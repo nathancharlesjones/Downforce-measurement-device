@@ -3,9 +3,16 @@
 #include "cmsis_os.h"
 
 extern void Error_Handler(void);
+extern osThreadId_t UART_TXHandle;
+extern osThreadId_t UART_RXHandle;
 extern osMessageQueueId_t Queue_UART_TXHandle;
 extern osMessageQueueId_t Queue_UART_RXHandle;
 extern UART_HandleTypeDef huart1;
+
+static uint32_t Thread_UART_RX_max_stack_size = 0;
+static uint32_t Thread_UART_TX_max_stack_size = 0;
+static uint16_t UART_TX_queue_max_size = 0;
+static uint16_t UART_RX_queue_max_size = 0;
 
 void
 Thread_UART_RX(void)
@@ -15,6 +22,8 @@ Thread_UART_RX(void)
     
     for (;;)
     {
+        uint32_t Thread_UART_RX_stack_size = osThreadGetStackSpace(UART_RXHandle);
+        if ( Thread_UART_RX_stack_size > Thread_UART_RX_max_stack_size ) Thread_UART_RX_max_stack_size = Thread_UART_RX_stack_size;
         HAL_UART_Receive_IT(&huart1, (uint8_t *)(&rx_msg[0]), MAX_LOG_MSG_SIZE);
         while ( huart1.RxState != HAL_UART_STATE_READY )
         {
@@ -25,7 +34,7 @@ Thread_UART_RX(void)
                     HAL_UART_AbortReceive_IT(&huart1);
                 }
             }
-            osDelay(1);
+            osThreadYield();
         }
       
         //Echo received msg
@@ -35,7 +44,7 @@ Thread_UART_RX(void)
         }
         memset(&rx_msg[0], 0, MAX_LOG_MSG_SIZE);
       
-        osDelay(1);
+        osThreadYield();
     }
 }
 
@@ -46,11 +55,16 @@ Thread_UART_TX(void)
     
     for (;;)
     {
-        if ( osMessageQueueGetCount(Queue_UART_TXHandle) > 0 )
+        uint32_t Thread_UART_TX_stack_size = osThreadGetStackSpace(UART_TXHandle);
+        if ( Thread_UART_TX_stack_size > Thread_UART_TX_max_stack_size ) Thread_UART_TX_max_stack_size = Thread_UART_TX_stack_size;
+        
+        uint16_t UART_TX_queue_count = osMessageQueueGetCount(Queue_UART_TXHandle);
+        if ( UART_TX_queue_count > 0 )
         {
+            if ( UART_TX_queue_count > UART_TX_queue_max_size ) UART_TX_queue_max_size = UART_TX_queue_count;
             osMessageQueueGet(Queue_UART_TXHandle, &ch, 0, 0);
             HAL_UART_Transmit(&huart1, (uint8_t *)(&ch), 1, HAL_MAX_DELAY);
         }
-        osDelay(1);
+        osThreadYield();
     }
 }
