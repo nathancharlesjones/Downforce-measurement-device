@@ -1,0 +1,326 @@
+ARM GAS  /tmp/ccJ6t4wY.s 			page 1
+
+
+   1              		.cpu cortex-m3
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 1
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"UART.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.Thread_UART_RX,"ax",%progbits
+  16              		.align	1
+  17              		.global	Thread_UART_RX
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	Thread_UART_RX:
+  24              	.LFB69:
+  25              		.file 1 "Src/UART.c"
+   1:Src/UART.c    **** #include <string.h>
+   2:Src/UART.c    **** #include "main.h"
+   3:Src/UART.c    **** #include "cmsis_os.h"
+   4:Src/UART.c    **** 
+   5:Src/UART.c    **** extern void Error_Handler(void);
+   6:Src/UART.c    **** extern osMessageQueueId_t Queue_UART_TXHandle;
+   7:Src/UART.c    **** extern osMessageQueueId_t Queue_UART_RXHandle;
+   8:Src/UART.c    **** extern UART_HandleTypeDef huart1;
+   9:Src/UART.c    **** 
+  10:Src/UART.c    **** void
+  11:Src/UART.c    **** Thread_UART_RX(void)
+  12:Src/UART.c    **** {
+  26              		.loc 1 12 0
+  27              		.cfi_startproc
+  28              		@ Volatile: function does not return.
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 08B5     		push	{r3, lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  36 0002 38E0     		b	.L9
+  37              	.L4:
+  13:Src/UART.c    ****     static char rx_msg[MAX_LOG_MSG_SIZE+1] = {0};
+  14:Src/UART.c    ****     static uint8_t idx = MAX_LOG_MSG_SIZE;
+  15:Src/UART.c    ****     
+  16:Src/UART.c    ****     for (;;)
+  17:Src/UART.c    ****     {
+  18:Src/UART.c    ****         HAL_UART_Receive_IT(&huart1, (uint8_t *)(&rx_msg[0]), MAX_LOG_MSG_SIZE);
+  19:Src/UART.c    ****         while ( huart1.RxState != HAL_UART_STATE_READY )
+  20:Src/UART.c    ****         {
+  21:Src/UART.c    ****             for ( idx = MAX_LOG_MSG_SIZE; idx > 0; idx-- )
+ARM GAS  /tmp/ccJ6t4wY.s 			page 2
+
+
+  38              		.loc 1 21 0 discriminator 2
+  39 0004 1F4A     		ldr	r2, .L14
+  40 0006 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  41 0008 013B     		subs	r3, r3, #1
+  42 000a 1370     		strb	r3, [r2]
+  43              	.L3:
+  44              		.loc 1 21 0 is_stmt 0 discriminator 1
+  45 000c 1D4B     		ldr	r3, .L14
+  46 000e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  47 0010 3BB1     		cbz	r3, .L11
+  22:Src/UART.c    ****             {
+  23:Src/UART.c    ****                 if ( rx_msg[idx] == '\n' )
+  48              		.loc 1 23 0 is_stmt 1
+  49 0012 1D4A     		ldr	r2, .L14+4
+  50 0014 D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
+  51 0016 0A2B     		cmp	r3, #10
+  52 0018 F4D1     		bne	.L4
+  24:Src/UART.c    ****                 {
+  25:Src/UART.c    ****                     HAL_UART_AbortReceive_IT(&huart1);
+  53              		.loc 1 25 0
+  54 001a 1C48     		ldr	r0, .L14+8
+  55 001c FFF7FEFF 		bl	HAL_UART_AbortReceive_IT
+  56              	.LVL0:
+  57 0020 F0E7     		b	.L4
+  58              	.L11:
+  26:Src/UART.c    ****                 }
+  27:Src/UART.c    ****             }
+  28:Src/UART.c    ****             osDelay(1);
+  59              		.loc 1 28 0
+  60 0022 0120     		movs	r0, #1
+  61 0024 FFF7FEFF 		bl	osDelay
+  62              	.LVL1:
+  63              	.L2:
+  19:Src/UART.c    ****         {
+  64              		.loc 1 19 0
+  65 0028 184B     		ldr	r3, .L14+8
+  66 002a 93F83A30 		ldrb	r3, [r3, #58]	@ zero_extendqisi2
+  67 002e DBB2     		uxtb	r3, r3
+  68 0030 202B     		cmp	r3, #32
+  69 0032 03D0     		beq	.L12
+  21:Src/UART.c    ****             {
+  70              		.loc 1 21 0
+  71 0034 4022     		movs	r2, #64
+  72 0036 134B     		ldr	r3, .L14
+  73 0038 1A70     		strb	r2, [r3]
+  74 003a E7E7     		b	.L3
+  75              	.L12:
+  29:Src/UART.c    ****         }
+  30:Src/UART.c    ****       
+  31:Src/UART.c    ****         //Echo received msg
+  32:Src/UART.c    ****         for (idx = 0; rx_msg[idx]; idx++)
+  76              		.loc 1 32 0
+  77 003c 0022     		movs	r2, #0
+  78 003e 114B     		ldr	r3, .L14
+  79 0040 1A70     		strb	r2, [r3]
+  80              	.L7:
+  81              		.loc 1 32 0 is_stmt 0 discriminator 1
+ARM GAS  /tmp/ccJ6t4wY.s 			page 3
+
+
+  82 0042 104B     		ldr	r3, .L14
+  83 0044 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
+  84 0046 104B     		ldr	r3, .L14+4
+  85 0048 5B5C     		ldrb	r3, [r3, r1]	@ zero_extendqisi2
+  86 004a 63B1     		cbz	r3, .L13
+  33:Src/UART.c    ****         {
+  34:Src/UART.c    ****             osMessageQueuePut(Queue_UART_TXHandle, &rx_msg[idx], 0, 0);
+  87              		.loc 1 34 0 is_stmt 1 discriminator 3
+  88 004c 0023     		movs	r3, #0
+  89 004e 1A46     		mov	r2, r3
+  90 0050 0D48     		ldr	r0, .L14+4
+  91 0052 0144     		add	r1, r1, r0
+  92 0054 0E48     		ldr	r0, .L14+12
+  93 0056 0068     		ldr	r0, [r0]
+  94 0058 FFF7FEFF 		bl	osMessageQueuePut
+  95              	.LVL2:
+  32:Src/UART.c    ****         {
+  96              		.loc 1 32 0 discriminator 3
+  97 005c 094A     		ldr	r2, .L14
+  98 005e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  99 0060 0133     		adds	r3, r3, #1
+ 100 0062 1370     		strb	r3, [r2]
+ 101 0064 EDE7     		b	.L7
+ 102              	.L13:
+  35:Src/UART.c    ****         }
+  36:Src/UART.c    ****         memset(&rx_msg[0], 0, MAX_LOG_MSG_SIZE);
+ 103              		.loc 1 36 0
+ 104 0066 4022     		movs	r2, #64
+ 105 0068 0021     		movs	r1, #0
+ 106 006a 0748     		ldr	r0, .L14+4
+ 107 006c FFF7FEFF 		bl	memset
+ 108              	.LVL3:
+  37:Src/UART.c    ****       
+  38:Src/UART.c    ****         osDelay(1);
+ 109              		.loc 1 38 0
+ 110 0070 0120     		movs	r0, #1
+ 111 0072 FFF7FEFF 		bl	osDelay
+ 112              	.LVL4:
+ 113              	.L9:
+  18:Src/UART.c    ****         while ( huart1.RxState != HAL_UART_STATE_READY )
+ 114              		.loc 1 18 0
+ 115 0076 4022     		movs	r2, #64
+ 116 0078 0349     		ldr	r1, .L14+4
+ 117 007a 0448     		ldr	r0, .L14+8
+ 118 007c FFF7FEFF 		bl	HAL_UART_Receive_IT
+ 119              	.LVL5:
+  19:Src/UART.c    ****         {
+ 120              		.loc 1 19 0
+ 121 0080 D2E7     		b	.L2
+ 122              	.L15:
+ 123 0082 00BF     		.align	2
+ 124              	.L14:
+ 125 0084 00000000 		.word	.LANCHOR1
+ 126 0088 00000000 		.word	.LANCHOR0
+ 127 008c 00000000 		.word	huart1
+ 128 0090 00000000 		.word	Queue_UART_TXHandle
+ 129              		.cfi_endproc
+ARM GAS  /tmp/ccJ6t4wY.s 			page 4
+
+
+ 130              	.LFE69:
+ 132              		.section	.text.Thread_UART_TX,"ax",%progbits
+ 133              		.align	1
+ 134              		.global	Thread_UART_TX
+ 135              		.syntax unified
+ 136              		.thumb
+ 137              		.thumb_func
+ 138              		.fpu softvfp
+ 140              	Thread_UART_TX:
+ 141              	.LFB70:
+  39:Src/UART.c    ****     }
+  40:Src/UART.c    **** }
+  41:Src/UART.c    **** 
+  42:Src/UART.c    **** void
+  43:Src/UART.c    **** Thread_UART_TX(void)
+  44:Src/UART.c    **** {
+ 142              		.loc 1 44 0
+ 143              		.cfi_startproc
+ 144              		@ Volatile: function does not return.
+ 145              		@ args = 0, pretend = 0, frame = 0
+ 146              		@ frame_needed = 0, uses_anonymous_args = 0
+ 147 0000 08B5     		push	{r3, lr}
+ 148              	.LCFI1:
+ 149              		.cfi_def_cfa_offset 8
+ 150              		.cfi_offset 3, -8
+ 151              		.cfi_offset 14, -4
+ 152 0002 02E0     		b	.L18
+ 153              	.L17:
+  45:Src/UART.c    ****     static char ch;
+  46:Src/UART.c    ****     
+  47:Src/UART.c    ****     for (;;)
+  48:Src/UART.c    ****     {
+  49:Src/UART.c    ****         if ( osMessageQueueGetCount(Queue_UART_TXHandle) > 0 )
+  50:Src/UART.c    ****         {
+  51:Src/UART.c    ****             osMessageQueueGet(Queue_UART_TXHandle, &ch, 0, 0);
+  52:Src/UART.c    ****             HAL_UART_Transmit(&huart1, (uint8_t *)(&ch), 1, HAL_MAX_DELAY);
+  53:Src/UART.c    ****         }
+  54:Src/UART.c    ****         osDelay(1);
+ 154              		.loc 1 54 0
+ 155 0004 0120     		movs	r0, #1
+ 156 0006 FFF7FEFF 		bl	osDelay
+ 157              	.LVL6:
+ 158              	.L18:
+  49:Src/UART.c    ****         {
+ 159              		.loc 1 49 0
+ 160 000a 0B4B     		ldr	r3, .L20
+ 161 000c 1868     		ldr	r0, [r3]
+ 162 000e FFF7FEFF 		bl	osMessageQueueGetCount
+ 163              	.LVL7:
+ 164 0012 0028     		cmp	r0, #0
+ 165 0014 F6D0     		beq	.L17
+  51:Src/UART.c    ****             HAL_UART_Transmit(&huart1, (uint8_t *)(&ch), 1, HAL_MAX_DELAY);
+ 166              		.loc 1 51 0
+ 167 0016 094C     		ldr	r4, .L20+4
+ 168 0018 0023     		movs	r3, #0
+ 169 001a 1A46     		mov	r2, r3
+ 170 001c 2146     		mov	r1, r4
+ARM GAS  /tmp/ccJ6t4wY.s 			page 5
+
+
+ 171 001e 0648     		ldr	r0, .L20
+ 172 0020 0068     		ldr	r0, [r0]
+ 173 0022 FFF7FEFF 		bl	osMessageQueueGet
+ 174              	.LVL8:
+  52:Src/UART.c    ****         }
+ 175              		.loc 1 52 0
+ 176 0026 4FF0FF33 		mov	r3, #-1
+ 177 002a 0122     		movs	r2, #1
+ 178 002c 2146     		mov	r1, r4
+ 179 002e 0448     		ldr	r0, .L20+8
+ 180 0030 FFF7FEFF 		bl	HAL_UART_Transmit
+ 181              	.LVL9:
+ 182 0034 E6E7     		b	.L17
+ 183              	.L21:
+ 184 0036 00BF     		.align	2
+ 185              	.L20:
+ 186 0038 00000000 		.word	Queue_UART_TXHandle
+ 187 003c 00000000 		.word	.LANCHOR2
+ 188 0040 00000000 		.word	huart1
+ 189              		.cfi_endproc
+ 190              	.LFE70:
+ 192              		.section	.bss.ch.7316,"aw",%nobits
+ 193              		.set	.LANCHOR2,. + 0
+ 196              	ch.7316:
+ 197 0000 00       		.space	1
+ 198              		.section	.bss.rx_msg.7301,"aw",%nobits
+ 199              		.align	2
+ 200              		.set	.LANCHOR0,. + 0
+ 203              	rx_msg.7301:
+ 204 0000 00000000 		.space	65
+ 204      00000000 
+ 204      00000000 
+ 204      00000000 
+ 204      00000000 
+ 205              		.section	.data.idx.7302,"aw",%progbits
+ 206              		.set	.LANCHOR1,. + 0
+ 209              	idx.7302:
+ 210 0000 40       		.byte	64
+ 211              		.text
+ 212              	.Letext0:
+ 213              		.file 2 "/usr/include/newlib/machine/_default_types.h"
+ 214              		.file 3 "/usr/include/newlib/sys/lock.h"
+ 215              		.file 4 "/usr/include/newlib/sys/_types.h"
+ 216              		.file 5 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
+ 217              		.file 6 "/usr/include/newlib/sys/reent.h"
+ 218              		.file 7 "/usr/include/newlib/sys/_stdint.h"
+ 219              		.file 8 "Drivers/CMSIS/Include/core_cm3.h"
+ 220              		.file 9 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 221              		.file 10 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 222              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 223              		.file 12 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 224              		.file 13 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ 225              		.file 14 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 226              		.file 15 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
+ARM GAS  /tmp/ccJ6t4wY.s 			page 6
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 UART.c
+     /tmp/ccJ6t4wY.s:16     .text.Thread_UART_RX:0000000000000000 $t
+     /tmp/ccJ6t4wY.s:23     .text.Thread_UART_RX:0000000000000000 Thread_UART_RX
+     /tmp/ccJ6t4wY.s:125    .text.Thread_UART_RX:0000000000000084 $d
+     /tmp/ccJ6t4wY.s:133    .text.Thread_UART_TX:0000000000000000 $t
+     /tmp/ccJ6t4wY.s:140    .text.Thread_UART_TX:0000000000000000 Thread_UART_TX
+     /tmp/ccJ6t4wY.s:186    .text.Thread_UART_TX:0000000000000038 $d
+     /tmp/ccJ6t4wY.s:196    .bss.ch.7316:0000000000000000 ch.7316
+     /tmp/ccJ6t4wY.s:197    .bss.ch.7316:0000000000000000 $d
+     /tmp/ccJ6t4wY.s:199    .bss.rx_msg.7301:0000000000000000 $d
+     /tmp/ccJ6t4wY.s:203    .bss.rx_msg.7301:0000000000000000 rx_msg.7301
+     /tmp/ccJ6t4wY.s:209    .data.idx.7302:0000000000000000 idx.7302
+                     .debug_frame:0000000000000010 $d
+
+UNDEFINED SYMBOLS
+HAL_UART_AbortReceive_IT
+osDelay
+osMessageQueuePut
+memset
+HAL_UART_Receive_IT
+huart1
+Queue_UART_TXHandle
+osMessageQueueGetCount
+osMessageQueueGet
+HAL_UART_Transmit
