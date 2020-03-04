@@ -83,7 +83,7 @@ void SPI_Timer_On (WORD ms) {
 }
 
 inline BOOL SPI_Timer_Status (void) {
-    return ((HAL_GetTick() - spiTimerTickStart) > spiTimerTickDelay);
+    return ((HAL_GetTick() - spiTimerTickStart) < spiTimerTickDelay);
 }
 
 inline void SPI_Timer_Off (void) {

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccqJyIbP.s 			page 1
+ARM GAS  /tmp/ccMKUzo5.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
   31:Src/main.c    **** #include "ADC.h"
   32:Src/main.c    **** #include "UART.h"
   33:Src/main.c    **** /* USER CODE END Includes */
-ARM GAS  /tmp/ccqJyIbP.s 			page 2
+ARM GAS  /tmp/ccMKUzo5.s 			page 2
 
 
   34:Src/main.c    **** 
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
   88:Src/main.c    **** osMessageQueueId_t Queue_UART_RXHandle;
   89:Src/main.c    **** const osMessageQueueAttr_t Queue_UART_RX_attributes = {
   90:Src/main.c    ****   .name = "Queue_UART_RX"
-ARM GAS  /tmp/ccqJyIbP.s 			page 3
+ARM GAS  /tmp/ccMKUzo5.s 			page 3
 
 
   91:Src/main.c    **** };
@@ -170,7 +170,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  137:Src/main.c    ****   HAL_Init();
  138:Src/main.c    **** 
  139:Src/main.c    ****   /* USER CODE BEGIN Init */
- 140:Src/main.c    ****   //SDRESULTS res = SD_Init(dev);
+ 140:Src/main.c    ****   
  141:Src/main.c    ****   /* USER CODE END Init */
  142:Src/main.c    **** 
  143:Src/main.c    ****   /* Configure the system clock */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  145:Src/main.c    **** 
  146:Src/main.c    ****   /* USER CODE BEGIN SysInit */
  147:Src/main.c    ****   
-ARM GAS  /tmp/ccqJyIbP.s 			page 4
+ARM GAS  /tmp/ccMKUzo5.s 			page 4
 
 
  148:Src/main.c    ****   /* USER CODE END SysInit */
@@ -191,7 +191,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  155:Src/main.c    ****   MX_SPI1_Init();
  156:Src/main.c    ****   MX_FATFS_Init();
  157:Src/main.c    ****   /* USER CODE BEGIN 2 */
- 158:Src/main.c    **** 
+ 158:Src/main.c    ****   SDRESULTS res = SD_Init(dev);
  159:Src/main.c    ****   /* USER CODE END 2 */
  160:Src/main.c    ****   /* Init scheduler */
  161:Src/main.c    ****   osKernelInitialize();
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  202:Src/main.c    **** 
  203:Src/main.c    ****   /* Start scheduler */
  204:Src/main.c    ****   osKernelStart();
-ARM GAS  /tmp/ccqJyIbP.s 			page 5
+ARM GAS  /tmp/ccMKUzo5.s 			page 5
 
 
  205:Src/main.c    ****  
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  259:Src/main.c    ****   }
  260:Src/main.c    **** }
  261:Src/main.c    **** 
-ARM GAS  /tmp/ccqJyIbP.s 			page 6
+ARM GAS  /tmp/ccMKUzo5.s 			page 6
 
 
  262:Src/main.c    **** /**
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  316:Src/main.c    **** 
  317:Src/main.c    ****   /* USER CODE END RTC_Init 0 */
  318:Src/main.c    **** 
-ARM GAS  /tmp/ccqJyIbP.s 			page 7
+ARM GAS  /tmp/ccMKUzo5.s 			page 7
 
 
  319:Src/main.c    ****   RTC_TimeTypeDef sTime = {0};
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  373:Src/main.c    **** 
  374:Src/main.c    ****   /* USER CODE END SPI1_Init 0 */
  375:Src/main.c    **** 
-ARM GAS  /tmp/ccqJyIbP.s 			page 8
+ARM GAS  /tmp/ccMKUzo5.s 			page 8
 
 
  376:Src/main.c    ****   /* USER CODE BEGIN SPI1_Init 1 */
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  430:Src/main.c    ****   
  431:Src/main.c    ****   /* USER CODE END USART1_Init 2 */
  432:Src/main.c    **** 
-ARM GAS  /tmp/ccqJyIbP.s 			page 9
+ARM GAS  /tmp/ccMKUzo5.s 			page 9
 
 
  433:Src/main.c    **** }
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  487:Src/main.c    **** * @param argument: Not used
  488:Src/main.c    **** * @retval None
  489:Src/main.c    **** */
-ARM GAS  /tmp/ccqJyIbP.s 			page 10
+ARM GAS  /tmp/ccMKUzo5.s 			page 10
 
 
  490:Src/main.c    **** /* USER CODE END Header_Tsk_UART_TX */
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
   58              	.LCFI1:
   59              		.cfi_def_cfa_offset 48
  442:Src/main.c    **** 
-ARM GAS  /tmp/ccqJyIbP.s 			page 11
+ARM GAS  /tmp/ccMKUzo5.s 			page 11
 
 
   60              		.loc 1 442 0
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  108 005a 0123     		movs	r3, #1
  109 005c 0593     		str	r3, [sp, #20]
  455:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-ARM GAS  /tmp/ccqJyIbP.s 			page 12
+ARM GAS  /tmp/ccMKUzo5.s 			page 12
 
 
  110              		.loc 1 455 0
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  161              		.cfi_endproc
  162              	.LFE77:
  164              		.section	.text.Tsk_UART_TX,"ax",%progbits
-ARM GAS  /tmp/ccqJyIbP.s 			page 13
+ARM GAS  /tmp/ccMKUzo5.s 			page 13
 
 
  165              		.align	1
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  528:Src/main.c    **** /* USER CODE BEGIN Header_Tsk_UART_RX */
  529:Src/main.c    **** /**
  530:Src/main.c    **** * @brief Function implementing the UART_RX thread.
-ARM GAS  /tmp/ccqJyIbP.s 			page 14
+ARM GAS  /tmp/ccMKUzo5.s 			page 14
 
 
  531:Src/main.c    **** * @param argument: Not used
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  234              		.loc 1 556 0
  235              		.cfi_startproc
  236              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/ccqJyIbP.s 			page 15
+ARM GAS  /tmp/ccMKUzo5.s 			page 15
 
 
  237              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  276              		.loc 1 573 0
  277              		.cfi_startproc
  278              		@ Volatile: function does not return.
-ARM GAS  /tmp/ccqJyIbP.s 			page 16
+ARM GAS  /tmp/ccMKUzo5.s 			page 16
 
 
  279              		@ args = 0, pretend = 0, frame = 0
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  325              		.loc 1 424 0
  326 001c C361     		str	r3, [r0, #28]
  425:Src/main.c    ****   {
-ARM GAS  /tmp/ccqJyIbP.s 			page 17
+ARM GAS  /tmp/ccMKUzo5.s 			page 17
 
 
  327              		.loc 1 425 0
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  284:Src/main.c    ****   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
  377              		.loc 1 284 0
  378 0016 0375     		strb	r3, [r0, #20]
-ARM GAS  /tmp/ccqJyIbP.s 			page 18
+ARM GAS  /tmp/ccMKUzo5.s 			page 18
 
 
  285:Src/main.c    ****   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  422              	.L37:
  423              		.align	2
  424              	.L36:
-ARM GAS  /tmp/ccqJyIbP.s 			page 19
+ARM GAS  /tmp/ccMKUzo5.s 			page 19
 
 
  425 004c 00000000 		.word	hadc1
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  472              		.loc 1 342 0
  473 002a 0023     		movs	r3, #0
  474 002c 8DF80530 		strb	r3, [sp, #5]
-ARM GAS  /tmp/ccqJyIbP.s 			page 20
+ARM GAS  /tmp/ccMKUzo5.s 			page 20
 
 
  343:Src/main.c    **** 
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  519 0070 FFF7FEFF 		bl	Error_Handler
  520              	.LVL26:
  521              	.L45:
-ARM GAS  /tmp/ccqJyIbP.s 			page 21
+ARM GAS  /tmp/ccMKUzo5.s 			page 21
 
 
  356:Src/main.c    ****   }
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  569 001a 4FF48022 		mov	r2, #262144
  570 001e 8261     		str	r2, [r0, #24]
  387:Src/main.c    ****   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
-ARM GAS  /tmp/ccqJyIbP.s 			page 22
+ARM GAS  /tmp/ccMKUzo5.s 			page 22
 
 
  571              		.loc 1 387 0
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  225:Src/main.c    ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
  620              		.loc 1 225 0
  621 0004 2822     		movs	r2, #40
-ARM GAS  /tmp/ccqJyIbP.s 			page 23
+ARM GAS  /tmp/ccMKUzo5.s 			page 23
 
 
  622 0006 0021     		movs	r1, #0
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  664              		.loc 1 247 0
  665 0046 0991     		str	r1, [sp, #36]
  249:Src/main.c    ****   {
-ARM GAS  /tmp/ccqJyIbP.s 			page 24
+ARM GAS  /tmp/ccMKUzo5.s 			page 24
 
 
  666              		.loc 1 249 0
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  713              		.thumb
  714              		.thumb_func
  715              		.fpu softvfp
-ARM GAS  /tmp/ccqJyIbP.s 			page 25
+ARM GAS  /tmp/ccMKUzo5.s 			page 25
 
 
  717              	main:
@@ -1446,356 +1446,365 @@ ARM GAS  /tmp/ccqJyIbP.s 			page 1
  127:Src/main.c    ****   /* USER CODE BEGIN 1 */
  719              		.loc 1 127 0
  720              		.cfi_startproc
- 721              		@ Volatile: function does not return.
- 722              		@ args = 0, pretend = 0, frame = 0
- 723              		@ frame_needed = 0, uses_anonymous_args = 0
- 724 0000 08B5     		push	{r3, lr}
- 725              	.LCFI21:
- 726              		.cfi_def_cfa_offset 8
- 727              		.cfi_offset 3, -8
- 728              		.cfi_offset 14, -4
+ 721              		@ args = 0, pretend = 0, frame = 8
+ 722              		@ frame_needed = 0, uses_anonymous_args = 0
+ 723 0000 00B5     		push	{lr}
+ 724              	.LCFI21:
+ 725              		.cfi_def_cfa_offset 4
+ 726              		.cfi_offset 14, -4
+ 727 0002 83B0     		sub	sp, sp, #12
+ 728              	.LCFI22:
+ 729              		.cfi_def_cfa_offset 16
  137:Src/main.c    **** 
- 729              		.loc 1 137 0
- 730 0002 FFF7FEFF 		bl	HAL_Init
- 731              	.LVL37:
+ 730              		.loc 1 137 0
+ 731 0004 FFF7FEFF 		bl	HAL_Init
+ 732              	.LVL37:
  144:Src/main.c    **** 
- 732              		.loc 1 144 0
- 733 0006 FFF7FEFF 		bl	SystemClock_Config
- 734              	.LVL38:
+ 733              		.loc 1 144 0
+ 734 0008 FFF7FEFF 		bl	SystemClock_Config
+ 735              	.LVL38:
  151:Src/main.c    ****   MX_USART1_UART_Init();
- 735              		.loc 1 151 0
- 736 000a FFF7FEFF 		bl	MX_GPIO_Init
- 737              	.LVL39:
+ 736              		.loc 1 151 0
+ 737 000c FFF7FEFF 		bl	MX_GPIO_Init
+ 738              	.LVL39:
  152:Src/main.c    ****   MX_ADC1_Init();
- 738              		.loc 1 152 0
- 739 000e FFF7FEFF 		bl	MX_USART1_UART_Init
- 740              	.LVL40:
+ 739              		.loc 1 152 0
+ 740 0010 FFF7FEFF 		bl	MX_USART1_UART_Init
+ 741              	.LVL40:
  153:Src/main.c    ****   MX_RTC_Init();
- 741              		.loc 1 153 0
- 742 0012 FFF7FEFF 		bl	MX_ADC1_Init
- 743              	.LVL41:
+ 742              		.loc 1 153 0
+ 743 0014 FFF7FEFF 		bl	MX_ADC1_Init
+ 744              	.LVL41:
  154:Src/main.c    ****   MX_SPI1_Init();
- 744              		.loc 1 154 0
- 745 0016 FFF7FEFF 		bl	MX_RTC_Init
- 746              	.LVL42:
+ 745              		.loc 1 154 0
+ 746 0018 FFF7FEFF 		bl	MX_RTC_Init
+ 747              	.LVL42:
  155:Src/main.c    ****   MX_FATFS_Init();
- 747              		.loc 1 155 0
- 748 001a FFF7FEFF 		bl	MX_SPI1_Init
- 749              	.LVL43:
+ 748              		.loc 1 155 0
+ 749 001c FFF7FEFF 		bl	MX_SPI1_Init
+ 750              	.LVL43:
  156:Src/main.c    ****   /* USER CODE BEGIN 2 */
- 750              		.loc 1 156 0
- 751 001e FFF7FEFF 		bl	MX_FATFS_Init
- 752              	.LVL44:
+ 751              		.loc 1 156 0
+ 752 0020 FFF7FEFF 		bl	MX_FATFS_Init
+ 753              	.LVL44:
+ 158:Src/main.c    ****   /* USER CODE END 2 */
+ 754              		.loc 1 158 0
+ 755 0024 6846     		mov	r0, sp
+ 756 0026 FFF7FEFF 		bl	SD_Init
+ 757              	.LVL45:
  161:Src/main.c    **** 
- 753              		.loc 1 161 0
- 754 0022 FFF7FEFF 		bl	osKernelInitialize
- 755              	.LVL45:
+ 758              		.loc 1 161 0
+ 759 002a FFF7FEFF 		bl	osKernelInitialize
+ 760              	.LVL46:
  177:Src/main.c    **** 
- 756              		.loc 1 177 0
- 757 0026 164A     		ldr	r2, .L65
- 758 0028 0121     		movs	r1, #1
- 759 002a 8020     		movs	r0, #128
- 760 002c FFF7FEFF 		bl	osMessageQueueNew
- 761              	.LVL46:
- 762 0030 144B     		ldr	r3, .L65+4
-ARM GAS  /tmp/ccqJyIbP.s 			page 26
+ 761              		.loc 1 177 0
+ARM GAS  /tmp/ccMKUzo5.s 			page 26
 
 
- 763 0032 1860     		str	r0, [r3]
+ 762 002e 164A     		ldr	r2, .L65
+ 763 0030 0121     		movs	r1, #1
+ 764 0032 8020     		movs	r0, #128
+ 765 0034 FFF7FEFF 		bl	osMessageQueueNew
+ 766              	.LVL47:
+ 767 0038 144B     		ldr	r3, .L65+4
+ 768 003a 1860     		str	r0, [r3]
  180:Src/main.c    **** 
- 764              		.loc 1 180 0
- 765 0034 144A     		ldr	r2, .L65+8
- 766 0036 0121     		movs	r1, #1
- 767 0038 8020     		movs	r0, #128
- 768 003a FFF7FEFF 		bl	osMessageQueueNew
- 769              	.LVL47:
- 770 003e 134B     		ldr	r3, .L65+12
- 771 0040 1860     		str	r0, [r3]
+ 769              		.loc 1 180 0
+ 770 003c 144A     		ldr	r2, .L65+8
+ 771 003e 0121     		movs	r1, #1
+ 772 0040 8020     		movs	r0, #128
+ 773 0042 FFF7FEFF 		bl	osMessageQueueNew
+ 774              	.LVL48:
+ 775 0046 134B     		ldr	r3, .L65+12
+ 776 0048 1860     		str	r0, [r3]
  188:Src/main.c    **** 
- 772              		.loc 1 188 0
- 773 0042 134A     		ldr	r2, .L65+16
- 774 0044 0021     		movs	r1, #0
- 775 0046 1348     		ldr	r0, .L65+20
- 776 0048 FFF7FEFF 		bl	osThreadNew
- 777              	.LVL48:
- 778 004c 124B     		ldr	r3, .L65+24
- 779 004e 1860     		str	r0, [r3]
+ 777              		.loc 1 188 0
+ 778 004a 134A     		ldr	r2, .L65+16
+ 779 004c 0021     		movs	r1, #0
+ 780 004e 1348     		ldr	r0, .L65+20
+ 781 0050 FFF7FEFF 		bl	osThreadNew
+ 782              	.LVL49:
+ 783 0054 124B     		ldr	r3, .L65+24
+ 784 0056 1860     		str	r0, [r3]
  191:Src/main.c    **** 
- 780              		.loc 1 191 0
- 781 0050 124A     		ldr	r2, .L65+28
- 782 0052 0021     		movs	r1, #0
- 783 0054 1248     		ldr	r0, .L65+32
- 784 0056 FFF7FEFF 		bl	osThreadNew
- 785              	.LVL49:
- 786 005a 124B     		ldr	r3, .L65+36
- 787 005c 1860     		str	r0, [r3]
+ 785              		.loc 1 191 0
+ 786 0058 124A     		ldr	r2, .L65+28
+ 787 005a 0021     		movs	r1, #0
+ 788 005c 1248     		ldr	r0, .L65+32
+ 789 005e FFF7FEFF 		bl	osThreadNew
+ 790              	.LVL50:
+ 791 0062 124B     		ldr	r3, .L65+36
+ 792 0064 1860     		str	r0, [r3]
  194:Src/main.c    **** 
- 788              		.loc 1 194 0
- 789 005e 124A     		ldr	r2, .L65+40
- 790 0060 0021     		movs	r1, #0
- 791 0062 1248     		ldr	r0, .L65+44
- 792 0064 FFF7FEFF 		bl	osThreadNew
- 793              	.LVL50:
- 794 0068 114B     		ldr	r3, .L65+48
- 795 006a 1860     		str	r0, [r3]
+ 793              		.loc 1 194 0
+ 794 0066 124A     		ldr	r2, .L65+40
+ 795 0068 0021     		movs	r1, #0
+ 796 006a 1248     		ldr	r0, .L65+44
+ 797 006c FFF7FEFF 		bl	osThreadNew
+ 798              	.LVL51:
+ 799 0070 114B     		ldr	r3, .L65+48
+ 800 0072 1860     		str	r0, [r3]
  197:Src/main.c    **** 
- 796              		.loc 1 197 0
- 797 006c 114A     		ldr	r2, .L65+52
- 798 006e 0021     		movs	r1, #0
- 799 0070 1148     		ldr	r0, .L65+56
- 800 0072 FFF7FEFF 		bl	osThreadNew
- 801              	.LVL51:
- 802 0076 114B     		ldr	r3, .L65+60
- 803 0078 1860     		str	r0, [r3]
- 204:Src/main.c    ****  
- 804              		.loc 1 204 0
- 805 007a FFF7FEFF 		bl	osKernelStart
+ 801              		.loc 1 197 0
+ 802 0074 114A     		ldr	r2, .L65+52
+ 803 0076 0021     		movs	r1, #0
+ 804 0078 1148     		ldr	r0, .L65+56
+ 805 007a FFF7FEFF 		bl	osThreadNew
  806              	.LVL52:
- 807              	.L63:
- 808 007e FEE7     		b	.L63
- 809              	.L66:
- 810              		.align	2
- 811              	.L65:
- 812 0080 00000000 		.word	.LANCHOR0
- 813 0084 00000000 		.word	Queue_UART_RXHandle
-ARM GAS  /tmp/ccqJyIbP.s 			page 27
+ 807 007e 114B     		ldr	r3, .L65+60
+ 808 0080 1860     		str	r0, [r3]
+ 204:Src/main.c    ****  
+ 809              		.loc 1 204 0
+ 810 0082 FFF7FEFF 		bl	osKernelStart
+ 811              	.LVL53:
+ 812              	.L63:
+ARM GAS  /tmp/ccMKUzo5.s 			page 27
 
 
- 814 0088 00000000 		.word	.LANCHOR1
- 815 008c 00000000 		.word	Queue_UART_TXHandle
- 816 0090 00000000 		.word	.LANCHOR2
- 817 0094 00000000 		.word	Tsk_ADC_LightSensor
- 818 0098 00000000 		.word	ADC_LightSensorHandle
- 819 009c 00000000 		.word	.LANCHOR3
- 820 00a0 00000000 		.word	Tsk_UART_TX
- 821 00a4 00000000 		.word	UART_TXHandle
- 822 00a8 00000000 		.word	.LANCHOR4
- 823 00ac 00000000 		.word	Tsk_LED
- 824 00b0 00000000 		.word	LEDHandle
- 825 00b4 00000000 		.word	.LANCHOR5
- 826 00b8 00000000 		.word	Tsk_UART_RX
- 827 00bc 00000000 		.word	UART_RXHandle
- 828              		.cfi_endproc
- 829              	.LFE70:
- 831              		.global	Queue_UART_TX_attributes
- 832              		.comm	Queue_UART_TXHandle,4,4
- 833              		.global	Queue_UART_RX_attributes
- 834              		.comm	Queue_UART_RXHandle,4,4
- 835              		.global	UART_RX_attributes
- 836              		.comm	UART_RXHandle,4,4
- 837              		.global	LED_attributes
- 838              		.comm	LEDHandle,4,4
- 839              		.global	UART_TX_attributes
- 840              		.comm	UART_TXHandle,4,4
- 841              		.global	ADC_LightSensor_attributes
- 842              		.comm	ADC_LightSensorHandle,4,4
- 843              		.comm	huart1,64,4
- 844              		.comm	hspi1,88,4
- 845              		.comm	hrtc,20,4
- 846              		.comm	hadc1,48,4
- 847              		.section	.rodata.ADC_LightSensor_attributes,"a",%progbits
- 848              		.align	2
- 849              		.set	.LANCHOR2,. + 0
- 852              	ADC_LightSensor_attributes:
- 853 0000 34000000 		.word	.LC5
- 854 0004 00000000 		.space	16
- 854      00000000 
- 854      00000000 
- 854      00000000 
- 855 0014 00020000 		.word	512
- 856 0018 18000000 		.word	24
- 857 001c 00000000 		.space	8
- 857      00000000 
- 858              		.section	.rodata.LED_attributes,"a",%progbits
- 859              		.align	2
- 860              		.set	.LANCHOR4,. + 0
- 863              	LED_attributes:
- 864 0000 28000000 		.word	.LC3
- 865 0004 00000000 		.space	16
- 865      00000000 
- 865      00000000 
- 865      00000000 
- 866 0014 80000000 		.word	128
- 867 0018 08000000 		.word	8
- 868 001c 00000000 		.space	8
-ARM GAS  /tmp/ccqJyIbP.s 			page 28
+ 813 0086 FEE7     		b	.L63
+ 814              	.L66:
+ 815              		.align	2
+ 816              	.L65:
+ 817 0088 00000000 		.word	.LANCHOR0
+ 818 008c 00000000 		.word	Queue_UART_RXHandle
+ 819 0090 00000000 		.word	.LANCHOR1
+ 820 0094 00000000 		.word	Queue_UART_TXHandle
+ 821 0098 00000000 		.word	.LANCHOR2
+ 822 009c 00000000 		.word	Tsk_ADC_LightSensor
+ 823 00a0 00000000 		.word	ADC_LightSensorHandle
+ 824 00a4 00000000 		.word	.LANCHOR3
+ 825 00a8 00000000 		.word	Tsk_UART_TX
+ 826 00ac 00000000 		.word	UART_TXHandle
+ 827 00b0 00000000 		.word	.LANCHOR4
+ 828 00b4 00000000 		.word	Tsk_LED
+ 829 00b8 00000000 		.word	LEDHandle
+ 830 00bc 00000000 		.word	.LANCHOR5
+ 831 00c0 00000000 		.word	Tsk_UART_RX
+ 832 00c4 00000000 		.word	UART_RXHandle
+ 833              		.cfi_endproc
+ 834              	.LFE70:
+ 836              		.global	Queue_UART_TX_attributes
+ 837              		.comm	Queue_UART_TXHandle,4,4
+ 838              		.global	Queue_UART_RX_attributes
+ 839              		.comm	Queue_UART_RXHandle,4,4
+ 840              		.global	UART_RX_attributes
+ 841              		.comm	UART_RXHandle,4,4
+ 842              		.global	LED_attributes
+ 843              		.comm	LEDHandle,4,4
+ 844              		.global	UART_TX_attributes
+ 845              		.comm	UART_TXHandle,4,4
+ 846              		.global	ADC_LightSensor_attributes
+ 847              		.comm	ADC_LightSensorHandle,4,4
+ 848              		.comm	huart1,64,4
+ 849              		.comm	hspi1,88,4
+ 850              		.comm	hrtc,20,4
+ 851              		.comm	hadc1,48,4
+ 852              		.section	.rodata.ADC_LightSensor_attributes,"a",%progbits
+ 853              		.align	2
+ 854              		.set	.LANCHOR2,. + 0
+ 857              	ADC_LightSensor_attributes:
+ 858 0000 34000000 		.word	.LC5
+ 859 0004 00000000 		.space	16
+ 859      00000000 
+ 859      00000000 
+ 859      00000000 
+ 860 0014 00020000 		.word	512
+ 861 0018 18000000 		.word	24
+ 862 001c 00000000 		.space	8
+ 862      00000000 
+ 863              		.section	.rodata.LED_attributes,"a",%progbits
+ 864              		.align	2
+ 865              		.set	.LANCHOR4,. + 0
+ 868              	LED_attributes:
+ 869 0000 28000000 		.word	.LC3
+ 870 0004 00000000 		.space	16
+ARM GAS  /tmp/ccMKUzo5.s 			page 28
 
 
- 868      00000000 
- 869              		.section	.rodata.Queue_UART_RX_attributes,"a",%progbits
- 870              		.align	2
- 871              		.set	.LANCHOR0,. + 0
- 874              	Queue_UART_RX_attributes:
- 875 0000 10000000 		.word	.LC1
- 876 0004 00000000 		.space	20
- 876      00000000 
- 876      00000000 
- 876      00000000 
- 876      00000000 
- 877              		.section	.rodata.Queue_UART_TX_attributes,"a",%progbits
- 878              		.align	2
- 879              		.set	.LANCHOR1,. + 0
- 882              	Queue_UART_TX_attributes:
- 883 0000 00000000 		.word	.LC0
- 884 0004 00000000 		.space	20
- 884      00000000 
- 884      00000000 
- 884      00000000 
- 884      00000000 
- 885              		.section	.rodata.UART_RX_attributes,"a",%progbits
- 886              		.align	2
- 887              		.set	.LANCHOR5,. + 0
- 890              	UART_RX_attributes:
- 891 0000 20000000 		.word	.LC2
- 892 0004 00000000 		.space	16
- 892      00000000 
- 892      00000000 
- 892      00000000 
- 893 0014 80000000 		.word	128
- 894 0018 08000000 		.word	8
- 895 001c 00000000 		.space	8
- 895      00000000 
- 896              		.section	.rodata.UART_TX_attributes,"a",%progbits
- 897              		.align	2
- 898              		.set	.LANCHOR3,. + 0
- 901              	UART_TX_attributes:
- 902 0000 2C000000 		.word	.LC4
- 903 0004 00000000 		.space	16
- 903      00000000 
- 903      00000000 
- 903      00000000 
- 904 0014 80000000 		.word	128
- 905 0018 08000000 		.word	8
- 906 001c 00000000 		.space	8
- 906      00000000 
- 907              		.section	.rodata.str1.4,"aMS",%progbits,1
- 908              		.align	2
- 909              	.LC0:
- 910 0000 51756575 		.ascii	"Queue_UART_TX\000"
- 910      655F5541 
- 910      52545F54 
- 910      5800
- 911 000e 0000     		.space	2
- 912              	.LC1:
- 913 0010 51756575 		.ascii	"Queue_UART_RX\000"
-ARM GAS  /tmp/ccqJyIbP.s 			page 29
+ 870      00000000 
+ 870      00000000 
+ 870      00000000 
+ 871 0014 80000000 		.word	128
+ 872 0018 08000000 		.word	8
+ 873 001c 00000000 		.space	8
+ 873      00000000 
+ 874              		.section	.rodata.Queue_UART_RX_attributes,"a",%progbits
+ 875              		.align	2
+ 876              		.set	.LANCHOR0,. + 0
+ 879              	Queue_UART_RX_attributes:
+ 880 0000 10000000 		.word	.LC1
+ 881 0004 00000000 		.space	20
+ 881      00000000 
+ 881      00000000 
+ 881      00000000 
+ 881      00000000 
+ 882              		.section	.rodata.Queue_UART_TX_attributes,"a",%progbits
+ 883              		.align	2
+ 884              		.set	.LANCHOR1,. + 0
+ 887              	Queue_UART_TX_attributes:
+ 888 0000 00000000 		.word	.LC0
+ 889 0004 00000000 		.space	20
+ 889      00000000 
+ 889      00000000 
+ 889      00000000 
+ 889      00000000 
+ 890              		.section	.rodata.UART_RX_attributes,"a",%progbits
+ 891              		.align	2
+ 892              		.set	.LANCHOR5,. + 0
+ 895              	UART_RX_attributes:
+ 896 0000 20000000 		.word	.LC2
+ 897 0004 00000000 		.space	16
+ 897      00000000 
+ 897      00000000 
+ 897      00000000 
+ 898 0014 80000000 		.word	128
+ 899 0018 08000000 		.word	8
+ 900 001c 00000000 		.space	8
+ 900      00000000 
+ 901              		.section	.rodata.UART_TX_attributes,"a",%progbits
+ 902              		.align	2
+ 903              		.set	.LANCHOR3,. + 0
+ 906              	UART_TX_attributes:
+ 907 0000 2C000000 		.word	.LC4
+ 908 0004 00000000 		.space	16
+ 908      00000000 
+ 908      00000000 
+ 908      00000000 
+ 909 0014 80000000 		.word	128
+ 910 0018 08000000 		.word	8
+ 911 001c 00000000 		.space	8
+ 911      00000000 
+ 912              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 913              		.align	2
+ 914              	.LC0:
+ 915 0000 51756575 		.ascii	"Queue_UART_TX\000"
+ARM GAS  /tmp/ccMKUzo5.s 			page 29
 
 
- 913      655F5541 
- 913      52545F52 
- 913      5800
- 914 001e 0000     		.space	2
- 915              	.LC2:
- 916 0020 55415254 		.ascii	"UART_RX\000"
- 916      5F525800 
- 917              	.LC3:
- 918 0028 4C454400 		.ascii	"LED\000"
- 919              	.LC4:
- 920 002c 55415254 		.ascii	"UART_TX\000"
- 920      5F545800 
- 921              	.LC5:
- 922 0034 4144435F 		.ascii	"ADC_LightSensor\000"
- 922      4C696768 
- 922      7453656E 
- 922      736F7200 
- 923              		.text
- 924              	.Letext0:
- 925              		.file 2 "/usr/include/newlib/machine/_default_types.h"
- 926              		.file 3 "/usr/include/newlib/sys/_stdint.h"
- 927              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
- 928              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
- 929              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 930              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
- 931              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 932              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
- 933              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
- 934              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
- 935              		.file 12 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
- 936              		.file 13 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h"
- 937              		.file 14 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc.h"
- 938              		.file 15 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h"
- 939              		.file 16 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
- 940              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
- 941              		.file 18 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
- 942              		.file 19 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
- 943              		.file 20 "Middlewares/Third_Party/FatFs/src/integer.h"
- 944              		.file 21 "Middlewares/Third_Party/FatFs/src/ff.h"
- 945              		.file 22 "Middlewares/Third_Party/FatFs/src/diskio.h"
- 946              		.file 23 "Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
- 947              		.file 24 "Inc/user_diskio.h"
- 948              		.file 25 "Inc/fatfs.h"
- 949              		.file 26 "/usr/include/newlib/sys/lock.h"
- 950              		.file 27 "/usr/include/newlib/sys/_types.h"
- 951              		.file 28 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
- 952              		.file 29 "/usr/include/newlib/sys/reent.h"
- 953              		.file 30 "Middlewares/Third_Party/ulibSD/integer_ulibsd.h"
- 954              		.file 31 "Middlewares/Third_Party/ulibSD/sd_io.h"
- 955              		.file 32 "Inc/UART.h"
- 956              		.file 33 "Inc/ADC.h"
-ARM GAS  /tmp/ccqJyIbP.s 			page 30
+ 915      655F5541 
+ 915      52545F54 
+ 915      5800
+ 916 000e 0000     		.space	2
+ 917              	.LC1:
+ 918 0010 51756575 		.ascii	"Queue_UART_RX\000"
+ 918      655F5541 
+ 918      52545F52 
+ 918      5800
+ 919 001e 0000     		.space	2
+ 920              	.LC2:
+ 921 0020 55415254 		.ascii	"UART_RX\000"
+ 921      5F525800 
+ 922              	.LC3:
+ 923 0028 4C454400 		.ascii	"LED\000"
+ 924              	.LC4:
+ 925 002c 55415254 		.ascii	"UART_TX\000"
+ 925      5F545800 
+ 926              	.LC5:
+ 927 0034 4144435F 		.ascii	"ADC_LightSensor\000"
+ 927      4C696768 
+ 927      7453656E 
+ 927      736F7200 
+ 928              		.text
+ 929              	.Letext0:
+ 930              		.file 2 "/usr/include/newlib/machine/_default_types.h"
+ 931              		.file 3 "/usr/include/newlib/sys/_stdint.h"
+ 932              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
+ 933              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 934              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 935              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 936              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 937              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
+ 938              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
+ 939              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 940              		.file 12 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 941              		.file 13 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h"
+ 942              		.file 14 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc.h"
+ 943              		.file 15 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h"
+ 944              		.file 16 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
+ 945              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ 946              		.file 18 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 947              		.file 19 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
+ 948              		.file 20 "Middlewares/Third_Party/FatFs/src/integer.h"
+ 949              		.file 21 "Middlewares/Third_Party/FatFs/src/ff.h"
+ 950              		.file 22 "Middlewares/Third_Party/FatFs/src/diskio.h"
+ 951              		.file 23 "Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
+ 952              		.file 24 "Inc/user_diskio.h"
+ 953              		.file 25 "Inc/fatfs.h"
+ 954              		.file 26 "/usr/include/newlib/sys/lock.h"
+ 955              		.file 27 "/usr/include/newlib/sys/_types.h"
+ 956              		.file 28 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
+ 957              		.file 29 "/usr/include/newlib/sys/reent.h"
+ 958              		.file 30 "Middlewares/Third_Party/ulibSD/integer_ulibsd.h"
+ 959              		.file 31 "Middlewares/Third_Party/ulibSD/sd_io.h"
+ 960              		.file 32 "Inc/UART.h"
+ 961              		.file 33 "Inc/ADC.h"
+ARM GAS  /tmp/ccMKUzo5.s 			page 30
+
+
+ARM GAS  /tmp/ccMKUzo5.s 			page 31
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-     /tmp/ccqJyIbP.s:16     .text.Tsk_LED:0000000000000000 $t
-     /tmp/ccqJyIbP.s:23     .text.Tsk_LED:0000000000000000 Tsk_LED
-     /tmp/ccqJyIbP.s:38     .text.MX_GPIO_Init:0000000000000000 $t
-     /tmp/ccqJyIbP.s:44     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
-     /tmp/ccqJyIbP.s:129    .text.MX_GPIO_Init:0000000000000070 $d
-     /tmp/ccqJyIbP.s:135    .text.Tsk_ADC_LightSensor:0000000000000000 $t
-     /tmp/ccqJyIbP.s:142    .text.Tsk_ADC_LightSensor:0000000000000000 Tsk_ADC_LightSensor
-     /tmp/ccqJyIbP.s:165    .text.Tsk_UART_TX:0000000000000000 $t
-     /tmp/ccqJyIbP.s:172    .text.Tsk_UART_TX:0000000000000000 Tsk_UART_TX
-     /tmp/ccqJyIbP.s:195    .text.Tsk_UART_RX:0000000000000000 $t
-     /tmp/ccqJyIbP.s:202    .text.Tsk_UART_RX:0000000000000000 Tsk_UART_RX
-     /tmp/ccqJyIbP.s:225    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 $t
-     /tmp/ccqJyIbP.s:232    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 HAL_TIM_PeriodElapsedCallback
-     /tmp/ccqJyIbP.s:262    .text.HAL_TIM_PeriodElapsedCallback:0000000000000014 $d
-     /tmp/ccqJyIbP.s:267    .text.Error_Handler:0000000000000000 $t
-     /tmp/ccqJyIbP.s:274    .text.Error_Handler:0000000000000000 Error_Handler
-     /tmp/ccqJyIbP.s:288    .text.MX_USART1_UART_Init:0000000000000000 $t
-     /tmp/ccqJyIbP.s:294    .text.MX_USART1_UART_Init:0000000000000000 MX_USART1_UART_Init
-     /tmp/ccqJyIbP.s:339    .text.MX_USART1_UART_Init:000000000000002c $d
+     /tmp/ccMKUzo5.s:16     .text.Tsk_LED:0000000000000000 $t
+     /tmp/ccMKUzo5.s:23     .text.Tsk_LED:0000000000000000 Tsk_LED
+     /tmp/ccMKUzo5.s:38     .text.MX_GPIO_Init:0000000000000000 $t
+     /tmp/ccMKUzo5.s:44     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
+     /tmp/ccMKUzo5.s:129    .text.MX_GPIO_Init:0000000000000070 $d
+     /tmp/ccMKUzo5.s:135    .text.Tsk_ADC_LightSensor:0000000000000000 $t
+     /tmp/ccMKUzo5.s:142    .text.Tsk_ADC_LightSensor:0000000000000000 Tsk_ADC_LightSensor
+     /tmp/ccMKUzo5.s:165    .text.Tsk_UART_TX:0000000000000000 $t
+     /tmp/ccMKUzo5.s:172    .text.Tsk_UART_TX:0000000000000000 Tsk_UART_TX
+     /tmp/ccMKUzo5.s:195    .text.Tsk_UART_RX:0000000000000000 $t
+     /tmp/ccMKUzo5.s:202    .text.Tsk_UART_RX:0000000000000000 Tsk_UART_RX
+     /tmp/ccMKUzo5.s:225    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 $t
+     /tmp/ccMKUzo5.s:232    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 HAL_TIM_PeriodElapsedCallback
+     /tmp/ccMKUzo5.s:262    .text.HAL_TIM_PeriodElapsedCallback:0000000000000014 $d
+     /tmp/ccMKUzo5.s:267    .text.Error_Handler:0000000000000000 $t
+     /tmp/ccMKUzo5.s:274    .text.Error_Handler:0000000000000000 Error_Handler
+     /tmp/ccMKUzo5.s:288    .text.MX_USART1_UART_Init:0000000000000000 $t
+     /tmp/ccMKUzo5.s:294    .text.MX_USART1_UART_Init:0000000000000000 MX_USART1_UART_Init
+     /tmp/ccMKUzo5.s:339    .text.MX_USART1_UART_Init:000000000000002c $d
                             *COM*:0000000000000040 huart1
-     /tmp/ccqJyIbP.s:345    .text.MX_ADC1_Init:0000000000000000 $t
-     /tmp/ccqJyIbP.s:351    .text.MX_ADC1_Init:0000000000000000 MX_ADC1_Init
-     /tmp/ccqJyIbP.s:425    .text.MX_ADC1_Init:000000000000004c $d
+     /tmp/ccMKUzo5.s:345    .text.MX_ADC1_Init:0000000000000000 $t
+     /tmp/ccMKUzo5.s:351    .text.MX_ADC1_Init:0000000000000000 MX_ADC1_Init
+     /tmp/ccMKUzo5.s:425    .text.MX_ADC1_Init:000000000000004c $d
                             *COM*:0000000000000030 hadc1
-     /tmp/ccqJyIbP.s:431    .text.MX_RTC_Init:0000000000000000 $t
-     /tmp/ccqJyIbP.s:437    .text.MX_RTC_Init:0000000000000000 MX_RTC_Init
-     /tmp/ccqJyIbP.s:528    .text.MX_RTC_Init:0000000000000078 $d
+     /tmp/ccMKUzo5.s:431    .text.MX_RTC_Init:0000000000000000 $t
+     /tmp/ccMKUzo5.s:437    .text.MX_RTC_Init:0000000000000000 MX_RTC_Init
+     /tmp/ccMKUzo5.s:528    .text.MX_RTC_Init:0000000000000078 $d
                             *COM*:0000000000000014 hrtc
-     /tmp/ccqJyIbP.s:534    .text.MX_SPI1_Init:0000000000000000 $t
-     /tmp/ccqJyIbP.s:540    .text.MX_SPI1_Init:0000000000000000 MX_SPI1_Init
-     /tmp/ccqJyIbP.s:594    .text.MX_SPI1_Init:0000000000000038 $d
+     /tmp/ccMKUzo5.s:534    .text.MX_SPI1_Init:0000000000000000 $t
+     /tmp/ccMKUzo5.s:540    .text.MX_SPI1_Init:0000000000000000 MX_SPI1_Init
+     /tmp/ccMKUzo5.s:594    .text.MX_SPI1_Init:0000000000000038 $d
                             *COM*:0000000000000058 hspi1
-     /tmp/ccqJyIbP.s:600    .text.SystemClock_Config:0000000000000000 $t
-     /tmp/ccqJyIbP.s:607    .text.SystemClock_Config:0000000000000000 SystemClock_Config
-     /tmp/ccqJyIbP.s:710    .text.main:0000000000000000 $t
-     /tmp/ccqJyIbP.s:717    .text.main:0000000000000000 main
-     /tmp/ccqJyIbP.s:812    .text.main:0000000000000080 $d
+     /tmp/ccMKUzo5.s:600    .text.SystemClock_Config:0000000000000000 $t
+     /tmp/ccMKUzo5.s:607    .text.SystemClock_Config:0000000000000000 SystemClock_Config
+     /tmp/ccMKUzo5.s:710    .text.main:0000000000000000 $t
+     /tmp/ccMKUzo5.s:717    .text.main:0000000000000000 main
+     /tmp/ccMKUzo5.s:817    .text.main:0000000000000088 $d
                             *COM*:0000000000000004 Queue_UART_RXHandle
                             *COM*:0000000000000004 Queue_UART_TXHandle
                             *COM*:0000000000000004 ADC_LightSensorHandle
                             *COM*:0000000000000004 UART_TXHandle
                             *COM*:0000000000000004 LEDHandle
                             *COM*:0000000000000004 UART_RXHandle
-     /tmp/ccqJyIbP.s:882    .rodata.Queue_UART_TX_attributes:0000000000000000 Queue_UART_TX_attributes
-     /tmp/ccqJyIbP.s:874    .rodata.Queue_UART_RX_attributes:0000000000000000 Queue_UART_RX_attributes
-     /tmp/ccqJyIbP.s:890    .rodata.UART_RX_attributes:0000000000000000 UART_RX_attributes
-     /tmp/ccqJyIbP.s:863    .rodata.LED_attributes:0000000000000000 LED_attributes
-     /tmp/ccqJyIbP.s:901    .rodata.UART_TX_attributes:0000000000000000 UART_TX_attributes
-     /tmp/ccqJyIbP.s:852    .rodata.ADC_LightSensor_attributes:0000000000000000 ADC_LightSensor_attributes
-     /tmp/ccqJyIbP.s:848    .rodata.ADC_LightSensor_attributes:0000000000000000 $d
-     /tmp/ccqJyIbP.s:859    .rodata.LED_attributes:0000000000000000 $d
-     /tmp/ccqJyIbP.s:870    .rodata.Queue_UART_RX_attributes:0000000000000000 $d
-     /tmp/ccqJyIbP.s:878    .rodata.Queue_UART_TX_attributes:0000000000000000 $d
-     /tmp/ccqJyIbP.s:886    .rodata.UART_RX_attributes:0000000000000000 $d
-     /tmp/ccqJyIbP.s:897    .rodata.UART_TX_attributes:0000000000000000 $d
-ARM GAS  /tmp/ccqJyIbP.s 			page 31
+     /tmp/ccMKUzo5.s:887    .rodata.Queue_UART_TX_attributes:0000000000000000 Queue_UART_TX_attributes
+     /tmp/ccMKUzo5.s:879    .rodata.Queue_UART_RX_attributes:0000000000000000 Queue_UART_RX_attributes
+     /tmp/ccMKUzo5.s:895    .rodata.UART_RX_attributes:0000000000000000 UART_RX_attributes
+     /tmp/ccMKUzo5.s:868    .rodata.LED_attributes:0000000000000000 LED_attributes
+     /tmp/ccMKUzo5.s:906    .rodata.UART_TX_attributes:0000000000000000 UART_TX_attributes
+     /tmp/ccMKUzo5.s:857    .rodata.ADC_LightSensor_attributes:0000000000000000 ADC_LightSensor_attributes
+     /tmp/ccMKUzo5.s:853    .rodata.ADC_LightSensor_attributes:0000000000000000 $d
+     /tmp/ccMKUzo5.s:864    .rodata.LED_attributes:0000000000000000 $d
+     /tmp/ccMKUzo5.s:875    .rodata.Queue_UART_RX_attributes:0000000000000000 $d
+     /tmp/ccMKUzo5.s:883    .rodata.Queue_UART_TX_attributes:0000000000000000 $d
+     /tmp/ccMKUzo5.s:891    .rodata.UART_RX_attributes:0000000000000000 $d
+     /tmp/ccMKUzo5.s:902    .rodata.UART_TX_attributes:0000000000000000 $d
+ARM GAS  /tmp/ccMKUzo5.s 			page 32
 
 
-     /tmp/ccqJyIbP.s:908    .rodata.str1.4:0000000000000000 $d
+     /tmp/ccMKUzo5.s:913    .rodata.str1.4:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
@@ -1818,6 +1827,7 @@ HAL_RCC_ClockConfig
 HAL_RCCEx_PeriphCLKConfig
 HAL_Init
 MX_FATFS_Init
+SD_Init
 osKernelInitialize
 osMessageQueueNew
 osThreadNew

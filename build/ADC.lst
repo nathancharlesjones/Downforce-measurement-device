@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccC9qmig.s 			page 1
+ARM GAS  /tmp/cca1lmtL.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccC9qmig.s 			page 1
   21:Src/ADC.c     ****     
   22:Src/ADC.c     ****     for (idx = 0; ADC_msg[idx]; idx++)
   36              		.loc 1 22 0
-ARM GAS  /tmp/ccC9qmig.s 			page 2
+ARM GAS  /tmp/cca1lmtL.s 			page 2
 
 
   37 0002 0024     		movs	r4, #0
@@ -118,39 +118,40 @@ ARM GAS  /tmp/ccC9qmig.s 			page 1
   33:Src/ADC.c     ****     /* Infinite loop */
   34:Src/ADC.c     ****     for(;;)
   35:Src/ADC.c     ****     {
-ARM GAS  /tmp/ccC9qmig.s 			page 3
+ARM GAS  /tmp/cca1lmtL.s 			page 3
 
 
   36:Src/ADC.c     ****         uint32_t Thread_ADC_LightSensor_stack_size = osThreadGetStackSpace(ADC_LightSensorHandle);
   37:Src/ADC.c     ****         if ( Thread_ADC_LightSensor_stack_size > Thread_ADC_LightSensor_max_stack_size ) Thread_ADC
-  38:Src/ADC.c     ****         HAL_ADC_Start(&hadc1);
-  39:Src/ADC.c     ****         while( HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY) != HAL_OK )
-  40:Src/ADC.c     ****         {
-  41:Src/ADC.c     ****             osThreadYield();
-  79              		.loc 1 41 0
+  38:Src/ADC.c     ****         
+  39:Src/ADC.c     ****         HAL_ADC_Start(&hadc1);
+  40:Src/ADC.c     ****         while( HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY) != HAL_OK )
+  41:Src/ADC.c     ****         {
+  42:Src/ADC.c     ****             osThreadYield();
+  79              		.loc 1 42 0
   80 003a FFF7FEFF 		bl	osThreadYield
   81              	.LVL9:
   82              	.L6:
-  39:Src/ADC.c     ****         {
-  83              		.loc 1 39 0
+  40:Src/ADC.c     ****         {
+  83              		.loc 1 40 0
   84 003e 4FF0FF31 		mov	r1, #-1
   85 0042 2948     		ldr	r0, .L16+4
   86 0044 FFF7FEFF 		bl	HAL_ADC_PollForConversion
   87              	.LVL10:
   88 0048 0028     		cmp	r0, #0
   89 004a F6D1     		bne	.L7
-  42:Src/ADC.c     ****         }
-  43:Src/ADC.c     ****     
-  44:Src/ADC.c     ****         lightVal = HAL_ADC_GetValue(&hadc1);
-  90              		.loc 1 44 0
+  43:Src/ADC.c     ****         }
+  44:Src/ADC.c     ****     
+  45:Src/ADC.c     ****         lightVal = HAL_ADC_GetValue(&hadc1);
+  90              		.loc 1 45 0
   91 004c 2648     		ldr	r0, .L16+4
   92 004e FFF7FEFF 		bl	HAL_ADC_GetValue
   93              	.LVL11:
   94 0052 274C     		ldr	r4, .L16+12
   95              	.LVL12:
   96 0054 2080     		strh	r0, [r4]	@ movhi
-  45:Src/ADC.c     ****         sprintf(&ADC_msg[0], "%d: %d\n", HAL_GetTick(), lightVal);
-  97              		.loc 1 45 0
+  46:Src/ADC.c     ****         sprintf(&ADC_msg[0], "%d: %d\n", HAL_GetTick(), lightVal);
+  97              		.loc 1 46 0
   98 0056 FFF7FEFF 		bl	HAL_GetTick
   99              	.LVL13:
  100 005a 2388     		ldrh	r3, [r4]
@@ -159,29 +160,29 @@ ARM GAS  /tmp/ccC9qmig.s 			page 1
  103 0060 2048     		ldr	r0, .L16
  104 0062 FFF7FEFF 		bl	sprintf
  105              	.LVL14:
-  46:Src/ADC.c     ****     
-  47:Src/ADC.c     ****         for (idx = 0; ADC_msg[idx]; idx++)
- 106              		.loc 1 47 0
+  47:Src/ADC.c     ****     
+  48:Src/ADC.c     ****         for (idx = 0; ADC_msg[idx]; idx++)
+ 106              		.loc 1 48 0
  107 0066 0024     		movs	r4, #0
  108 0068 01E0     		b	.L8
  109              	.LVL15:
  110              	.L9:
- 111              		.loc 1 47 0 is_stmt 0 discriminator 2
+ 111              		.loc 1 48 0 is_stmt 0 discriminator 2
  112 006a 0134     		adds	r4, r4, #1
  113              	.LVL16:
  114 006c E4B2     		uxtb	r4, r4
  115              	.LVL17:
  116              	.L8:
- 117              		.loc 1 47 0 discriminator 1
+ 117              		.loc 1 48 0 discriminator 1
  118 006e 1D4B     		ldr	r3, .L16
  119 0070 1B5D     		ldrb	r3, [r3, r4]	@ zero_extendqisi2
  120 0072 73B1     		cbz	r3, .L15
-  48:Src/ADC.c     ****         {
-  49:Src/ADC.c     ****             if ( osMessageQueuePut(Queue_UART_TXHandle, &ADC_msg[idx], 0, 0) != osOK ) UART_TX_queu
-ARM GAS  /tmp/ccC9qmig.s 			page 4
+  49:Src/ADC.c     ****         {
+ARM GAS  /tmp/cca1lmtL.s 			page 4
 
 
- 121              		.loc 1 49 0 is_stmt 1
+  50:Src/ADC.c     ****             if ( osMessageQueuePut(Queue_UART_TXHandle, &ADC_msg[idx], 0, 0) != osOK ) UART_TX_queu
+ 121              		.loc 1 50 0 is_stmt 1
  122 0074 0023     		movs	r3, #0
  123 0076 1A46     		mov	r2, r3
  124 0078 1A49     		ldr	r1, .L16
@@ -192,44 +193,44 @@ ARM GAS  /tmp/ccC9qmig.s 			page 1
  129              	.LVL18:
  130 0084 0028     		cmp	r0, #0
  131 0086 F0D0     		beq	.L9
- 132              		.loc 1 49 0 is_stmt 0 discriminator 1
+ 132              		.loc 1 50 0 is_stmt 0 discriminator 1
  133 0088 1B4A     		ldr	r2, .L16+20
  134 008a 1388     		ldrh	r3, [r2]
  135 008c 0133     		adds	r3, r3, #1
  136 008e 1380     		strh	r3, [r2]	@ movhi
  137 0090 EBE7     		b	.L9
  138              	.L15:
-  50:Src/ADC.c     ****         }
-  51:Src/ADC.c     ****         memset(&ADC_msg[0], 0, MAX_LOG_MSG_SIZE);
- 139              		.loc 1 51 0 is_stmt 1
+  51:Src/ADC.c     ****         }
+  52:Src/ADC.c     ****         memset(&ADC_msg[0], 0, MAX_LOG_MSG_SIZE);
+ 139              		.loc 1 52 0 is_stmt 1
  140 0092 4022     		movs	r2, #64
  141 0094 0021     		movs	r1, #0
  142 0096 1348     		ldr	r0, .L16
  143 0098 FFF7FEFF 		bl	memset
  144              	.LVL19:
-  52:Src/ADC.c     ****     
-  53:Src/ADC.c     ****         if (lightVal > 2000u)
- 145              		.loc 1 53 0
+  53:Src/ADC.c     ****     
+  54:Src/ADC.c     ****         if (lightVal > 2000u)
+ 145              		.loc 1 54 0
  146 009c 144B     		ldr	r3, .L16+12
  147 009e 1B88     		ldrh	r3, [r3]
  148 00a0 B3F5FA6F 		cmp	r3, #2000
  149 00a4 17D9     		bls	.L11
-  54:Src/ADC.c     ****         {
-  55:Src/ADC.c     ****             HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
- 150              		.loc 1 55 0
+  55:Src/ADC.c     ****         {
+  56:Src/ADC.c     ****             HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+ 150              		.loc 1 56 0
  151 00a6 0022     		movs	r2, #0
  152 00a8 4FF40051 		mov	r1, #8192
  153 00ac 1348     		ldr	r0, .L16+24
  154 00ae FFF7FEFF 		bl	HAL_GPIO_WritePin
  155              	.LVL20:
  156              	.L12:
-  56:Src/ADC.c     ****         }
-  57:Src/ADC.c     ****         else
-  58:Src/ADC.c     ****         {
-  59:Src/ADC.c     ****             HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
-  60:Src/ADC.c     ****         }
-  61:Src/ADC.c     ****         osDelay(ADC_delay);
- 157              		.loc 1 61 0
+  57:Src/ADC.c     ****         }
+  58:Src/ADC.c     ****         else
+  59:Src/ADC.c     ****         {
+  60:Src/ADC.c     ****             HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
+  61:Src/ADC.c     ****         }
+  62:Src/ADC.c     ****         osDelay(ADC_delay);
+ 157              		.loc 1 62 0
  158 00b2 4FF47A70 		mov	r0, #1000
  159 00b6 FFF7FEFF 		bl	osDelay
  160              	.LVL21:
@@ -237,35 +238,35 @@ ARM GAS  /tmp/ccC9qmig.s 			page 1
   36:Src/ADC.c     ****         if ( Thread_ADC_LightSensor_stack_size > Thread_ADC_LightSensor_max_stack_size ) Thread_ADC
  162              		.loc 1 36 0
  163 00ba 114B     		ldr	r3, .L16+28
+ARM GAS  /tmp/cca1lmtL.s 			page 5
+
+
  164 00bc 1868     		ldr	r0, [r3]
-ARM GAS  /tmp/ccC9qmig.s 			page 5
-
-
  165 00be FFF7FEFF 		bl	osThreadGetStackSpace
  166              	.LVL22:
-  37:Src/ADC.c     ****         HAL_ADC_Start(&hadc1);
+  37:Src/ADC.c     ****         
  167              		.loc 1 37 0
  168 00c2 104B     		ldr	r3, .L16+32
  169 00c4 1B68     		ldr	r3, [r3]
  170 00c6 9842     		cmp	r0, r3
  171 00c8 01D9     		bls	.L5
-  37:Src/ADC.c     ****         HAL_ADC_Start(&hadc1);
+  37:Src/ADC.c     ****         
  172              		.loc 1 37 0 is_stmt 0 discriminator 1
  173 00ca 0E4B     		ldr	r3, .L16+32
  174 00cc 1860     		str	r0, [r3]
  175              	.L5:
-  38:Src/ADC.c     ****         while( HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY) != HAL_OK )
- 176              		.loc 1 38 0 is_stmt 1
+  39:Src/ADC.c     ****         while( HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY) != HAL_OK )
+ 176              		.loc 1 39 0 is_stmt 1
  177 00ce 0648     		ldr	r0, .L16+4
  178              	.LVL23:
  179 00d0 FFF7FEFF 		bl	HAL_ADC_Start
  180              	.LVL24:
-  39:Src/ADC.c     ****         {
- 181              		.loc 1 39 0
+  40:Src/ADC.c     ****         {
+ 181              		.loc 1 40 0
  182 00d4 B3E7     		b	.L6
  183              	.L11:
-  59:Src/ADC.c     ****         }
- 184              		.loc 1 59 0
+  60:Src/ADC.c     ****         }
+ 184              		.loc 1 60 0
  185 00d6 0122     		movs	r2, #1
  186 00d8 4FF40051 		mov	r1, #8192
  187 00dc 0748     		ldr	r0, .L16+24
@@ -297,10 +298,10 @@ ARM GAS  /tmp/ccC9qmig.s 			page 1
  216              		.set	.LANCHOR3,. + 0
  219              	UART_TX_queue_full_count:
  220 0000 0000     		.space	2
+ARM GAS  /tmp/cca1lmtL.s 			page 6
+
+
  221              		.section	.bss.lightVal.8082,"aw",%nobits
-ARM GAS  /tmp/ccC9qmig.s 			page 6
-
-
  222              		.align	1
  223              		.set	.LANCHOR2,. + 0
  226              	lightVal.8082:
@@ -344,23 +345,23 @@ ARM GAS  /tmp/ccC9qmig.s 			page 1
  257              		.file 17 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
  258              		.file 18 "/usr/include/newlib/stdio.h"
  259              		.file 19 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h"
-ARM GAS  /tmp/ccC9qmig.s 			page 7
+ARM GAS  /tmp/cca1lmtL.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ADC.c
-     /tmp/ccC9qmig.s:16     .text.Thread_ADC_LightSensor:0000000000000000 $t
-     /tmp/ccC9qmig.s:23     .text.Thread_ADC_LightSensor:0000000000000000 Thread_ADC_LightSensor
-     /tmp/ccC9qmig.s:194    .text.Thread_ADC_LightSensor:00000000000000e4 $d
-     /tmp/ccC9qmig.s:208    .bss.Thread_ADC_LightSensor_max_stack_size:0000000000000000 $d
-     /tmp/ccC9qmig.s:212    .bss.Thread_ADC_LightSensor_max_stack_size:0000000000000000 Thread_ADC_LightSensor_max_stack_size
-     /tmp/ccC9qmig.s:215    .bss.UART_TX_queue_full_count:0000000000000000 $d
-     /tmp/ccC9qmig.s:219    .bss.UART_TX_queue_full_count:0000000000000000 UART_TX_queue_full_count
-     /tmp/ccC9qmig.s:222    .bss.lightVal.8082:0000000000000000 $d
-     /tmp/ccC9qmig.s:226    .bss.lightVal.8082:0000000000000000 lightVal.8082
-     /tmp/ccC9qmig.s:229    .data.ADC_msg.8084:0000000000000000 $d
-     /tmp/ccC9qmig.s:233    .data.ADC_msg.8084:0000000000000000 ADC_msg.8084
-     /tmp/ccC9qmig.s:237    .rodata.Thread_ADC_LightSensor.str1.4:0000000000000000 $d
+     /tmp/cca1lmtL.s:16     .text.Thread_ADC_LightSensor:0000000000000000 $t
+     /tmp/cca1lmtL.s:23     .text.Thread_ADC_LightSensor:0000000000000000 Thread_ADC_LightSensor
+     /tmp/cca1lmtL.s:194    .text.Thread_ADC_LightSensor:00000000000000e4 $d
+     /tmp/cca1lmtL.s:208    .bss.Thread_ADC_LightSensor_max_stack_size:0000000000000000 $d
+     /tmp/cca1lmtL.s:212    .bss.Thread_ADC_LightSensor_max_stack_size:0000000000000000 Thread_ADC_LightSensor_max_stack_size
+     /tmp/cca1lmtL.s:215    .bss.UART_TX_queue_full_count:0000000000000000 $d
+     /tmp/cca1lmtL.s:219    .bss.UART_TX_queue_full_count:0000000000000000 UART_TX_queue_full_count
+     /tmp/cca1lmtL.s:222    .bss.lightVal.8082:0000000000000000 $d
+     /tmp/cca1lmtL.s:226    .bss.lightVal.8082:0000000000000000 lightVal.8082
+     /tmp/cca1lmtL.s:229    .data.ADC_msg.8084:0000000000000000 $d
+     /tmp/cca1lmtL.s:233    .data.ADC_msg.8084:0000000000000000 ADC_msg.8084
+     /tmp/cca1lmtL.s:237    .rodata.Thread_ADC_LightSensor.str1.4:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

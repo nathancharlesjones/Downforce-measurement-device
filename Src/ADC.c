@@ -35,6 +35,7 @@ Thread_ADC_LightSensor( void )
     {
         uint32_t Thread_ADC_LightSensor_stack_size = osThreadGetStackSpace(ADC_LightSensorHandle);
         if ( Thread_ADC_LightSensor_stack_size > Thread_ADC_LightSensor_max_stack_size ) Thread_ADC_LightSensor_max_stack_size = Thread_ADC_LightSensor_stack_size;
+        
         HAL_ADC_Start(&hadc1);
         while( HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY) != HAL_OK )
         {

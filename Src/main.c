@@ -137,7 +137,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  //SDRESULTS res = SD_Init(dev);
+  
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -155,7 +155,7 @@ int main(void)
   MX_SPI1_Init();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
-
+  SDRESULTS res = SD_Init(dev);
   /* USER CODE END 2 */
   /* Init scheduler */
   osKernelInitialize();
