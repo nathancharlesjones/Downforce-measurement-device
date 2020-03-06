@@ -37,8 +37,8 @@ void SPI_Init (void) {
 }
 
 BYTE SPI_RW (BYTE d) {
-    uint8_t rx_data = 0, tx_data = d;
-    HAL_SPI_TransmitReceive(&hspi1, (uint8_t *)(&tx_data), &rx_data, 1, 0);
+    uint8_t rx_data = 0, tx_data = (uint8_t)d;
+    HAL_SPI_TransmitReceive(&hspi1, &tx_data, &rx_data, 1, 0);
     return (rx_data);
 }
 

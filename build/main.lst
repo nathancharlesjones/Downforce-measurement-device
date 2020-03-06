@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc4ILIM4.s 			page 1
+ARM GAS  /tmp/ccRwZQlv.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
   32:Src/main.c    **** #include "UART.h"
   33:Src/main.c    **** /* USER CODE END Includes */
   34:Src/main.c    **** 
-ARM GAS  /tmp/cc4ILIM4.s 			page 2
+ARM GAS  /tmp/ccRwZQlv.s 			page 2
 
 
   35:Src/main.c    **** /* Private typedef -----------------------------------------------------------*/
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
   89:Src/main.c    **** const osMessageQueueAttr_t Queue_UART_RX_attributes = {
   90:Src/main.c    ****   .name = "Queue_UART_RX"
   91:Src/main.c    **** };
-ARM GAS  /tmp/cc4ILIM4.s 			page 3
+ARM GAS  /tmp/ccRwZQlv.s 			page 3
 
 
   92:Src/main.c    **** /* Definitions for Queue_UART_TX */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  146:Src/main.c    **** 
  147:Src/main.c    ****   /* USER CODE BEGIN SysInit */
  148:Src/main.c    ****   
-ARM GAS  /tmp/cc4ILIM4.s 			page 4
+ARM GAS  /tmp/ccRwZQlv.s 			page 4
 
 
  149:Src/main.c    ****   /* USER CODE END SysInit */
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  203:Src/main.c    ****   ADC_LightSensorHandle = osThreadNew(Tsk_ADC_LightSensor, NULL, &ADC_LightSensor_attributes);
  204:Src/main.c    **** 
  205:Src/main.c    ****   /* creation of UART_TX */
-ARM GAS  /tmp/cc4ILIM4.s 			page 5
+ARM GAS  /tmp/ccRwZQlv.s 			page 5
 
 
  206:Src/main.c    ****   UART_TXHandle = osThreadNew(Tsk_UART_TX, NULL, &UART_TX_attributes);
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  260:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
  261:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
  262:Src/main.c    ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
-ARM GAS  /tmp/cc4ILIM4.s 			page 6
+ARM GAS  /tmp/ccRwZQlv.s 			page 6
 
 
  263:Src/main.c    **** 
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  317:Src/main.c    **** 
  318:Src/main.c    ****   /* USER CODE END ADC1_Init 2 */
  319:Src/main.c    **** 
-ARM GAS  /tmp/cc4ILIM4.s 			page 7
+ARM GAS  /tmp/ccRwZQlv.s 			page 7
 
 
  320:Src/main.c    **** }
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  374:Src/main.c    **** 
  375:Src/main.c    ****   /* USER CODE END RTC_Init 2 */
  376:Src/main.c    **** 
-ARM GAS  /tmp/cc4ILIM4.s 			page 8
+ARM GAS  /tmp/ccRwZQlv.s 			page 8
 
 
  377:Src/main.c    **** }
@@ -443,7 +443,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  396:Src/main.c    ****   hspi1.Init.Mode = SPI_MODE_MASTER;
  397:Src/main.c    ****   hspi1.Init.Direction = SPI_DIRECTION_2LINES;
  398:Src/main.c    ****   hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
- 399:Src/main.c    ****   hspi1.Init.CLKPolarity = SPI_POLARITY_HIGH;
+ 399:Src/main.c    ****   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
  400:Src/main.c    ****   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
  401:Src/main.c    ****   hspi1.Init.NSS = SPI_NSS_SOFT;
  402:Src/main.c    ****   hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  431:Src/main.c    ****   /* USER CODE END USART1_Init 1 */
  432:Src/main.c    ****   huart1.Instance = USART1;
  433:Src/main.c    ****   huart1.Init.BaudRate = 115200;
-ARM GAS  /tmp/cc4ILIM4.s 			page 9
+ARM GAS  /tmp/ccRwZQlv.s 			page 9
 
 
  434:Src/main.c    ****   huart1.Init.WordLength = UART_WORDLENGTH_8B;
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
   52 0018 9A69     		ldr	r2, [r3, #24]
   53 001a 02F01002 		and	r2, r2, #16
   54 001e 0192     		str	r2, [sp, #4]
-ARM GAS  /tmp/cc4ILIM4.s 			page 10
+ARM GAS  /tmp/ccRwZQlv.s 			page 10
 
 
   55 0020 019A     		ldr	r2, [sp, #4]
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  473:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
   97              		.loc 1 473 0
   98 006a 0694     		str	r4, [sp, #24]
-ARM GAS  /tmp/cc4ILIM4.s 			page 11
+ARM GAS  /tmp/ccRwZQlv.s 			page 11
 
 
  474:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  143              		.fpu softvfp
  145              	Tsk_ADC_LightSensor:
  146              	.LFB77:
-ARM GAS  /tmp/cc4ILIM4.s 			page 12
+ARM GAS  /tmp/ccRwZQlv.s 			page 12
 
 
  485:Src/main.c    **** 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  511:Src/main.c    **** * @brief Function implementing the UART_TX thread.
  512:Src/main.c    **** * @param argument: Not used
  513:Src/main.c    **** * @retval None
-ARM GAS  /tmp/cc4ILIM4.s 			page 13
+ARM GAS  /tmp/ccRwZQlv.s 			page 13
 
 
  514:Src/main.c    **** */
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  210              		@ args = 0, pretend = 0, frame = 0
  211              		@ frame_needed = 0, uses_anonymous_args = 0
  212              		@ link register save eliminated.
-ARM GAS  /tmp/cc4ILIM4.s 			page 14
+ARM GAS  /tmp/ccRwZQlv.s 			page 14
 
 
  213              	.LVL10:
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  563:Src/main.c    **** 
  564:Src/main.c    ****   /* Infinite loop */
  565:Src/main.c    ****   for(;;)
-ARM GAS  /tmp/cc4ILIM4.s 			page 15
+ARM GAS  /tmp/ccRwZQlv.s 			page 15
 
 
  566:Src/main.c    ****   {
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  279              	.L19:
  586:Src/main.c    ****     HAL_IncTick();
  280              		.loc 1 586 0
-ARM GAS  /tmp/cc4ILIM4.s 			page 16
+ARM GAS  /tmp/ccRwZQlv.s 			page 16
 
 
  281 000c FFF7FEFF 		bl	HAL_IncTick
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  423:Src/main.c    **** 
  326              		.loc 1 423 0
  327 0000 08B5     		push	{r3, lr}
-ARM GAS  /tmp/cc4ILIM4.s 			page 17
+ARM GAS  /tmp/ccRwZQlv.s 			page 17
 
 
  328              	.LCFI7:
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  373              		.thumb
  374              		.thumb_func
  375              		.fpu softvfp
-ARM GAS  /tmp/cc4ILIM4.s 			page 18
+ARM GAS  /tmp/ccRwZQlv.s 			page 18
 
 
  377              	MX_ADC1_Init:
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  310:Src/main.c    ****   sConfig.SamplingTime = ADC_SAMPLETIME_1CYCLE_5;
  420              		.loc 1 310 0
  421 002e 0293     		str	r3, [sp, #8]
-ARM GAS  /tmp/cc4ILIM4.s 			page 19
+ARM GAS  /tmp/ccRwZQlv.s 			page 19
 
 
  311:Src/main.c    ****   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  472              		.cfi_offset 14, -4
  473 0002 83B0     		sub	sp, sp, #12
  474              	.LCFI13:
-ARM GAS  /tmp/cc4ILIM4.s 			page 20
+ARM GAS  /tmp/ccRwZQlv.s 			page 20
 
 
  475              		.cfi_def_cfa_offset 16
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  366:Src/main.c    ****   DateToUpdate.Year = 0x20;
  517              		.loc 1 366 0
  518 004e 2923     		movs	r3, #41
-ARM GAS  /tmp/cc4ILIM4.s 			page 21
+ARM GAS  /tmp/ccRwZQlv.s 			page 21
 
 
  519 0050 8DF80230 		strb	r3, [sp, #2]
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  568              		.loc 1 385 0
  569              		.cfi_startproc
  570              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/cc4ILIM4.s 			page 22
+ARM GAS  /tmp/ccRwZQlv.s 			page 22
 
 
  571              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1280,569 +1280,568 @@ ARM GAS  /tmp/cc4ILIM4.s 			page 1
  584              		.loc 1 397 0
  585 000e 0023     		movs	r3, #0
  586 0010 8360     		str	r3, [r0, #8]
- 398:Src/main.c    ****   hspi1.Init.CLKPolarity = SPI_POLARITY_HIGH;
+ 398:Src/main.c    ****   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
  587              		.loc 1 398 0
  588 0012 C360     		str	r3, [r0, #12]
  399:Src/main.c    ****   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
  589              		.loc 1 399 0
- 590 0014 0222     		movs	r2, #2
- 591 0016 0261     		str	r2, [r0, #16]
+ 590 0014 0361     		str	r3, [r0, #16]
  400:Src/main.c    ****   hspi1.Init.NSS = SPI_NSS_SOFT;
- 592              		.loc 1 400 0
- 593 0018 4361     		str	r3, [r0, #20]
+ 591              		.loc 1 400 0
+ 592 0016 4361     		str	r3, [r0, #20]
  401:Src/main.c    ****   hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
- 594              		.loc 1 401 0
- 595 001a 4FF40072 		mov	r2, #512
- 596 001e 8261     		str	r2, [r0, #24]
+ 593              		.loc 1 401 0
+ 594 0018 4FF40072 		mov	r2, #512
+ 595 001c 8261     		str	r2, [r0, #24]
  402:Src/main.c    ****   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
- 597              		.loc 1 402 0
- 598 0020 C361     		str	r3, [r0, #28]
+ 596              		.loc 1 402 0
+ 597 001e C361     		str	r3, [r0, #28]
  403:Src/main.c    ****   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
- 599              		.loc 1 403 0
- 600 0022 0362     		str	r3, [r0, #32]
+ 598              		.loc 1 403 0
+ 599 0020 0362     		str	r3, [r0, #32]
  404:Src/main.c    ****   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
- 601              		.loc 1 404 0
- 602 0024 4362     		str	r3, [r0, #36]
+ 600              		.loc 1 404 0
+ 601 0022 4362     		str	r3, [r0, #36]
  405:Src/main.c    ****   hspi1.Init.CRCPolynomial = 10;
- 603              		.loc 1 405 0
- 604 0026 8362     		str	r3, [r0, #40]
+ 602              		.loc 1 405 0
+ 603 0024 8362     		str	r3, [r0, #40]
  406:Src/main.c    ****   if (HAL_SPI_Init(&hspi1) != HAL_OK)
- 605              		.loc 1 406 0
- 606 0028 0A23     		movs	r3, #10
- 607 002a C362     		str	r3, [r0, #44]
+ 604              		.loc 1 406 0
+ 605 0026 0A23     		movs	r3, #10
+ 606 0028 C362     		str	r3, [r0, #44]
  407:Src/main.c    ****   {
- 608              		.loc 1 407 0
- 609 002c FFF7FEFF 		bl	HAL_SPI_Init
- 610              	.LVL30:
- 611 0030 00B9     		cbnz	r0, .L51
- 612 0032 08BD     		pop	{r3, pc}
- 613              	.L51:
+ 607              		.loc 1 407 0
+ 608 002a FFF7FEFF 		bl	HAL_SPI_Init
+ 609              	.LVL30:
+ 610 002e 00B9     		cbnz	r0, .L51
+ 611 0030 08BD     		pop	{r3, pc}
+ 612              	.L51:
  409:Src/main.c    ****   }
-ARM GAS  /tmp/cc4ILIM4.s 			page 23
+ 613              		.loc 1 409 0
+ARM GAS  /tmp/ccRwZQlv.s 			page 23
 
 
- 614              		.loc 1 409 0
- 615 0034 FFF7FEFF 		bl	Error_Handler
- 616              	.LVL31:
- 617              	.L53:
- 618              		.align	2
- 619              	.L52:
- 620 0038 00000000 		.word	hspi1
- 621 003c 00300140 		.word	1073819648
- 622              		.cfi_endproc
- 623              	.LFE74:
- 625              		.section	.text.SystemClock_Config,"ax",%progbits
- 626              		.align	1
- 627              		.global	SystemClock_Config
- 628              		.syntax unified
- 629              		.thumb
- 630              		.thumb_func
- 631              		.fpu softvfp
- 633              	SystemClock_Config:
- 634              	.LFB71:
+ 614 0032 FFF7FEFF 		bl	Error_Handler
+ 615              	.LVL31:
+ 616              	.L53:
+ 617 0036 00BF     		.align	2
+ 618              	.L52:
+ 619 0038 00000000 		.word	hspi1
+ 620 003c 00300140 		.word	1073819648
+ 621              		.cfi_endproc
+ 622              	.LFE74:
+ 624              		.section	.text.SystemClock_Config,"ax",%progbits
+ 625              		.align	1
+ 626              		.global	SystemClock_Config
+ 627              		.syntax unified
+ 628              		.thumb
+ 629              		.thumb_func
+ 630              		.fpu softvfp
+ 632              	SystemClock_Config:
+ 633              	.LFB71:
  239:Src/main.c    ****   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
- 635              		.loc 1 239 0
- 636              		.cfi_startproc
- 637              		@ args = 0, pretend = 0, frame = 80
- 638              		@ frame_needed = 0, uses_anonymous_args = 0
- 639 0000 00B5     		push	{lr}
- 640              	.LCFI17:
- 641              		.cfi_def_cfa_offset 4
- 642              		.cfi_offset 14, -4
- 643 0002 95B0     		sub	sp, sp, #84
- 644              	.LCFI18:
- 645              		.cfi_def_cfa_offset 88
+ 634              		.loc 1 239 0
+ 635              		.cfi_startproc
+ 636              		@ args = 0, pretend = 0, frame = 80
+ 637              		@ frame_needed = 0, uses_anonymous_args = 0
+ 638 0000 00B5     		push	{lr}
+ 639              	.LCFI17:
+ 640              		.cfi_def_cfa_offset 4
+ 641              		.cfi_offset 14, -4
+ 642 0002 95B0     		sub	sp, sp, #84
+ 643              	.LCFI18:
+ 644              		.cfi_def_cfa_offset 88
  240:Src/main.c    ****   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
- 646              		.loc 1 240 0
- 647 0004 2822     		movs	r2, #40
- 648 0006 0021     		movs	r1, #0
- 649 0008 0DEB0200 		add	r0, sp, r2
- 650 000c FFF7FEFF 		bl	memset
- 651              	.LVL32:
+ 645              		.loc 1 240 0
+ 646 0004 2822     		movs	r2, #40
+ 647 0006 0021     		movs	r1, #0
+ 648 0008 0DEB0200 		add	r0, sp, r2
+ 649 000c FFF7FEFF 		bl	memset
+ 650              	.LVL32:
  241:Src/main.c    ****   RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
- 652              		.loc 1 241 0
- 653 0010 0023     		movs	r3, #0
- 654 0012 0593     		str	r3, [sp, #20]
- 655 0014 0693     		str	r3, [sp, #24]
- 656 0016 0793     		str	r3, [sp, #28]
- 657 0018 0893     		str	r3, [sp, #32]
- 658 001a 0993     		str	r3, [sp, #36]
+ 651              		.loc 1 241 0
+ 652 0010 0023     		movs	r3, #0
+ 653 0012 0593     		str	r3, [sp, #20]
+ 654 0014 0693     		str	r3, [sp, #24]
+ 655 0016 0793     		str	r3, [sp, #28]
+ 656 0018 0893     		str	r3, [sp, #32]
+ 657 001a 0993     		str	r3, [sp, #36]
  242:Src/main.c    **** 
- 659              		.loc 1 242 0
- 660 001c 0193     		str	r3, [sp, #4]
- 661 001e 0293     		str	r3, [sp, #8]
- 662 0020 0393     		str	r3, [sp, #12]
- 663 0022 0493     		str	r3, [sp, #16]
+ 658              		.loc 1 242 0
+ 659 001c 0193     		str	r3, [sp, #4]
+ 660 001e 0293     		str	r3, [sp, #8]
+ 661 0020 0393     		str	r3, [sp, #12]
+ 662 0022 0493     		str	r3, [sp, #16]
  246:Src/main.c    ****   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
- 664              		.loc 1 246 0
- 665 0024 0A23     		movs	r3, #10
- 666 0026 0A93     		str	r3, [sp, #40]
+ 663              		.loc 1 246 0
+ 664 0024 0A23     		movs	r3, #10
+ 665 0026 0A93     		str	r3, [sp, #40]
  247:Src/main.c    ****   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-ARM GAS  /tmp/cc4ILIM4.s 			page 24
+ 666              		.loc 1 247 0
+ARM GAS  /tmp/ccRwZQlv.s 			page 24
 
 
- 667              		.loc 1 247 0
- 668 0028 0123     		movs	r3, #1
- 669 002a 0E93     		str	r3, [sp, #56]
+ 667 0028 0123     		movs	r3, #1
+ 668 002a 0E93     		str	r3, [sp, #56]
  248:Src/main.c    ****   RCC_OscInitStruct.LSIState = RCC_LSI_ON;
- 670              		.loc 1 248 0
- 671 002c 1022     		movs	r2, #16
- 672 002e 0F92     		str	r2, [sp, #60]
+ 669              		.loc 1 248 0
+ 670 002c 1022     		movs	r2, #16
+ 671 002e 0F92     		str	r2, [sp, #60]
  249:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
- 673              		.loc 1 249 0
- 674 0030 1093     		str	r3, [sp, #64]
+ 672              		.loc 1 249 0
+ 673 0030 1093     		str	r3, [sp, #64]
  251:Src/main.c    ****   {
- 675              		.loc 1 251 0
- 676 0032 0AA8     		add	r0, sp, #40
- 677 0034 FFF7FEFF 		bl	HAL_RCC_OscConfig
- 678              	.LVL33:
- 679 0038 C0B9     		cbnz	r0, .L59
+ 674              		.loc 1 251 0
+ 675 0032 0AA8     		add	r0, sp, #40
+ 676 0034 FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 677              	.LVL33:
+ 678 0038 C0B9     		cbnz	r0, .L59
  257:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
- 680              		.loc 1 257 0
- 681 003a 0F23     		movs	r3, #15
- 682 003c 0593     		str	r3, [sp, #20]
+ 679              		.loc 1 257 0
+ 680 003a 0F23     		movs	r3, #15
+ 681 003c 0593     		str	r3, [sp, #20]
  259:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
- 683              		.loc 1 259 0
- 684 003e 0021     		movs	r1, #0
- 685 0040 0691     		str	r1, [sp, #24]
+ 682              		.loc 1 259 0
+ 683 003e 0021     		movs	r1, #0
+ 684 0040 0691     		str	r1, [sp, #24]
  260:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
- 686              		.loc 1 260 0
- 687 0042 0791     		str	r1, [sp, #28]
+ 685              		.loc 1 260 0
+ 686 0042 0791     		str	r1, [sp, #28]
  261:Src/main.c    ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
- 688              		.loc 1 261 0
- 689 0044 0891     		str	r1, [sp, #32]
+ 687              		.loc 1 261 0
+ 688 0044 0891     		str	r1, [sp, #32]
  262:Src/main.c    **** 
- 690              		.loc 1 262 0
- 691 0046 0991     		str	r1, [sp, #36]
+ 689              		.loc 1 262 0
+ 690 0046 0991     		str	r1, [sp, #36]
  264:Src/main.c    ****   {
- 692              		.loc 1 264 0
- 693 0048 05A8     		add	r0, sp, #20
- 694 004a FFF7FEFF 		bl	HAL_RCC_ClockConfig
- 695              	.LVL34:
- 696 004e 78B9     		cbnz	r0, .L60
+ 691              		.loc 1 264 0
+ 692 0048 05A8     		add	r0, sp, #20
+ 693 004a FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 694              	.LVL34:
+ 695 004e 78B9     		cbnz	r0, .L60
  268:Src/main.c    ****   PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
- 697              		.loc 1 268 0
- 698 0050 0323     		movs	r3, #3
- 699 0052 0193     		str	r3, [sp, #4]
+ 696              		.loc 1 268 0
+ 697 0050 0323     		movs	r3, #3
+ 698 0052 0193     		str	r3, [sp, #4]
  269:Src/main.c    ****   PeriphClkInit.AdcClockSelection = RCC_ADCPCLK2_DIV2;
- 700              		.loc 1 269 0
- 701 0054 4FF40073 		mov	r3, #512
- 702 0058 0293     		str	r3, [sp, #8]
+ 699              		.loc 1 269 0
+ 700 0054 4FF40073 		mov	r3, #512
+ 701 0058 0293     		str	r3, [sp, #8]
  270:Src/main.c    ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
- 703              		.loc 1 270 0
- 704 005a 0023     		movs	r3, #0
- 705 005c 0393     		str	r3, [sp, #12]
+ 702              		.loc 1 270 0
+ 703 005a 0023     		movs	r3, #0
+ 704 005c 0393     		str	r3, [sp, #12]
  271:Src/main.c    ****   {
- 706              		.loc 1 271 0
- 707 005e 01A8     		add	r0, sp, #4
- 708 0060 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
- 709              	.LVL35:
- 710 0064 30B9     		cbnz	r0, .L61
-ARM GAS  /tmp/cc4ILIM4.s 			page 25
-
-
+ 705              		.loc 1 271 0
+ 706 005e 01A8     		add	r0, sp, #4
+ 707 0060 FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 708              	.LVL35:
+ 709 0064 30B9     		cbnz	r0, .L61
  275:Src/main.c    **** 
- 711              		.loc 1 275 0
- 712 0066 15B0     		add	sp, sp, #84
- 713              	.LCFI19:
- 714              		.cfi_remember_state
- 715              		.cfi_def_cfa_offset 4
- 716              		@ sp needed
- 717 0068 5DF804FB 		ldr	pc, [sp], #4
- 718              	.L59:
- 719              	.LCFI20:
- 720              		.cfi_restore_state
+ARM GAS  /tmp/ccRwZQlv.s 			page 25
+
+
+ 710              		.loc 1 275 0
+ 711 0066 15B0     		add	sp, sp, #84
+ 712              	.LCFI19:
+ 713              		.cfi_remember_state
+ 714              		.cfi_def_cfa_offset 4
+ 715              		@ sp needed
+ 716 0068 5DF804FB 		ldr	pc, [sp], #4
+ 717              	.L59:
+ 718              	.LCFI20:
+ 719              		.cfi_restore_state
  253:Src/main.c    ****   }
- 721              		.loc 1 253 0
- 722 006c FFF7FEFF 		bl	Error_Handler
- 723              	.LVL36:
- 724              	.L60:
+ 720              		.loc 1 253 0
+ 721 006c FFF7FEFF 		bl	Error_Handler
+ 722              	.LVL36:
+ 723              	.L60:
  266:Src/main.c    ****   }
- 725              		.loc 1 266 0
- 726 0070 FFF7FEFF 		bl	Error_Handler
- 727              	.LVL37:
- 728              	.L61:
+ 724              		.loc 1 266 0
+ 725 0070 FFF7FEFF 		bl	Error_Handler
+ 726              	.LVL37:
+ 727              	.L61:
  273:Src/main.c    ****   }
- 729              		.loc 1 273 0
- 730 0074 FFF7FEFF 		bl	Error_Handler
- 731              	.LVL38:
- 732              		.cfi_endproc
- 733              	.LFE71:
- 735              		.section	.text.main,"ax",%progbits
- 736              		.align	1
- 737              		.global	main
- 738              		.syntax unified
- 739              		.thumb
- 740              		.thumb_func
- 741              		.fpu softvfp
- 743              	main:
- 744              	.LFB70:
+ 728              		.loc 1 273 0
+ 729 0074 FFF7FEFF 		bl	Error_Handler
+ 730              	.LVL38:
+ 731              		.cfi_endproc
+ 732              	.LFE71:
+ 734              		.section	.text.main,"ax",%progbits
+ 735              		.align	1
+ 736              		.global	main
+ 737              		.syntax unified
+ 738              		.thumb
+ 739              		.thumb_func
+ 740              		.fpu softvfp
+ 742              	main:
+ 743              	.LFB70:
  127:Src/main.c    ****   /* USER CODE BEGIN 1 */
- 745              		.loc 1 127 0
- 746              		.cfi_startproc
- 747              		@ args = 0, pretend = 0, frame = 1032
- 748              		@ frame_needed = 0, uses_anonymous_args = 0
- 749 0000 10B5     		push	{r4, lr}
- 750              	.LCFI21:
- 751              		.cfi_def_cfa_offset 8
- 752              		.cfi_offset 4, -8
- 753              		.cfi_offset 14, -4
- 754 0002 ADF5826D 		sub	sp, sp, #1040
- 755              	.LCFI22:
- 756              		.cfi_def_cfa_offset 1048
+ 744              		.loc 1 127 0
+ 745              		.cfi_startproc
+ 746              		@ args = 0, pretend = 0, frame = 1032
+ 747              		@ frame_needed = 0, uses_anonymous_args = 0
+ 748 0000 10B5     		push	{r4, lr}
+ 749              	.LCFI21:
+ 750              		.cfi_def_cfa_offset 8
+ 751              		.cfi_offset 4, -8
+ 752              		.cfi_offset 14, -4
+ 753 0002 ADF5826D 		sub	sp, sp, #1040
+ 754              	.LCFI22:
+ 755              		.cfi_def_cfa_offset 1048
  130:Src/main.c    ****   char read_buffer[512] = {0};
- 757              		.loc 1 130 0
- 758 0006 264B     		ldr	r3, .L68
- 759 0008 82AC     		add	r4, sp, #520
- 760 000a 0FCB     		ldm	r3, {r0, r1, r2, r3}
- 761 000c 07C4     		stmia	r4!, {r0, r1, r2}
- 762 000e 24F8023B 		strh	r3, [r4], #2	@ movhi
- 763 0012 1B0C     		lsrs	r3, r3, #16
-ARM GAS  /tmp/cc4ILIM4.s 			page 26
+ 756              		.loc 1 130 0
+ 757 0006 264B     		ldr	r3, .L68
+ 758 0008 82AC     		add	r4, sp, #520
+ 759 000a 0FCB     		ldm	r3, {r0, r1, r2, r3}
+ 760 000c 07C4     		stmia	r4!, {r0, r1, r2}
+ 761 000e 24F8023B 		strh	r3, [r4], #2	@ movhi
+ 762 0012 1B0C     		lsrs	r3, r3, #16
+ 763 0014 2370     		strb	r3, [r4]
+ARM GAS  /tmp/ccRwZQlv.s 			page 26
 
 
- 764 0014 2370     		strb	r3, [r4]
- 765 0016 40F2F112 		movw	r2, #497
- 766 001a 0021     		movs	r1, #0
- 767 001c 0DF21720 		addw	r0, sp, #535
- 768 0020 FFF7FEFF 		bl	memset
- 769              	.LVL39:
+ 764 0016 40F2F112 		movw	r2, #497
+ 765 001a 0021     		movs	r1, #0
+ 766 001c 0DF21720 		addw	r0, sp, #535
+ 767 0020 FFF7FEFF 		bl	memset
+ 768              	.LVL39:
  131:Src/main.c    ****   /* USER CODE END 1 */
- 770              		.loc 1 131 0
- 771 0024 4FF40072 		mov	r2, #512
- 772 0028 0021     		movs	r1, #0
- 773 002a 02A8     		add	r0, sp, #8
- 774 002c FFF7FEFF 		bl	memset
- 775              	.LVL40:
+ 769              		.loc 1 131 0
+ 770 0024 4FF40072 		mov	r2, #512
+ 771 0028 0021     		movs	r1, #0
+ 772 002a 02A8     		add	r0, sp, #8
+ 773 002c FFF7FEFF 		bl	memset
+ 774              	.LVL40:
  138:Src/main.c    **** 
- 776              		.loc 1 138 0
- 777 0030 FFF7FEFF 		bl	HAL_Init
- 778              	.LVL41:
+ 775              		.loc 1 138 0
+ 776 0030 FFF7FEFF 		bl	HAL_Init
+ 777              	.LVL41:
  145:Src/main.c    **** 
- 779              		.loc 1 145 0
- 780 0034 FFF7FEFF 		bl	SystemClock_Config
- 781              	.LVL42:
+ 778              		.loc 1 145 0
+ 779 0034 FFF7FEFF 		bl	SystemClock_Config
+ 780              	.LVL42:
  152:Src/main.c    ****   MX_USART1_UART_Init();
- 782              		.loc 1 152 0
- 783 0038 FFF7FEFF 		bl	MX_GPIO_Init
- 784              	.LVL43:
+ 781              		.loc 1 152 0
+ 782 0038 FFF7FEFF 		bl	MX_GPIO_Init
+ 783              	.LVL43:
  153:Src/main.c    ****   MX_ADC1_Init();
- 785              		.loc 1 153 0
- 786 003c FFF7FEFF 		bl	MX_USART1_UART_Init
- 787              	.LVL44:
+ 784              		.loc 1 153 0
+ 785 003c FFF7FEFF 		bl	MX_USART1_UART_Init
+ 786              	.LVL44:
  154:Src/main.c    ****   MX_RTC_Init();
- 788              		.loc 1 154 0
- 789 0040 FFF7FEFF 		bl	MX_ADC1_Init
- 790              	.LVL45:
+ 787              		.loc 1 154 0
+ 788 0040 FFF7FEFF 		bl	MX_ADC1_Init
+ 789              	.LVL45:
  155:Src/main.c    ****   MX_SPI1_Init();
- 791              		.loc 1 155 0
- 792 0044 FFF7FEFF 		bl	MX_RTC_Init
- 793              	.LVL46:
+ 790              		.loc 1 155 0
+ 791 0044 FFF7FEFF 		bl	MX_RTC_Init
+ 792              	.LVL46:
  156:Src/main.c    ****   MX_FATFS_Init();
- 794              		.loc 1 156 0
- 795 0048 FFF7FEFF 		bl	MX_SPI1_Init
- 796              	.LVL47:
+ 793              		.loc 1 156 0
+ 794 0048 FFF7FEFF 		bl	MX_SPI1_Init
+ 795              	.LVL47:
  157:Src/main.c    ****   /* USER CODE BEGIN 2 */
- 797              		.loc 1 157 0
- 798 004c FFF7FEFF 		bl	MX_FATFS_Init
- 799              	.LVL48:
+ 796              		.loc 1 157 0
+ 797 004c FFF7FEFF 		bl	MX_FATFS_Init
+ 798              	.LVL48:
  159:Src/main.c    ****   {
- 800              		.loc 1 159 0
- 801 0050 0DF58160 		add	r0, sp, #1032
- 802 0054 FFF7FEFF 		bl	SD_Init
- 803              	.LVL49:
- 804 0058 08B1     		cbz	r0, .L63
+ 799              		.loc 1 159 0
+ 800 0050 0DF58160 		add	r0, sp, #1032
+ 801 0054 FFF7FEFF 		bl	SD_Init
+ 802              	.LVL49:
+ 803 0058 08B1     		cbz	r0, .L63
  161:Src/main.c    ****   }
- 805              		.loc 1 161 0
- 806 005a FFF7FEFF 		bl	Error_Handler
- 807              	.LVL50:
- 808              	.L63:
+ 804              		.loc 1 161 0
+ 805 005a FFF7FEFF 		bl	Error_Handler
+ 806              	.LVL50:
+ 807              	.L63:
  163:Src/main.c    ****   {
-ARM GAS  /tmp/cc4ILIM4.s 			page 27
+ 808              		.loc 1 163 0
+ARM GAS  /tmp/ccRwZQlv.s 			page 27
 
 
- 809              		.loc 1 163 0
- 810 005e 0022     		movs	r2, #0
- 811 0060 82A9     		add	r1, sp, #520
- 812 0062 0DF58160 		add	r0, sp, #1032
- 813 0066 FFF7FEFF 		bl	SD_Write
- 814              	.LVL51:
- 815 006a 08B1     		cbz	r0, .L64
+ 809 005e 0022     		movs	r2, #0
+ 810 0060 82A9     		add	r1, sp, #520
+ 811 0062 0DF58160 		add	r0, sp, #1032
+ 812 0066 FFF7FEFF 		bl	SD_Write
+ 813              	.LVL51:
+ 814 006a 08B1     		cbz	r0, .L64
  165:Src/main.c    ****   }
- 816              		.loc 1 165 0
- 817 006c FFF7FEFF 		bl	Error_Handler
- 818              	.LVL52:
- 819              	.L64:
+ 815              		.loc 1 165 0
+ 816 006c FFF7FEFF 		bl	Error_Handler
+ 817              	.LVL52:
+ 818              	.L64:
  167:Src/main.c    ****   {
- 820              		.loc 1 167 0
- 821 0070 4FF40073 		mov	r3, #512
- 822 0074 0093     		str	r3, [sp]
- 823 0076 0023     		movs	r3, #0
- 824 0078 1A46     		mov	r2, r3
- 825 007a 02A9     		add	r1, sp, #8
- 826 007c 0DF58160 		add	r0, sp, #1032
- 827 0080 FFF7FEFF 		bl	SD_Read
- 828              	.LVL53:
- 829 0084 08B1     		cbz	r0, .L65
+ 819              		.loc 1 167 0
+ 820 0070 4FF40073 		mov	r3, #512
+ 821 0074 0093     		str	r3, [sp]
+ 822 0076 0023     		movs	r3, #0
+ 823 0078 1A46     		mov	r2, r3
+ 824 007a 02A9     		add	r1, sp, #8
+ 825 007c 0DF58160 		add	r0, sp, #1032
+ 826 0080 FFF7FEFF 		bl	SD_Read
+ 827              	.LVL53:
+ 828 0084 08B1     		cbz	r0, .L65
  169:Src/main.c    ****   }
- 830              		.loc 1 169 0
- 831 0086 FFF7FEFF 		bl	Error_Handler
- 832              	.LVL54:
- 833              	.L65:
+ 829              		.loc 1 169 0
+ 830 0086 FFF7FEFF 		bl	Error_Handler
+ 831              	.LVL54:
+ 832              	.L65:
  171:Src/main.c    ****   HAL_UART_Transmit(&huart1, (uint8_t *)read_buffer, read_buffer_size, HAL_MAX_DELAY);
- 834              		.loc 1 171 0
- 835 008a 02A8     		add	r0, sp, #8
- 836 008c FFF7FEFF 		bl	strlen
- 837              	.LVL55:
+ 833              		.loc 1 171 0
+ 834 008a 02A8     		add	r0, sp, #8
+ 835 008c FFF7FEFF 		bl	strlen
+ 836              	.LVL55:
  172:Src/main.c    ****   while (1);
- 838              		.loc 1 172 0
- 839 0090 4FF0FF33 		mov	r3, #-1
- 840 0094 C2B2     		uxtb	r2, r0
- 841 0096 02A9     		add	r1, sp, #8
- 842 0098 0248     		ldr	r0, .L68+4
- 843              	.LVL56:
- 844 009a FFF7FEFF 		bl	HAL_UART_Transmit
- 845              	.LVL57:
- 846              	.L66:
- 847 009e FEE7     		b	.L66
- 848              	.L69:
- 849              		.align	2
- 850              	.L68:
- 851 00a0 00000000 		.word	.LANCHOR0
- 852 00a4 00000000 		.word	huart1
- 853              		.cfi_endproc
- 854              	.LFE70:
- 856              		.global	Queue_UART_TX_attributes
- 857              		.comm	Queue_UART_TXHandle,4,4
- 858              		.global	Queue_UART_RX_attributes
- 859              		.comm	Queue_UART_RXHandle,4,4
- 860              		.global	UART_RX_attributes
- 861              		.comm	UART_RXHandle,4,4
-ARM GAS  /tmp/cc4ILIM4.s 			page 28
+ 837              		.loc 1 172 0
+ 838 0090 4FF0FF33 		mov	r3, #-1
+ 839 0094 C2B2     		uxtb	r2, r0
+ 840 0096 02A9     		add	r1, sp, #8
+ 841 0098 0248     		ldr	r0, .L68+4
+ 842              	.LVL56:
+ 843 009a FFF7FEFF 		bl	HAL_UART_Transmit
+ 844              	.LVL57:
+ 845              	.L66:
+ 846 009e FEE7     		b	.L66
+ 847              	.L69:
+ 848              		.align	2
+ 849              	.L68:
+ 850 00a0 00000000 		.word	.LANCHOR0
+ 851 00a4 00000000 		.word	huart1
+ 852              		.cfi_endproc
+ 853              	.LFE70:
+ 855              		.global	Queue_UART_TX_attributes
+ 856              		.comm	Queue_UART_TXHandle,4,4
+ 857              		.global	Queue_UART_RX_attributes
+ 858              		.comm	Queue_UART_RXHandle,4,4
+ 859              		.global	UART_RX_attributes
+ 860              		.comm	UART_RXHandle,4,4
+ 861              		.global	LED_attributes
+ARM GAS  /tmp/ccRwZQlv.s 			page 28
 
 
- 862              		.global	LED_attributes
- 863              		.comm	LEDHandle,4,4
- 864              		.global	UART_TX_attributes
- 865              		.comm	UART_TXHandle,4,4
- 866              		.global	ADC_LightSensor_attributes
- 867              		.comm	ADC_LightSensorHandle,4,4
- 868              		.comm	huart1,64,4
- 869              		.comm	hspi1,88,4
- 870              		.comm	hrtc,20,4
- 871              		.comm	hadc1,48,4
- 872              		.section	.rodata
- 873              		.align	2
- 874              		.set	.LANCHOR0,. + 0
- 875              	.LC0:
- 876 0000 54657374 		.ascii	"Test message.\012\000"
- 876      206D6573 
- 876      73616765 
- 876      2E0A00
- 877 000f 00000000 		.space	497
- 877      00000000 
- 877      00000000 
- 877      00000000 
- 877      00000000 
- 878              		.section	.rodata.ADC_LightSensor_attributes,"a",%progbits
- 879              		.align	2
- 882              	ADC_LightSensor_attributes:
- 883 0000 34000000 		.word	.LC6
- 884 0004 00000000 		.space	16
- 884      00000000 
- 884      00000000 
- 884      00000000 
- 885 0014 00020000 		.word	512
- 886 0018 18000000 		.word	24
- 887 001c 00000000 		.space	8
- 887      00000000 
- 888              		.section	.rodata.LED_attributes,"a",%progbits
- 889              		.align	2
- 892              	LED_attributes:
- 893 0000 28000000 		.word	.LC4
- 894 0004 00000000 		.space	16
- 894      00000000 
- 894      00000000 
- 894      00000000 
- 895 0014 80000000 		.word	128
- 896 0018 08000000 		.word	8
- 897 001c 00000000 		.space	8
- 897      00000000 
- 898              		.section	.rodata.Queue_UART_RX_attributes,"a",%progbits
- 899              		.align	2
- 902              	Queue_UART_RX_attributes:
- 903 0000 10000000 		.word	.LC2
- 904 0004 00000000 		.space	20
- 904      00000000 
- 904      00000000 
- 904      00000000 
- 904      00000000 
- 905              		.section	.rodata.Queue_UART_TX_attributes,"a",%progbits
-ARM GAS  /tmp/cc4ILIM4.s 			page 29
+ 862              		.comm	LEDHandle,4,4
+ 863              		.global	UART_TX_attributes
+ 864              		.comm	UART_TXHandle,4,4
+ 865              		.global	ADC_LightSensor_attributes
+ 866              		.comm	ADC_LightSensorHandle,4,4
+ 867              		.comm	huart1,64,4
+ 868              		.comm	hspi1,88,4
+ 869              		.comm	hrtc,20,4
+ 870              		.comm	hadc1,48,4
+ 871              		.section	.rodata
+ 872              		.align	2
+ 873              		.set	.LANCHOR0,. + 0
+ 874              	.LC0:
+ 875 0000 54657374 		.ascii	"Test message.\012\000"
+ 875      206D6573 
+ 875      73616765 
+ 875      2E0A00
+ 876 000f 00000000 		.space	497
+ 876      00000000 
+ 876      00000000 
+ 876      00000000 
+ 876      00000000 
+ 877              		.section	.rodata.ADC_LightSensor_attributes,"a",%progbits
+ 878              		.align	2
+ 881              	ADC_LightSensor_attributes:
+ 882 0000 34000000 		.word	.LC6
+ 883 0004 00000000 		.space	16
+ 883      00000000 
+ 883      00000000 
+ 883      00000000 
+ 884 0014 00020000 		.word	512
+ 885 0018 18000000 		.word	24
+ 886 001c 00000000 		.space	8
+ 886      00000000 
+ 887              		.section	.rodata.LED_attributes,"a",%progbits
+ 888              		.align	2
+ 891              	LED_attributes:
+ 892 0000 28000000 		.word	.LC4
+ 893 0004 00000000 		.space	16
+ 893      00000000 
+ 893      00000000 
+ 893      00000000 
+ 894 0014 80000000 		.word	128
+ 895 0018 08000000 		.word	8
+ 896 001c 00000000 		.space	8
+ 896      00000000 
+ 897              		.section	.rodata.Queue_UART_RX_attributes,"a",%progbits
+ 898              		.align	2
+ 901              	Queue_UART_RX_attributes:
+ 902 0000 10000000 		.word	.LC2
+ 903 0004 00000000 		.space	20
+ 903      00000000 
+ 903      00000000 
+ 903      00000000 
+ 903      00000000 
+ 904              		.section	.rodata.Queue_UART_TX_attributes,"a",%progbits
+ 905              		.align	2
+ARM GAS  /tmp/ccRwZQlv.s 			page 29
 
 
- 906              		.align	2
- 909              	Queue_UART_TX_attributes:
- 910 0000 00000000 		.word	.LC1
- 911 0004 00000000 		.space	20
- 911      00000000 
- 911      00000000 
- 911      00000000 
- 911      00000000 
- 912              		.section	.rodata.UART_RX_attributes,"a",%progbits
- 913              		.align	2
- 916              	UART_RX_attributes:
- 917 0000 20000000 		.word	.LC3
- 918 0004 00000000 		.space	16
- 918      00000000 
- 918      00000000 
- 918      00000000 
- 919 0014 80000000 		.word	128
- 920 0018 08000000 		.word	8
- 921 001c 00000000 		.space	8
- 921      00000000 
- 922              		.section	.rodata.UART_TX_attributes,"a",%progbits
- 923              		.align	2
- 926              	UART_TX_attributes:
- 927 0000 2C000000 		.word	.LC5
- 928 0004 00000000 		.space	16
- 928      00000000 
- 928      00000000 
- 928      00000000 
- 929 0014 80000000 		.word	128
- 930 0018 08000000 		.word	8
- 931 001c 00000000 		.space	8
- 931      00000000 
- 932              		.section	.rodata.str1.4,"aMS",%progbits,1
- 933              		.align	2
- 934              	.LC1:
- 935 0000 51756575 		.ascii	"Queue_UART_TX\000"
- 935      655F5541 
- 935      52545F54 
- 935      5800
- 936 000e 0000     		.space	2
- 937              	.LC2:
- 938 0010 51756575 		.ascii	"Queue_UART_RX\000"
- 938      655F5541 
- 938      52545F52 
- 938      5800
- 939 001e 0000     		.space	2
- 940              	.LC3:
- 941 0020 55415254 		.ascii	"UART_RX\000"
- 941      5F525800 
- 942              	.LC4:
- 943 0028 4C454400 		.ascii	"LED\000"
- 944              	.LC5:
- 945 002c 55415254 		.ascii	"UART_TX\000"
- 945      5F545800 
- 946              	.LC6:
- 947 0034 4144435F 		.ascii	"ADC_LightSensor\000"
- 947      4C696768 
-ARM GAS  /tmp/cc4ILIM4.s 			page 30
+ 908              	Queue_UART_TX_attributes:
+ 909 0000 00000000 		.word	.LC1
+ 910 0004 00000000 		.space	20
+ 910      00000000 
+ 910      00000000 
+ 910      00000000 
+ 910      00000000 
+ 911              		.section	.rodata.UART_RX_attributes,"a",%progbits
+ 912              		.align	2
+ 915              	UART_RX_attributes:
+ 916 0000 20000000 		.word	.LC3
+ 917 0004 00000000 		.space	16
+ 917      00000000 
+ 917      00000000 
+ 917      00000000 
+ 918 0014 80000000 		.word	128
+ 919 0018 08000000 		.word	8
+ 920 001c 00000000 		.space	8
+ 920      00000000 
+ 921              		.section	.rodata.UART_TX_attributes,"a",%progbits
+ 922              		.align	2
+ 925              	UART_TX_attributes:
+ 926 0000 2C000000 		.word	.LC5
+ 927 0004 00000000 		.space	16
+ 927      00000000 
+ 927      00000000 
+ 927      00000000 
+ 928 0014 80000000 		.word	128
+ 929 0018 08000000 		.word	8
+ 930 001c 00000000 		.space	8
+ 930      00000000 
+ 931              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 932              		.align	2
+ 933              	.LC1:
+ 934 0000 51756575 		.ascii	"Queue_UART_TX\000"
+ 934      655F5541 
+ 934      52545F54 
+ 934      5800
+ 935 000e 0000     		.space	2
+ 936              	.LC2:
+ 937 0010 51756575 		.ascii	"Queue_UART_RX\000"
+ 937      655F5541 
+ 937      52545F52 
+ 937      5800
+ 938 001e 0000     		.space	2
+ 939              	.LC3:
+ 940 0020 55415254 		.ascii	"UART_RX\000"
+ 940      5F525800 
+ 941              	.LC4:
+ 942 0028 4C454400 		.ascii	"LED\000"
+ 943              	.LC5:
+ 944 002c 55415254 		.ascii	"UART_TX\000"
+ 944      5F545800 
+ 945              	.LC6:
+ 946 0034 4144435F 		.ascii	"ADC_LightSensor\000"
+ 946      4C696768 
+ 946      7453656E 
+ARM GAS  /tmp/ccRwZQlv.s 			page 30
 
 
- 947      7453656E 
- 947      736F7200 
- 948              		.text
- 949              	.Letext0:
- 950              		.file 2 "/usr/include/newlib/machine/_default_types.h"
- 951              		.file 3 "/usr/include/newlib/sys/_stdint.h"
- 952              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
- 953              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
- 954              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 955              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
- 956              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 957              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
- 958              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
- 959              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
- 960              		.file 12 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
- 961              		.file 13 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h"
- 962              		.file 14 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc.h"
- 963              		.file 15 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h"
- 964              		.file 16 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
- 965              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
- 966              		.file 18 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
- 967              		.file 19 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
- 968              		.file 20 "Middlewares/Third_Party/FatFs/src/integer.h"
- 969              		.file 21 "Middlewares/Third_Party/FatFs/src/ff.h"
- 970              		.file 22 "Middlewares/Third_Party/FatFs/src/diskio.h"
- 971              		.file 23 "Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
- 972              		.file 24 "Inc/user_diskio.h"
- 973              		.file 25 "Inc/fatfs.h"
- 974              		.file 26 "/usr/include/newlib/sys/lock.h"
- 975              		.file 27 "/usr/include/newlib/sys/_types.h"
- 976              		.file 28 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
- 977              		.file 29 "/usr/include/newlib/sys/reent.h"
- 978              		.file 30 "Middlewares/Third_Party/ulibSD/integer_ulibsd.h"
- 979              		.file 31 "Middlewares/Third_Party/ulibSD/sd_io.h"
- 980              		.file 32 "Inc/UART.h"
- 981              		.file 33 "Inc/ADC.h"
- 982              		.file 34 "/usr/include/newlib/string.h"
-ARM GAS  /tmp/cc4ILIM4.s 			page 31
+ 946      736F7200 
+ 947              		.text
+ 948              	.Letext0:
+ 949              		.file 2 "/usr/include/newlib/machine/_default_types.h"
+ 950              		.file 3 "/usr/include/newlib/sys/_stdint.h"
+ 951              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
+ 952              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 953              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 954              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h"
+ 955              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 956              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
+ 957              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h"
+ 958              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 959              		.file 12 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 960              		.file 13 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h"
+ 961              		.file 14 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc.h"
+ 962              		.file 15 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h"
+ 963              		.file 16 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
+ 964              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ 965              		.file 18 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 966              		.file 19 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
+ 967              		.file 20 "Middlewares/Third_Party/FatFs/src/integer.h"
+ 968              		.file 21 "Middlewares/Third_Party/FatFs/src/ff.h"
+ 969              		.file 22 "Middlewares/Third_Party/FatFs/src/diskio.h"
+ 970              		.file 23 "Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
+ 971              		.file 24 "Inc/user_diskio.h"
+ 972              		.file 25 "Inc/fatfs.h"
+ 973              		.file 26 "/usr/include/newlib/sys/lock.h"
+ 974              		.file 27 "/usr/include/newlib/sys/_types.h"
+ 975              		.file 28 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
+ 976              		.file 29 "/usr/include/newlib/sys/reent.h"
+ 977              		.file 30 "Middlewares/Third_Party/ulibSD/integer_ulibsd.h"
+ 978              		.file 31 "Middlewares/Third_Party/ulibSD/sd_io.h"
+ 979              		.file 32 "Inc/UART.h"
+ 980              		.file 33 "Inc/ADC.h"
+ 981              		.file 34 "/usr/include/newlib/string.h"
+ARM GAS  /tmp/ccRwZQlv.s 			page 31
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 main.c
-     /tmp/cc4ILIM4.s:16     .text.MX_GPIO_Init:0000000000000000 $t
-     /tmp/cc4ILIM4.s:22     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
-     /tmp/cc4ILIM4.s:131    .text.MX_GPIO_Init:0000000000000090 $d
-     /tmp/cc4ILIM4.s:138    .text.Tsk_ADC_LightSensor:0000000000000000 $t
-     /tmp/cc4ILIM4.s:145    .text.Tsk_ADC_LightSensor:0000000000000000 Tsk_ADC_LightSensor
-     /tmp/cc4ILIM4.s:168    .text.Tsk_UART_TX:0000000000000000 $t
-     /tmp/cc4ILIM4.s:175    .text.Tsk_UART_TX:0000000000000000 Tsk_UART_TX
-     /tmp/cc4ILIM4.s:198    .text.Tsk_LED:0000000000000000 $t
-     /tmp/cc4ILIM4.s:205    .text.Tsk_LED:0000000000000000 Tsk_LED
-     /tmp/cc4ILIM4.s:220    .text.Tsk_UART_RX:0000000000000000 $t
-     /tmp/cc4ILIM4.s:227    .text.Tsk_UART_RX:0000000000000000 Tsk_UART_RX
-     /tmp/cc4ILIM4.s:251    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 $t
-     /tmp/cc4ILIM4.s:258    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 HAL_TIM_PeriodElapsedCallback
-     /tmp/cc4ILIM4.s:288    .text.HAL_TIM_PeriodElapsedCallback:0000000000000014 $d
-     /tmp/cc4ILIM4.s:293    .text.Error_Handler:0000000000000000 $t
-     /tmp/cc4ILIM4.s:300    .text.Error_Handler:0000000000000000 Error_Handler
-     /tmp/cc4ILIM4.s:314    .text.MX_USART1_UART_Init:0000000000000000 $t
-     /tmp/cc4ILIM4.s:320    .text.MX_USART1_UART_Init:0000000000000000 MX_USART1_UART_Init
-     /tmp/cc4ILIM4.s:365    .text.MX_USART1_UART_Init:000000000000002c $d
+     /tmp/ccRwZQlv.s:16     .text.MX_GPIO_Init:0000000000000000 $t
+     /tmp/ccRwZQlv.s:22     .text.MX_GPIO_Init:0000000000000000 MX_GPIO_Init
+     /tmp/ccRwZQlv.s:131    .text.MX_GPIO_Init:0000000000000090 $d
+     /tmp/ccRwZQlv.s:138    .text.Tsk_ADC_LightSensor:0000000000000000 $t
+     /tmp/ccRwZQlv.s:145    .text.Tsk_ADC_LightSensor:0000000000000000 Tsk_ADC_LightSensor
+     /tmp/ccRwZQlv.s:168    .text.Tsk_UART_TX:0000000000000000 $t
+     /tmp/ccRwZQlv.s:175    .text.Tsk_UART_TX:0000000000000000 Tsk_UART_TX
+     /tmp/ccRwZQlv.s:198    .text.Tsk_LED:0000000000000000 $t
+     /tmp/ccRwZQlv.s:205    .text.Tsk_LED:0000000000000000 Tsk_LED
+     /tmp/ccRwZQlv.s:220    .text.Tsk_UART_RX:0000000000000000 $t
+     /tmp/ccRwZQlv.s:227    .text.Tsk_UART_RX:0000000000000000 Tsk_UART_RX
+     /tmp/ccRwZQlv.s:251    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 $t
+     /tmp/ccRwZQlv.s:258    .text.HAL_TIM_PeriodElapsedCallback:0000000000000000 HAL_TIM_PeriodElapsedCallback
+     /tmp/ccRwZQlv.s:288    .text.HAL_TIM_PeriodElapsedCallback:0000000000000014 $d
+     /tmp/ccRwZQlv.s:293    .text.Error_Handler:0000000000000000 $t
+     /tmp/ccRwZQlv.s:300    .text.Error_Handler:0000000000000000 Error_Handler
+     /tmp/ccRwZQlv.s:314    .text.MX_USART1_UART_Init:0000000000000000 $t
+     /tmp/ccRwZQlv.s:320    .text.MX_USART1_UART_Init:0000000000000000 MX_USART1_UART_Init
+     /tmp/ccRwZQlv.s:365    .text.MX_USART1_UART_Init:000000000000002c $d
                             *COM*:0000000000000040 huart1
-     /tmp/cc4ILIM4.s:371    .text.MX_ADC1_Init:0000000000000000 $t
-     /tmp/cc4ILIM4.s:377    .text.MX_ADC1_Init:0000000000000000 MX_ADC1_Init
-     /tmp/cc4ILIM4.s:451    .text.MX_ADC1_Init:000000000000004c $d
+     /tmp/ccRwZQlv.s:371    .text.MX_ADC1_Init:0000000000000000 $t
+     /tmp/ccRwZQlv.s:377    .text.MX_ADC1_Init:0000000000000000 MX_ADC1_Init
+     /tmp/ccRwZQlv.s:451    .text.MX_ADC1_Init:000000000000004c $d
                             *COM*:0000000000000030 hadc1
-     /tmp/cc4ILIM4.s:457    .text.MX_RTC_Init:0000000000000000 $t
-     /tmp/cc4ILIM4.s:463    .text.MX_RTC_Init:0000000000000000 MX_RTC_Init
-     /tmp/cc4ILIM4.s:554    .text.MX_RTC_Init:0000000000000078 $d
+     /tmp/ccRwZQlv.s:457    .text.MX_RTC_Init:0000000000000000 $t
+     /tmp/ccRwZQlv.s:463    .text.MX_RTC_Init:0000000000000000 MX_RTC_Init
+     /tmp/ccRwZQlv.s:554    .text.MX_RTC_Init:0000000000000078 $d
                             *COM*:0000000000000014 hrtc
-     /tmp/cc4ILIM4.s:560    .text.MX_SPI1_Init:0000000000000000 $t
-     /tmp/cc4ILIM4.s:566    .text.MX_SPI1_Init:0000000000000000 MX_SPI1_Init
-     /tmp/cc4ILIM4.s:620    .text.MX_SPI1_Init:0000000000000038 $d
+     /tmp/ccRwZQlv.s:560    .text.MX_SPI1_Init:0000000000000000 $t
+     /tmp/ccRwZQlv.s:566    .text.MX_SPI1_Init:0000000000000000 MX_SPI1_Init
+     /tmp/ccRwZQlv.s:619    .text.MX_SPI1_Init:0000000000000038 $d
                             *COM*:0000000000000058 hspi1
-     /tmp/cc4ILIM4.s:626    .text.SystemClock_Config:0000000000000000 $t
-     /tmp/cc4ILIM4.s:633    .text.SystemClock_Config:0000000000000000 SystemClock_Config
-     /tmp/cc4ILIM4.s:736    .text.main:0000000000000000 $t
-     /tmp/cc4ILIM4.s:743    .text.main:0000000000000000 main
-     /tmp/cc4ILIM4.s:851    .text.main:00000000000000a0 $d
-     /tmp/cc4ILIM4.s:909    .rodata.Queue_UART_TX_attributes:0000000000000000 Queue_UART_TX_attributes
+     /tmp/ccRwZQlv.s:625    .text.SystemClock_Config:0000000000000000 $t
+     /tmp/ccRwZQlv.s:632    .text.SystemClock_Config:0000000000000000 SystemClock_Config
+     /tmp/ccRwZQlv.s:735    .text.main:0000000000000000 $t
+     /tmp/ccRwZQlv.s:742    .text.main:0000000000000000 main
+     /tmp/ccRwZQlv.s:850    .text.main:00000000000000a0 $d
+     /tmp/ccRwZQlv.s:908    .rodata.Queue_UART_TX_attributes:0000000000000000 Queue_UART_TX_attributes
                             *COM*:0000000000000004 Queue_UART_TXHandle
-     /tmp/cc4ILIM4.s:902    .rodata.Queue_UART_RX_attributes:0000000000000000 Queue_UART_RX_attributes
+     /tmp/ccRwZQlv.s:901    .rodata.Queue_UART_RX_attributes:0000000000000000 Queue_UART_RX_attributes
                             *COM*:0000000000000004 Queue_UART_RXHandle
-     /tmp/cc4ILIM4.s:916    .rodata.UART_RX_attributes:0000000000000000 UART_RX_attributes
+     /tmp/ccRwZQlv.s:915    .rodata.UART_RX_attributes:0000000000000000 UART_RX_attributes
                             *COM*:0000000000000004 UART_RXHandle
-     /tmp/cc4ILIM4.s:892    .rodata.LED_attributes:0000000000000000 LED_attributes
+     /tmp/ccRwZQlv.s:891    .rodata.LED_attributes:0000000000000000 LED_attributes
                             *COM*:0000000000000004 LEDHandle
-     /tmp/cc4ILIM4.s:926    .rodata.UART_TX_attributes:0000000000000000 UART_TX_attributes
+     /tmp/ccRwZQlv.s:925    .rodata.UART_TX_attributes:0000000000000000 UART_TX_attributes
                             *COM*:0000000000000004 UART_TXHandle
-     /tmp/cc4ILIM4.s:882    .rodata.ADC_LightSensor_attributes:0000000000000000 ADC_LightSensor_attributes
+     /tmp/ccRwZQlv.s:881    .rodata.ADC_LightSensor_attributes:0000000000000000 ADC_LightSensor_attributes
                             *COM*:0000000000000004 ADC_LightSensorHandle
-     /tmp/cc4ILIM4.s:873    .rodata:0000000000000000 $d
-     /tmp/cc4ILIM4.s:879    .rodata.ADC_LightSensor_attributes:0000000000000000 $d
-     /tmp/cc4ILIM4.s:889    .rodata.LED_attributes:0000000000000000 $d
-     /tmp/cc4ILIM4.s:899    .rodata.Queue_UART_RX_attributes:0000000000000000 $d
-     /tmp/cc4ILIM4.s:906    .rodata.Queue_UART_TX_attributes:0000000000000000 $d
-     /tmp/cc4ILIM4.s:913    .rodata.UART_RX_attributes:0000000000000000 $d
-ARM GAS  /tmp/cc4ILIM4.s 			page 32
+     /tmp/ccRwZQlv.s:872    .rodata:0000000000000000 $d
+     /tmp/ccRwZQlv.s:878    .rodata.ADC_LightSensor_attributes:0000000000000000 $d
+     /tmp/ccRwZQlv.s:888    .rodata.LED_attributes:0000000000000000 $d
+     /tmp/ccRwZQlv.s:898    .rodata.Queue_UART_RX_attributes:0000000000000000 $d
+     /tmp/ccRwZQlv.s:905    .rodata.Queue_UART_TX_attributes:0000000000000000 $d
+     /tmp/ccRwZQlv.s:912    .rodata.UART_RX_attributes:0000000000000000 $d
+ARM GAS  /tmp/ccRwZQlv.s 			page 32
 
 
-     /tmp/cc4ILIM4.s:923    .rodata.UART_TX_attributes:0000000000000000 $d
-     /tmp/cc4ILIM4.s:933    .rodata.str1.4:0000000000000000 $d
+     /tmp/ccRwZQlv.s:922    .rodata.UART_TX_attributes:0000000000000000 $d
+     /tmp/ccRwZQlv.s:932    .rodata.str1.4:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

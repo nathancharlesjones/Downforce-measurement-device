@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc1Sd0xR.s 			page 1
+ARM GAS  /tmp/ccRLCvB9.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc1Sd0xR.s 			page 1
   31:Middlewares/Third_Party/ulibSD/spi_io.c **** 
   32:Middlewares/Third_Party/ulibSD/spi_io.c **** /******************************************************************************
   33:Middlewares/Third_Party/ulibSD/spi_io.c ****  Module Public Functions - Low level SPI control functions
-ARM GAS  /tmp/cc1Sd0xR.s 			page 2
+ARM GAS  /tmp/ccRLCvB9.s 			page 2
 
 
   34:Middlewares/Third_Party/ulibSD/spi_io.c **** ******************************************************************************/
@@ -97,12 +97,12 @@ ARM GAS  /tmp/cc1Sd0xR.s 			page 1
   55 0002 85B0     		sub	sp, sp, #20
   56              	.LCFI1:
   57              		.cfi_def_cfa_offset 24
-  40:Middlewares/Third_Party/ulibSD/spi_io.c ****     uint8_t rx_data = 0, tx_data = d;
+  40:Middlewares/Third_Party/ulibSD/spi_io.c ****     uint8_t rx_data = 0, tx_data = (uint8_t)d;
   58              		.loc 1 40 0
   59 0004 0023     		movs	r3, #0
   60 0006 8DF80F30 		strb	r3, [sp, #15]
   61 000a 8DF80E00 		strb	r0, [sp, #14]
-  41:Middlewares/Third_Party/ulibSD/spi_io.c ****     HAL_SPI_TransmitReceive(&hspi1, (uint8_t *)(&tx_data), &rx_data, 1, 0);
+  41:Middlewares/Third_Party/ulibSD/spi_io.c ****     HAL_SPI_TransmitReceive(&hspi1, &tx_data, &rx_data, 1, 0);
   62              		.loc 1 41 0
   63 000e 0093     		str	r3, [sp]
   64 0010 0123     		movs	r3, #1
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc1Sd0xR.s 			page 1
   72 0020 9DF80F00 		ldrb	r0, [sp, #15]	@ zero_extendqisi2
   73 0024 05B0     		add	sp, sp, #20
   74              	.LCFI2:
-ARM GAS  /tmp/cc1Sd0xR.s 			page 3
+ARM GAS  /tmp/ccRLCvB9.s 			page 3
 
 
   75              		.cfi_def_cfa_offset 4
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc1Sd0xR.s 			page 1
  127              	.LFE68:
  129              		.section	.text.SPI_CS_Low,"ax",%progbits
  130              		.align	1
-ARM GAS  /tmp/cc1Sd0xR.s 			page 4
+ARM GAS  /tmp/ccRLCvB9.s 			page 4
 
 
  131              		.global	SPI_CS_Low
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc1Sd0xR.s 			page 1
   55:Middlewares/Third_Party/ulibSD/spi_io.c ****     HAL_GPIO_WritePin(SD_NSS_GPIO_Port, SD_NSS_Pin, GPIO_PIN_SET);
  181              		.loc 1 55 0
  182 0002 0122     		movs	r2, #1
-ARM GAS  /tmp/cc1Sd0xR.s 			page 5
+ARM GAS  /tmp/ccRLCvB9.s 			page 5
 
 
  183 0004 1021     		movs	r1, #16
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc1Sd0xR.s 			page 1
   65:Middlewares/Third_Party/ulibSD/spi_io.c ****     {
   66:Middlewares/Third_Party/ulibSD/spi_io.c ****         Error_Handler();
  230              		.loc 1 66 0
-ARM GAS  /tmp/cc1Sd0xR.s 			page 6
+ARM GAS  /tmp/ccRLCvB9.s 			page 6
 
 
  231 0018 FFF7FEFF 		bl	Error_Handler
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc1Sd0xR.s 			page 1
   77:Middlewares/Third_Party/ulibSD/spi_io.c ****     {
   78:Middlewares/Third_Party/ulibSD/spi_io.c ****         Error_Handler();
  277              		.loc 1 78 0
-ARM GAS  /tmp/cc1Sd0xR.s 			page 7
+ARM GAS  /tmp/ccRLCvB9.s 			page 7
 
 
  278 0018 FFF7FEFF 		bl	Error_Handler
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc1Sd0xR.s 			page 1
  103:Middlewares/Third_Party/ulibSD/spi_io.c ****     spiTimerTickStart = HAL_GetTick();
  310              		.loc 1 103 0
  311 0004 FFF7FEFF 		bl	HAL_GetTick
-ARM GAS  /tmp/cc1Sd0xR.s 			page 8
+ARM GAS  /tmp/ccRLCvB9.s 			page 8
 
 
  312              	.LVL17:
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc1Sd0xR.s 			page 1
  362              	.L37:
  363 001c 00000000 		.word	spiTimerTickStart
  364 0020 00000000 		.word	spiTimerTickDelay
-ARM GAS  /tmp/cc1Sd0xR.s 			page 9
+ARM GAS  /tmp/ccRLCvB9.s 			page 9
 
 
  365              		.cfi_endproc
@@ -523,40 +523,40 @@ ARM GAS  /tmp/cc1Sd0xR.s 			page 1
  405              		.file 16 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h"
  406              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
  407              		.file 18 "Inc/main.h"
-ARM GAS  /tmp/cc1Sd0xR.s 			page 10
+ARM GAS  /tmp/ccRLCvB9.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 spi_io.c
-     /tmp/cc1Sd0xR.s:16     .text.SPI_Init:0000000000000000 $t
-     /tmp/cc1Sd0xR.s:23     .text.SPI_Init:0000000000000000 SPI_Init
-     /tmp/cc1Sd0xR.s:36     .text.SPI_RW:0000000000000000 $t
-     /tmp/cc1Sd0xR.s:43     .text.SPI_RW:0000000000000000 SPI_RW
-     /tmp/cc1Sd0xR.s:81     .text.SPI_RW:000000000000002c $d
-     /tmp/cc1Sd0xR.s:86     .text.SPI_Release:0000000000000000 $t
-     /tmp/cc1Sd0xR.s:93     .text.SPI_Release:0000000000000000 SPI_Release
-     /tmp/cc1Sd0xR.s:130    .text.SPI_CS_Low:0000000000000000 $t
-     /tmp/cc1Sd0xR.s:137    .text.SPI_CS_Low:0000000000000000 SPI_CS_Low
-     /tmp/cc1Sd0xR.s:158    .text.SPI_CS_Low:0000000000000010 $d
-     /tmp/cc1Sd0xR.s:163    .text.SPI_CS_High:0000000000000000 $t
-     /tmp/cc1Sd0xR.s:170    .text.SPI_CS_High:0000000000000000 SPI_CS_High
-     /tmp/cc1Sd0xR.s:191    .text.SPI_CS_High:0000000000000010 $d
-     /tmp/cc1Sd0xR.s:196    .text.SPI_Freq_High:0000000000000000 $t
-     /tmp/cc1Sd0xR.s:203    .text.SPI_Freq_High:0000000000000000 SPI_Freq_High
-     /tmp/cc1Sd0xR.s:238    .text.SPI_Freq_High:0000000000000020 $d
-     /tmp/cc1Sd0xR.s:243    .text.SPI_Freq_Low:0000000000000000 $t
-     /tmp/cc1Sd0xR.s:250    .text.SPI_Freq_Low:0000000000000000 SPI_Freq_Low
-     /tmp/cc1Sd0xR.s:285    .text.SPI_Freq_Low:0000000000000020 $d
-     /tmp/cc1Sd0xR.s:290    .text.SPI_Timer_On:0000000000000000 $t
-     /tmp/cc1Sd0xR.s:297    .text.SPI_Timer_On:0000000000000000 SPI_Timer_On
-     /tmp/cc1Sd0xR.s:322    .text.SPI_Timer_On:0000000000000014 $d
+     /tmp/ccRLCvB9.s:16     .text.SPI_Init:0000000000000000 $t
+     /tmp/ccRLCvB9.s:23     .text.SPI_Init:0000000000000000 SPI_Init
+     /tmp/ccRLCvB9.s:36     .text.SPI_RW:0000000000000000 $t
+     /tmp/ccRLCvB9.s:43     .text.SPI_RW:0000000000000000 SPI_RW
+     /tmp/ccRLCvB9.s:81     .text.SPI_RW:000000000000002c $d
+     /tmp/ccRLCvB9.s:86     .text.SPI_Release:0000000000000000 $t
+     /tmp/ccRLCvB9.s:93     .text.SPI_Release:0000000000000000 SPI_Release
+     /tmp/ccRLCvB9.s:130    .text.SPI_CS_Low:0000000000000000 $t
+     /tmp/ccRLCvB9.s:137    .text.SPI_CS_Low:0000000000000000 SPI_CS_Low
+     /tmp/ccRLCvB9.s:158    .text.SPI_CS_Low:0000000000000010 $d
+     /tmp/ccRLCvB9.s:163    .text.SPI_CS_High:0000000000000000 $t
+     /tmp/ccRLCvB9.s:170    .text.SPI_CS_High:0000000000000000 SPI_CS_High
+     /tmp/ccRLCvB9.s:191    .text.SPI_CS_High:0000000000000010 $d
+     /tmp/ccRLCvB9.s:196    .text.SPI_Freq_High:0000000000000000 $t
+     /tmp/ccRLCvB9.s:203    .text.SPI_Freq_High:0000000000000000 SPI_Freq_High
+     /tmp/ccRLCvB9.s:238    .text.SPI_Freq_High:0000000000000020 $d
+     /tmp/ccRLCvB9.s:243    .text.SPI_Freq_Low:0000000000000000 $t
+     /tmp/ccRLCvB9.s:250    .text.SPI_Freq_Low:0000000000000000 SPI_Freq_Low
+     /tmp/ccRLCvB9.s:285    .text.SPI_Freq_Low:0000000000000020 $d
+     /tmp/ccRLCvB9.s:290    .text.SPI_Timer_On:0000000000000000 $t
+     /tmp/ccRLCvB9.s:297    .text.SPI_Timer_On:0000000000000000 SPI_Timer_On
+     /tmp/ccRLCvB9.s:322    .text.SPI_Timer_On:0000000000000014 $d
                             *COM*:0000000000000004 spiTimerTickStart
                             *COM*:0000000000000004 spiTimerTickDelay
-     /tmp/cc1Sd0xR.s:328    .text.SPI_Timer_Status:0000000000000000 $t
-     /tmp/cc1Sd0xR.s:335    .text.SPI_Timer_Status:0000000000000000 SPI_Timer_Status
-     /tmp/cc1Sd0xR.s:363    .text.SPI_Timer_Status:000000000000001c $d
-     /tmp/cc1Sd0xR.s:369    .text.SPI_Timer_Off:0000000000000000 $t
-     /tmp/cc1Sd0xR.s:376    .text.SPI_Timer_Off:0000000000000000 SPI_Timer_Off
+     /tmp/ccRLCvB9.s:328    .text.SPI_Timer_Status:0000000000000000 $t
+     /tmp/ccRLCvB9.s:335    .text.SPI_Timer_Status:0000000000000000 SPI_Timer_Status
+     /tmp/ccRLCvB9.s:363    .text.SPI_Timer_Status:000000000000001c $d
+     /tmp/ccRLCvB9.s:369    .text.SPI_Timer_Off:0000000000000000 $t
+     /tmp/ccRLCvB9.s:376    .text.SPI_Timer_Off:0000000000000000 SPI_Timer_Off
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
