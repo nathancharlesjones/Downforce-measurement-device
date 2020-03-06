@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccmJkpLc.s 			page 1
+ARM GAS  /tmp/cc1Sd0xR.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -38,31 +38,33 @@ ARM GAS  /tmp/ccmJkpLc.s 			page 1
   11:Middlewares/Third_Party/ulibSD/spi_io.c **** #include "main.h"
   12:Middlewares/Third_Party/ulibSD/spi_io.c **** 
   13:Middlewares/Third_Party/ulibSD/spi_io.c **** extern SPI_HandleTypeDef hspi1;
-  14:Middlewares/Third_Party/ulibSD/spi_io.c **** extern TIM_HandleTypeDef htim1;
-  15:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t * GPIOA_BSRR = (uint32_t *)0x40010810;
-  16:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t * GPIOA_BRR = (uint32_t *)0x40010814;
-  17:Middlewares/Third_Party/ulibSD/spi_io.c **** uint16_t SPI_NSS_Pin_Pos = 4u;
-  18:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t SPI_NSS_Pin_Mask = (0x1 << 4);
-  19:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t * RCC_CFGR = (uint32_t *)0x40021004;
-  20:Middlewares/Third_Party/ulibSD/spi_io.c **** uint16_t PPRE2_Pos = 11u;
-  21:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t PPRE2_Mask = (0x111 << 11);
-  22:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t * SPI_CR1 = (uint32_t *)0x40013000;
-  23:Middlewares/Third_Party/ulibSD/spi_io.c **** uint16_t SPI_BR_Pos = 3u;
-  24:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t SPI_BR_Mask = (0x111 << 3);
-  25:Middlewares/Third_Party/ulibSD/spi_io.c **** 
-  26:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t spiTimerTickStart;
-  27:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t spiTimerTickDelay;
-  28:Middlewares/Third_Party/ulibSD/spi_io.c **** 
-  29:Middlewares/Third_Party/ulibSD/spi_io.c **** 
-  30:Middlewares/Third_Party/ulibSD/spi_io.c **** /******************************************************************************
-  31:Middlewares/Third_Party/ulibSD/spi_io.c ****  Module Public Functions - Low level SPI control functions
-  32:Middlewares/Third_Party/ulibSD/spi_io.c **** ******************************************************************************/
-  33:Middlewares/Third_Party/ulibSD/spi_io.c **** 
-ARM GAS  /tmp/ccmJkpLc.s 			page 2
+  14:Middlewares/Third_Party/ulibSD/spi_io.c **** /*
+  15:Middlewares/Third_Party/ulibSD/spi_io.c **** extern TIM_HandleTypeDef htim1;
+  16:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t * GPIOA_BSRR = (uint32_t *)0x40010810;
+  17:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t * GPIOA_BRR = (uint32_t *)0x40010814;
+  18:Middlewares/Third_Party/ulibSD/spi_io.c **** uint16_t SPI_NSS_Pin_Pos = 4u;
+  19:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t SPI_NSS_Pin_Mask = (0x1 << 4);
+  20:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t * RCC_CFGR = (uint32_t *)0x40021004;
+  21:Middlewares/Third_Party/ulibSD/spi_io.c **** uint16_t PPRE2_Pos = 11u;
+  22:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t PPRE2_Mask = (0x111 << 11);
+  23:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t * SPI_CR1 = (uint32_t *)0x40013000;
+  24:Middlewares/Third_Party/ulibSD/spi_io.c **** uint16_t SPI_BR_Pos = 3u;
+  25:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t SPI_BR_Mask = (0x111 << 3);
+  26:Middlewares/Third_Party/ulibSD/spi_io.c **** */
+  27:Middlewares/Third_Party/ulibSD/spi_io.c **** 
+  28:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t spiTimerTickStart;
+  29:Middlewares/Third_Party/ulibSD/spi_io.c **** uint32_t spiTimerTickDelay;
+  30:Middlewares/Third_Party/ulibSD/spi_io.c **** 
+  31:Middlewares/Third_Party/ulibSD/spi_io.c **** 
+  32:Middlewares/Third_Party/ulibSD/spi_io.c **** /******************************************************************************
+  33:Middlewares/Third_Party/ulibSD/spi_io.c ****  Module Public Functions - Low level SPI control functions
+ARM GAS  /tmp/cc1Sd0xR.s 			page 2
 
 
-  34:Middlewares/Third_Party/ulibSD/spi_io.c **** void SPI_Init (void) {
-  26              		.loc 1 34 0
+  34:Middlewares/Third_Party/ulibSD/spi_io.c **** ******************************************************************************/
+  35:Middlewares/Third_Party/ulibSD/spi_io.c **** 
+  36:Middlewares/Third_Party/ulibSD/spi_io.c **** void SPI_Init (void) {
+  26              		.loc 1 36 0
   27              		.cfi_startproc
   28              		@ args = 0, pretend = 0, frame = 0
   29              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -79,15 +81,15 @@ ARM GAS  /tmp/ccmJkpLc.s 			page 1
   41              		.fpu softvfp
   43              	SPI_RW:
   44              	.LFB67:
-  35:Middlewares/Third_Party/ulibSD/spi_io.c **** }
-  36:Middlewares/Third_Party/ulibSD/spi_io.c **** 
-  37:Middlewares/Third_Party/ulibSD/spi_io.c **** BYTE SPI_RW (BYTE d) {
-  45              		.loc 1 37 0
+  37:Middlewares/Third_Party/ulibSD/spi_io.c **** }
+  38:Middlewares/Third_Party/ulibSD/spi_io.c **** 
+  39:Middlewares/Third_Party/ulibSD/spi_io.c **** BYTE SPI_RW (BYTE d) {
+  45              		.loc 1 39 0
   46              		.cfi_startproc
   47              		@ args = 0, pretend = 0, frame = 8
   48              		@ frame_needed = 0, uses_anonymous_args = 0
   49              	.LVL0:
-  50              		.loc 1 37 0
+  50              		.loc 1 39 0
   51 0000 00B5     		push	{lr}
   52              	.LCFI0:
   53              		.cfi_def_cfa_offset 4
@@ -95,13 +97,13 @@ ARM GAS  /tmp/ccmJkpLc.s 			page 1
   55 0002 85B0     		sub	sp, sp, #20
   56              	.LCFI1:
   57              		.cfi_def_cfa_offset 24
-  38:Middlewares/Third_Party/ulibSD/spi_io.c ****     uint8_t rx_data = 0, tx_data = d;
-  58              		.loc 1 38 0
+  40:Middlewares/Third_Party/ulibSD/spi_io.c ****     uint8_t rx_data = 0, tx_data = d;
+  58              		.loc 1 40 0
   59 0004 0023     		movs	r3, #0
   60 0006 8DF80F30 		strb	r3, [sp, #15]
   61 000a 8DF80E00 		strb	r0, [sp, #14]
-  39:Middlewares/Third_Party/ulibSD/spi_io.c ****     HAL_SPI_TransmitReceive(&hspi1, (uint8_t *)(&tx_data), &rx_data, 1, 0);
-  62              		.loc 1 39 0
+  41:Middlewares/Third_Party/ulibSD/spi_io.c ****     HAL_SPI_TransmitReceive(&hspi1, (uint8_t *)(&tx_data), &rx_data, 1, 0);
+  62              		.loc 1 41 0
   63 000e 0093     		str	r3, [sp]
   64 0010 0123     		movs	r3, #1
   65 0012 0DF10F02 		add	r2, sp, #15
@@ -110,17 +112,17 @@ ARM GAS  /tmp/ccmJkpLc.s 			page 1
   68              	.LVL1:
   69 001c FFF7FEFF 		bl	HAL_SPI_TransmitReceive
   70              	.LVL2:
-  40:Middlewares/Third_Party/ulibSD/spi_io.c ****     return (rx_data);
-  41:Middlewares/Third_Party/ulibSD/spi_io.c **** }
-  71              		.loc 1 41 0
+  42:Middlewares/Third_Party/ulibSD/spi_io.c ****     return (rx_data);
+  43:Middlewares/Third_Party/ulibSD/spi_io.c **** }
+  71              		.loc 1 43 0
   72 0020 9DF80F00 		ldrb	r0, [sp, #15]	@ zero_extendqisi2
   73 0024 05B0     		add	sp, sp, #20
   74              	.LCFI2:
+ARM GAS  /tmp/cc1Sd0xR.s 			page 3
+
+
   75              		.cfi_def_cfa_offset 4
   76              		@ sp needed
-ARM GAS  /tmp/ccmJkpLc.s 			page 3
-
-
   77 0026 5DF804FB 		ldr	pc, [sp], #4
   78              	.L5:
   79 002a 00BF     		.align	2
@@ -137,9 +139,9 @@ ARM GAS  /tmp/ccmJkpLc.s 			page 1
   91              		.fpu softvfp
   93              	SPI_Release:
   94              	.LFB68:
-  42:Middlewares/Third_Party/ulibSD/spi_io.c **** 
-  43:Middlewares/Third_Party/ulibSD/spi_io.c **** void SPI_Release (void) {
-  95              		.loc 1 43 0
+  44:Middlewares/Third_Party/ulibSD/spi_io.c **** 
+  45:Middlewares/Third_Party/ulibSD/spi_io.c **** void SPI_Release (void) {
+  95              		.loc 1 45 0
   96              		.cfi_startproc
   97              		@ args = 0, pretend = 0, frame = 0
   98              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -149,22 +151,22 @@ ARM GAS  /tmp/ccmJkpLc.s 			page 1
  102              		.cfi_offset 4, -8
  103              		.cfi_offset 14, -4
  104              	.LVL3:
-  44:Middlewares/Third_Party/ulibSD/spi_io.c ****     WORD idx;
-  45:Middlewares/Third_Party/ulibSD/spi_io.c ****     for (idx=512; idx && (SPI_RW(0xFF)!=0xFF); idx--);
- 105              		.loc 1 45 0
+  46:Middlewares/Third_Party/ulibSD/spi_io.c ****     WORD idx;
+  47:Middlewares/Third_Party/ulibSD/spi_io.c ****     for (idx=512; idx && (SPI_RW(0xFF)!=0xFF); idx--);
+ 105              		.loc 1 47 0
  106 0002 4FF40074 		mov	r4, #512
  107 0006 01E0     		b	.L7
  108              	.LVL4:
  109              	.L9:
- 110              		.loc 1 45 0 is_stmt 0 discriminator 4
+ 110              		.loc 1 47 0 is_stmt 0 discriminator 4
  111 0008 013C     		subs	r4, r4, #1
  112              	.LVL5:
  113 000a A4B2     		uxth	r4, r4
  114              	.LVL6:
  115              	.L7:
- 116              		.loc 1 45 0 discriminator 1
+ 116              		.loc 1 47 0 discriminator 1
  117 000c 24B1     		cbz	r4, .L6
- 118              		.loc 1 45 0 discriminator 3
+ 118              		.loc 1 47 0 discriminator 3
  119 000e FF20     		movs	r0, #255
  120 0010 FFF7FEFF 		bl	SPI_RW
  121              	.LVL7:
@@ -176,463 +178,392 @@ ARM GAS  /tmp/ccmJkpLc.s 			page 1
  127              	.LFE68:
  129              		.section	.text.SPI_CS_Low,"ax",%progbits
  130              		.align	1
+ARM GAS  /tmp/cc1Sd0xR.s 			page 4
+
+
  131              		.global	SPI_CS_Low
  132              		.syntax unified
-ARM GAS  /tmp/ccmJkpLc.s 			page 4
-
-
  133              		.thumb
  134              		.thumb_func
  135              		.fpu softvfp
  137              	SPI_CS_Low:
  138              	.LFB69:
-  46:Middlewares/Third_Party/ulibSD/spi_io.c **** }
-  47:Middlewares/Third_Party/ulibSD/spi_io.c **** 
-  48:Middlewares/Third_Party/ulibSD/spi_io.c **** inline void SPI_CS_Low (void) {
- 139              		.loc 1 48 0 is_stmt 1
+  48:Middlewares/Third_Party/ulibSD/spi_io.c **** }
+  49:Middlewares/Third_Party/ulibSD/spi_io.c **** 
+  50:Middlewares/Third_Party/ulibSD/spi_io.c **** inline void SPI_CS_Low (void) {
+ 139              		.loc 1 50 0 is_stmt 1
  140              		.cfi_startproc
  141              		@ args = 0, pretend = 0, frame = 0
  142              		@ frame_needed = 0, uses_anonymous_args = 0
- 143              		@ link register save eliminated.
-  49:Middlewares/Third_Party/ulibSD/spi_io.c ****     *GPIOA_BRR |= SPI_NSS_Pin_Mask;
- 144              		.loc 1 49 0
- 145 0000 034B     		ldr	r3, .L12
- 146 0002 1A68     		ldr	r2, [r3]
- 147 0004 1368     		ldr	r3, [r2]
- 148 0006 0349     		ldr	r1, .L12+4
- 149 0008 0968     		ldr	r1, [r1]
- 150 000a 0B43     		orrs	r3, r3, r1
- 151 000c 1360     		str	r3, [r2]
- 152 000e 7047     		bx	lr
- 153              	.L13:
- 154              		.align	2
- 155              	.L12:
- 156 0010 00000000 		.word	.LANCHOR0
- 157 0014 00000000 		.word	.LANCHOR1
- 158              		.cfi_endproc
- 159              	.LFE69:
- 161              		.section	.text.SPI_CS_High,"ax",%progbits
- 162              		.align	1
- 163              		.global	SPI_CS_High
- 164              		.syntax unified
- 165              		.thumb
- 166              		.thumb_func
- 167              		.fpu softvfp
- 169              	SPI_CS_High:
- 170              	.LFB70:
-  50:Middlewares/Third_Party/ulibSD/spi_io.c **** }
-  51:Middlewares/Third_Party/ulibSD/spi_io.c **** 
-  52:Middlewares/Third_Party/ulibSD/spi_io.c **** inline void SPI_CS_High (void){
- 171              		.loc 1 52 0
- 172              		.cfi_startproc
- 173              		@ args = 0, pretend = 0, frame = 0
- 174              		@ frame_needed = 0, uses_anonymous_args = 0
- 175              		@ link register save eliminated.
-  53:Middlewares/Third_Party/ulibSD/spi_io.c ****     *GPIOA_BSRR |= SPI_NSS_Pin_Mask;
- 176              		.loc 1 53 0
- 177 0000 034B     		ldr	r3, .L15
- 178 0002 1A68     		ldr	r2, [r3]
- 179 0004 1368     		ldr	r3, [r2]
- 180 0006 0349     		ldr	r1, .L15+4
- 181 0008 0968     		ldr	r1, [r1]
- 182 000a 0B43     		orrs	r3, r3, r1
- 183 000c 1360     		str	r3, [r2]
- 184 000e 7047     		bx	lr
-ARM GAS  /tmp/ccmJkpLc.s 			page 5
+ 143 0000 08B5     		push	{r3, lr}
+ 144              	.LCFI4:
+ 145              		.cfi_def_cfa_offset 8
+ 146              		.cfi_offset 3, -8
+ 147              		.cfi_offset 14, -4
+  51:Middlewares/Third_Party/ulibSD/spi_io.c ****     HAL_GPIO_WritePin(SD_NSS_GPIO_Port, SD_NSS_Pin, GPIO_PIN_RESET);
+ 148              		.loc 1 51 0
+ 149 0002 0022     		movs	r2, #0
+ 150 0004 1021     		movs	r1, #16
+ 151 0006 0248     		ldr	r0, .L13
+ 152 0008 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 153              	.LVL8:
+ 154 000c 08BD     		pop	{r3, pc}
+ 155              	.L14:
+ 156 000e 00BF     		.align	2
+ 157              	.L13:
+ 158 0010 00080140 		.word	1073809408
+ 159              		.cfi_endproc
+ 160              	.LFE69:
+ 162              		.section	.text.SPI_CS_High,"ax",%progbits
+ 163              		.align	1
+ 164              		.global	SPI_CS_High
+ 165              		.syntax unified
+ 166              		.thumb
+ 167              		.thumb_func
+ 168              		.fpu softvfp
+ 170              	SPI_CS_High:
+ 171              	.LFB70:
+  52:Middlewares/Third_Party/ulibSD/spi_io.c **** }
+  53:Middlewares/Third_Party/ulibSD/spi_io.c **** 
+  54:Middlewares/Third_Party/ulibSD/spi_io.c **** inline void SPI_CS_High (void){
+ 172              		.loc 1 54 0
+ 173              		.cfi_startproc
+ 174              		@ args = 0, pretend = 0, frame = 0
+ 175              		@ frame_needed = 0, uses_anonymous_args = 0
+ 176 0000 08B5     		push	{r3, lr}
+ 177              	.LCFI5:
+ 178              		.cfi_def_cfa_offset 8
+ 179              		.cfi_offset 3, -8
+ 180              		.cfi_offset 14, -4
+  55:Middlewares/Third_Party/ulibSD/spi_io.c ****     HAL_GPIO_WritePin(SD_NSS_GPIO_Port, SD_NSS_Pin, GPIO_PIN_SET);
+ 181              		.loc 1 55 0
+ 182 0002 0122     		movs	r2, #1
+ARM GAS  /tmp/cc1Sd0xR.s 			page 5
 
 
- 185              	.L16:
- 186              		.align	2
- 187              	.L15:
- 188 0010 00000000 		.word	.LANCHOR2
- 189 0014 00000000 		.word	.LANCHOR1
- 190              		.cfi_endproc
- 191              	.LFE70:
- 193              		.section	.text.SPI_Freq_High,"ax",%progbits
- 194              		.align	1
- 195              		.global	SPI_Freq_High
- 196              		.syntax unified
- 197              		.thumb
- 198              		.thumb_func
- 199              		.fpu softvfp
- 201              	SPI_Freq_High:
- 202              	.LFB71:
-  54:Middlewares/Third_Party/ulibSD/spi_io.c **** }
-  55:Middlewares/Third_Party/ulibSD/spi_io.c **** 
-  56:Middlewares/Third_Party/ulibSD/spi_io.c **** inline void SPI_Freq_High (void) {
- 203              		.loc 1 56 0
- 204              		.cfi_startproc
- 205              		@ args = 0, pretend = 0, frame = 0
- 206              		@ frame_needed = 0, uses_anonymous_args = 0
- 207              		@ link register save eliminated.
-  57:Middlewares/Third_Party/ulibSD/spi_io.c ****     *SPI_CR1 &= ~(SPI_BR_Mask);
- 208              		.loc 1 57 0
- 209 0000 044B     		ldr	r3, .L18
- 210 0002 1A68     		ldr	r2, [r3]
- 211 0004 044B     		ldr	r3, .L18+4
- 212 0006 1968     		ldr	r1, [r3]
- 213 0008 1368     		ldr	r3, [r2]
- 214 000a 23EA0103 		bic	r3, r3, r1
- 215 000e 1360     		str	r3, [r2]
- 216 0010 7047     		bx	lr
- 217              	.L19:
- 218 0012 00BF     		.align	2
- 219              	.L18:
- 220 0014 00000000 		.word	.LANCHOR3
- 221 0018 00000000 		.word	.LANCHOR4
- 222              		.cfi_endproc
- 223              	.LFE71:
- 225              		.section	.text.SPI_Freq_Low,"ax",%progbits
- 226              		.align	1
- 227              		.global	SPI_Freq_Low
- 228              		.syntax unified
- 229              		.thumb
- 230              		.thumb_func
- 231              		.fpu softvfp
- 233              	SPI_Freq_Low:
- 234              	.LFB72:
-  58:Middlewares/Third_Party/ulibSD/spi_io.c **** }
-  59:Middlewares/Third_Party/ulibSD/spi_io.c **** 
-  60:Middlewares/Third_Party/ulibSD/spi_io.c **** inline void SPI_Freq_Low (void) {
- 235              		.loc 1 60 0
- 236              		.cfi_startproc
- 237              		@ args = 0, pretend = 0, frame = 0
- 238              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/ccmJkpLc.s 			page 6
+ 183 0004 1021     		movs	r1, #16
+ 184 0006 0248     		ldr	r0, .L17
+ 185 0008 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 186              	.LVL9:
+ 187 000c 08BD     		pop	{r3, pc}
+ 188              	.L18:
+ 189 000e 00BF     		.align	2
+ 190              	.L17:
+ 191 0010 00080140 		.word	1073809408
+ 192              		.cfi_endproc
+ 193              	.LFE70:
+ 195              		.section	.text.SPI_Freq_High,"ax",%progbits
+ 196              		.align	1
+ 197              		.global	SPI_Freq_High
+ 198              		.syntax unified
+ 199              		.thumb
+ 200              		.thumb_func
+ 201              		.fpu softvfp
+ 203              	SPI_Freq_High:
+ 204              	.LFB71:
+  56:Middlewares/Third_Party/ulibSD/spi_io.c **** }
+  57:Middlewares/Third_Party/ulibSD/spi_io.c **** 
+  58:Middlewares/Third_Party/ulibSD/spi_io.c **** inline void SPI_Freq_High (void) {
+ 205              		.loc 1 58 0
+ 206              		.cfi_startproc
+ 207              		@ args = 0, pretend = 0, frame = 0
+ 208              		@ frame_needed = 0, uses_anonymous_args = 0
+ 209 0000 10B5     		push	{r4, lr}
+ 210              	.LCFI6:
+ 211              		.cfi_def_cfa_offset 8
+ 212              		.cfi_offset 4, -8
+ 213              		.cfi_offset 14, -4
+  59:Middlewares/Third_Party/ulibSD/spi_io.c ****     //De-initialize SPI
+  60:Middlewares/Third_Party/ulibSD/spi_io.c ****     HAL_SPI_DeInit(&hspi1);
+ 214              		.loc 1 60 0
+ 215 0002 074C     		ldr	r4, .L23
+ 216 0004 2046     		mov	r0, r4
+ 217 0006 FFF7FEFF 		bl	HAL_SPI_DeInit
+ 218              	.LVL10:
+  61:Middlewares/Third_Party/ulibSD/spi_io.c ****     //Set init struct baudrate prescaler to 2
+  62:Middlewares/Third_Party/ulibSD/spi_io.c ****     hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+ 219              		.loc 1 62 0
+ 220 000a 0023     		movs	r3, #0
+ 221 000c E361     		str	r3, [r4, #28]
+  63:Middlewares/Third_Party/ulibSD/spi_io.c ****     //Re-initialize SPI
+  64:Middlewares/Third_Party/ulibSD/spi_io.c ****     if (HAL_SPI_Init(&hspi1) != HAL_OK)
+ 222              		.loc 1 64 0
+ 223 000e 2046     		mov	r0, r4
+ 224 0010 FFF7FEFF 		bl	HAL_SPI_Init
+ 225              	.LVL11:
+ 226 0014 00B9     		cbnz	r0, .L22
+ 227              	.L19:
+ 228 0016 10BD     		pop	{r4, pc}
+ 229              	.L22:
+  65:Middlewares/Third_Party/ulibSD/spi_io.c ****     {
+  66:Middlewares/Third_Party/ulibSD/spi_io.c ****         Error_Handler();
+ 230              		.loc 1 66 0
+ARM GAS  /tmp/cc1Sd0xR.s 			page 6
 
 
- 239 0000 08B5     		push	{r3, lr}
- 240              	.LCFI4:
- 241              		.cfi_def_cfa_offset 8
- 242              		.cfi_offset 3, -8
- 243              		.cfi_offset 14, -4
-  61:Middlewares/Third_Party/ulibSD/spi_io.c ****     if ( *RCC_CFGR & PPRE2_Mask )
- 244              		.loc 1 61 0
- 245 0002 104B     		ldr	r3, .L25
- 246 0004 1B68     		ldr	r3, [r3]
- 247 0006 1A68     		ldr	r2, [r3]
- 248 0008 0F4B     		ldr	r3, .L25+4
- 249 000a 1B68     		ldr	r3, [r3]
- 250 000c 1A42     		tst	r2, r3
- 251 000e 10D0     		beq	.L21
-  62:Middlewares/Third_Party/ulibSD/spi_io.c ****     {
-  63:Middlewares/Third_Party/ulibSD/spi_io.c ****         //APB2 prescaler is >1 and APB2 timer clock is 2x APB2 clock
-  64:Middlewares/Third_Party/ulibSD/spi_io.c ****         if ( ( HAL_RCC_GetPCLK2Freq() * 2 / 256 ) > 400000 )
- 252              		.loc 1 64 0
- 253 0010 FFF7FEFF 		bl	HAL_RCC_GetPCLK2Freq
- 254              	.LVL8:
- 255 0014 0D4B     		ldr	r3, .L25+8
- 256 0016 B3EB400F 		cmp	r3, r0, lsl #1
- 257 001a 07D3     		bcc	.L24
- 258              	.L22:
-  65:Middlewares/Third_Party/ulibSD/spi_io.c ****         {
-  66:Middlewares/Third_Party/ulibSD/spi_io.c ****             Error_Handler();
-  67:Middlewares/Third_Party/ulibSD/spi_io.c ****         }
-  68:Middlewares/Third_Party/ulibSD/spi_io.c ****     }
-  69:Middlewares/Third_Party/ulibSD/spi_io.c ****     else
-  70:Middlewares/Third_Party/ulibSD/spi_io.c ****     {
-  71:Middlewares/Third_Party/ulibSD/spi_io.c ****         //APB2 prescaler is x1 and APB2 timer clock = APB2 clock
-  72:Middlewares/Third_Party/ulibSD/spi_io.c ****         if ( ( HAL_RCC_GetPCLK2Freq() / 256 ) > 400000 )
-  73:Middlewares/Third_Party/ulibSD/spi_io.c ****         {
-  74:Middlewares/Third_Party/ulibSD/spi_io.c ****             Error_Handler();
-  75:Middlewares/Third_Party/ulibSD/spi_io.c ****         }
-  76:Middlewares/Third_Party/ulibSD/spi_io.c ****     }
-  77:Middlewares/Third_Party/ulibSD/spi_io.c ****     *SPI_CR1 |= SPI_BR_Mask;
- 259              		.loc 1 77 0
- 260 001c 0C4B     		ldr	r3, .L25+12
- 261 001e 1A68     		ldr	r2, [r3]
- 262 0020 1368     		ldr	r3, [r2]
- 263 0022 0C49     		ldr	r1, .L25+16
- 264 0024 0968     		ldr	r1, [r1]
- 265 0026 0B43     		orrs	r3, r3, r1
- 266 0028 1360     		str	r3, [r2]
- 267 002a 08BD     		pop	{r3, pc}
- 268              	.L24:
-  66:Middlewares/Third_Party/ulibSD/spi_io.c ****         }
- 269              		.loc 1 66 0
- 270 002c FFF7FEFF 		bl	Error_Handler
- 271              	.LVL9:
- 272 0030 F4E7     		b	.L22
- 273              	.L21:
-  72:Middlewares/Third_Party/ulibSD/spi_io.c ****         {
- 274              		.loc 1 72 0
- 275 0032 FFF7FEFF 		bl	HAL_RCC_GetPCLK2Freq
- 276              	.LVL10:
-ARM GAS  /tmp/ccmJkpLc.s 			page 7
+ 231 0018 FFF7FEFF 		bl	Error_Handler
+ 232              	.LVL12:
+  67:Middlewares/Third_Party/ulibSD/spi_io.c ****     }
+  68:Middlewares/Third_Party/ulibSD/spi_io.c **** }
+ 233              		.loc 1 68 0
+ 234 001c FBE7     		b	.L19
+ 235              	.L24:
+ 236 001e 00BF     		.align	2
+ 237              	.L23:
+ 238 0020 00000000 		.word	hspi1
+ 239              		.cfi_endproc
+ 240              	.LFE71:
+ 242              		.section	.text.SPI_Freq_Low,"ax",%progbits
+ 243              		.align	1
+ 244              		.global	SPI_Freq_Low
+ 245              		.syntax unified
+ 246              		.thumb
+ 247              		.thumb_func
+ 248              		.fpu softvfp
+ 250              	SPI_Freq_Low:
+ 251              	.LFB72:
+  69:Middlewares/Third_Party/ulibSD/spi_io.c **** 
+  70:Middlewares/Third_Party/ulibSD/spi_io.c **** inline void SPI_Freq_Low (void) {
+ 252              		.loc 1 70 0
+ 253              		.cfi_startproc
+ 254              		@ args = 0, pretend = 0, frame = 0
+ 255              		@ frame_needed = 0, uses_anonymous_args = 0
+ 256 0000 10B5     		push	{r4, lr}
+ 257              	.LCFI7:
+ 258              		.cfi_def_cfa_offset 8
+ 259              		.cfi_offset 4, -8
+ 260              		.cfi_offset 14, -4
+  71:Middlewares/Third_Party/ulibSD/spi_io.c ****     //De-initialize SPI
+  72:Middlewares/Third_Party/ulibSD/spi_io.c ****     HAL_SPI_DeInit(&hspi1);
+ 261              		.loc 1 72 0
+ 262 0002 074C     		ldr	r4, .L29
+ 263 0004 2046     		mov	r0, r4
+ 264 0006 FFF7FEFF 		bl	HAL_SPI_DeInit
+ 265              	.LVL13:
+  73:Middlewares/Third_Party/ulibSD/spi_io.c ****     //Set init struct baudrate prescaler to 256
+  74:Middlewares/Third_Party/ulibSD/spi_io.c ****     hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_32;
+ 266              		.loc 1 74 0
+ 267 000a 2023     		movs	r3, #32
+ 268 000c E361     		str	r3, [r4, #28]
+  75:Middlewares/Third_Party/ulibSD/spi_io.c ****     //Re-initialize SPI
+  76:Middlewares/Third_Party/ulibSD/spi_io.c ****     if (HAL_SPI_Init(&hspi1) != HAL_OK)
+ 269              		.loc 1 76 0
+ 270 000e 2046     		mov	r0, r4
+ 271 0010 FFF7FEFF 		bl	HAL_SPI_Init
+ 272              	.LVL14:
+ 273 0014 00B9     		cbnz	r0, .L28
+ 274              	.L25:
+ 275 0016 10BD     		pop	{r4, pc}
+ 276              	.L28:
+  77:Middlewares/Third_Party/ulibSD/spi_io.c ****     {
+  78:Middlewares/Third_Party/ulibSD/spi_io.c ****         Error_Handler();
+ 277              		.loc 1 78 0
+ARM GAS  /tmp/cc1Sd0xR.s 			page 7
 
 
- 277 0036 054B     		ldr	r3, .L25+8
- 278 0038 9842     		cmp	r0, r3
- 279 003a EFD9     		bls	.L22
-  74:Middlewares/Third_Party/ulibSD/spi_io.c ****         }
- 280              		.loc 1 74 0
- 281 003c FFF7FEFF 		bl	Error_Handler
- 282              	.LVL11:
- 283 0040 ECE7     		b	.L22
- 284              	.L26:
- 285 0042 00BF     		.align	2
- 286              	.L25:
- 287 0044 00000000 		.word	.LANCHOR5
- 288 0048 00000000 		.word	.LANCHOR6
- 289 004c FF801A06 		.word	102400255
- 290 0050 00000000 		.word	.LANCHOR3
- 291 0054 00000000 		.word	.LANCHOR4
- 292              		.cfi_endproc
- 293              	.LFE72:
- 295              		.section	.text.SPI_Timer_On,"ax",%progbits
- 296              		.align	1
- 297              		.global	SPI_Timer_On
- 298              		.syntax unified
- 299              		.thumb
- 300              		.thumb_func
- 301              		.fpu softvfp
- 303              	SPI_Timer_On:
- 304              	.LFB73:
-  78:Middlewares/Third_Party/ulibSD/spi_io.c **** }
-  79:Middlewares/Third_Party/ulibSD/spi_io.c **** 
-  80:Middlewares/Third_Party/ulibSD/spi_io.c **** void SPI_Timer_On (WORD ms) {
- 305              		.loc 1 80 0
- 306              		.cfi_startproc
- 307              		@ args = 0, pretend = 0, frame = 0
- 308              		@ frame_needed = 0, uses_anonymous_args = 0
- 309              	.LVL12:
- 310 0000 10B5     		push	{r4, lr}
- 311              	.LCFI5:
- 312              		.cfi_def_cfa_offset 8
- 313              		.cfi_offset 4, -8
- 314              		.cfi_offset 14, -4
- 315 0002 0446     		mov	r4, r0
-  81:Middlewares/Third_Party/ulibSD/spi_io.c ****     spiTimerTickStart = HAL_GetTick();
- 316              		.loc 1 81 0
- 317 0004 FFF7FEFF 		bl	HAL_GetTick
- 318              	.LVL13:
- 319 0008 024B     		ldr	r3, .L29
- 320 000a 1860     		str	r0, [r3]
-  82:Middlewares/Third_Party/ulibSD/spi_io.c ****     spiTimerTickDelay = ms;
- 321              		.loc 1 82 0
- 322 000c 024B     		ldr	r3, .L29+4
- 323 000e 1C60     		str	r4, [r3]
- 324 0010 10BD     		pop	{r4, pc}
- 325              	.L30:
- 326 0012 00BF     		.align	2
- 327              	.L29:
- 328 0014 00000000 		.word	spiTimerTickStart
- 329 0018 00000000 		.word	spiTimerTickDelay
-ARM GAS  /tmp/ccmJkpLc.s 			page 8
+ 278 0018 FFF7FEFF 		bl	Error_Handler
+ 279              	.LVL15:
+  79:Middlewares/Third_Party/ulibSD/spi_io.c ****     }
+  80:Middlewares/Third_Party/ulibSD/spi_io.c ****     
+  81:Middlewares/Third_Party/ulibSD/spi_io.c ****     /*
+  82:Middlewares/Third_Party/ulibSD/spi_io.c ****     if ( *RCC_CFGR & PPRE2_Mask )
+  83:Middlewares/Third_Party/ulibSD/spi_io.c ****     {
+  84:Middlewares/Third_Party/ulibSD/spi_io.c ****         //APB2 prescaler is >1 and APB2 timer clock is 2x APB2 clock
+  85:Middlewares/Third_Party/ulibSD/spi_io.c ****         if ( ( HAL_RCC_GetPCLK2Freq() * 2 / 256 ) > 400000 )
+  86:Middlewares/Third_Party/ulibSD/spi_io.c ****         {
+  87:Middlewares/Third_Party/ulibSD/spi_io.c ****             Error_Handler();
+  88:Middlewares/Third_Party/ulibSD/spi_io.c ****         }
+  89:Middlewares/Third_Party/ulibSD/spi_io.c ****     }
+  90:Middlewares/Third_Party/ulibSD/spi_io.c ****     else
+  91:Middlewares/Third_Party/ulibSD/spi_io.c ****     {
+  92:Middlewares/Third_Party/ulibSD/spi_io.c ****         //APB2 prescaler is x1 and APB2 timer clock = APB2 clock
+  93:Middlewares/Third_Party/ulibSD/spi_io.c ****         if ( ( HAL_RCC_GetPCLK2Freq() / 256 ) > 400000 )
+  94:Middlewares/Third_Party/ulibSD/spi_io.c ****         {
+  95:Middlewares/Third_Party/ulibSD/spi_io.c ****             Error_Handler();
+  96:Middlewares/Third_Party/ulibSD/spi_io.c ****         }
+  97:Middlewares/Third_Party/ulibSD/spi_io.c ****     }
+  98:Middlewares/Third_Party/ulibSD/spi_io.c ****     *SPI_CR1 |= SPI_BR_Mask;
+  99:Middlewares/Third_Party/ulibSD/spi_io.c ****     */
+ 100:Middlewares/Third_Party/ulibSD/spi_io.c **** }
+ 280              		.loc 1 100 0
+ 281 001c FBE7     		b	.L25
+ 282              	.L30:
+ 283 001e 00BF     		.align	2
+ 284              	.L29:
+ 285 0020 00000000 		.word	hspi1
+ 286              		.cfi_endproc
+ 287              	.LFE72:
+ 289              		.section	.text.SPI_Timer_On,"ax",%progbits
+ 290              		.align	1
+ 291              		.global	SPI_Timer_On
+ 292              		.syntax unified
+ 293              		.thumb
+ 294              		.thumb_func
+ 295              		.fpu softvfp
+ 297              	SPI_Timer_On:
+ 298              	.LFB73:
+ 101:Middlewares/Third_Party/ulibSD/spi_io.c **** 
+ 102:Middlewares/Third_Party/ulibSD/spi_io.c **** void SPI_Timer_On (WORD ms) {
+ 299              		.loc 1 102 0
+ 300              		.cfi_startproc
+ 301              		@ args = 0, pretend = 0, frame = 0
+ 302              		@ frame_needed = 0, uses_anonymous_args = 0
+ 303              	.LVL16:
+ 304 0000 10B5     		push	{r4, lr}
+ 305              	.LCFI8:
+ 306              		.cfi_def_cfa_offset 8
+ 307              		.cfi_offset 4, -8
+ 308              		.cfi_offset 14, -4
+ 309 0002 0446     		mov	r4, r0
+ 103:Middlewares/Third_Party/ulibSD/spi_io.c ****     spiTimerTickStart = HAL_GetTick();
+ 310              		.loc 1 103 0
+ 311 0004 FFF7FEFF 		bl	HAL_GetTick
+ARM GAS  /tmp/cc1Sd0xR.s 			page 8
 
 
- 330              		.cfi_endproc
- 331              	.LFE73:
- 333              		.section	.text.SPI_Timer_Status,"ax",%progbits
- 334              		.align	1
- 335              		.global	SPI_Timer_Status
- 336              		.syntax unified
- 337              		.thumb
- 338              		.thumb_func
- 339              		.fpu softvfp
- 341              	SPI_Timer_Status:
- 342              	.LFB74:
-  83:Middlewares/Third_Party/ulibSD/spi_io.c **** }
-  84:Middlewares/Third_Party/ulibSD/spi_io.c **** 
-  85:Middlewares/Third_Party/ulibSD/spi_io.c **** inline BOOL SPI_Timer_Status (void) {
- 343              		.loc 1 85 0
- 344              		.cfi_startproc
- 345              		@ args = 0, pretend = 0, frame = 0
- 346              		@ frame_needed = 0, uses_anonymous_args = 0
- 347 0000 08B5     		push	{r3, lr}
- 348              	.LCFI6:
- 349              		.cfi_def_cfa_offset 8
- 350              		.cfi_offset 3, -8
- 351              		.cfi_offset 14, -4
-  86:Middlewares/Third_Party/ulibSD/spi_io.c ****     return ((HAL_GetTick() - spiTimerTickStart) > spiTimerTickDelay);
- 352              		.loc 1 86 0
- 353 0002 FFF7FEFF 		bl	HAL_GetTick
- 354              	.LVL14:
- 355 0006 054B     		ldr	r3, .L33
- 356 0008 1B68     		ldr	r3, [r3]
- 357 000a C01A     		subs	r0, r0, r3
- 358 000c 044B     		ldr	r3, .L33+4
- 359 000e 1B68     		ldr	r3, [r3]
-  87:Middlewares/Third_Party/ulibSD/spi_io.c **** }
- 360              		.loc 1 87 0
- 361 0010 9842     		cmp	r0, r3
- 362 0012 94BF     		ite	ls
- 363 0014 0020     		movls	r0, #0
- 364 0016 0120     		movhi	r0, #1
- 365 0018 08BD     		pop	{r3, pc}
- 366              	.L34:
- 367 001a 00BF     		.align	2
- 368              	.L33:
- 369 001c 00000000 		.word	spiTimerTickStart
- 370 0020 00000000 		.word	spiTimerTickDelay
- 371              		.cfi_endproc
- 372              	.LFE74:
- 374              		.section	.text.SPI_Timer_Off,"ax",%progbits
- 375              		.align	1
- 376              		.global	SPI_Timer_Off
- 377              		.syntax unified
- 378              		.thumb
- 379              		.thumb_func
- 380              		.fpu softvfp
- 382              	SPI_Timer_Off:
- 383              	.LFB75:
-  88:Middlewares/Third_Party/ulibSD/spi_io.c **** 
-  89:Middlewares/Third_Party/ulibSD/spi_io.c **** inline void SPI_Timer_Off (void) {
-ARM GAS  /tmp/ccmJkpLc.s 			page 9
+ 312              	.LVL17:
+ 313 0008 024B     		ldr	r3, .L33
+ 314 000a 1860     		str	r0, [r3]
+ 104:Middlewares/Third_Party/ulibSD/spi_io.c ****     spiTimerTickDelay = ms;
+ 315              		.loc 1 104 0
+ 316 000c 024B     		ldr	r3, .L33+4
+ 317 000e 1C60     		str	r4, [r3]
+ 318 0010 10BD     		pop	{r4, pc}
+ 319              	.L34:
+ 320 0012 00BF     		.align	2
+ 321              	.L33:
+ 322 0014 00000000 		.word	spiTimerTickStart
+ 323 0018 00000000 		.word	spiTimerTickDelay
+ 324              		.cfi_endproc
+ 325              	.LFE73:
+ 327              		.section	.text.SPI_Timer_Status,"ax",%progbits
+ 328              		.align	1
+ 329              		.global	SPI_Timer_Status
+ 330              		.syntax unified
+ 331              		.thumb
+ 332              		.thumb_func
+ 333              		.fpu softvfp
+ 335              	SPI_Timer_Status:
+ 336              	.LFB74:
+ 105:Middlewares/Third_Party/ulibSD/spi_io.c **** }
+ 106:Middlewares/Third_Party/ulibSD/spi_io.c **** 
+ 107:Middlewares/Third_Party/ulibSD/spi_io.c **** inline BOOL SPI_Timer_Status (void) {
+ 337              		.loc 1 107 0
+ 338              		.cfi_startproc
+ 339              		@ args = 0, pretend = 0, frame = 0
+ 340              		@ frame_needed = 0, uses_anonymous_args = 0
+ 341 0000 08B5     		push	{r3, lr}
+ 342              	.LCFI9:
+ 343              		.cfi_def_cfa_offset 8
+ 344              		.cfi_offset 3, -8
+ 345              		.cfi_offset 14, -4
+ 108:Middlewares/Third_Party/ulibSD/spi_io.c ****     return ((HAL_GetTick() - spiTimerTickStart) < spiTimerTickDelay);
+ 346              		.loc 1 108 0
+ 347 0002 FFF7FEFF 		bl	HAL_GetTick
+ 348              	.LVL18:
+ 349 0006 054B     		ldr	r3, .L37
+ 350 0008 1B68     		ldr	r3, [r3]
+ 351 000a C01A     		subs	r0, r0, r3
+ 352 000c 044B     		ldr	r3, .L37+4
+ 353 000e 1B68     		ldr	r3, [r3]
+ 109:Middlewares/Third_Party/ulibSD/spi_io.c **** }
+ 354              		.loc 1 109 0
+ 355 0010 9842     		cmp	r0, r3
+ 356 0012 2CBF     		ite	cs
+ 357 0014 0020     		movcs	r0, #0
+ 358 0016 0120     		movcc	r0, #1
+ 359 0018 08BD     		pop	{r3, pc}
+ 360              	.L38:
+ 361 001a 00BF     		.align	2
+ 362              	.L37:
+ 363 001c 00000000 		.word	spiTimerTickStart
+ 364 0020 00000000 		.word	spiTimerTickDelay
+ARM GAS  /tmp/cc1Sd0xR.s 			page 9
 
 
- 384              		.loc 1 89 0
- 385              		.cfi_startproc
- 386              		@ args = 0, pretend = 0, frame = 0
- 387              		@ frame_needed = 0, uses_anonymous_args = 0
- 388              		@ link register save eliminated.
- 389 0000 7047     		bx	lr
- 390              		.cfi_endproc
- 391              	.LFE75:
- 393              		.comm	spiTimerTickDelay,4,4
- 394              		.comm	spiTimerTickStart,4,4
- 395              		.global	SPI_BR_Mask
- 396              		.global	SPI_BR_Pos
- 397              		.global	SPI_CR1
- 398              		.global	PPRE2_Mask
- 399              		.global	PPRE2_Pos
- 400              		.global	RCC_CFGR
- 401              		.global	SPI_NSS_Pin_Mask
- 402              		.global	SPI_NSS_Pin_Pos
- 403              		.global	GPIOA_BRR
- 404              		.global	GPIOA_BSRR
- 405              		.section	.data.GPIOA_BRR,"aw",%progbits
- 406              		.align	2
- 407              		.set	.LANCHOR0,. + 0
- 410              	GPIOA_BRR:
- 411 0000 14080140 		.word	1073809428
- 412              		.section	.data.GPIOA_BSRR,"aw",%progbits
- 413              		.align	2
- 414              		.set	.LANCHOR2,. + 0
- 417              	GPIOA_BSRR:
- 418 0000 10080140 		.word	1073809424
- 419              		.section	.data.PPRE2_Mask,"aw",%progbits
- 420              		.align	2
- 421              		.set	.LANCHOR6,. + 0
- 424              	PPRE2_Mask:
- 425 0000 00880800 		.word	559104
- 426              		.section	.data.PPRE2_Pos,"aw",%progbits
- 427              		.align	1
- 430              	PPRE2_Pos:
- 431 0000 0B00     		.short	11
- 432              		.section	.data.RCC_CFGR,"aw",%progbits
- 433              		.align	2
- 434              		.set	.LANCHOR5,. + 0
- 437              	RCC_CFGR:
- 438 0000 04100240 		.word	1073876996
- 439              		.section	.data.SPI_BR_Mask,"aw",%progbits
- 440              		.align	2
- 441              		.set	.LANCHOR4,. + 0
- 444              	SPI_BR_Mask:
- 445 0000 88080000 		.word	2184
- 446              		.section	.data.SPI_BR_Pos,"aw",%progbits
- 447              		.align	1
- 450              	SPI_BR_Pos:
- 451 0000 0300     		.short	3
- 452              		.section	.data.SPI_CR1,"aw",%progbits
- 453              		.align	2
- 454              		.set	.LANCHOR3,. + 0
- 457              	SPI_CR1:
-ARM GAS  /tmp/ccmJkpLc.s 			page 10
-
-
- 458 0000 00300140 		.word	1073819648
- 459              		.section	.data.SPI_NSS_Pin_Mask,"aw",%progbits
- 460              		.align	2
- 461              		.set	.LANCHOR1,. + 0
- 464              	SPI_NSS_Pin_Mask:
- 465 0000 10000000 		.word	16
- 466              		.section	.data.SPI_NSS_Pin_Pos,"aw",%progbits
- 467              		.align	1
- 470              	SPI_NSS_Pin_Pos:
- 471 0000 0400     		.short	4
- 472              		.text
- 473              	.Letext0:
- 474              		.file 2 "/usr/include/newlib/machine/_default_types.h"
- 475              		.file 3 "/usr/include/newlib/sys/lock.h"
- 476              		.file 4 "/usr/include/newlib/sys/_types.h"
- 477              		.file 5 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
- 478              		.file 6 "/usr/include/newlib/sys/reent.h"
- 479              		.file 7 "/usr/include/newlib/sys/_stdint.h"
- 480              		.file 8 "Middlewares/Third_Party/FatFs/src/integer.h"
- 481              		.file 9 "Middlewares/Third_Party/ulibSD/integer_ulibsd.h"
- 482              		.file 10 "Drivers/CMSIS/Include/core_cm3.h"
- 483              		.file 11 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
- 484              		.file 12 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 485              		.file 13 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
- 486              		.file 14 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
- 487              		.file 15 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h"
- 488              		.file 16 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h"
- 489              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
- 490              		.file 18 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
- 491              		.file 19 "Inc/main.h"
-ARM GAS  /tmp/ccmJkpLc.s 			page 11
+ 365              		.cfi_endproc
+ 366              	.LFE74:
+ 368              		.section	.text.SPI_Timer_Off,"ax",%progbits
+ 369              		.align	1
+ 370              		.global	SPI_Timer_Off
+ 371              		.syntax unified
+ 372              		.thumb
+ 373              		.thumb_func
+ 374              		.fpu softvfp
+ 376              	SPI_Timer_Off:
+ 377              	.LFB75:
+ 110:Middlewares/Third_Party/ulibSD/spi_io.c **** 
+ 111:Middlewares/Third_Party/ulibSD/spi_io.c **** inline void SPI_Timer_Off (void) {
+ 378              		.loc 1 111 0
+ 379              		.cfi_startproc
+ 380              		@ args = 0, pretend = 0, frame = 0
+ 381              		@ frame_needed = 0, uses_anonymous_args = 0
+ 382              		@ link register save eliminated.
+ 383 0000 7047     		bx	lr
+ 384              		.cfi_endproc
+ 385              	.LFE75:
+ 387              		.comm	spiTimerTickDelay,4,4
+ 388              		.comm	spiTimerTickStart,4,4
+ 389              		.text
+ 390              	.Letext0:
+ 391              		.file 2 "/usr/include/newlib/machine/_default_types.h"
+ 392              		.file 3 "/usr/include/newlib/sys/lock.h"
+ 393              		.file 4 "/usr/include/newlib/sys/_types.h"
+ 394              		.file 5 "/usr/lib/gcc/arm-none-eabi/6.3.1/include/stddef.h"
+ 395              		.file 6 "/usr/include/newlib/sys/reent.h"
+ 396              		.file 7 "/usr/include/newlib/sys/_stdint.h"
+ 397              		.file 8 "Middlewares/Third_Party/FatFs/src/integer.h"
+ 398              		.file 9 "Middlewares/Third_Party/ulibSD/integer_ulibsd.h"
+ 399              		.file 10 "Drivers/CMSIS/Include/core_cm3.h"
+ 400              		.file 11 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
+ 401              		.file 12 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
+ 402              		.file 13 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
+ 403              		.file 14 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h"
+ 404              		.file 15 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
+ 405              		.file 16 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h"
+ 406              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+ 407              		.file 18 "Inc/main.h"
+ARM GAS  /tmp/cc1Sd0xR.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 spi_io.c
-     /tmp/ccmJkpLc.s:16     .text.SPI_Init:0000000000000000 $t
-     /tmp/ccmJkpLc.s:23     .text.SPI_Init:0000000000000000 SPI_Init
-     /tmp/ccmJkpLc.s:36     .text.SPI_RW:0000000000000000 $t
-     /tmp/ccmJkpLc.s:43     .text.SPI_RW:0000000000000000 SPI_RW
-     /tmp/ccmJkpLc.s:81     .text.SPI_RW:000000000000002c $d
-     /tmp/ccmJkpLc.s:86     .text.SPI_Release:0000000000000000 $t
-     /tmp/ccmJkpLc.s:93     .text.SPI_Release:0000000000000000 SPI_Release
-     /tmp/ccmJkpLc.s:130    .text.SPI_CS_Low:0000000000000000 $t
-     /tmp/ccmJkpLc.s:137    .text.SPI_CS_Low:0000000000000000 SPI_CS_Low
-     /tmp/ccmJkpLc.s:156    .text.SPI_CS_Low:0000000000000010 $d
-     /tmp/ccmJkpLc.s:162    .text.SPI_CS_High:0000000000000000 $t
-     /tmp/ccmJkpLc.s:169    .text.SPI_CS_High:0000000000000000 SPI_CS_High
-     /tmp/ccmJkpLc.s:188    .text.SPI_CS_High:0000000000000010 $d
-     /tmp/ccmJkpLc.s:194    .text.SPI_Freq_High:0000000000000000 $t
-     /tmp/ccmJkpLc.s:201    .text.SPI_Freq_High:0000000000000000 SPI_Freq_High
-     /tmp/ccmJkpLc.s:220    .text.SPI_Freq_High:0000000000000014 $d
-     /tmp/ccmJkpLc.s:226    .text.SPI_Freq_Low:0000000000000000 $t
-     /tmp/ccmJkpLc.s:233    .text.SPI_Freq_Low:0000000000000000 SPI_Freq_Low
-     /tmp/ccmJkpLc.s:287    .text.SPI_Freq_Low:0000000000000044 $d
-     /tmp/ccmJkpLc.s:296    .text.SPI_Timer_On:0000000000000000 $t
-     /tmp/ccmJkpLc.s:303    .text.SPI_Timer_On:0000000000000000 SPI_Timer_On
-     /tmp/ccmJkpLc.s:328    .text.SPI_Timer_On:0000000000000014 $d
+     /tmp/cc1Sd0xR.s:16     .text.SPI_Init:0000000000000000 $t
+     /tmp/cc1Sd0xR.s:23     .text.SPI_Init:0000000000000000 SPI_Init
+     /tmp/cc1Sd0xR.s:36     .text.SPI_RW:0000000000000000 $t
+     /tmp/cc1Sd0xR.s:43     .text.SPI_RW:0000000000000000 SPI_RW
+     /tmp/cc1Sd0xR.s:81     .text.SPI_RW:000000000000002c $d
+     /tmp/cc1Sd0xR.s:86     .text.SPI_Release:0000000000000000 $t
+     /tmp/cc1Sd0xR.s:93     .text.SPI_Release:0000000000000000 SPI_Release
+     /tmp/cc1Sd0xR.s:130    .text.SPI_CS_Low:0000000000000000 $t
+     /tmp/cc1Sd0xR.s:137    .text.SPI_CS_Low:0000000000000000 SPI_CS_Low
+     /tmp/cc1Sd0xR.s:158    .text.SPI_CS_Low:0000000000000010 $d
+     /tmp/cc1Sd0xR.s:163    .text.SPI_CS_High:0000000000000000 $t
+     /tmp/cc1Sd0xR.s:170    .text.SPI_CS_High:0000000000000000 SPI_CS_High
+     /tmp/cc1Sd0xR.s:191    .text.SPI_CS_High:0000000000000010 $d
+     /tmp/cc1Sd0xR.s:196    .text.SPI_Freq_High:0000000000000000 $t
+     /tmp/cc1Sd0xR.s:203    .text.SPI_Freq_High:0000000000000000 SPI_Freq_High
+     /tmp/cc1Sd0xR.s:238    .text.SPI_Freq_High:0000000000000020 $d
+     /tmp/cc1Sd0xR.s:243    .text.SPI_Freq_Low:0000000000000000 $t
+     /tmp/cc1Sd0xR.s:250    .text.SPI_Freq_Low:0000000000000000 SPI_Freq_Low
+     /tmp/cc1Sd0xR.s:285    .text.SPI_Freq_Low:0000000000000020 $d
+     /tmp/cc1Sd0xR.s:290    .text.SPI_Timer_On:0000000000000000 $t
+     /tmp/cc1Sd0xR.s:297    .text.SPI_Timer_On:0000000000000000 SPI_Timer_On
+     /tmp/cc1Sd0xR.s:322    .text.SPI_Timer_On:0000000000000014 $d
                             *COM*:0000000000000004 spiTimerTickStart
                             *COM*:0000000000000004 spiTimerTickDelay
-     /tmp/ccmJkpLc.s:334    .text.SPI_Timer_Status:0000000000000000 $t
-     /tmp/ccmJkpLc.s:341    .text.SPI_Timer_Status:0000000000000000 SPI_Timer_Status
-     /tmp/ccmJkpLc.s:369    .text.SPI_Timer_Status:000000000000001c $d
-     /tmp/ccmJkpLc.s:375    .text.SPI_Timer_Off:0000000000000000 $t
-     /tmp/ccmJkpLc.s:382    .text.SPI_Timer_Off:0000000000000000 SPI_Timer_Off
-     /tmp/ccmJkpLc.s:444    .data.SPI_BR_Mask:0000000000000000 SPI_BR_Mask
-     /tmp/ccmJkpLc.s:450    .data.SPI_BR_Pos:0000000000000000 SPI_BR_Pos
-     /tmp/ccmJkpLc.s:457    .data.SPI_CR1:0000000000000000 SPI_CR1
-     /tmp/ccmJkpLc.s:424    .data.PPRE2_Mask:0000000000000000 PPRE2_Mask
-     /tmp/ccmJkpLc.s:430    .data.PPRE2_Pos:0000000000000000 PPRE2_Pos
-     /tmp/ccmJkpLc.s:437    .data.RCC_CFGR:0000000000000000 RCC_CFGR
-     /tmp/ccmJkpLc.s:464    .data.SPI_NSS_Pin_Mask:0000000000000000 SPI_NSS_Pin_Mask
-     /tmp/ccmJkpLc.s:470    .data.SPI_NSS_Pin_Pos:0000000000000000 SPI_NSS_Pin_Pos
-     /tmp/ccmJkpLc.s:410    .data.GPIOA_BRR:0000000000000000 GPIOA_BRR
-     /tmp/ccmJkpLc.s:417    .data.GPIOA_BSRR:0000000000000000 GPIOA_BSRR
-     /tmp/ccmJkpLc.s:406    .data.GPIOA_BRR:0000000000000000 $d
-     /tmp/ccmJkpLc.s:413    .data.GPIOA_BSRR:0000000000000000 $d
-     /tmp/ccmJkpLc.s:420    .data.PPRE2_Mask:0000000000000000 $d
-     /tmp/ccmJkpLc.s:427    .data.PPRE2_Pos:0000000000000000 $d
-     /tmp/ccmJkpLc.s:433    .data.RCC_CFGR:0000000000000000 $d
-     /tmp/ccmJkpLc.s:440    .data.SPI_BR_Mask:0000000000000000 $d
-     /tmp/ccmJkpLc.s:447    .data.SPI_BR_Pos:0000000000000000 $d
-     /tmp/ccmJkpLc.s:453    .data.SPI_CR1:0000000000000000 $d
-     /tmp/ccmJkpLc.s:460    .data.SPI_NSS_Pin_Mask:0000000000000000 $d
-     /tmp/ccmJkpLc.s:467    .data.SPI_NSS_Pin_Pos:0000000000000000 $d
+     /tmp/cc1Sd0xR.s:328    .text.SPI_Timer_Status:0000000000000000 $t
+     /tmp/cc1Sd0xR.s:335    .text.SPI_Timer_Status:0000000000000000 SPI_Timer_Status
+     /tmp/cc1Sd0xR.s:363    .text.SPI_Timer_Status:000000000000001c $d
+     /tmp/cc1Sd0xR.s:369    .text.SPI_Timer_Off:0000000000000000 $t
+     /tmp/cc1Sd0xR.s:376    .text.SPI_Timer_Off:0000000000000000 SPI_Timer_Off
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
 HAL_SPI_TransmitReceive
 hspi1
-HAL_RCC_GetPCLK2Freq
-ARM GAS  /tmp/ccmJkpLc.s 			page 12
-
-
+HAL_GPIO_WritePin
+HAL_SPI_DeInit
+HAL_SPI_Init
 Error_Handler
 HAL_GetTick

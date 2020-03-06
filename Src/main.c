@@ -126,8 +126,9 @@ void Tsk_UART_RX(void *argument);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  SD_DEV dev[1];          // Create device descriptor
-  uint8_t buffer[512];    // Example of your buffer data
+  SD_DEV dev[1];
+  char write_buffer[512] = "Test message.\n";
+  char read_buffer[512] = {0};
   /* USER CODE END 1 */
   
 
@@ -137,7 +138,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  //SDRESULTS res = SD_Init(dev);
+  
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -155,7 +156,21 @@ int main(void)
   MX_SPI1_Init();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
-
+  if ( SD_Init(dev) != SD_OK )
+  {
+      Error_Handler();
+  }
+  if ( SD_Write(dev, (void *)write_buffer, 0) != SD_OK )
+  {
+      Error_Handler();
+  }
+  if ( SD_Read(dev, (void *)read_buffer, 0, 0, 512) != SD_OK )
+  {
+      Error_Handler();
+  }
+  uint8_t read_buffer_size = (uint8_t)strlen(read_buffer);
+  HAL_UART_Transmit(&huart1, (uint8_t *)read_buffer, read_buffer_size, HAL_MAX_DELAY);
+  while (1);
   /* USER CODE END 2 */
   /* Init scheduler */
   osKernelInitialize();
@@ -383,7 +398,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
   hspi1.Init.CLKPolarity = SPI_POLARITY_HIGH;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
-  hspi1.Init.NSS = SPI_NSS_HARD_OUTPUT;
+  hspi1.Init.NSS = SPI_NSS_SOFT;
   hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
@@ -449,12 +464,22 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(SD_NSS_GPIO_Port, SD_NSS_Pin, GPIO_PIN_RESET);
+
   /*Configure GPIO pin : LED_Pin */
   GPIO_InitStruct.Pin = LED_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : SD_NSS_Pin */
+  GPIO_InitStruct.Pin = SD_NSS_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  HAL_GPIO_Init(SD_NSS_GPIO_Port, &GPIO_InitStruct);
 
 }
 
@@ -510,8 +535,8 @@ void Tsk_UART_TX(void *argument)
 void Tsk_LED(void *argument)
 {
   /* USER CODE BEGIN Tsk_LED */
-  volatile uint32_t * GPIOC_BSRR = (uint32_t *) 0x40011010;
-  volatile uint32_t * GPIOC_BRR = (uint32_t *) 0x40011014;  
+  //volatile uint32_t * GPIOC_BSRR = (uint32_t *) 0x40011010;
+  //volatile uint32_t * GPIOC_BRR = (uint32_t *) 0x40011014;  
   /* Infinite loop */
   for(;;)
   {

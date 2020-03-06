@@ -73,7 +73,7 @@ typedef struct _SD_DEV {
 #define CMD58   (0x40+58)       /* READ_OCR                 */
 #define CMD59   (0x40+59)       /* CRC_ON_OFF               */
 
-#define SD_INIT_TRYS    0x03
+#define SD_INIT_TRYS    0xFF
 
 /* CardType) */
 #define SDCT_MMC        0x01                    /* MMC version 3    */

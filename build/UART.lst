@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccic9RUn.s 			page 1
+ARM GAS  /tmp/ccdM3Mpj.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccic9RUn.s 			page 1
   37              	.L5:
   38              	.LBB2:
   20:Src/UART.c    ****     static char rx_msg[MAX_LOG_MSG_SIZE+1] = {0};
-ARM GAS  /tmp/ccic9RUn.s 			page 2
+ARM GAS  /tmp/ccdM3Mpj.s 			page 2
 
 
   21:Src/UART.c    ****     static uint8_t idx = MAX_LOG_MSG_SIZE;
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccic9RUn.s 			page 1
   74 0038 E8E7     		b	.L4
   75              	.L13:
   38:Src/UART.c    ****         }
-ARM GAS  /tmp/ccic9RUn.s 			page 3
+ARM GAS  /tmp/ccdM3Mpj.s 			page 3
 
 
   39:Src/UART.c    ****       
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccic9RUn.s 			page 1
  118              		.loc 1 26 0
  119 007a 0B4B     		ldr	r3, .L15+20
  120 007c 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/ccic9RUn.s 			page 4
+ARM GAS  /tmp/ccdM3Mpj.s 			page 4
 
 
  121 007e 9842     		cmp	r0, r3
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccic9RUn.s 			page 1
  168 0002 10E0     		b	.L21
  169              	.LVL9:
  170              	.L20:
-ARM GAS  /tmp/ccic9RUn.s 			page 5
+ARM GAS  /tmp/ccdM3Mpj.s 			page 5
 
 
  171              	.LBB3:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccic9RUn.s 			page 1
  207              	.L18:
   61:Src/UART.c    ****         if ( UART_TX_queue_count > 0 )
  208              		.loc 1 61 0 is_stmt 1
-ARM GAS  /tmp/ccic9RUn.s 			page 6
+ARM GAS  /tmp/ccdM3Mpj.s 			page 6
 
 
  209 003a 084B     		ldr	r3, .L23+4
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccic9RUn.s 			page 1
  269              		.align	2
  270              		.set	.LANCHOR1,. + 0
  273              	rx_msg.7307:
-ARM GAS  /tmp/ccic9RUn.s 			page 7
+ARM GAS  /tmp/ccdM3Mpj.s 			page 7
 
 
  274 0000 00000000 		.space	65
@@ -386,28 +386,28 @@ ARM GAS  /tmp/ccic9RUn.s 			page 1
  294              		.file 13 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
  295              		.file 14 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
  296              		.file 15 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
-ARM GAS  /tmp/ccic9RUn.s 			page 8
+ARM GAS  /tmp/ccdM3Mpj.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 UART.c
-     /tmp/ccic9RUn.s:16     .text.Thread_UART_RX:0000000000000000 $t
-     /tmp/ccic9RUn.s:23     .text.Thread_UART_RX:0000000000000000 Thread_UART_RX
-     /tmp/ccic9RUn.s:139    .text.Thread_UART_RX:0000000000000094 $d
-     /tmp/ccic9RUn.s:150    .text.Thread_UART_TX:0000000000000000 $t
-     /tmp/ccic9RUn.s:157    .text.Thread_UART_TX:0000000000000000 Thread_UART_TX
-     /tmp/ccic9RUn.s:231    .text.Thread_UART_TX:0000000000000058 $d
-     /tmp/ccic9RUn.s:242    .bss.Thread_UART_RX_max_stack_size:0000000000000000 $d
-     /tmp/ccic9RUn.s:246    .bss.Thread_UART_RX_max_stack_size:0000000000000000 Thread_UART_RX_max_stack_size
-     /tmp/ccic9RUn.s:249    .bss.Thread_UART_TX_max_stack_size:0000000000000000 $d
-     /tmp/ccic9RUn.s:253    .bss.Thread_UART_TX_max_stack_size:0000000000000000 Thread_UART_TX_max_stack_size
-     /tmp/ccic9RUn.s:256    .bss.UART_TX_queue_max_size:0000000000000000 $d
-     /tmp/ccic9RUn.s:260    .bss.UART_TX_queue_max_size:0000000000000000 UART_TX_queue_max_size
-     /tmp/ccic9RUn.s:266    .bss.ch.7323:0000000000000000 ch.7323
-     /tmp/ccic9RUn.s:267    .bss.ch.7323:0000000000000000 $d
-     /tmp/ccic9RUn.s:269    .bss.rx_msg.7307:0000000000000000 $d
-     /tmp/ccic9RUn.s:273    .bss.rx_msg.7307:0000000000000000 rx_msg.7307
-     /tmp/ccic9RUn.s:279    .data.idx.7308:0000000000000000 idx.7308
+     /tmp/ccdM3Mpj.s:16     .text.Thread_UART_RX:0000000000000000 $t
+     /tmp/ccdM3Mpj.s:23     .text.Thread_UART_RX:0000000000000000 Thread_UART_RX
+     /tmp/ccdM3Mpj.s:139    .text.Thread_UART_RX:0000000000000094 $d
+     /tmp/ccdM3Mpj.s:150    .text.Thread_UART_TX:0000000000000000 $t
+     /tmp/ccdM3Mpj.s:157    .text.Thread_UART_TX:0000000000000000 Thread_UART_TX
+     /tmp/ccdM3Mpj.s:231    .text.Thread_UART_TX:0000000000000058 $d
+     /tmp/ccdM3Mpj.s:242    .bss.Thread_UART_RX_max_stack_size:0000000000000000 $d
+     /tmp/ccdM3Mpj.s:246    .bss.Thread_UART_RX_max_stack_size:0000000000000000 Thread_UART_RX_max_stack_size
+     /tmp/ccdM3Mpj.s:249    .bss.Thread_UART_TX_max_stack_size:0000000000000000 $d
+     /tmp/ccdM3Mpj.s:253    .bss.Thread_UART_TX_max_stack_size:0000000000000000 Thread_UART_TX_max_stack_size
+     /tmp/ccdM3Mpj.s:256    .bss.UART_TX_queue_max_size:0000000000000000 $d
+     /tmp/ccdM3Mpj.s:260    .bss.UART_TX_queue_max_size:0000000000000000 UART_TX_queue_max_size
+     /tmp/ccdM3Mpj.s:266    .bss.ch.7323:0000000000000000 ch.7323
+     /tmp/ccdM3Mpj.s:267    .bss.ch.7323:0000000000000000 $d
+     /tmp/ccdM3Mpj.s:269    .bss.rx_msg.7307:0000000000000000 $d
+     /tmp/ccdM3Mpj.s:273    .bss.rx_msg.7307:0000000000000000 rx_msg.7307
+     /tmp/ccdM3Mpj.s:279    .data.idx.7308:0000000000000000 idx.7308
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
