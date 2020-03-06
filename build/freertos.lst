@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ARM GAS  /tmp/ccoXmVNd.s 			page 1
+=======
+ARM GAS  /tmp/ccAS7R9o.s 			page 1
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
    1              		.cpu cortex-m3
@@ -58,7 +62,11 @@ ARM GAS  /tmp/ccoXmVNd.s 			page 1
   31:Src/freertos.c **** /* Private typedef -----------------------------------------------------------*/
   32:Src/freertos.c **** /* USER CODE BEGIN PTD */
   33:Src/freertos.c **** 
+<<<<<<< HEAD
 ARM GAS  /tmp/ccoXmVNd.s 			page 2
+=======
+ARM GAS  /tmp/ccAS7R9o.s 			page 2
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
   34:Src/freertos.c **** /* USER CODE END PTD */
@@ -107,13 +115,22 @@ ARM GAS  /tmp/ccoXmVNd.s 			page 1
   42              		.file 6 "Drivers/CMSIS/Include/core_cm3.h"
   43              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
   44              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
+<<<<<<< HEAD
 ARM GAS  /tmp/ccoXmVNd.s 			page 3
+=======
+ARM GAS  /tmp/ccAS7R9o.s 			page 3
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 freertos.c
+<<<<<<< HEAD
      /tmp/ccoXmVNd.s:16     .text.vApplicationStackOverflowHook:0000000000000000 $t
      /tmp/ccoXmVNd.s:23     .text.vApplicationStackOverflowHook:0000000000000000 vApplicationStackOverflowHook
+=======
+     /tmp/ccAS7R9o.s:16     .text.vApplicationStackOverflowHook:0000000000000000 $t
+     /tmp/ccAS7R9o.s:23     .text.vApplicationStackOverflowHook:0000000000000000 vApplicationStackOverflowHook
+>>>>>>> Adding-ulibSD_Only-HAL
                      .debug_frame:0000000000000010 $d
 
 NO UNDEFINED SYMBOLS

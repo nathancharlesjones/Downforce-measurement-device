@@ -11,6 +11,7 @@
 #include "main.h"
 
 extern SPI_HandleTypeDef hspi1;
+/*
 extern TIM_HandleTypeDef htim1;
 uint32_t * GPIOA_BSRR = (uint32_t *)0x40010810;
 uint32_t * GPIOA_BRR = (uint32_t *)0x40010814;
@@ -22,6 +23,7 @@ uint32_t PPRE2_Mask = (0x111 << 11);
 uint32_t * SPI_CR1 = (uint32_t *)0x40013000;
 uint16_t SPI_BR_Pos = 3u;
 uint32_t SPI_BR_Mask = (0x111 << 3);
+*/
 
 uint32_t spiTimerTickStart;
 uint32_t spiTimerTickDelay;
@@ -35,8 +37,9 @@ void SPI_Init (void) {
 }
 
 BYTE SPI_RW (BYTE d) {
-    uint8_t rx_data = 0, tx_data = d;
-    HAL_SPI_TransmitReceive(&hspi1, (uint8_t *)(&tx_data), &rx_data, 1, 0);
+    uint8_t rx_data = 0, tx_data = (uint8_t)d;
+    while ( hspi1.State != HAL_SPI_STATE_READY );
+    HAL_SPI_TransmitReceive(&hspi1, &tx_data, &rx_data, 1, 0);
     return (rx_data);
 }
 
@@ -46,18 +49,37 @@ void SPI_Release (void) {
 }
 
 inline void SPI_CS_Low (void) {
-    *GPIOA_BRR |= SPI_NSS_Pin_Mask;
+    HAL_GPIO_WritePin(SD_NSS_GPIO_Port, SD_NSS_Pin, GPIO_PIN_RESET);
 }
 
 inline void SPI_CS_High (void){
-    *GPIOA_BSRR |= SPI_NSS_Pin_Mask;
+    HAL_GPIO_WritePin(SD_NSS_GPIO_Port, SD_NSS_Pin, GPIO_PIN_SET);
 }
 
 inline void SPI_Freq_High (void) {
-    *SPI_CR1 &= ~(SPI_BR_Mask);
+    //De-initialize SPI
+    HAL_SPI_DeInit(&hspi1);
+    //Set init struct baudrate prescaler to 2
+    hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+    //Re-initialize SPI
+    if (HAL_SPI_Init(&hspi1) != HAL_OK)
+    {
+        Error_Handler();
+    }
 }
 
 inline void SPI_Freq_Low (void) {
+    //De-initialize SPI
+    HAL_SPI_DeInit(&hspi1);
+    //Set init struct baudrate prescaler to 256
+    hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_32;
+    //Re-initialize SPI
+    if (HAL_SPI_Init(&hspi1) != HAL_OK)
+    {
+        Error_Handler();
+    }
+    
+    /*
     if ( *RCC_CFGR & PPRE2_Mask )
     {
         //APB2 prescaler is >1 and APB2 timer clock is 2x APB2 clock
@@ -75,6 +97,7 @@ inline void SPI_Freq_Low (void) {
         }
     }
     *SPI_CR1 |= SPI_BR_Mask;
+    */
 }
 
 void SPI_Timer_On (WORD ms) {

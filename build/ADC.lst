@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ARM GAS  /tmp/cc5o3JXn.s 			page 1
+=======
+ARM GAS  /tmp/cco228aq.s 			page 1
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
    1              		.cpu cortex-m3
@@ -58,7 +62,11 @@ ARM GAS  /tmp/cc5o3JXn.s 			page 1
   21:Src/ADC.c     ****     
   22:Src/ADC.c     ****     for (idx = 0; ADC_msg[idx]; idx++)
   36              		.loc 1 22 0
+<<<<<<< HEAD
 ARM GAS  /tmp/cc5o3JXn.s 			page 2
+=======
+ARM GAS  /tmp/cco228aq.s 			page 2
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
   37 0002 0024     		movs	r4, #0
@@ -118,7 +126,11 @@ ARM GAS  /tmp/cc5o3JXn.s 			page 1
   33:Src/ADC.c     ****     /* Infinite loop */
   34:Src/ADC.c     ****     for(;;)
   35:Src/ADC.c     ****     {
+<<<<<<< HEAD
 ARM GAS  /tmp/cc5o3JXn.s 			page 3
+=======
+ARM GAS  /tmp/cco228aq.s 			page 3
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
   36:Src/ADC.c     ****         uint32_t Thread_ADC_LightSensor_stack_size = osThreadGetStackSpace(ADC_LightSensorHandle);
@@ -177,8 +189,14 @@ ARM GAS  /tmp/cc5o3JXn.s 			page 1
  118 006e 1D4B     		ldr	r3, .L16
  119 0070 1B5D     		ldrb	r3, [r3, r4]	@ zero_extendqisi2
  120 0072 73B1     		cbz	r3, .L15
+<<<<<<< HEAD
   49:Src/ADC.c     ****         {
 ARM GAS  /tmp/cc5o3JXn.s 			page 4
+=======
+  48:Src/ADC.c     ****         {
+  49:Src/ADC.c     ****             if ( osMessageQueuePut(Queue_UART_TXHandle, &ADC_msg[idx], 0, 0) != osOK ) UART_TX_queu
+ARM GAS  /tmp/cco228aq.s 			page 4
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
   50:Src/ADC.c     ****             if ( osMessageQueuePut(Queue_UART_TXHandle, &ADC_msg[idx], 0, 0) != osOK ) UART_TX_queu
@@ -238,7 +256,12 @@ ARM GAS  /tmp/cc5o3JXn.s 			page 1
   36:Src/ADC.c     ****         if ( Thread_ADC_LightSensor_stack_size > Thread_ADC_LightSensor_max_stack_size ) Thread_ADC
  162              		.loc 1 36 0
  163 00ba 114B     		ldr	r3, .L16+28
+<<<<<<< HEAD
 ARM GAS  /tmp/cc5o3JXn.s 			page 5
+=======
+ 164 00bc 1868     		ldr	r0, [r3]
+ARM GAS  /tmp/cco228aq.s 			page 5
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
  164 00bc 1868     		ldr	r0, [r3]
@@ -298,7 +321,12 @@ ARM GAS  /tmp/cc5o3JXn.s 			page 1
  216              		.set	.LANCHOR3,. + 0
  219              	UART_TX_queue_full_count:
  220 0000 0000     		.space	2
+<<<<<<< HEAD
 ARM GAS  /tmp/cc5o3JXn.s 			page 6
+=======
+ 221              		.section	.bss.lightVal.8082,"aw",%nobits
+ARM GAS  /tmp/cco228aq.s 			page 6
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
  221              		.section	.bss.lightVal.8082,"aw",%nobits
@@ -345,11 +373,16 @@ ARM GAS  /tmp/cc5o3JXn.s 			page 1
  257              		.file 17 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
  258              		.file 18 "/usr/include/newlib/stdio.h"
  259              		.file 19 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h"
+<<<<<<< HEAD
 ARM GAS  /tmp/cc5o3JXn.s 			page 7
+=======
+ARM GAS  /tmp/cco228aq.s 			page 7
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 ADC.c
+<<<<<<< HEAD
      /tmp/cc5o3JXn.s:16     .text.Thread_ADC_LightSensor:0000000000000000 $t
      /tmp/cc5o3JXn.s:23     .text.Thread_ADC_LightSensor:0000000000000000 Thread_ADC_LightSensor
      /tmp/cc5o3JXn.s:194    .text.Thread_ADC_LightSensor:00000000000000e4 $d
@@ -362,6 +395,20 @@ DEFINED SYMBOLS
      /tmp/cc5o3JXn.s:229    .data.ADC_msg.8084:0000000000000000 $d
      /tmp/cc5o3JXn.s:233    .data.ADC_msg.8084:0000000000000000 ADC_msg.8084
      /tmp/cc5o3JXn.s:237    .rodata.Thread_ADC_LightSensor.str1.4:0000000000000000 $d
+=======
+     /tmp/cco228aq.s:16     .text.Thread_ADC_LightSensor:0000000000000000 $t
+     /tmp/cco228aq.s:23     .text.Thread_ADC_LightSensor:0000000000000000 Thread_ADC_LightSensor
+     /tmp/cco228aq.s:194    .text.Thread_ADC_LightSensor:00000000000000e4 $d
+     /tmp/cco228aq.s:208    .bss.Thread_ADC_LightSensor_max_stack_size:0000000000000000 $d
+     /tmp/cco228aq.s:212    .bss.Thread_ADC_LightSensor_max_stack_size:0000000000000000 Thread_ADC_LightSensor_max_stack_size
+     /tmp/cco228aq.s:215    .bss.UART_TX_queue_full_count:0000000000000000 $d
+     /tmp/cco228aq.s:219    .bss.UART_TX_queue_full_count:0000000000000000 UART_TX_queue_full_count
+     /tmp/cco228aq.s:222    .bss.lightVal.8082:0000000000000000 $d
+     /tmp/cco228aq.s:226    .bss.lightVal.8082:0000000000000000 lightVal.8082
+     /tmp/cco228aq.s:229    .data.ADC_msg.8084:0000000000000000 $d
+     /tmp/cco228aq.s:233    .data.ADC_msg.8084:0000000000000000 ADC_msg.8084
+     /tmp/cco228aq.s:237    .rodata.Thread_ADC_LightSensor.str1.4:0000000000000000 $d
+>>>>>>> Adding-ulibSD_Only-HAL
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

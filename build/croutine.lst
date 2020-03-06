@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ARM GAS  /tmp/cc63hZpU.s 			page 1
+=======
+ARM GAS  /tmp/ccaPSuik.s 			page 1
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
    1              		.cpu cortex-m3
@@ -19,7 +23,11 @@ ARM GAS  /tmp/cc63hZpU.s 			page 1
   16              		.file 1 "/usr/include/newlib/machine/_default_types.h"
   17              		.file 2 "/usr/include/newlib/sys/_stdint.h"
   18              		.file 3 "Inc/FreeRTOSConfig.h"
+<<<<<<< HEAD
 ARM GAS  /tmp/cc63hZpU.s 			page 2
+=======
+ARM GAS  /tmp/ccaPSuik.s 			page 2
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
 DEFINED SYMBOLS

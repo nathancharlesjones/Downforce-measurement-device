@@ -38,7 +38,11 @@ build/user_diskio.o: Src/user_diskio.c \
  Middlewares/Third_Party/FreeRTOS/Source/include/portable.h \
  Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h \
  Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+ Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
+ Middlewares/Third_Party/ulibSD/sd_io.h \
+ Middlewares/Third_Party/ulibSD/spi_io.h \
+ Middlewares/Third_Party/FatFs/src/integer.h \
+ Middlewares/Third_Party/ulibSD/integer_ulibsd.h Inc/user_diskio.h
 
 Middlewares/Third_Party/FatFs/src/ff_gen_drv.h:
 
@@ -127,3 +131,13 @@ Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h:
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h:
 
 Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
+
+Middlewares/Third_Party/ulibSD/sd_io.h:
+
+Middlewares/Third_Party/ulibSD/spi_io.h:
+
+Middlewares/Third_Party/FatFs/src/integer.h:
+
+Middlewares/Third_Party/ulibSD/integer_ulibsd.h:
+
+Inc/user_diskio.h:

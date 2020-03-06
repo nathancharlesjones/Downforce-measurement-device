@@ -61,6 +61,8 @@ void Error_Handler(void);
 #define HAL_SD_MODULE_ENABLED 1
 #define LED_Pin GPIO_PIN_13
 #define LED_GPIO_Port GPIOC
+#define SD_NSS_Pin GPIO_PIN_4
+#define SD_NSS_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
 #define MAX_LOG_MSG_SIZE 64
 /* USER CODE END Private defines */

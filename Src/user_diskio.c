@@ -36,6 +36,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include <string.h>
 #include "ff_gen_drv.h"
+#include "sd_io.h"
+#include "user_diskio.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -43,6 +45,7 @@
 /* Private variables ---------------------------------------------------------*/
 /* Disk status */
 static volatile DSTATUS Stat = STA_NOINIT;
+SD_DEV dev[1];
 
 /* USER CODE END DECL */
 
@@ -83,6 +86,7 @@ DSTATUS USER_initialize (
 {
   /* USER CODE BEGIN INIT */
     Stat = STA_NOINIT;
+    if ( SD_Init(dev) == SD_OK ) Stat &= ~STA_NOINIT;
     return Stat;
   /* USER CODE END INIT */
 }
@@ -98,6 +102,7 @@ DSTATUS USER_status (
 {
   /* USER CODE BEGIN STATUS */
     Stat = STA_NOINIT;
+    if ( SD_Status(dev) == SD_OK ) Stat &= ~STA_NOINIT;
     return Stat;
   /* USER CODE END STATUS */
 }
@@ -118,7 +123,9 @@ DRESULT USER_read (
 )
 {
   /* USER CODE BEGIN READ */
-    return RES_OK;
+    DRESULT res = RES_ERROR;
+    if ( SD_Read(dev, (void *)buff, sector, 0, (WORD)count) ==  SD_OK ) res = RES_OK;
+    return res;
   /* USER CODE END READ */
 }
 
@@ -140,7 +147,14 @@ DRESULT USER_write (
 { 
   /* USER CODE BEGIN WRITE */
   /* USER CODE HERE */
-    return RES_OK;
+    BYTE * _buff = buff;
+    DRESULT res = RES_OK;
+    while (count--)
+    {
+        if ( SD_Write(dev, (void *)_buff, sector) != SD_OK ) res = RES_ERROR;
+        _buff += THIS_BLOCK_SIZE;
+    }
+    return res;
   /* USER CODE END WRITE */
 }
 #endif /* _USE_WRITE == 1 */

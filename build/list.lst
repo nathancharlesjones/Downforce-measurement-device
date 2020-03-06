@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ARM GAS  /tmp/ccBQrR54.s 			page 1
+=======
+ARM GAS  /tmp/cc2x5b5t.s 			page 1
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
    1              		.cpu cortex-m3
@@ -58,7 +62,11 @@ ARM GAS  /tmp/ccBQrR54.s 			page 1
   31:Middlewares/Third_Party/FreeRTOS/Source/list.c **** #include "list.h"
   32:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
   33:Middlewares/Third_Party/FreeRTOS/Source/list.c **** /*-----------------------------------------------------------
+<<<<<<< HEAD
 ARM GAS  /tmp/ccBQrR54.s 			page 2
+=======
+ARM GAS  /tmp/cc2x5b5t.s 			page 2
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
   34:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * PUBLIC LIST API documented in list.h
@@ -118,7 +126,11 @@ ARM GAS  /tmp/ccBQrR54.s 			page 1
   57:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	listSET_LIST_INTEGRITY_CHECK_1_VALUE( pxList );
   58:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	listSET_LIST_INTEGRITY_CHECK_2_VALUE( pxList );
   59:Middlewares/Third_Party/FreeRTOS/Source/list.c **** }
+<<<<<<< HEAD
 ARM GAS  /tmp/ccBQrR54.s 			page 3
+=======
+ARM GAS  /tmp/cc2x5b5t.s 			page 3
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
   60:Middlewares/Third_Party/FreeRTOS/Source/list.c **** /*-----------------------------------------------------------*/
@@ -178,7 +190,11 @@ ARM GAS  /tmp/ccBQrR54.s 			page 1
   84:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* Insert a new list item into pxList, but rather than sort the list,
   85:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	makes the new list item the last item to be removed by a call to
   86:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	listGET_OWNER_OF_NEXT_ENTRY(). */
+<<<<<<< HEAD
 ARM GAS  /tmp/ccBQrR54.s 			page 4
+=======
+ARM GAS  /tmp/cc2x5b5t.s 			page 4
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
   87:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxNewListItem->pxNext = pxIndex;
@@ -238,7 +254,11 @@ ARM GAS  /tmp/ccBQrR54.s 			page 1
  129              	.LCFI0:
  130              		.cfi_def_cfa_offset 8
  131              		.cfi_offset 4, -8
+<<<<<<< HEAD
 ARM GAS  /tmp/ccBQrR54.s 			page 5
+=======
+ARM GAS  /tmp/cc2x5b5t.s 			page 5
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
  132              		.cfi_offset 5, -4
@@ -298,7 +318,11 @@ ARM GAS  /tmp/ccBQrR54.s 			page 1
  140 000a 00F10802 		add	r2, r0, #8
  141              	.LVL7:
  142 000e 02E0     		b	.L7
+<<<<<<< HEAD
 ARM GAS  /tmp/ccBQrR54.s 			page 6
+=======
+ARM GAS  /tmp/cc2x5b5t.s 			page 6
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
  143              	.LVL8:
@@ -358,7 +382,11 @@ ARM GAS  /tmp/ccBQrR54.s 			page 1
  179              		.cfi_restore 4
  180              		.cfi_def_cfa_offset 0
  181              	.LVL11:
+<<<<<<< HEAD
 ARM GAS  /tmp/ccBQrR54.s 			page 7
+=======
+ARM GAS  /tmp/cc2x5b5t.s 			page 7
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
  182 0032 7047     		bx	lr
@@ -418,7 +446,11 @@ ARM GAS  /tmp/ccBQrR54.s 			page 1
  188:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	{
  189:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 		mtCOVERAGE_TEST_MARKER();
  190:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	}
+<<<<<<< HEAD
 ARM GAS  /tmp/ccBQrR54.s 			page 8
+=======
+ARM GAS  /tmp/cc2x5b5t.s 			page 8
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
  191:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
@@ -460,11 +492,16 @@ ARM GAS  /tmp/ccBQrR54.s 			page 1
  248              		.file 9 "Inc/FreeRTOSConfig.h"
  249              		.file 10 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/portmacro.h"
  250              		.file 11 "Middlewares/Third_Party/FreeRTOS/Source/include/list.h"
+<<<<<<< HEAD
 ARM GAS  /tmp/ccBQrR54.s 			page 9
+=======
+ARM GAS  /tmp/cc2x5b5t.s 			page 9
+>>>>>>> Adding-ulibSD_Only-HAL
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 list.c
+<<<<<<< HEAD
      /tmp/ccBQrR54.s:16     .text.vListInitialise:0000000000000000 $t
      /tmp/ccBQrR54.s:23     .text.vListInitialise:0000000000000000 vListInitialise
      /tmp/ccBQrR54.s:50     .text.vListInitialiseItem:0000000000000000 $t
@@ -475,6 +512,18 @@ DEFINED SYMBOLS
      /tmp/ccBQrR54.s:120    .text.vListInsert:0000000000000000 vListInsert
      /tmp/ccBQrR54.s:187    .text.uxListRemove:0000000000000000 $t
      /tmp/ccBQrR54.s:194    .text.uxListRemove:0000000000000000 uxListRemove
+=======
+     /tmp/cc2x5b5t.s:16     .text.vListInitialise:0000000000000000 $t
+     /tmp/cc2x5b5t.s:23     .text.vListInitialise:0000000000000000 vListInitialise
+     /tmp/cc2x5b5t.s:50     .text.vListInitialiseItem:0000000000000000 $t
+     /tmp/cc2x5b5t.s:57     .text.vListInitialiseItem:0000000000000000 vListInitialiseItem
+     /tmp/cc2x5b5t.s:73     .text.vListInsertEnd:0000000000000000 $t
+     /tmp/cc2x5b5t.s:80     .text.vListInsertEnd:0000000000000000 vListInsertEnd
+     /tmp/cc2x5b5t.s:113    .text.vListInsert:0000000000000000 $t
+     /tmp/cc2x5b5t.s:120    .text.vListInsert:0000000000000000 vListInsert
+     /tmp/cc2x5b5t.s:187    .text.uxListRemove:0000000000000000 $t
+     /tmp/cc2x5b5t.s:194    .text.uxListRemove:0000000000000000 uxListRemove
+>>>>>>> Adding-ulibSD_Only-HAL
                      .debug_frame:0000000000000010 $d
 
 NO UNDEFINED SYMBOLS
