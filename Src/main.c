@@ -126,8 +126,7 @@ void Tsk_UART_RX(void *argument);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  SD_DEV dev[1];          // Create device descriptor
-  uint8_t buffer[512];    // Example of your buffer data
+
   /* USER CODE END 1 */
   
 
@@ -155,7 +154,7 @@ int main(void)
   MX_SPI1_Init();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
-  SDRESULTS res = SD_Init(dev);
+  
   /* USER CODE END 2 */
   /* Init scheduler */
   osKernelInitialize();
@@ -510,8 +509,8 @@ void Tsk_UART_TX(void *argument)
 void Tsk_LED(void *argument)
 {
   /* USER CODE BEGIN Tsk_LED */
-  volatile uint32_t * GPIOC_BSRR = (uint32_t *) 0x40011010;
-  volatile uint32_t * GPIOC_BRR = (uint32_t *) 0x40011014;  
+  //volatile uint32_t * GPIOC_BSRR = (uint32_t *) 0x40011010;
+  //volatile uint32_t * GPIOC_BRR = (uint32_t *) 0x40011014;  
   /* Infinite loop */
   for(;;)
   {
