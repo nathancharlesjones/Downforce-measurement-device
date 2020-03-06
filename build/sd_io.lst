@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccHJZQN0.s 			page 1
+ARM GAS  /tmp/cc6kedp5.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
   31:Middlewares/Third_Party/ulibSD/sd_io.c ****         fseek(dev->fp, 0L, SEEK_END);
   32:Middlewares/Third_Party/ulibSD/sd_io.c ****         return (((DWORD)(ftell(dev->fp)))/((DWORD)512)-1);
   33:Middlewares/Third_Party/ulibSD/sd_io.c ****     }
-ARM GAS  /tmp/ccHJZQN0.s 			page 2
+ARM GAS  /tmp/cc6kedp5.s 			page 2
 
 
   34:Middlewares/Third_Party/ulibSD/sd_io.c **** }
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
   88:Middlewares/Third_Party/ulibSD/sd_io.c **** 
   89:Middlewares/Third_Party/ulibSD/sd_io.c **** DWORD __SD_Power_Of_Two(BYTE e)
   90:Middlewares/Third_Party/ulibSD/sd_io.c **** {
-ARM GAS  /tmp/ccHJZQN0.s 			page 3
+ARM GAS  /tmp/cc6kedp5.s 			page 3
 
 
   26              		.loc 1 90 0
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  104:Middlewares/Third_Party/ulibSD/sd_io.c **** 
  105:Middlewares/Third_Party/ulibSD/sd_io.c **** void __SD_Speed_Transfer(BYTE throttle) {
   68              		.loc 1 105 0
-ARM GAS  /tmp/ccHJZQN0.s 			page 4
+ARM GAS  /tmp/cc6kedp5.s 			page 4
 
 
   69              		.cfi_startproc
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  112:Middlewares/Third_Party/ulibSD/sd_io.c ****     BYTE crc, res;
  113:Middlewares/Third_Party/ulibSD/sd_io.c ****     // ACMD«n» is the command sequense of CMD55-CMD«n»
  114:Middlewares/Third_Party/ulibSD/sd_io.c ****     if(cmd & 0x80) {
-ARM GAS  /tmp/ccHJZQN0.s 			page 5
+ARM GAS  /tmp/cc6kedp5.s 			page 5
 
 
  118              		.loc 1 114 0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  155 0030 FFF7FEFF 		bl	SPI_RW
  156              	.LVL18:
  130:Middlewares/Third_Party/ulibSD/sd_io.c ****     SPI_RW((BYTE)(arg >> 8 ));          // Arg[15-08]
-ARM GAS  /tmp/ccHJZQN0.s 			page 6
+ARM GAS  /tmp/cc6kedp5.s 			page 6
 
 
  157              		.loc 1 130 0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  196              	.LVL27:
  197 0068 0128     		cmp	r0, #1
  198 006a F4D0     		beq	.L15
-ARM GAS  /tmp/ccHJZQN0.s 			page 7
+ARM GAS  /tmp/cc6kedp5.s 			page 7
 
 
  199              	.L14:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  246              	__SD_Write_Block:
  247              	.LFB5:
  149:Middlewares/Third_Party/ulibSD/sd_io.c **** 
-ARM GAS  /tmp/ccHJZQN0.s 			page 8
+ARM GAS  /tmp/cc6kedp5.s 			page 8
 
 
  150:Middlewares/Third_Party/ulibSD/sd_io.c **** SDRESULTS __SD_Write_Block(SD_DEV *dev, void *dat, BYTE token)
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  289              	.LVL44:
  163:Middlewares/Third_Party/ulibSD/sd_io.c ****         SPI_RW(0xFF);
  290              		.loc 1 163 0
-ARM GAS  /tmp/ccHJZQN0.s 			page 9
+ARM GAS  /tmp/cc6kedp5.s 			page 9
 
 
  291 002a FF20     		movs	r0, #255
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  327 005e 0CB9     		cbnz	r4, .L30
  328 0060 0420     		movs	r0, #4
  329 0062 38BD     		pop	{r3, r4, r5, pc}
-ARM GAS  /tmp/ccHJZQN0.s 			page 10
+ARM GAS  /tmp/cc6kedp5.s 			page 10
 
 
  330              	.LVL52:
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  373 0010 0028     		cmp	r0, #0
  374 0012 5BD1     		bne	.L39
  375              	.L34:
-ARM GAS  /tmp/ccHJZQN0.s 			page 11
+ARM GAS  /tmp/cc6kedp5.s 			page 11
 
 
  195:Middlewares/Third_Party/ulibSD/sd_io.c ****     {
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  417              		.loc 1 207 0
  418 0050 9DF80560 		ldrb	r6, [sp, #5]	@ zero_extendqisi2
  419              	.LVL66:
-ARM GAS  /tmp/ccHJZQN0.s 			page 12
+ARM GAS  /tmp/cc6kedp5.s 			page 12
 
 
  420 0054 06F00F06 		and	r6, r6, #15
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  451              	.LVL76:
  231:Middlewares/Third_Party/ulibSD/sd_io.c ****         ss *= __SD_Power_Of_Two(C_SIZE_MULT + 2);
  452              		.loc 1 231 0
-ARM GAS  /tmp/ccHJZQN0.s 			page 13
+ARM GAS  /tmp/cc6kedp5.s 			page 13
 
 
  453 0086 A81C     		adds	r0, r5, #2
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  497              		.loc 1 226 0
  498 00bc 9DF80930 		ldrb	r3, [sp, #9]	@ zero_extendqisi2
  499 00c0 1C43     		orrs	r4, r4, r3
-ARM GAS  /tmp/ccHJZQN0.s 			page 14
+ARM GAS  /tmp/cc6kedp5.s 			page 14
 
 
  500              	.LVL88:
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  545 0004 82B0     		sub	sp, sp, #8
  546              	.LCFI8:
  547              		.cfi_def_cfa_offset 32
-ARM GAS  /tmp/ccHJZQN0.s 			page 15
+ARM GAS  /tmp/cc6kedp5.s 			page 15
 
 
  548 0006 0746     		mov	r7, r0
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  571 001c 4FF4FA70 		mov	r0, #500
  572 0020 FFF7FEFF 		bl	SPI_Timer_On
  573              	.LVL100:
-ARM GAS  /tmp/ccHJZQN0.s 			page 16
+ARM GAS  /tmp/cc6kedp5.s 			page 16
 
 
  574              	.L46:
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  618              		.loc 1 263 0 discriminator 2
  619 0062 0135     		adds	r5, r5, #1
  620              	.LVL110:
-ARM GAS  /tmp/ccHJZQN0.s 			page 17
+ARM GAS  /tmp/cc6kedp5.s 			page 17
 
 
  621 0064 EDB2     		uxtb	r5, r5
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  302:Middlewares/Third_Party/ulibSD/sd_io.c ****                 }
  303:Middlewares/Third_Party/ulibSD/sd_io.c ****             } else {
  304:Middlewares/Third_Party/ulibSD/sd_io.c ****                 // SD version 1 or MMC?
-ARM GAS  /tmp/ccHJZQN0.s 			page 18
+ARM GAS  /tmp/cc6kedp5.s 			page 18
 
 
  305:Middlewares/Third_Party/ulibSD/sd_io.c ****                 if (__SD_Send_Cmd(ACMD41, 0) <= 1)
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  320:Middlewares/Third_Party/ulibSD/sd_io.c ****                 if(__SD_Send_Cmd(CMD59, 0))   ct = 0;   // Deactivate CRC check (default)
  690              		.loc 1 320 0
  691 00c6 0021     		movs	r1, #0
-ARM GAS  /tmp/ccHJZQN0.s 			page 19
+ARM GAS  /tmp/cc6kedp5.s 			page 19
 
 
  692 00c8 7B20     		movs	r0, #123
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  739 0112 FFF7FEFF 		bl	SPI_Timer_Status
  740              	.LVL133:
  741 0116 0128     		cmp	r0, #1
-ARM GAS  /tmp/ccHJZQN0.s 			page 20
+ARM GAS  /tmp/cc6kedp5.s 			page 20
 
 
  742 0118 06D1     		bne	.L53
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  789 015c 9DF80430 		ldrb	r3, [sp, #4]	@ zero_extendqisi2
  790 0160 13F0400F 		tst	r3, #64
  791 0164 05D0     		beq	.L66
-ARM GAS  /tmp/ccHJZQN0.s 			page 21
+ARM GAS  /tmp/cc6kedp5.s 			page 21
 
 
  792 0166 0C26     		movs	r6, #12
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  826              	.L75:
  827              	.LCFI10:
  828              		.cfi_restore_state
-ARM GAS  /tmp/ccHJZQN0.s 			page 22
+ARM GAS  /tmp/cc6kedp5.s 			page 22
 
 
  326:Middlewares/Third_Party/ulibSD/sd_io.c ****         dev->cardtype = ct;
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  345:Middlewares/Third_Party/ulibSD/sd_io.c ****     if(dev->fp!=NULL)
  346:Middlewares/Third_Party/ulibSD/sd_io.c ****     {
  347:Middlewares/Third_Party/ulibSD/sd_io.c ****         if (fseek(dev->fp, ((512 * sector) + ofs), SEEK_SET)!=0)
-ARM GAS  /tmp/ccHJZQN0.s 			page 23
+ARM GAS  /tmp/cc6kedp5.s 			page 23
 
 
  348:Middlewares/Third_Party/ulibSD/sd_io.c ****             return(SD_ERROR);
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  394:Middlewares/Third_Party/ulibSD/sd_io.c ****             res = SD_OK;
  395:Middlewares/Third_Party/ulibSD/sd_io.c ****         }
  396:Middlewares/Third_Party/ulibSD/sd_io.c ****     }
-ARM GAS  /tmp/ccHJZQN0.s 			page 24
+ARM GAS  /tmp/cc6kedp5.s 			page 24
 
 
  397:Middlewares/Third_Party/ulibSD/sd_io.c ****     SPI_Release();
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  922              	.LVL164:
  923 003a 0746     		mov	r7, r0
  924              	.LVL165:
-ARM GAS  /tmp/ccHJZQN0.s 			page 25
+ARM GAS  /tmp/cc6kedp5.s 			page 25
 
 
  373:Middlewares/Third_Party/ulibSD/sd_io.c ****         SPI_Timer_Off();
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  969 0070 FF20     		movs	r0, #255
  970 0072 FFF7FEFF 		bl	SPI_RW
  971              	.LVL174:
-ARM GAS  /tmp/ccHJZQN0.s 			page 26
+ARM GAS  /tmp/cc6kedp5.s 			page 26
 
 
  972 0076 06F8010B 		strb	r0, [r6], #1
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  1020              		.cfi_offset 5, -8
  1021              		.cfi_offset 14, -4
  408:Middlewares/Third_Party/ulibSD/sd_io.c **** #if defined(_M_IX86)    // x86
-ARM GAS  /tmp/ccHJZQN0.s 			page 27
+ARM GAS  /tmp/cc6kedp5.s 			page 27
 
 
  409:Middlewares/Third_Party/ulibSD/sd_io.c ****     // Query ok?
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  1047              		.loc 1 432 0
  1048 001e FE22     		movs	r2, #254
  1049 0020 2946     		mov	r1, r5
-ARM GAS  /tmp/ccHJZQN0.s 			page 28
+ARM GAS  /tmp/cc6kedp5.s 			page 28
 
 
  1050 0022 2046     		mov	r0, r4
@@ -1678,35 +1678,35 @@ ARM GAS  /tmp/ccHJZQN0.s 			page 1
  1096              		.file 2 "Middlewares/Third_Party/FatFs/src/integer.h"
  1097              		.file 3 "/usr/include/newlib/machine/_default_types.h"
  1098              		.file 4 "/usr/include/newlib/sys/_stdint.h"
-ARM GAS  /tmp/ccHJZQN0.s 			page 29
+ARM GAS  /tmp/cc6kedp5.s 			page 29
 
 
  1099              		.file 5 "Middlewares/Third_Party/ulibSD/integer_ulibsd.h"
  1100              		.file 6 "Middlewares/Third_Party/ulibSD/sd_io.h"
  1101              		.file 7 "Middlewares/Third_Party/ulibSD/spi_io.h"
-ARM GAS  /tmp/ccHJZQN0.s 			page 30
+ARM GAS  /tmp/cc6kedp5.s 			page 30
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 sd_io.c
-     /tmp/ccHJZQN0.s:16     .text.__SD_Power_Of_Two:0000000000000000 $t
-     /tmp/ccHJZQN0.s:23     .text.__SD_Power_Of_Two:0000000000000000 __SD_Power_Of_Two
-     /tmp/ccHJZQN0.s:59     .text.__SD_Speed_Transfer:0000000000000000 $t
-     /tmp/ccHJZQN0.s:66     .text.__SD_Speed_Transfer:0000000000000000 __SD_Speed_Transfer
-     /tmp/ccHJZQN0.s:95     .text.__SD_Send_Cmd:0000000000000000 $t
-     /tmp/ccHJZQN0.s:102    .text.__SD_Send_Cmd:0000000000000000 __SD_Send_Cmd
-     /tmp/ccHJZQN0.s:239    .text.__SD_Write_Block:0000000000000000 $t
-     /tmp/ccHJZQN0.s:246    .text.__SD_Write_Block:0000000000000000 __SD_Write_Block
-     /tmp/ccHJZQN0.s:340    .text.__SD_Sectors:0000000000000000 $t
-     /tmp/ccHJZQN0.s:347    .text.__SD_Sectors:0000000000000000 __SD_Sectors
-     /tmp/ccHJZQN0.s:522    .text.SD_Init:0000000000000000 $t
-     /tmp/ccHJZQN0.s:529    .text.SD_Init:0000000000000000 SD_Init
-     /tmp/ccHJZQN0.s:849    .text.SD_Read:0000000000000000 $t
-     /tmp/ccHJZQN0.s:856    .text.SD_Read:0000000000000000 SD_Read
-     /tmp/ccHJZQN0.s:1001   .text.SD_Write:0000000000000000 $t
-     /tmp/ccHJZQN0.s:1008   .text.SD_Write:0000000000000000 SD_Write
-     /tmp/ccHJZQN0.s:1058   .text.SD_Status:0000000000000000 $t
-     /tmp/ccHJZQN0.s:1065   .text.SD_Status:0000000000000000 SD_Status
+     /tmp/cc6kedp5.s:16     .text.__SD_Power_Of_Two:0000000000000000 $t
+     /tmp/cc6kedp5.s:23     .text.__SD_Power_Of_Two:0000000000000000 __SD_Power_Of_Two
+     /tmp/cc6kedp5.s:59     .text.__SD_Speed_Transfer:0000000000000000 $t
+     /tmp/cc6kedp5.s:66     .text.__SD_Speed_Transfer:0000000000000000 __SD_Speed_Transfer
+     /tmp/cc6kedp5.s:95     .text.__SD_Send_Cmd:0000000000000000 $t
+     /tmp/cc6kedp5.s:102    .text.__SD_Send_Cmd:0000000000000000 __SD_Send_Cmd
+     /tmp/cc6kedp5.s:239    .text.__SD_Write_Block:0000000000000000 $t
+     /tmp/cc6kedp5.s:246    .text.__SD_Write_Block:0000000000000000 __SD_Write_Block
+     /tmp/cc6kedp5.s:340    .text.__SD_Sectors:0000000000000000 $t
+     /tmp/cc6kedp5.s:347    .text.__SD_Sectors:0000000000000000 __SD_Sectors
+     /tmp/cc6kedp5.s:522    .text.SD_Init:0000000000000000 $t
+     /tmp/cc6kedp5.s:529    .text.SD_Init:0000000000000000 SD_Init
+     /tmp/cc6kedp5.s:849    .text.SD_Read:0000000000000000 $t
+     /tmp/cc6kedp5.s:856    .text.SD_Read:0000000000000000 SD_Read
+     /tmp/cc6kedp5.s:1001   .text.SD_Write:0000000000000000 $t
+     /tmp/cc6kedp5.s:1008   .text.SD_Write:0000000000000000 SD_Write
+     /tmp/cc6kedp5.s:1058   .text.SD_Status:0000000000000000 $t
+     /tmp/cc6kedp5.s:1065   .text.SD_Status:0000000000000000 SD_Status
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
