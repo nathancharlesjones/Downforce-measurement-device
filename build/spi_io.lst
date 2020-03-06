@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cccTsFb2.s 			page 1
+ARM GAS  /tmp/ccN2LLS3.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cccTsFb2.s 			page 1
   31:Middlewares/Third_Party/ulibSD/spi_io.c **** 
   32:Middlewares/Third_Party/ulibSD/spi_io.c **** /******************************************************************************
   33:Middlewares/Third_Party/ulibSD/spi_io.c ****  Module Public Functions - Low level SPI control functions
-ARM GAS  /tmp/cccTsFb2.s 			page 2
+ARM GAS  /tmp/ccN2LLS3.s 			page 2
 
 
   34:Middlewares/Third_Party/ulibSD/spi_io.c **** ******************************************************************************/
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cccTsFb2.s 			page 1
   73 0020 0DF10F02 		add	r2, sp, #15
   74 0024 0DF10E01 		add	r1, sp, #14
   75 0028 0348     		ldr	r0, .L5
-ARM GAS  /tmp/cccTsFb2.s 			page 3
+ARM GAS  /tmp/ccN2LLS3.s 			page 3
 
 
   76              	.LVL1:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cccTsFb2.s 			page 1
  126              		.loc 1 48 0 discriminator 3
  127 000e FF20     		movs	r0, #255
  128 0010 FFF7FEFF 		bl	SPI_RW
-ARM GAS  /tmp/cccTsFb2.s 			page 4
+ARM GAS  /tmp/ccN2LLS3.s 			page 4
 
 
  129              	.LVL7:
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cccTsFb2.s 			page 1
  180              		.loc 1 55 0
  181              		.cfi_startproc
  182              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/cccTsFb2.s 			page 5
+ARM GAS  /tmp/ccN2LLS3.s 			page 5
 
 
  183              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cccTsFb2.s 			page 1
   65:Middlewares/Third_Party/ulibSD/spi_io.c ****     if (HAL_SPI_Init(&hspi1) != HAL_OK)
  230              		.loc 1 65 0
  231 000e 2046     		mov	r0, r4
-ARM GAS  /tmp/cccTsFb2.s 			page 6
+ARM GAS  /tmp/ccN2LLS3.s 			page 6
 
 
  232 0010 FFF7FEFF 		bl	HAL_SPI_Init
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cccTsFb2.s 			page 1
   77:Middlewares/Third_Party/ulibSD/spi_io.c ****     if (HAL_SPI_Init(&hspi1) != HAL_OK)
  277              		.loc 1 77 0
  278 000e 2046     		mov	r0, r4
-ARM GAS  /tmp/cccTsFb2.s 			page 7
+ARM GAS  /tmp/ccN2LLS3.s 			page 7
 
 
  279 0010 FFF7FEFF 		bl	HAL_SPI_Init
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cccTsFb2.s 			page 1
  309              		@ args = 0, pretend = 0, frame = 0
  310              		@ frame_needed = 0, uses_anonymous_args = 0
  311              	.LVL16:
-ARM GAS  /tmp/cccTsFb2.s 			page 8
+ARM GAS  /tmp/ccN2LLS3.s 			page 8
 
 
  312 0000 10B5     		push	{r4, lr}
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cccTsFb2.s 			page 1
  110:Middlewares/Third_Party/ulibSD/spi_io.c **** }
  362              		.loc 1 110 0
  363 0010 9842     		cmp	r0, r3
-ARM GAS  /tmp/cccTsFb2.s 			page 9
+ARM GAS  /tmp/ccN2LLS3.s 			page 9
 
 
  364 0012 2CBF     		ite	cs
@@ -532,40 +532,40 @@ ARM GAS  /tmp/cccTsFb2.s 			page 1
  413              		.file 16 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h"
  414              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
  415              		.file 18 "Inc/main.h"
-ARM GAS  /tmp/cccTsFb2.s 			page 10
+ARM GAS  /tmp/ccN2LLS3.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 spi_io.c
-     /tmp/cccTsFb2.s:16     .text.SPI_Init:0000000000000000 $t
-     /tmp/cccTsFb2.s:23     .text.SPI_Init:0000000000000000 SPI_Init
-     /tmp/cccTsFb2.s:36     .text.SPI_RW:0000000000000000 $t
-     /tmp/cccTsFb2.s:43     .text.SPI_RW:0000000000000000 SPI_RW
-     /tmp/cccTsFb2.s:89     .text.SPI_RW:0000000000000038 $d
-     /tmp/cccTsFb2.s:94     .text.SPI_Release:0000000000000000 $t
-     /tmp/cccTsFb2.s:101    .text.SPI_Release:0000000000000000 SPI_Release
-     /tmp/cccTsFb2.s:138    .text.SPI_CS_Low:0000000000000000 $t
-     /tmp/cccTsFb2.s:145    .text.SPI_CS_Low:0000000000000000 SPI_CS_Low
-     /tmp/cccTsFb2.s:166    .text.SPI_CS_Low:0000000000000010 $d
-     /tmp/cccTsFb2.s:171    .text.SPI_CS_High:0000000000000000 $t
-     /tmp/cccTsFb2.s:178    .text.SPI_CS_High:0000000000000000 SPI_CS_High
-     /tmp/cccTsFb2.s:199    .text.SPI_CS_High:0000000000000010 $d
-     /tmp/cccTsFb2.s:204    .text.SPI_Freq_High:0000000000000000 $t
-     /tmp/cccTsFb2.s:211    .text.SPI_Freq_High:0000000000000000 SPI_Freq_High
-     /tmp/cccTsFb2.s:246    .text.SPI_Freq_High:0000000000000020 $d
-     /tmp/cccTsFb2.s:251    .text.SPI_Freq_Low:0000000000000000 $t
-     /tmp/cccTsFb2.s:258    .text.SPI_Freq_Low:0000000000000000 SPI_Freq_Low
-     /tmp/cccTsFb2.s:293    .text.SPI_Freq_Low:0000000000000020 $d
-     /tmp/cccTsFb2.s:298    .text.SPI_Timer_On:0000000000000000 $t
-     /tmp/cccTsFb2.s:305    .text.SPI_Timer_On:0000000000000000 SPI_Timer_On
-     /tmp/cccTsFb2.s:330    .text.SPI_Timer_On:0000000000000014 $d
+     /tmp/ccN2LLS3.s:16     .text.SPI_Init:0000000000000000 $t
+     /tmp/ccN2LLS3.s:23     .text.SPI_Init:0000000000000000 SPI_Init
+     /tmp/ccN2LLS3.s:36     .text.SPI_RW:0000000000000000 $t
+     /tmp/ccN2LLS3.s:43     .text.SPI_RW:0000000000000000 SPI_RW
+     /tmp/ccN2LLS3.s:89     .text.SPI_RW:0000000000000038 $d
+     /tmp/ccN2LLS3.s:94     .text.SPI_Release:0000000000000000 $t
+     /tmp/ccN2LLS3.s:101    .text.SPI_Release:0000000000000000 SPI_Release
+     /tmp/ccN2LLS3.s:138    .text.SPI_CS_Low:0000000000000000 $t
+     /tmp/ccN2LLS3.s:145    .text.SPI_CS_Low:0000000000000000 SPI_CS_Low
+     /tmp/ccN2LLS3.s:166    .text.SPI_CS_Low:0000000000000010 $d
+     /tmp/ccN2LLS3.s:171    .text.SPI_CS_High:0000000000000000 $t
+     /tmp/ccN2LLS3.s:178    .text.SPI_CS_High:0000000000000000 SPI_CS_High
+     /tmp/ccN2LLS3.s:199    .text.SPI_CS_High:0000000000000010 $d
+     /tmp/ccN2LLS3.s:204    .text.SPI_Freq_High:0000000000000000 $t
+     /tmp/ccN2LLS3.s:211    .text.SPI_Freq_High:0000000000000000 SPI_Freq_High
+     /tmp/ccN2LLS3.s:246    .text.SPI_Freq_High:0000000000000020 $d
+     /tmp/ccN2LLS3.s:251    .text.SPI_Freq_Low:0000000000000000 $t
+     /tmp/ccN2LLS3.s:258    .text.SPI_Freq_Low:0000000000000000 SPI_Freq_Low
+     /tmp/ccN2LLS3.s:293    .text.SPI_Freq_Low:0000000000000020 $d
+     /tmp/ccN2LLS3.s:298    .text.SPI_Timer_On:0000000000000000 $t
+     /tmp/ccN2LLS3.s:305    .text.SPI_Timer_On:0000000000000000 SPI_Timer_On
+     /tmp/ccN2LLS3.s:330    .text.SPI_Timer_On:0000000000000014 $d
                             *COM*:0000000000000004 spiTimerTickStart
                             *COM*:0000000000000004 spiTimerTickDelay
-     /tmp/cccTsFb2.s:336    .text.SPI_Timer_Status:0000000000000000 $t
-     /tmp/cccTsFb2.s:343    .text.SPI_Timer_Status:0000000000000000 SPI_Timer_Status
-     /tmp/cccTsFb2.s:371    .text.SPI_Timer_Status:000000000000001c $d
-     /tmp/cccTsFb2.s:377    .text.SPI_Timer_Off:0000000000000000 $t
-     /tmp/cccTsFb2.s:384    .text.SPI_Timer_Off:0000000000000000 SPI_Timer_Off
+     /tmp/ccN2LLS3.s:336    .text.SPI_Timer_Status:0000000000000000 $t
+     /tmp/ccN2LLS3.s:343    .text.SPI_Timer_Status:0000000000000000 SPI_Timer_Status
+     /tmp/ccN2LLS3.s:371    .text.SPI_Timer_Status:000000000000001c $d
+     /tmp/ccN2LLS3.s:377    .text.SPI_Timer_Off:0000000000000000 $t
+     /tmp/ccN2LLS3.s:384    .text.SPI_Timer_Off:0000000000000000 SPI_Timer_Off
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

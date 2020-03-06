@@ -170,7 +170,6 @@ int main(void)
   }
   uint8_t read_buffer_size = (uint8_t)strlen(read_buffer);
   HAL_UART_Transmit(&huart1, (uint8_t *)read_buffer, read_buffer_size, HAL_MAX_DELAY);
-  while (1);
   /* USER CODE END 2 */
   /* Init scheduler */
   osKernelInitialize();

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc1e1p1A.s 			page 1
+ARM GAS  /tmp/cc8U746t.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc1e1p1A.s 			page 1
   31:Src/user_diskio.c **** /* USER CODE END 0 */
   32:Src/user_diskio.c **** #endif
   33:Src/user_diskio.c **** 
-ARM GAS  /tmp/cc1e1p1A.s 			page 2
+ARM GAS  /tmp/cc8U746t.s 			page 2
 
 
   34:Src/user_diskio.c **** /* USER CODE BEGIN DECL */
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc1e1p1A.s 			page 1
   88:Src/user_diskio.c ****     Stat = STA_NOINIT;
   89:Src/user_diskio.c ****     if ( SD_Init(dev) == SD_OK ) Stat &= ~STA_NOINIT;
   90:Src/user_diskio.c ****     return Stat;
-ARM GAS  /tmp/cc1e1p1A.s 			page 3
+ARM GAS  /tmp/cc8U746t.s 			page 3
 
 
   91:Src/user_diskio.c ****   /* USER CODE END INIT */
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc1e1p1A.s 			page 1
  145:Src/user_diskio.c **** 	UINT count          /* Number of sectors to write */
  146:Src/user_diskio.c **** )
  147:Src/user_diskio.c **** { 
-ARM GAS  /tmp/cc1e1p1A.s 			page 4
+ARM GAS  /tmp/cc8U746t.s 			page 4
 
 
  148:Src/user_diskio.c ****   /* USER CODE BEGIN WRITE */
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc1e1p1A.s 			page 1
   86:Src/user_diskio.c ****   /* USER CODE BEGIN INIT */
   49              		.loc 1 86 0
   50              		.cfi_startproc
-ARM GAS  /tmp/cc1e1p1A.s 			page 5
+ARM GAS  /tmp/cc8U746t.s 			page 5
 
 
   51              		@ args = 0, pretend = 0, frame = 0
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc1e1p1A.s 			page 1
  101              		@ frame_needed = 0, uses_anonymous_args = 0
  102              	.LVL5:
  103 0000 08B5     		push	{r3, lr}
-ARM GAS  /tmp/cc1e1p1A.s 			page 6
+ARM GAS  /tmp/cc8U746t.s 			page 6
 
 
  104              	.LCFI1:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc1e1p1A.s 			page 1
  154              		.cfi_def_cfa_offset 4
  155              		.cfi_offset 14, -4
  156 0002 83B0     		sub	sp, sp, #12
-ARM GAS  /tmp/cc1e1p1A.s 			page 7
+ARM GAS  /tmp/cc8U746t.s 			page 7
 
 
  157              	.LCFI3:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc1e1p1A.s 			page 1
  209 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
  210              	.LCFI6:
  211              		.cfi_def_cfa_offset 24
-ARM GAS  /tmp/cc1e1p1A.s 			page 8
+ARM GAS  /tmp/cc8U746t.s 			page 8
 
 
  212              		.cfi_offset 3, -24
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc1e1p1A.s 			page 1
  259              		.cfi_endproc
  260              	.LFE72:
  262              		.global	USER_Driver
-ARM GAS  /tmp/cc1e1p1A.s 			page 9
+ARM GAS  /tmp/cc8U746t.s 			page 9
 
 
  263              		.comm	dev,8,4
@@ -511,29 +511,29 @@ ARM GAS  /tmp/cc1e1p1A.s 			page 1
  294              		.file 14 "Middlewares/Third_Party/ulibSD/integer_ulibsd.h"
  295              		.file 15 "Middlewares/Third_Party/ulibSD/sd_io.h"
  296              		.file 16 "Inc/user_diskio.h"
-ARM GAS  /tmp/cc1e1p1A.s 			page 10
+ARM GAS  /tmp/cc8U746t.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 user_diskio.c
-     /tmp/cc1e1p1A.s:16     .text.USER_ioctl:0000000000000000 $t
-     /tmp/cc1e1p1A.s:23     .text.USER_ioctl:0000000000000000 USER_ioctl
-     /tmp/cc1e1p1A.s:40     .text.USER_initialize:0000000000000000 $t
-     /tmp/cc1e1p1A.s:47     .text.USER_initialize:0000000000000000 USER_initialize
-     /tmp/cc1e1p1A.s:83     .text.USER_initialize:0000000000000020 $d
+     /tmp/cc8U746t.s:16     .text.USER_ioctl:0000000000000000 $t
+     /tmp/cc8U746t.s:23     .text.USER_ioctl:0000000000000000 USER_ioctl
+     /tmp/cc8U746t.s:40     .text.USER_initialize:0000000000000000 $t
+     /tmp/cc8U746t.s:47     .text.USER_initialize:0000000000000000 USER_initialize
+     /tmp/cc8U746t.s:83     .text.USER_initialize:0000000000000020 $d
                             *COM*:0000000000000008 dev
-     /tmp/cc1e1p1A.s:89     .text.USER_status:0000000000000000 $t
-     /tmp/cc1e1p1A.s:96     .text.USER_status:0000000000000000 USER_status
-     /tmp/cc1e1p1A.s:132    .text.USER_status:0000000000000020 $d
-     /tmp/cc1e1p1A.s:138    .text.USER_read:0000000000000000 $t
-     /tmp/cc1e1p1A.s:145    .text.USER_read:0000000000000000 USER_read
-     /tmp/cc1e1p1A.s:190    .text.USER_read:0000000000000020 $d
-     /tmp/cc1e1p1A.s:195    .text.USER_write:0000000000000000 $t
-     /tmp/cc1e1p1A.s:202    .text.USER_write:0000000000000000 USER_write
-     /tmp/cc1e1p1A.s:258    .text.USER_write:000000000000002c $d
-     /tmp/cc1e1p1A.s:274    .data.USER_Driver:0000000000000000 USER_Driver
-     /tmp/cc1e1p1A.s:268    .data.Stat:0000000000000000 Stat
-     /tmp/cc1e1p1A.s:271    .data.USER_Driver:0000000000000000 $d
+     /tmp/cc8U746t.s:89     .text.USER_status:0000000000000000 $t
+     /tmp/cc8U746t.s:96     .text.USER_status:0000000000000000 USER_status
+     /tmp/cc8U746t.s:132    .text.USER_status:0000000000000020 $d
+     /tmp/cc8U746t.s:138    .text.USER_read:0000000000000000 $t
+     /tmp/cc8U746t.s:145    .text.USER_read:0000000000000000 USER_read
+     /tmp/cc8U746t.s:190    .text.USER_read:0000000000000020 $d
+     /tmp/cc8U746t.s:195    .text.USER_write:0000000000000000 $t
+     /tmp/cc8U746t.s:202    .text.USER_write:0000000000000000 USER_write
+     /tmp/cc8U746t.s:258    .text.USER_write:000000000000002c $d
+     /tmp/cc8U746t.s:274    .data.USER_Driver:0000000000000000 USER_Driver
+     /tmp/cc8U746t.s:268    .data.Stat:0000000000000000 Stat
+     /tmp/cc8U746t.s:271    .data.USER_Driver:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
