@@ -126,13 +126,9 @@ void Tsk_UART_RX(void *argument);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-<<<<<<< HEAD
-
-=======
   SD_DEV dev[1];
   char write_buffer[512] = "Test message.\n";
   char read_buffer[512] = {0};
->>>>>>> Adding-ulibSD_Only-HAL
   /* USER CODE END 1 */
   
 
@@ -160,9 +156,6 @@ int main(void)
   MX_SPI1_Init();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
-<<<<<<< HEAD
-  
-=======
   if ( SD_Init(dev) != SD_OK )
   {
       Error_Handler();
@@ -177,7 +170,6 @@ int main(void)
   }
   uint8_t read_buffer_size = (uint8_t)strlen(read_buffer);
   HAL_UART_Transmit(&huart1, (uint8_t *)read_buffer, read_buffer_size, HAL_MAX_DELAY);
->>>>>>> Adding-ulibSD_Only-HAL
   /* USER CODE END 2 */
   /* Init scheduler */
   osKernelInitialize();

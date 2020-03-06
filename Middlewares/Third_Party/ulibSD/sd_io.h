@@ -60,20 +60,6 @@ typedef struct _SD_DEV {
 #include "spi_io.h" /* Provide the low-level functions */
 
 /* Definitions of SD commands */
-<<<<<<< HEAD
-#define CMD0    (0x40+0)        /* GO_IDLE_STATE            */
-#define CMD1    (0x40+1)        /* SEND_OP_COND (MMC)       */
-#define ACMD41  (0xC0+41)       /* SEND_OP_COND (SDC)       */
-#define CMD8    (0x40+8)        /* SEND_IF_COND             */
-#define CMD9    (0x40+9)        /* SEND_CSD                 */
-#define CMD16   (0x40+16)       /* SET_BLOCKLEN             */
-#define CMD17   (0x40+17)       /* READ_SINGLE_BLOCK        */
-#define CMD24   (0x40+24)       /* WRITE_SINGLE_BLOCK       */
-#define CMD42   (0x40+42)       /* LOCK_UNLOCK              */
-#define CMD55   (0x40+55)       /* APP_CMD                  */
-#define CMD58   (0x40+58)       /* READ_OCR                 */
-#define CMD59   (0x40+59)       /* CRC_ON_OFF               */
-=======
 #define CMD0    (0x40+0)        /* GO_IDLE_STATE            0x40 */
 #define CMD1    (0x40+1)        /* SEND_OP_COND (MMC)       0x41 */
 #define ACMD41  (0xC0+41)       /* SEND_OP_COND (SDC)       0xE9 */
@@ -86,7 +72,6 @@ typedef struct _SD_DEV {
 #define CMD55   (0x40+55)       /* APP_CMD                  0x77 */
 #define CMD58   (0x40+58)       /* READ_OCR                 0x7A */
 #define CMD59   (0x40+59)       /* CRC_ON_OFF               0x7B */
->>>>>>> Adding-ulibSD_Only-HAL
 
 #define SD_INIT_TRYS    0xFF
 
