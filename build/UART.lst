@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccb55h1h.s 			page 1
+ARM GAS  /tmp/cctyP6fy.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccb55h1h.s 			page 1
   37              	.L6:
   38              	.LBB2:
   20:Src/UART.c    ****     static char rx_msg[MAX_LOG_MSG_SIZE+1] = {0};
-ARM GAS  /tmp/ccb55h1h.s 			page 2
+ARM GAS  /tmp/cctyP6fy.s 			page 2
 
 
   21:Src/UART.c    ****     static uint8_t idx = MAX_LOG_MSG_SIZE;
@@ -69,78 +69,79 @@ ARM GAS  /tmp/ccb55h1h.s 			page 1
   26:Src/UART.c    ****         if ( Thread_UART_RX_stack_size > Thread_UART_RX_max_stack_size ) Thread_UART_RX_max_stack_s
   27:Src/UART.c    ****         if ( HAL_UART_Receive_IT(&huart1, (uint8_t *)(&rx_msg[0]), MAX_LOG_MSG_SIZE) != HAL_OK )
   28:Src/UART.c    ****         {
-  29:Src/UART.c    ****             Error_Handler();
-  30:Src/UART.c    ****         }
-  31:Src/UART.c    ****         while ( huart1.RxState != HAL_UART_STATE_READY )
-  32:Src/UART.c    ****         {
-  33:Src/UART.c    ****             for ( idx = MAX_LOG_MSG_SIZE; idx > 0; idx-- )
-  39              		.loc 1 33 0 discriminator 2
+  29:Src/UART.c    ****             //Error_Handler();
+  30:Src/UART.c    ****             osThreadYield();
+  31:Src/UART.c    ****         }
+  32:Src/UART.c    ****         while ( huart1.RxState != HAL_UART_STATE_READY )
+  33:Src/UART.c    ****         {
+  34:Src/UART.c    ****             for ( idx = MAX_LOG_MSG_SIZE; idx > 0; idx-- )
+  39              		.loc 1 34 0 discriminator 2
   40 0004 2A4A     		ldr	r2, .L17
   41 0006 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   42 0008 013B     		subs	r3, r3, #1
   43 000a 1370     		strb	r3, [r2]
   44              	.L5:
-  45              		.loc 1 33 0 is_stmt 0 discriminator 1
+  45              		.loc 1 34 0 is_stmt 0 discriminator 1
   46 000c 284B     		ldr	r3, .L17
   47 000e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
   48 0010 3BB1     		cbz	r3, .L14
-  34:Src/UART.c    ****             {
-  35:Src/UART.c    ****                 if ( rx_msg[idx] == '\n' )
-  49              		.loc 1 35 0 is_stmt 1
+  35:Src/UART.c    ****             {
+  36:Src/UART.c    ****                 if ( rx_msg[idx] == '\n' )
+  49              		.loc 1 36 0 is_stmt 1
   50 0012 284A     		ldr	r2, .L17+4
   51 0014 D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
   52 0016 0A2B     		cmp	r3, #10
   53 0018 F4D1     		bne	.L6
-  36:Src/UART.c    ****                 {
-  37:Src/UART.c    ****                     HAL_UART_AbortReceive_IT(&huart1);
-  54              		.loc 1 37 0
+  37:Src/UART.c    ****                 {
+  38:Src/UART.c    ****                     HAL_UART_AbortReceive_IT(&huart1);
+  54              		.loc 1 38 0
   55 001a 2748     		ldr	r0, .L17+8
   56 001c FFF7FEFF 		bl	HAL_UART_AbortReceive_IT
   57              	.LVL1:
   58 0020 F0E7     		b	.L6
   59              	.L14:
-  38:Src/UART.c    ****                 }
-  39:Src/UART.c    ****             }
-  40:Src/UART.c    ****             osThreadYield();
-  60              		.loc 1 40 0
+  39:Src/UART.c    ****                 }
+  40:Src/UART.c    ****             }
+  41:Src/UART.c    ****             osThreadYield();
+  60              		.loc 1 41 0
   61 0022 FFF7FEFF 		bl	osThreadYield
   62              	.LVL2:
   63              	.L4:
-  31:Src/UART.c    ****         {
-  64              		.loc 1 31 0
+  32:Src/UART.c    ****         {
+  64              		.loc 1 32 0
   65 0026 244B     		ldr	r3, .L17+8
   66 0028 93F83A30 		ldrb	r3, [r3, #58]	@ zero_extendqisi2
   67 002c DBB2     		uxtb	r3, r3
   68 002e 202B     		cmp	r3, #32
   69 0030 03D0     		beq	.L15
-  33:Src/UART.c    ****             {
-  70              		.loc 1 33 0
+  34:Src/UART.c    ****             {
+  70              		.loc 1 34 0
   71 0032 4022     		movs	r2, #64
   72 0034 1E4B     		ldr	r3, .L17
+ARM GAS  /tmp/cctyP6fy.s 			page 3
+
+
   73 0036 1A70     		strb	r2, [r3]
-ARM GAS  /tmp/ccb55h1h.s 			page 3
-
-
   74 0038 E8E7     		b	.L5
   75              	.L15:
-  41:Src/UART.c    ****         }
-  42:Src/UART.c    ****       
-  43:Src/UART.c    ****         //Echo received msg
-  44:Src/UART.c    ****         for (idx = 0; rx_msg[idx]; idx++)
-  76              		.loc 1 44 0
+  42:Src/UART.c    ****         }
+  43:Src/UART.c    ****       
+  44:Src/UART.c    ****         //Echo received msg
+  45:Src/UART.c    ****         for (idx = 0; rx_msg[idx]; idx++)
+  76              		.loc 1 45 0
   77 003a 0022     		movs	r2, #0
   78 003c 1C4B     		ldr	r3, .L17
   79 003e 1A70     		strb	r2, [r3]
   80              	.L9:
-  81              		.loc 1 44 0 is_stmt 0 discriminator 1
+  81              		.loc 1 45 0 is_stmt 0 discriminator 1
   82 0040 1B4B     		ldr	r3, .L17
   83 0042 1978     		ldrb	r1, [r3]	@ zero_extendqisi2
   84 0044 1B4B     		ldr	r3, .L17+4
   85 0046 5B5C     		ldrb	r3, [r3, r1]	@ zero_extendqisi2
   86 0048 63B1     		cbz	r3, .L16
-  45:Src/UART.c    ****         {
-  46:Src/UART.c    ****             osMessageQueuePut(Queue_UART_TXHandle, &rx_msg[idx], 0, 0);
-  87              		.loc 1 46 0 is_stmt 1 discriminator 3
+  46:Src/UART.c    ****         {
+  47:Src/UART.c    ****             osMessageQueuePut(Queue_UART_TXHandle, &rx_msg[idx], 0, 0);
+  87              		.loc 1 47 0 is_stmt 1 discriminator 3
   88 004a 0023     		movs	r3, #0
   89 004c 1A46     		mov	r2, r3
   90 004e 1948     		ldr	r0, .L17+4
@@ -149,47 +150,47 @@ ARM GAS  /tmp/ccb55h1h.s 			page 1
   93 0054 0068     		ldr	r0, [r0]
   94 0056 FFF7FEFF 		bl	osMessageQueuePut
   95              	.LVL3:
-  44:Src/UART.c    ****         {
-  96              		.loc 1 44 0 discriminator 3
+  45:Src/UART.c    ****         {
+  96              		.loc 1 45 0 discriminator 3
   97 005a 154A     		ldr	r2, .L17
   98 005c 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
   99 005e 0133     		adds	r3, r3, #1
  100 0060 1370     		strb	r3, [r2]
  101 0062 EDE7     		b	.L9
  102              	.L16:
-  47:Src/UART.c    ****         }
-  48:Src/UART.c    ****         uint16_t UART_RX_queue_count = osMessageQueueGetCount(Queue_UART_RXHandle);
- 103              		.loc 1 48 0
+  48:Src/UART.c    ****         }
+  49:Src/UART.c    ****         uint16_t UART_RX_queue_count = osMessageQueueGetCount(Queue_UART_RXHandle);
+ 103              		.loc 1 49 0
  104 0064 164B     		ldr	r3, .L17+16
  105 0066 1868     		ldr	r0, [r3]
  106 0068 FFF7FEFF 		bl	osMessageQueueGetCount
  107              	.LVL4:
  108 006c 80B2     		uxth	r0, r0
  109              	.LVL5:
-  49:Src/UART.c    ****         if ( UART_RX_queue_count > UART_RX_queue_max_size ) UART_RX_queue_max_size = UART_RX_queue_
- 110              		.loc 1 49 0
+  50:Src/UART.c    ****         if ( UART_RX_queue_count > UART_RX_queue_max_size ) UART_RX_queue_max_size = UART_RX_queue_
+ 110              		.loc 1 50 0
  111 006e 154B     		ldr	r3, .L17+20
  112 0070 1B88     		ldrh	r3, [r3]
  113 0072 9842     		cmp	r0, r3
  114 0074 01D9     		bls	.L11
- 115              		.loc 1 49 0 is_stmt 0 discriminator 1
+ 115              		.loc 1 50 0 is_stmt 0 discriminator 1
  116 0076 134B     		ldr	r3, .L17+20
  117 0078 1880     		strh	r0, [r3]	@ movhi
  118              	.L11:
-  50:Src/UART.c    ****         memset(&rx_msg[0], 0, MAX_LOG_MSG_SIZE);
- 119              		.loc 1 50 0 is_stmt 1
-ARM GAS  /tmp/ccb55h1h.s 			page 4
+  51:Src/UART.c    ****         memset(&rx_msg[0], 0, MAX_LOG_MSG_SIZE);
+ARM GAS  /tmp/cctyP6fy.s 			page 4
 
 
+ 119              		.loc 1 51 0 is_stmt 1
  120 007a 4022     		movs	r2, #64
  121 007c 0021     		movs	r1, #0
  122 007e 0D48     		ldr	r0, .L17+4
  123              	.LVL6:
  124 0080 FFF7FEFF 		bl	memset
  125              	.LVL7:
-  51:Src/UART.c    ****       
-  52:Src/UART.c    ****         osThreadYield();
- 126              		.loc 1 52 0
+  52:Src/UART.c    ****       
+  53:Src/UART.c    ****         osThreadYield();
+ 126              		.loc 1 53 0
  127 0084 FFF7FEFF 		bl	osThreadYield
  128              	.LVL8:
  129              	.L12:
@@ -220,9 +221,9 @@ ARM GAS  /tmp/ccb55h1h.s 			page 1
  150              	.LVL11:
  151 00a6 0028     		cmp	r0, #0
  152 00a8 BDD0     		beq	.L4
-  29:Src/UART.c    ****         }
- 153              		.loc 1 29 0
- 154 00aa FFF7FEFF 		bl	Error_Handler
+  30:Src/UART.c    ****         }
+ 153              		.loc 1 30 0
+ 154 00aa FFF7FEFF 		bl	osThreadYield
  155              	.LVL12:
  156 00ae BAE7     		b	.L4
  157              	.L18:
@@ -237,10 +238,10 @@ ARM GAS  /tmp/ccb55h1h.s 			page 1
  166 00c8 00000000 		.word	UART_RXHandle
  167 00cc 00000000 		.word	.LANCHOR0
  168              	.LBE2:
+ARM GAS  /tmp/cctyP6fy.s 			page 5
+
+
  169              		.cfi_endproc
-ARM GAS  /tmp/ccb55h1h.s 			page 5
-
-
  170              	.LFE69:
  172              		.section	.text.Thread_UART_TX,"ax",%progbits
  173              		.align	1
@@ -251,13 +252,13 @@ ARM GAS  /tmp/ccb55h1h.s 			page 1
  178              		.fpu softvfp
  180              	Thread_UART_TX:
  181              	.LFB70:
-  53:Src/UART.c    ****     }
-  54:Src/UART.c    **** }
-  55:Src/UART.c    **** 
-  56:Src/UART.c    **** void
-  57:Src/UART.c    **** Thread_UART_TX(void)
-  58:Src/UART.c    **** {
- 182              		.loc 1 58 0
+  54:Src/UART.c    ****     }
+  55:Src/UART.c    **** }
+  56:Src/UART.c    **** 
+  57:Src/UART.c    **** void
+  58:Src/UART.c    **** Thread_UART_TX(void)
+  59:Src/UART.c    **** {
+ 182              		.loc 1 59 0
  183              		.cfi_startproc
  184              		@ args = 0, pretend = 0, frame = 0
  185              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -270,19 +271,19 @@ ARM GAS  /tmp/ccb55h1h.s 			page 1
  192              	.LVL13:
  193              	.L22:
  194              	.LBB3:
-  59:Src/UART.c    ****     static char ch;
-  60:Src/UART.c    ****     
-  61:Src/UART.c    ****     for (;;)
-  62:Src/UART.c    ****     {
-  63:Src/UART.c    ****         uint32_t Thread_UART_TX_stack_size = osThreadGetStackSpace(UART_TXHandle);
-  64:Src/UART.c    ****         if ( Thread_UART_TX_stack_size > Thread_UART_TX_max_stack_size ) Thread_UART_TX_max_stack_s
-  65:Src/UART.c    ****         
-  66:Src/UART.c    ****         uint16_t UART_TX_queue_count = osMessageQueueGetCount(Queue_UART_TXHandle);
-  67:Src/UART.c    ****         if ( UART_TX_queue_count > 0 )
-  68:Src/UART.c    ****         {
-  69:Src/UART.c    ****             if ( UART_TX_queue_count > UART_TX_queue_max_size ) UART_TX_queue_max_size = UART_TX_qu
-  70:Src/UART.c    ****             osMessageQueueGet(Queue_UART_TXHandle, &ch, 0, 0);
- 195              		.loc 1 70 0
+  60:Src/UART.c    ****     static char ch;
+  61:Src/UART.c    ****     
+  62:Src/UART.c    ****     for (;;)
+  63:Src/UART.c    ****     {
+  64:Src/UART.c    ****         uint32_t Thread_UART_TX_stack_size = osThreadGetStackSpace(UART_TXHandle);
+  65:Src/UART.c    ****         if ( Thread_UART_TX_stack_size > Thread_UART_TX_max_stack_size ) Thread_UART_TX_max_stack_s
+  66:Src/UART.c    ****         
+  67:Src/UART.c    ****         uint16_t UART_TX_queue_count = osMessageQueueGetCount(Queue_UART_TXHandle);
+  68:Src/UART.c    ****         if ( UART_TX_queue_count > 0 )
+  69:Src/UART.c    ****         {
+  70:Src/UART.c    ****             if ( UART_TX_queue_count > UART_TX_queue_max_size ) UART_TX_queue_max_size = UART_TX_qu
+  71:Src/UART.c    ****             osMessageQueueGet(Queue_UART_TXHandle, &ch, 0, 0);
+ 195              		.loc 1 71 0
  196 0004 144C     		ldr	r4, .L25
  197 0006 0023     		movs	r3, #0
  198 0008 1A46     		mov	r2, r3
@@ -292,43 +293,43 @@ ARM GAS  /tmp/ccb55h1h.s 			page 1
  202 000e 0068     		ldr	r0, [r0]
  203 0010 FFF7FEFF 		bl	osMessageQueueGet
  204              	.LVL15:
-  71:Src/UART.c    ****             HAL_UART_Transmit(&huart1, (uint8_t *)(&ch), 1, HAL_MAX_DELAY);
- 205              		.loc 1 71 0
+  72:Src/UART.c    ****             HAL_UART_Transmit(&huart1, (uint8_t *)(&ch), 1, HAL_MAX_DELAY);
+ 205              		.loc 1 72 0
  206 0014 4FF0FF33 		mov	r3, #-1
  207 0018 0122     		movs	r2, #1
  208 001a 2146     		mov	r1, r4
+ARM GAS  /tmp/cctyP6fy.s 			page 6
+
+
  209 001c 1048     		ldr	r0, .L25+8
-ARM GAS  /tmp/ccb55h1h.s 			page 6
-
-
  210 001e FFF7FEFF 		bl	HAL_UART_Transmit
  211              	.LVL16:
  212              	.L21:
-  72:Src/UART.c    ****         }
-  73:Src/UART.c    ****         osThreadYield();
- 213              		.loc 1 73 0
+  73:Src/UART.c    ****         }
+  74:Src/UART.c    ****         osThreadYield();
+ 213              		.loc 1 74 0
  214 0022 FFF7FEFF 		bl	osThreadYield
  215              	.LVL17:
  216              	.L23:
-  63:Src/UART.c    ****         if ( Thread_UART_TX_stack_size > Thread_UART_TX_max_stack_size ) Thread_UART_TX_max_stack_s
- 217              		.loc 1 63 0
+  64:Src/UART.c    ****         if ( Thread_UART_TX_stack_size > Thread_UART_TX_max_stack_size ) Thread_UART_TX_max_stack_s
+ 217              		.loc 1 64 0
  218 0026 0F4B     		ldr	r3, .L25+12
  219 0028 1868     		ldr	r0, [r3]
  220 002a FFF7FEFF 		bl	osThreadGetStackSpace
  221              	.LVL18:
-  64:Src/UART.c    ****         
- 222              		.loc 1 64 0
+  65:Src/UART.c    ****         
+ 222              		.loc 1 65 0
  223 002e 0E4B     		ldr	r3, .L25+16
  224 0030 1B68     		ldr	r3, [r3]
  225 0032 9842     		cmp	r0, r3
  226 0034 01D9     		bls	.L20
-  64:Src/UART.c    ****         
- 227              		.loc 1 64 0 is_stmt 0 discriminator 1
+  65:Src/UART.c    ****         
+ 227              		.loc 1 65 0 is_stmt 0 discriminator 1
  228 0036 0C4B     		ldr	r3, .L25+16
  229 0038 1860     		str	r0, [r3]
  230              	.L20:
-  66:Src/UART.c    ****         if ( UART_TX_queue_count > 0 )
- 231              		.loc 1 66 0 is_stmt 1
+  67:Src/UART.c    ****         if ( UART_TX_queue_count > 0 )
+ 231              		.loc 1 67 0 is_stmt 1
  232 003a 084B     		ldr	r3, .L25+4
  233 003c 1868     		ldr	r0, [r3]
  234              	.LVL19:
@@ -336,18 +337,18 @@ ARM GAS  /tmp/ccb55h1h.s 			page 1
  236              	.LVL20:
  237 0042 80B2     		uxth	r0, r0
  238              	.LVL21:
-  67:Src/UART.c    ****         {
- 239              		.loc 1 67 0
+  68:Src/UART.c    ****         {
+ 239              		.loc 1 68 0
  240 0044 0028     		cmp	r0, #0
  241 0046 ECD0     		beq	.L21
-  69:Src/UART.c    ****             osMessageQueueGet(Queue_UART_TXHandle, &ch, 0, 0);
- 242              		.loc 1 69 0
+  70:Src/UART.c    ****             osMessageQueueGet(Queue_UART_TXHandle, &ch, 0, 0);
+ 242              		.loc 1 70 0
  243 0048 084B     		ldr	r3, .L25+20
  244 004a 1B88     		ldrh	r3, [r3]
  245 004c 9842     		cmp	r0, r3
  246 004e D9D9     		bls	.L22
-  69:Src/UART.c    ****             osMessageQueueGet(Queue_UART_TXHandle, &ch, 0, 0);
- 247              		.loc 1 69 0 is_stmt 0 discriminator 1
+  70:Src/UART.c    ****             osMessageQueueGet(Queue_UART_TXHandle, &ch, 0, 0);
+ 247              		.loc 1 70 0 is_stmt 0 discriminator 1
  248 0050 064B     		ldr	r3, .L25+20
  249 0052 1880     		strh	r0, [r3]	@ movhi
  250 0054 D6E7     		b	.L22
@@ -357,10 +358,10 @@ ARM GAS  /tmp/ccb55h1h.s 			page 1
  254 0058 00000000 		.word	.LANCHOR6
  255 005c 00000000 		.word	Queue_UART_TXHandle
  256 0060 00000000 		.word	huart1
+ARM GAS  /tmp/cctyP6fy.s 			page 7
+
+
  257 0064 00000000 		.word	UART_TXHandle
-ARM GAS  /tmp/ccb55h1h.s 			page 7
-
-
  258 0068 00000000 		.word	.LANCHOR4
  259 006c 00000000 		.word	.LANCHOR5
  260              	.LBE3:
@@ -417,35 +418,35 @@ ARM GAS  /tmp/ccb55h1h.s 			page 1
  322              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h"
  323              		.file 12 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
  324              		.file 13 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h"
+ARM GAS  /tmp/cctyP6fy.s 			page 8
+
+
  325              		.file 14 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
-ARM GAS  /tmp/ccb55h1h.s 			page 8
-
-
  326              		.file 15 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
-ARM GAS  /tmp/ccb55h1h.s 			page 9
+ARM GAS  /tmp/cctyP6fy.s 			page 9
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 UART.c
-     /tmp/ccb55h1h.s:16     .text.Thread_UART_RX:0000000000000000 $t
-     /tmp/ccb55h1h.s:23     .text.Thread_UART_RX:0000000000000000 Thread_UART_RX
-     /tmp/ccb55h1h.s:160    .text.Thread_UART_RX:00000000000000b0 $d
-     /tmp/ccb55h1h.s:173    .text.Thread_UART_TX:0000000000000000 $t
-     /tmp/ccb55h1h.s:180    .text.Thread_UART_TX:0000000000000000 Thread_UART_TX
-     /tmp/ccb55h1h.s:254    .text.Thread_UART_TX:0000000000000058 $d
-     /tmp/ccb55h1h.s:265    .bss.Thread_UART_RX_max_stack_size:0000000000000000 $d
-     /tmp/ccb55h1h.s:269    .bss.Thread_UART_RX_max_stack_size:0000000000000000 Thread_UART_RX_max_stack_size
-     /tmp/ccb55h1h.s:272    .bss.Thread_UART_TX_max_stack_size:0000000000000000 $d
-     /tmp/ccb55h1h.s:276    .bss.Thread_UART_TX_max_stack_size:0000000000000000 Thread_UART_TX_max_stack_size
-     /tmp/ccb55h1h.s:279    .bss.UART_RX_queue_max_size:0000000000000000 $d
-     /tmp/ccb55h1h.s:283    .bss.UART_RX_queue_max_size:0000000000000000 UART_RX_queue_max_size
-     /tmp/ccb55h1h.s:286    .bss.UART_TX_queue_max_size:0000000000000000 $d
-     /tmp/ccb55h1h.s:290    .bss.UART_TX_queue_max_size:0000000000000000 UART_TX_queue_max_size
-     /tmp/ccb55h1h.s:296    .bss.ch.7324:0000000000000000 ch.7324
-     /tmp/ccb55h1h.s:297    .bss.ch.7324:0000000000000000 $d
-     /tmp/ccb55h1h.s:299    .bss.rx_msg.7307:0000000000000000 $d
-     /tmp/ccb55h1h.s:303    .bss.rx_msg.7307:0000000000000000 rx_msg.7307
-     /tmp/ccb55h1h.s:309    .data.idx.7308:0000000000000000 idx.7308
+     /tmp/cctyP6fy.s:16     .text.Thread_UART_RX:0000000000000000 $t
+     /tmp/cctyP6fy.s:23     .text.Thread_UART_RX:0000000000000000 Thread_UART_RX
+     /tmp/cctyP6fy.s:160    .text.Thread_UART_RX:00000000000000b0 $d
+     /tmp/cctyP6fy.s:173    .text.Thread_UART_TX:0000000000000000 $t
+     /tmp/cctyP6fy.s:180    .text.Thread_UART_TX:0000000000000000 Thread_UART_TX
+     /tmp/cctyP6fy.s:254    .text.Thread_UART_TX:0000000000000058 $d
+     /tmp/cctyP6fy.s:265    .bss.Thread_UART_RX_max_stack_size:0000000000000000 $d
+     /tmp/cctyP6fy.s:269    .bss.Thread_UART_RX_max_stack_size:0000000000000000 Thread_UART_RX_max_stack_size
+     /tmp/cctyP6fy.s:272    .bss.Thread_UART_TX_max_stack_size:0000000000000000 $d
+     /tmp/cctyP6fy.s:276    .bss.Thread_UART_TX_max_stack_size:0000000000000000 Thread_UART_TX_max_stack_size
+     /tmp/cctyP6fy.s:279    .bss.UART_RX_queue_max_size:0000000000000000 $d
+     /tmp/cctyP6fy.s:283    .bss.UART_RX_queue_max_size:0000000000000000 UART_RX_queue_max_size
+     /tmp/cctyP6fy.s:286    .bss.UART_TX_queue_max_size:0000000000000000 $d
+     /tmp/cctyP6fy.s:290    .bss.UART_TX_queue_max_size:0000000000000000 UART_TX_queue_max_size
+     /tmp/cctyP6fy.s:296    .bss.ch.7324:0000000000000000 ch.7324
+     /tmp/cctyP6fy.s:297    .bss.ch.7324:0000000000000000 $d
+     /tmp/cctyP6fy.s:299    .bss.rx_msg.7307:0000000000000000 $d
+     /tmp/cctyP6fy.s:303    .bss.rx_msg.7307:0000000000000000 rx_msg.7307
+     /tmp/cctyP6fy.s:309    .data.idx.7308:0000000000000000 idx.7308
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
@@ -456,7 +457,6 @@ osMessageQueueGetCount
 memset
 osThreadGetStackSpace
 HAL_UART_Receive_IT
-Error_Handler
 huart1
 Queue_UART_TXHandle
 Queue_UART_RXHandle

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc7X9BVl.s 			page 1
+ARM GAS  /tmp/ccTCuTsq.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc7X9BVl.s 			page 1
   31:Middlewares/Third_Party/ulibSD/spi_io.c ****  Module Public Functions - Low level SPI control functions
   32:Middlewares/Third_Party/ulibSD/spi_io.c **** ******************************************************************************/
   33:Middlewares/Third_Party/ulibSD/spi_io.c **** 
-ARM GAS  /tmp/cc7X9BVl.s 			page 2
+ARM GAS  /tmp/ccTCuTsq.s 			page 2
 
 
   34:Middlewares/Third_Party/ulibSD/spi_io.c **** void SPI_Init (void) {
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc7X9BVl.s 			page 1
   74              	.LCFI2:
   75              		.cfi_def_cfa_offset 4
   76              		@ sp needed
-ARM GAS  /tmp/cc7X9BVl.s 			page 3
+ARM GAS  /tmp/ccTCuTsq.s 			page 3
 
 
   77 0026 5DF804FB 		ldr	pc, [sp], #4
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc7X9BVl.s 			page 1
  130              		.align	1
  131              		.global	SPI_CS_Low
  132              		.syntax unified
-ARM GAS  /tmp/cc7X9BVl.s 			page 4
+ARM GAS  /tmp/ccTCuTsq.s 			page 4
 
 
  133              		.thumb
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc7X9BVl.s 			page 1
  182 000a 0B43     		orrs	r3, r3, r1
  183 000c 1360     		str	r3, [r2]
  184 000e 7047     		bx	lr
-ARM GAS  /tmp/cc7X9BVl.s 			page 5
+ARM GAS  /tmp/ccTCuTsq.s 			page 5
 
 
  185              	.L16:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc7X9BVl.s 			page 1
  236              		.cfi_startproc
  237              		@ args = 0, pretend = 0, frame = 0
  238              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cc7X9BVl.s 			page 6
+ARM GAS  /tmp/ccTCuTsq.s 			page 6
 
 
  239 0000 08B5     		push	{r3, lr}
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc7X9BVl.s 			page 1
  274              		.loc 1 72 0
  275 0032 FFF7FEFF 		bl	HAL_RCC_GetPCLK2Freq
  276              	.LVL10:
-ARM GAS  /tmp/cc7X9BVl.s 			page 7
+ARM GAS  /tmp/ccTCuTsq.s 			page 7
 
 
  277 0036 054B     		ldr	r3, .L25+8
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc7X9BVl.s 			page 1
  327              	.L29:
  328 0014 00000000 		.word	spiTimerTickStart
  329 0018 00000000 		.word	spiTimerTickDelay
-ARM GAS  /tmp/cc7X9BVl.s 			page 8
+ARM GAS  /tmp/ccTCuTsq.s 			page 8
 
 
  330              		.cfi_endproc
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc7X9BVl.s 			page 1
  383              	.LFB75:
   88:Middlewares/Third_Party/ulibSD/spi_io.c **** 
   89:Middlewares/Third_Party/ulibSD/spi_io.c **** inline void SPI_Timer_Off (void) {
-ARM GAS  /tmp/cc7X9BVl.s 			page 9
+ARM GAS  /tmp/ccTCuTsq.s 			page 9
 
 
  384              		.loc 1 89 0
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc7X9BVl.s 			page 1
  453              		.align	2
  454              		.set	.LANCHOR3,. + 0
  457              	SPI_CR1:
-ARM GAS  /tmp/cc7X9BVl.s 			page 10
+ARM GAS  /tmp/ccTCuTsq.s 			page 10
 
 
  458 0000 00300140 		.word	1073819648
@@ -571,67 +571,67 @@ ARM GAS  /tmp/cc7X9BVl.s 			page 1
  489              		.file 17 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
  490              		.file 18 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h"
  491              		.file 19 "Inc/main.h"
-ARM GAS  /tmp/cc7X9BVl.s 			page 11
+ARM GAS  /tmp/ccTCuTsq.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 spi_io.c
-     /tmp/cc7X9BVl.s:16     .text.SPI_Init:0000000000000000 $t
-     /tmp/cc7X9BVl.s:23     .text.SPI_Init:0000000000000000 SPI_Init
-     /tmp/cc7X9BVl.s:36     .text.SPI_RW:0000000000000000 $t
-     /tmp/cc7X9BVl.s:43     .text.SPI_RW:0000000000000000 SPI_RW
-     /tmp/cc7X9BVl.s:81     .text.SPI_RW:000000000000002c $d
-     /tmp/cc7X9BVl.s:86     .text.SPI_Release:0000000000000000 $t
-     /tmp/cc7X9BVl.s:93     .text.SPI_Release:0000000000000000 SPI_Release
-     /tmp/cc7X9BVl.s:130    .text.SPI_CS_Low:0000000000000000 $t
-     /tmp/cc7X9BVl.s:137    .text.SPI_CS_Low:0000000000000000 SPI_CS_Low
-     /tmp/cc7X9BVl.s:156    .text.SPI_CS_Low:0000000000000010 $d
-     /tmp/cc7X9BVl.s:162    .text.SPI_CS_High:0000000000000000 $t
-     /tmp/cc7X9BVl.s:169    .text.SPI_CS_High:0000000000000000 SPI_CS_High
-     /tmp/cc7X9BVl.s:188    .text.SPI_CS_High:0000000000000010 $d
-     /tmp/cc7X9BVl.s:194    .text.SPI_Freq_High:0000000000000000 $t
-     /tmp/cc7X9BVl.s:201    .text.SPI_Freq_High:0000000000000000 SPI_Freq_High
-     /tmp/cc7X9BVl.s:220    .text.SPI_Freq_High:0000000000000014 $d
-     /tmp/cc7X9BVl.s:226    .text.SPI_Freq_Low:0000000000000000 $t
-     /tmp/cc7X9BVl.s:233    .text.SPI_Freq_Low:0000000000000000 SPI_Freq_Low
-     /tmp/cc7X9BVl.s:287    .text.SPI_Freq_Low:0000000000000044 $d
-     /tmp/cc7X9BVl.s:296    .text.SPI_Timer_On:0000000000000000 $t
-     /tmp/cc7X9BVl.s:303    .text.SPI_Timer_On:0000000000000000 SPI_Timer_On
-     /tmp/cc7X9BVl.s:328    .text.SPI_Timer_On:0000000000000014 $d
+     /tmp/ccTCuTsq.s:16     .text.SPI_Init:0000000000000000 $t
+     /tmp/ccTCuTsq.s:23     .text.SPI_Init:0000000000000000 SPI_Init
+     /tmp/ccTCuTsq.s:36     .text.SPI_RW:0000000000000000 $t
+     /tmp/ccTCuTsq.s:43     .text.SPI_RW:0000000000000000 SPI_RW
+     /tmp/ccTCuTsq.s:81     .text.SPI_RW:000000000000002c $d
+     /tmp/ccTCuTsq.s:86     .text.SPI_Release:0000000000000000 $t
+     /tmp/ccTCuTsq.s:93     .text.SPI_Release:0000000000000000 SPI_Release
+     /tmp/ccTCuTsq.s:130    .text.SPI_CS_Low:0000000000000000 $t
+     /tmp/ccTCuTsq.s:137    .text.SPI_CS_Low:0000000000000000 SPI_CS_Low
+     /tmp/ccTCuTsq.s:156    .text.SPI_CS_Low:0000000000000010 $d
+     /tmp/ccTCuTsq.s:162    .text.SPI_CS_High:0000000000000000 $t
+     /tmp/ccTCuTsq.s:169    .text.SPI_CS_High:0000000000000000 SPI_CS_High
+     /tmp/ccTCuTsq.s:188    .text.SPI_CS_High:0000000000000010 $d
+     /tmp/ccTCuTsq.s:194    .text.SPI_Freq_High:0000000000000000 $t
+     /tmp/ccTCuTsq.s:201    .text.SPI_Freq_High:0000000000000000 SPI_Freq_High
+     /tmp/ccTCuTsq.s:220    .text.SPI_Freq_High:0000000000000014 $d
+     /tmp/ccTCuTsq.s:226    .text.SPI_Freq_Low:0000000000000000 $t
+     /tmp/ccTCuTsq.s:233    .text.SPI_Freq_Low:0000000000000000 SPI_Freq_Low
+     /tmp/ccTCuTsq.s:287    .text.SPI_Freq_Low:0000000000000044 $d
+     /tmp/ccTCuTsq.s:296    .text.SPI_Timer_On:0000000000000000 $t
+     /tmp/ccTCuTsq.s:303    .text.SPI_Timer_On:0000000000000000 SPI_Timer_On
+     /tmp/ccTCuTsq.s:328    .text.SPI_Timer_On:0000000000000014 $d
                             *COM*:0000000000000004 spiTimerTickStart
                             *COM*:0000000000000004 spiTimerTickDelay
-     /tmp/cc7X9BVl.s:334    .text.SPI_Timer_Status:0000000000000000 $t
-     /tmp/cc7X9BVl.s:341    .text.SPI_Timer_Status:0000000000000000 SPI_Timer_Status
-     /tmp/cc7X9BVl.s:369    .text.SPI_Timer_Status:000000000000001c $d
-     /tmp/cc7X9BVl.s:375    .text.SPI_Timer_Off:0000000000000000 $t
-     /tmp/cc7X9BVl.s:382    .text.SPI_Timer_Off:0000000000000000 SPI_Timer_Off
-     /tmp/cc7X9BVl.s:444    .data.SPI_BR_Mask:0000000000000000 SPI_BR_Mask
-     /tmp/cc7X9BVl.s:450    .data.SPI_BR_Pos:0000000000000000 SPI_BR_Pos
-     /tmp/cc7X9BVl.s:457    .data.SPI_CR1:0000000000000000 SPI_CR1
-     /tmp/cc7X9BVl.s:424    .data.PPRE2_Mask:0000000000000000 PPRE2_Mask
-     /tmp/cc7X9BVl.s:430    .data.PPRE2_Pos:0000000000000000 PPRE2_Pos
-     /tmp/cc7X9BVl.s:437    .data.RCC_CFGR:0000000000000000 RCC_CFGR
-     /tmp/cc7X9BVl.s:464    .data.SPI_NSS_Pin_Mask:0000000000000000 SPI_NSS_Pin_Mask
-     /tmp/cc7X9BVl.s:470    .data.SPI_NSS_Pin_Pos:0000000000000000 SPI_NSS_Pin_Pos
-     /tmp/cc7X9BVl.s:410    .data.GPIOA_BRR:0000000000000000 GPIOA_BRR
-     /tmp/cc7X9BVl.s:417    .data.GPIOA_BSRR:0000000000000000 GPIOA_BSRR
-     /tmp/cc7X9BVl.s:406    .data.GPIOA_BRR:0000000000000000 $d
-     /tmp/cc7X9BVl.s:413    .data.GPIOA_BSRR:0000000000000000 $d
-     /tmp/cc7X9BVl.s:420    .data.PPRE2_Mask:0000000000000000 $d
-     /tmp/cc7X9BVl.s:427    .data.PPRE2_Pos:0000000000000000 $d
-     /tmp/cc7X9BVl.s:433    .data.RCC_CFGR:0000000000000000 $d
-     /tmp/cc7X9BVl.s:440    .data.SPI_BR_Mask:0000000000000000 $d
-     /tmp/cc7X9BVl.s:447    .data.SPI_BR_Pos:0000000000000000 $d
-     /tmp/cc7X9BVl.s:453    .data.SPI_CR1:0000000000000000 $d
-     /tmp/cc7X9BVl.s:460    .data.SPI_NSS_Pin_Mask:0000000000000000 $d
-     /tmp/cc7X9BVl.s:467    .data.SPI_NSS_Pin_Pos:0000000000000000 $d
+     /tmp/ccTCuTsq.s:334    .text.SPI_Timer_Status:0000000000000000 $t
+     /tmp/ccTCuTsq.s:341    .text.SPI_Timer_Status:0000000000000000 SPI_Timer_Status
+     /tmp/ccTCuTsq.s:369    .text.SPI_Timer_Status:000000000000001c $d
+     /tmp/ccTCuTsq.s:375    .text.SPI_Timer_Off:0000000000000000 $t
+     /tmp/ccTCuTsq.s:382    .text.SPI_Timer_Off:0000000000000000 SPI_Timer_Off
+     /tmp/ccTCuTsq.s:444    .data.SPI_BR_Mask:0000000000000000 SPI_BR_Mask
+     /tmp/ccTCuTsq.s:450    .data.SPI_BR_Pos:0000000000000000 SPI_BR_Pos
+     /tmp/ccTCuTsq.s:457    .data.SPI_CR1:0000000000000000 SPI_CR1
+     /tmp/ccTCuTsq.s:424    .data.PPRE2_Mask:0000000000000000 PPRE2_Mask
+     /tmp/ccTCuTsq.s:430    .data.PPRE2_Pos:0000000000000000 PPRE2_Pos
+     /tmp/ccTCuTsq.s:437    .data.RCC_CFGR:0000000000000000 RCC_CFGR
+     /tmp/ccTCuTsq.s:464    .data.SPI_NSS_Pin_Mask:0000000000000000 SPI_NSS_Pin_Mask
+     /tmp/ccTCuTsq.s:470    .data.SPI_NSS_Pin_Pos:0000000000000000 SPI_NSS_Pin_Pos
+     /tmp/ccTCuTsq.s:410    .data.GPIOA_BRR:0000000000000000 GPIOA_BRR
+     /tmp/ccTCuTsq.s:417    .data.GPIOA_BSRR:0000000000000000 GPIOA_BSRR
+     /tmp/ccTCuTsq.s:406    .data.GPIOA_BRR:0000000000000000 $d
+     /tmp/ccTCuTsq.s:413    .data.GPIOA_BSRR:0000000000000000 $d
+     /tmp/ccTCuTsq.s:420    .data.PPRE2_Mask:0000000000000000 $d
+     /tmp/ccTCuTsq.s:427    .data.PPRE2_Pos:0000000000000000 $d
+     /tmp/ccTCuTsq.s:433    .data.RCC_CFGR:0000000000000000 $d
+     /tmp/ccTCuTsq.s:440    .data.SPI_BR_Mask:0000000000000000 $d
+     /tmp/ccTCuTsq.s:447    .data.SPI_BR_Pos:0000000000000000 $d
+     /tmp/ccTCuTsq.s:453    .data.SPI_CR1:0000000000000000 $d
+     /tmp/ccTCuTsq.s:460    .data.SPI_NSS_Pin_Mask:0000000000000000 $d
+     /tmp/ccTCuTsq.s:467    .data.SPI_NSS_Pin_Pos:0000000000000000 $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS
 HAL_SPI_TransmitReceive
 hspi1
 HAL_RCC_GetPCLK2Freq
-ARM GAS  /tmp/cc7X9BVl.s 			page 12
+ARM GAS  /tmp/ccTCuTsq.s 			page 12
 
 
 Error_Handler

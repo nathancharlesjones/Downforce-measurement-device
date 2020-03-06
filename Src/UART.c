@@ -26,7 +26,8 @@ Thread_UART_RX(void)
         if ( Thread_UART_RX_stack_size > Thread_UART_RX_max_stack_size ) Thread_UART_RX_max_stack_size = Thread_UART_RX_stack_size;
         if ( HAL_UART_Receive_IT(&huart1, (uint8_t *)(&rx_msg[0]), MAX_LOG_MSG_SIZE) != HAL_OK )
         {
-            Error_Handler();
+            //Error_Handler();
+            osThreadYield();
         }
         while ( huart1.RxState != HAL_UART_STATE_READY )
         {
