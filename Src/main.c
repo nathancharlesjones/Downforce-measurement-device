@@ -127,7 +127,7 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
   SD_DEV dev[1];
-  char write_buffer[512] = "uSD card test message.\n";
+  char write_buffer[512] = "New uSD card test message.\n";
   char read_buffer[512] = {0};
   /* USER CODE END 1 */
   
@@ -170,6 +170,12 @@ int main(void)
   }
   uint8_t read_buffer_size = (uint8_t)strlen(read_buffer);
   HAL_UART_Transmit(&huart1, (uint8_t *)read_buffer, read_buffer_size, HAL_MAX_DELAY);
+  
+  if ( retUSER == 0 )
+  {
+      strcpy(&write_buffer[0], "retUSR = 0; FATFS_LinkDriver returned okay.\n");
+      HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
+  }
   /* USER CODE END 2 */
   /* Init scheduler */
   osKernelInitialize();
