@@ -127,7 +127,7 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
   SD_DEV dev[1];
-  char write_buffer[512] = "Test message.\n";
+  char write_buffer[512] = "uSD card test message.\n";
   char read_buffer[512] = {0};
   /* USER CODE END 1 */
   

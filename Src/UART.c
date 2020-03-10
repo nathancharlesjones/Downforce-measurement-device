@@ -2,6 +2,8 @@
 #include "main.h"
 #include "cmsis_os.h"
 
+#define NOT_FOUND		-1
+
 extern void Error_Handler(void);
 extern osThreadId_t UART_TXHandle;
 extern osThreadId_t UART_RXHandle;
@@ -13,6 +15,21 @@ static uint32_t Thread_UART_RX_max_stack_size = 0;
 static uint32_t Thread_UART_TX_max_stack_size = 0;
 static uint16_t UART_TX_queue_max_size = 0;
 static uint16_t UART_RX_queue_max_size = 0;
+
+void
+UART_Send_String(char * string)
+{
+    for (; *string; string++)
+    {
+        //osMessageQueuePut(Queue_UART_TXHandle, *string, 0, 0);
+    }
+}
+
+void
+Process_Command(char * mReceiveBuffer, int32_t cmdEndline)
+{
+    
+}
 
 void
 Thread_UART_RX(void)
@@ -48,6 +65,9 @@ Thread_UART_RX(void)
         }
         uint16_t UART_RX_queue_count = osMessageQueueGetCount(Queue_UART_RXHandle);
         if ( UART_RX_queue_count > UART_RX_queue_max_size ) UART_RX_queue_max_size = UART_RX_queue_count;
+        
+        Process_Command(&rx_msg[0], idx);
+        
         memset(&rx_msg[0], 0, MAX_LOG_MSG_SIZE);
       
         osThreadYield();
