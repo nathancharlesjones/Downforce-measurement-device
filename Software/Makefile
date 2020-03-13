@@ -66,17 +66,17 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c \
 Src/stm32f1xx_hal_timebase_tim.c \
 Src/ADC.c \
 Src/UART.c \
-Src/user_diskio.c \
-Src/fatfs.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.c \
+Middlewares/Third_Party/ulibSD/sd_io.c \
+Middlewares/Third_Party/ulibSD/spi_io.c \
+Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c \
+Src/user_diskio.c \
+Src/fatfs.c \
 Middlewares/Third_Party/FatFs/src/diskio.c \
 Middlewares/Third_Party/FatFs/src/ff.c \
 Middlewares/Third_Party/FatFs/src/ff_gen_drv.c \
-Middlewares/Third_Party/FatFs/src/option/syscall.c \
-Middlewares/Third_Party/ulibSD/sd_io.c \
-Middlewares/Third_Party/ulibSD/spi_io.c \
-Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c
+Middlewares/Third_Party/FatFs/src/option/syscall.c
 
 # ASM sources
 ASM_SOURCES =  \
@@ -142,8 +142,8 @@ C_INCLUDES =  \
 -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 \
 -IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
 -IDrivers/CMSIS/Include \
--IMiddlewares/Third_Party/FatFs/src \
--IMiddlewares/Third_Party/ulibSD/
+-IMiddlewares/Third_Party/ulibSD/ \
+-IMiddlewares/Third_Party/FatFs/src
 
 
 # compile gcc flags

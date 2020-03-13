@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=/media/nathancharlesjones/Storage/Scripts/STM32/F103C8/Downforce-measurement-device/Inc
+HeaderPath=/media/nathancharlesjones/Storage/Scripts/STM32/F103C8/Downforce-measurement-device/Software/Inc
 HeaderFiles=FreeRTOSConfig.h;stm32f1xx_it.h;stm32f1xx_hal_conf.h;main.h;ffconf.h;user_diskio.h;fatfs.h;stm32_assert.h;
-SourcePath=/media/nathancharlesjones/Storage/Scripts/STM32/F103C8/Downforce-measurement-device/Src
+SourcePath=/media/nathancharlesjones/Storage/Scripts/STM32/F103C8/Downforce-measurement-device/Software/Src
 SourceFiles=freertos.c;stm32f1xx_it.c;stm32f1xx_hal_msp.c;stm32f1xx_hal_timebase_tim.c;main.c;user_diskio.c;fatfs.c;
 
 [PreviousLibFiles]

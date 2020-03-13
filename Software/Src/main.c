@@ -126,9 +126,7 @@ void Tsk_UART_RX(void *argument);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  SD_DEV dev[1];
   char write_buffer[512] = "New uSD card test message.\n";
-  char read_buffer[512] = {0};
   /* USER CODE END 1 */
   
 
@@ -156,42 +154,76 @@ int main(void)
   MX_SPI1_Init();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
-  if ( SD_Init(dev) != SD_OK )
-  {
-      Error_Handler();
-  }
-  if ( SD_Write(dev, (void *)write_buffer, 0) != SD_OK )
-  {
-      Error_Handler();
-  }
-  if ( SD_Read(dev, (void *)read_buffer, 0, 0, 512) != SD_OK )
-  {
-      Error_Handler();
-  }
-  uint8_t read_buffer_size = (uint8_t)strlen(read_buffer);
-  HAL_UART_Transmit(&huart1, (uint8_t *)read_buffer, read_buffer_size, HAL_MAX_DELAY);
-  
   if ( retUSER == 0 )
   {
-      strcpy(&write_buffer[0], "retUSER = 0; FATFS_LinkDriver returned okay.\n");
+      strcpy ( &write_buffer[0], "retUSER = 0; FATFS_LinkDriver returned okay.\n" );
       HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
       
       if( f_mount( &USERFatFS, (TCHAR const*)USERPath, 0) == FR_OK )
       {
-          strcpy(&write_buffer[0], "f_mount = FR_OK.\n");
+          sprintf(&write_buffer[0], "f_mount = FR_OK.\nUSERPath = %s\n", USERPath);
           HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
+          
+          retUSER = f_open( &USERFile, "config.txt", FA_READ );
+          if( retUSER == FR_OK )
+          {
+              strcpy(&write_buffer[0], "f_open = FR_OK.\n");
+              HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
+              
+              while( f_gets( &write_buffer[0], sizeof write_buffer, &USERFile ) )
+              {
+                  HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
+              }
+              
+              f_close( &USERFile );
+          }
+          else
+          {
+              sprintf(&write_buffer[0], "f_open failed; result = %d.\n", retUSER);
+              HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
+          }
+          
+          retUSER = f_open( &USERFile, "syslog.txt", FA_CREATE_ALWAYS | FA_WRITE );
+          if( retUSER == FR_OK )
+          {
+              uint32_t write_bytes = 0;
+              strcpy(&write_buffer[0], "Testing syslog.txt.\n");
+              
+              retUSER = f_write( &USERFile, &write_buffer[0], sizeof(write_buffer), (void *)&write_bytes );
+              if ( retUSER == FR_OK )
+              {
+                  strcpy(&write_buffer[0], "f_write = FR_OK.\n");
+                  HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
+                  
+                  f_close( &USERFile );
+              }
+              else
+              {
+                  sprintf(&write_buffer[0], "f_write failed; result = %d\n", retUSER);
+                  HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
+              }
+          }
+          else
+          {
+              sprintf(&write_buffer[0], "f_open failed; result = %d.\n", retUSER);
+              HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
+          }
       }
       else
       {
           strcpy(&write_buffer[0], "f_mount != FR_OK.\n");
           HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
       }
+      
+      FATFS_UnLinkDriver( USERPath );
   }
   else
   {
       strcpy(&write_buffer[0], "retUSR != 0; FATFS_LinkDriver returned with error.\n");
       HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
   }
+  
+  
   /* USER CODE END 2 */
   /* Init scheduler */
   osKernelInitialize();
