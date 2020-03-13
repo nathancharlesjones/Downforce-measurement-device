@@ -39,7 +39,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define _SYNC_t   osSemaphoreId_t
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -173,7 +173,23 @@ int main(void)
   
   if ( retUSER == 0 )
   {
-      strcpy(&write_buffer[0], "retUSR = 0; FATFS_LinkDriver returned okay.\n");
+      strcpy(&write_buffer[0], "retUSER = 0; FATFS_LinkDriver returned okay.\n");
+      HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
+      
+      if( f_mount( &USERFatFS, (TCHAR const*)USERPath, 0) == FR_OK )
+      {
+          strcpy(&write_buffer[0], "f_mount = FR_OK.\n");
+          HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
+      }
+      else
+      {
+          strcpy(&write_buffer[0], "f_mount != FR_OK.\n");
+          HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
+      }
+  }
+  else
+  {
+      strcpy(&write_buffer[0], "retUSR != 0; FATFS_LinkDriver returned with error.\n");
       HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
   }
   /* USER CODE END 2 */
