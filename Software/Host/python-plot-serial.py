@@ -6,7 +6,7 @@ plt.ion()
 time = []
 value = []
 
-port = serial.Serial("/dev/ttyUSB0", baudrate=115200, timeout=3.0)
+port = serial.Serial("/dev/ttyUSB0", baudrate=460800, timeout=3.0)
 
 while True:
     line = port.readline()
@@ -19,6 +19,6 @@ while True:
         plt.clf()
         plt.plot(time,value)
         plt.draw()
-        plt.pause(0.000001)
+        plt.pause(0.0000001)
     except (json.decoder.JSONDecodeError):
         pass
