@@ -159,7 +159,8 @@ int main(void)
       strcpy ( &write_buffer[0], "retUSER = 0; FATFS_LinkDriver returned okay.\n" );
       HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
       
-      if( f_mount( &USERFatFS, (TCHAR const*)USERPath, 0) == FR_OK )
+      retUSER = f_mount( &USERFatFS, (TCHAR const*)USERPath, 1);
+      if( retUSER == FR_OK )
       {
           sprintf(&write_buffer[0], "f_mount = FR_OK.\nUSERPath = %s\n", USERPath);
           HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
@@ -179,7 +180,7 @@ int main(void)
           }
           else
           {
-              sprintf(&write_buffer[0], "f_open failed; result = %d.\n", retUSER);
+              sprintf(&write_buffer[0], "f_open failed; result = %d\n", retUSER);
               HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
           }
           
@@ -211,7 +212,7 @@ int main(void)
       }
       else
       {
-          strcpy(&write_buffer[0], "f_mount != FR_OK.\n");
+          sprintf(&write_buffer[0], "f_mount != FR_OK; result = %d.\n", retUSER);
           HAL_UART_Transmit(&huart1, (uint8_t *)write_buffer, (uint8_t)strlen(write_buffer), HAL_MAX_DELAY);
       }
       
