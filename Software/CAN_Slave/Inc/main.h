@@ -37,7 +37,10 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+enum Msg_ID
+{
+    ID_Speed = 100
+};
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/

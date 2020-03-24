@@ -23,7 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -91,7 +91,7 @@ int main(void)
   MX_GPIO_Init();
   MX_CAN_Init();
   /* USER CODE BEGIN 2 */
-
+  HAL_CAN_Start(&hcan);
   /* USER CODE END 2 */
  
  
@@ -102,6 +102,28 @@ int main(void)
   {
     /* USER CODE END WHILE */
     HAL_GPIO_TogglePin(LED_BUILTIN_GPIO_Port, LED_BUILTIN_Pin);
+    
+    while ( HAL_CAN_GetTxMailboxesFreeLevel(&hcan) == 0)
+    {
+        __asm("nop");
+    }
+    
+    uint32_t speed = 0;
+    char msg[64] = {0};
+    sprintf(&msg[0], "Speed: %lu", speed++);
+    CAN_TxHeaderTypeDef TxHeader1;
+    TxHeader1.StdId = ID_Speed;
+    TxHeader1.ExtId = 0;
+    TxHeader1.IDE = CAN_ID_STD;
+    TxHeader1.RTR = CAN_RTR_DATA;
+    TxHeader1.DLC = sizeof(msg);
+    uint32_t TxMailbox = 0;
+    
+    if ( HAL_CAN_AddTxMessage(&hcan, &TxHeader1, (uint8_t*)&msg[0], &TxMailbox) != HAL_OK )
+    {
+        __asm("nop");
+    }
+    
     HAL_Delay(500);
     /* USER CODE BEGIN 3 */
   }
