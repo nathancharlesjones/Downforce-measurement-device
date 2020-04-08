@@ -91,13 +91,18 @@ int main(void)
   MX_GPIO_Init();
   MX_CAN_Init();
   /* USER CODE BEGIN 2 */
-  HAL_CAN_Start(&hcan);
+  if ( HAL_CAN_Start(&hcan) != HAL_OK )
+  {
+      Error_Handler();
+  }
   /* USER CODE END 2 */
  
  
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  uint32_t speed = 0;
+
   while (1)
   {
     /* USER CODE END WHILE */
@@ -108,15 +113,15 @@ int main(void)
         __asm("nop");
     }
     
-    uint32_t speed = 0;
     char msg[64] = {0};
     sprintf(&msg[0], "Speed: %lu", speed++);
     CAN_TxHeaderTypeDef TxHeader1;
     TxHeader1.StdId = ID_Speed;
-    TxHeader1.ExtId = 0;
+    TxHeader1.ExtId = 0x01;
     TxHeader1.IDE = CAN_ID_STD;
     TxHeader1.RTR = CAN_RTR_DATA;
     TxHeader1.DLC = sizeof(msg);
+    TxHeader1.TransmitGlobalTime = DISABLE;
     uint32_t TxMailbox = 0;
     
     if ( HAL_CAN_AddTxMessage(&hcan, &TxHeader1, (uint8_t*)&msg[0], &TxMailbox) != HAL_OK )
@@ -238,7 +243,7 @@ void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
   /* User can add his own implementation to report the HAL error return state */
-
+    for (;;);
   /* USER CODE END Error_Handler_Debug */
 }
 
