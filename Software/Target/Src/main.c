@@ -30,6 +30,7 @@
 #include "sd_io.h"
 #include "ADC.h"
 #include "UART.h"
+#include "GPS.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -50,17 +51,20 @@
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
 
+CAN_HandleTypeDef hcan;
+
 RTC_HandleTypeDef hrtc;
 
 SPI_HandleTypeDef hspi1;
 
 UART_HandleTypeDef huart1;
+UART_HandleTypeDef huart2;
 
 /* Definitions for ADC_LightSensor */
 osThreadId_t ADC_LightSensorHandle;
 const osThreadAttr_t ADC_LightSensor_attributes = {
   .name = "ADC_LightSensor",
-  .priority = (osPriority_t) osPriorityNormal,
+  .priority = (osPriority_t) osPriorityLow,
   .stack_size = 512
 };
 /* Definitions for UART_TX */
@@ -84,6 +88,20 @@ const osThreadAttr_t UART_RX_attributes = {
   .priority = (osPriority_t) osPriorityLow,
   .stack_size = 128
 };
+/* Definitions for GPS_RX */
+osThreadId_t GPS_RXHandle;
+const osThreadAttr_t GPS_RX_attributes = {
+  .name = "GPS_RX",
+  .priority = (osPriority_t) osPriorityLow,
+  .stack_size = 512
+};
+/* Definitions for GPS_Process */
+osThreadId_t GPS_ProcessHandle;
+const osThreadAttr_t GPS_Process_attributes = {
+  .name = "GPS_Process",
+  .priority = (osPriority_t) osPriorityLow,
+  .stack_size = 128
+};
 /* Definitions for Queue_UART_RX */
 osMessageQueueId_t Queue_UART_RXHandle;
 const osMessageQueueAttr_t Queue_UART_RX_attributes = {
@@ -93,6 +111,11 @@ const osMessageQueueAttr_t Queue_UART_RX_attributes = {
 osMessageQueueId_t Queue_UART_TXHandle;
 const osMessageQueueAttr_t Queue_UART_TX_attributes = {
   .name = "Queue_UART_TX"
+};
+/* Definitions for Queue_GPS */
+osMessageQueueId_t Queue_GPSHandle;
+const osMessageQueueAttr_t Queue_GPS_attributes = {
+  .name = "Queue_GPS"
 };
 /* USER CODE BEGIN PV */
 
@@ -105,10 +128,14 @@ static void MX_USART1_UART_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_RTC_Init(void);
 static void MX_SPI1_Init(void);
+static void MX_CAN_Init(void);
+static void MX_USART2_UART_Init(void);
 void Tsk_ADC_LightSensor(void *argument);
 void Tsk_UART_TX(void *argument);
 void Tsk_LED(void *argument);
 void Tsk_UART_RX(void *argument);
+void Tsk_GPS_RX(void *argument);
+void Tsk_GPS_Process(void *argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -153,6 +180,8 @@ int main(void)
   MX_RTC_Init();
   MX_SPI1_Init();
   MX_FATFS_Init();
+  MX_CAN_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   
   /* USER CODE END 2 */
@@ -178,6 +207,9 @@ int main(void)
   /* creation of Queue_UART_TX */
   Queue_UART_TXHandle = osMessageQueueNew (128, sizeof(char), &Queue_UART_TX_attributes);
 
+  /* creation of Queue_GPS */
+  Queue_GPSHandle = osMessageQueueNew (128, sizeof(char), &Queue_GPS_attributes);
+
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
@@ -194,6 +226,12 @@ int main(void)
 
   /* creation of UART_RX */
   UART_RXHandle = osThreadNew(Tsk_UART_RX, NULL, &UART_RX_attributes);
+
+  /* creation of GPS_RX */
+  GPS_RXHandle = osThreadNew(Tsk_GPS_RX, NULL, &GPS_RX_attributes);
+
+  /* creation of GPS_Process */
+  GPS_ProcessHandle = osThreadNew(Tsk_GPS_Process, NULL, &GPS_Process_attributes);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -300,6 +338,43 @@ static void MX_ADC1_Init(void)
   /* USER CODE BEGIN ADC1_Init 2 */
 
   /* USER CODE END ADC1_Init 2 */
+
+}
+
+/**
+  * @brief CAN Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_CAN_Init(void)
+{
+
+  /* USER CODE BEGIN CAN_Init 0 */
+
+  /* USER CODE END CAN_Init 0 */
+
+  /* USER CODE BEGIN CAN_Init 1 */
+
+  /* USER CODE END CAN_Init 1 */
+  hcan.Instance = CAN1;
+  hcan.Init.Prescaler = 16;
+  hcan.Init.Mode = CAN_MODE_NORMAL;
+  hcan.Init.SyncJumpWidth = CAN_SJW_1TQ;
+  hcan.Init.TimeSeg1 = CAN_BS1_1TQ;
+  hcan.Init.TimeSeg2 = CAN_BS2_1TQ;
+  hcan.Init.TimeTriggeredMode = DISABLE;
+  hcan.Init.AutoBusOff = DISABLE;
+  hcan.Init.AutoWakeUp = DISABLE;
+  hcan.Init.AutoRetransmission = DISABLE;
+  hcan.Init.ReceiveFifoLocked = DISABLE;
+  hcan.Init.TransmitFifoPriority = DISABLE;
+  if (HAL_CAN_Init(&hcan) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN CAN_Init 2 */
+
+  /* USER CODE END CAN_Init 2 */
 
 }
 
@@ -432,6 +507,39 @@ static void MX_USART1_UART_Init(void)
 }
 
 /**
+  * @brief USART2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART2_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART2_Init 0 */
+
+  /* USER CODE END USART2_Init 0 */
+
+  /* USER CODE BEGIN USART2_Init 1 */
+
+  /* USER CODE END USART2_Init 1 */
+  huart2.Instance = USART2;
+  huart2.Init.BaudRate = 4800;
+  huart2.Init.WordLength = UART_WORDLENGTH_8B;
+  huart2.Init.StopBits = UART_STOPBITS_1;
+  huart2.Init.Parity = UART_PARITY_NONE;
+  huart2.Init.Mode = UART_MODE_TX_RX;
+  huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART2_Init 2 */
+
+  /* USER CODE END USART2_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -551,6 +659,43 @@ void Tsk_UART_RX(void *argument)
       Thread_UART_RX();
   }
   /* USER CODE END Tsk_UART_RX */
+}
+
+/* USER CODE BEGIN Header_Tsk_GPS_RX */
+/**
+* @brief Function implementing the GPS_RX thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Tsk_GPS_RX */
+void Tsk_GPS_RX(void *argument)
+{
+  /* USER CODE BEGIN Tsk_GPS_RX */
+  /* Infinite loop */
+  for(;;)
+  {
+    Thread_GPS_RX();
+  }
+  /* USER CODE END Tsk_GPS_RX */
+}
+
+/* USER CODE BEGIN Header_Tsk_GPS_Process */
+/**
+* @brief Function implementing the GPS_Process thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Tsk_GPS_Process */
+void Tsk_GPS_Process(void *argument)
+{
+  /* USER CODE BEGIN Tsk_GPS_Process */
+  /* Infinite loop */
+  for(;;)
+  {
+    //Thread_GPS_Process();
+      osThreadYield();
+  }
+  /* USER CODE END Tsk_GPS_Process */
 }
 
 /**

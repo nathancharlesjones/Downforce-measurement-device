@@ -41,10 +41,9 @@ Thread_UART_RX(void)
     {
         uint32_t Thread_UART_RX_stack_size = osThreadGetStackSpace(UART_RXHandle);
         if ( Thread_UART_RX_stack_size > Thread_UART_RX_max_stack_size ) Thread_UART_RX_max_stack_size = Thread_UART_RX_stack_size;
-        if ( HAL_UART_Receive_IT(&huart1, (uint8_t *)(&rx_msg[0]), MAX_LOG_MSG_SIZE) != HAL_OK )
+        while ( HAL_UART_Receive_IT(&huart1, (uint8_t *)(&rx_msg[0]), MAX_LOG_MSG_SIZE) != HAL_OK )
         {
             //Error_Handler();
-            osThreadYield();
         }
         while ( huart1.RxState != HAL_UART_STATE_READY )
         {
@@ -85,7 +84,7 @@ Thread_UART_TX(void)
         if ( Thread_UART_TX_stack_size > Thread_UART_TX_max_stack_size ) Thread_UART_TX_max_stack_size = Thread_UART_TX_stack_size;
         
         uint16_t UART_TX_queue_count = osMessageQueueGetCount(Queue_UART_TXHandle);
-        if ( UART_TX_queue_count > 0 )
+        while ( UART_TX_queue_count > 0 )
         {
             if ( UART_TX_queue_count > UART_TX_queue_max_size ) UART_TX_queue_max_size = UART_TX_queue_count;
             osMessageQueueGet(Queue_UART_TXHandle, &ch, 0, 0);

@@ -27,6 +27,11 @@ Thread_ADC_LightSensor( void )
     }
   
     /* Infinite loop */
+    while(1)
+    {
+        osThreadYield();
+    }
+    
     for(;;)
     {
         uint32_t Thread_ADC_LightSensor_stack_size = osThreadGetStackSpace(ADC_LightSensorHandle);
