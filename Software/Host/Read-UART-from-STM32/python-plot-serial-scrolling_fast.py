@@ -4,15 +4,15 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import numpy as np
 import time
-import board
-from analogio import AnalogIn
 import datetime as dt
+import serial
+import json
 
-lightSensor = AnalogIn(board.G1)
+port = serial.Serial("/dev/ttyUSB0", baudrate=460800, timeout=3.0)
 now = dt.datetime.now()
 
 def get_voltage(raw):
-    return ( raw * 3.3 ) / 65535
+    return ( raw * 3.3 ) / 4095
 
 # Parameters
 x_len = 200         # Number of points to display
@@ -29,7 +29,7 @@ ax.set_ylim(y_range)
 line, = ax.plot(xs, ys)
 
 # Add labels
-plt.title('MCP2221 Analog Reading')
+plt.title('STM32 Analog Reading')
 plt.xlabel('Samples')
 plt.ylabel('Volts')
 
@@ -41,26 +41,26 @@ def animate(i, ys):
     global last_time
 
     for i in range(1):
-        raw = lightSensor.value
-        volts = get_voltage(raw)
+        data = port.readline()
+        try:
+            decoded_line = json.loads(data)
+            raw = decoded_line['value']
+            volts = get_voltage(raw)
+            ys.append(volts)
+            ys = ys[-x_len:]
+            line.set_ydata(ys)
 
-        # Add y to list
-        ys.append(volts)
+            with open(r"/media/nathancharlesjones/Storage/Scripts/STM32/F103C8/Downforce-measurement-device/Software/Host/Data/{}_AnalogIn.csv".format(now.strftime("%Y-%m-%d_%H-%M-%S")), "a") as file:
+                file.write("{},{:1.1f}\n".format(dt.datetime.now().strftime('%H:%M:%S.%f'),volts))
 
-        # Limit y list to set number of items
-        ys = ys[-x_len:]
-
-        # Update line with new Y values
-        line.set_ydata(ys)
-
-        with open(r"/media/nathancharlesjones/Storage/Scripts/STM32/F103C8/Downforce-measurement-device/Software/Host/Data/{}_AnalogIn.csv".format(now.strftime("%Y-%m-%d_%H-%M-%S")), "a") as file:
-            file.write("{},{:1.1f}\n".format(dt.datetime.now().strftime('%H:%M:%S.%f'),volts))
-
-    counter = counter + 1
+            counter = counter + 1
+        except (json.decoder.JSONDecodeError):
+            pass
 
     time_diff = time.perf_counter() - last_time
     if ( time_diff > 1 ):
         print("{:4d} samples processed in {:1.9f} seconds. Update frequency: {:4.1f} Hz".format(counter,time_diff,(counter/time_diff)))
+        print("Bytes unprocessed: {:6d}".format(port.in_waiting))
         last_time = time.perf_counter()
         counter = 0
 

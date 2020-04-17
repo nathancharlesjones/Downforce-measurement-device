@@ -6,7 +6,7 @@ import numpy as np
 import serial
 import datetime as dt
 
-port = serial.Serial("/dev/ttyACM1", baudrate=4800, timeout=3.0)
+port = serial.Serial("/dev/ttyACM0", baudrate=4800, timeout=3.0)
 now = dt.datetime.now()
 
 # Parameters
