@@ -54,7 +54,7 @@ def animate(i, ys):
         line.set_ydata(ys)
 
         with open(r"/media/nathancharlesjones/Storage/Scripts/STM32/F103C8/Downforce-measurement-device/Software/Host/Data/{}_AnalogIn.csv".format(now.strftime("%Y-%m-%d_%H-%M-%S")), "a") as file:
-            file.write("{},{:1.1f}\n".format(dt.datetime.now().strftime('%H:%M:%S.%f'),volts))
+            file.write("{},{:1.3f}\n".format(dt.datetime.now().strftime('%H:%M:%S.%f'),volts))
 
     counter = counter + 1
 

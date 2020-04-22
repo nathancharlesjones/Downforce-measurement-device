@@ -78,8 +78,12 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
   static char ADC_msg[MAX_LOG_MSG_SIZE] = {0};
-  const char channel_name[] = "LightSensor";
+  static const char channel_name[] = "LightSensor";
   static volatile uint16_t lightVal = 0;
+  static volatile uint8_t updateGain = 0;
+  static const uint8_t gain[8] = {1,2,4,5,8,10,16,32};
+  static volatile uint8_t gain_idx = 0;
+  static uint8_t SPI_msg[MAX_LOG_MSG_SIZE] = {0};
   /* USER CODE END 1 */
   
 
@@ -121,16 +125,19 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    //volatile int counter = 0;
-    //int start_time = HAL_GetTick();
-    //while( ( HAL_GetTick() - start_time ) < 1000 )
-    //{
-      HAL_ADC_Start(&hadc1);
-      while( HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY) != HAL_OK );
-      lightVal = HAL_ADC_GetValue(&hadc1);
-      //counter++;
-    //}
-    //asm("nop");
+    if (updateGain)
+    {
+    	SPI_msg[0] = 0x40;
+    	SPI_msg[1] = gain_idx;
+    	HAL_GPIO_WritePin(CSS_PGA_GPIO_Port, CSS_PGA_Pin, GPIO_PIN_RESET);
+    	HAL_SPI_Transmit(&hspi1, &SPI_msg[0], 2, HAL_MAX_DELAY);
+    	HAL_GPIO_WritePin(CSS_PGA_GPIO_Port, CSS_PGA_Pin, GPIO_PIN_SET);
+    }
+
+    HAL_ADC_Start(&hadc1);
+    while( HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY) != HAL_OK );
+    lightVal = HAL_ADC_GetValue(&hadc1);
+    
     sprintf(&ADC_msg[0], "{ \"channel\" : \"%s\", \"time\" : %d, \"value\" : %d }\n\r", channel_name, (int)HAL_GetTick(), lightVal);
     HAL_UART_Transmit(&huart1, (uint8_t*)&ADC_msg[0], strlen(ADC_msg), HAL_MAX_DELAY);
 
@@ -250,8 +257,8 @@ static void MX_SPI1_Init(void)
   hspi1.Init.Mode = SPI_MODE_MASTER;
   hspi1.Init.Direction = SPI_DIRECTION_1LINE;
   hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
-  hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
-  hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi1.Init.CLKPolarity = SPI_POLARITY_HIGH;
+  hspi1.Init.CLKPhase = SPI_PHASE_2EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
   hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
