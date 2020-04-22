@@ -25,6 +25,7 @@
 /* USER CODE BEGIN Includes */
 #include <string.h>
 #include <stdio.h>
+#include <math.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,7 +52,7 @@ UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-
+static uint8_t SPI_msg[MAX_LOG_MSG_SIZE] = {0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -62,7 +63,8 @@ static void MX_SPI1_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
-
+void setGain(gain_t new_gain);
+void setVref(uint16_t _new_Vref);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -80,10 +82,12 @@ int main(void)
   static char ADC_msg[MAX_LOG_MSG_SIZE] = {0};
   static const char channel_name[] = "LightSensor";
   static volatile uint16_t lightVal = 0;
-  static volatile uint8_t updateGain = 0;
+  static volatile uint8_t zoomAndEnhance = 0;
   static const uint8_t gain[8] = {1,2,4,5,8,10,16,32};
-  static volatile uint8_t gain_idx = 0;
-  static uint8_t SPI_msg[MAX_LOG_MSG_SIZE] = {0};
+  static volatile gain_t gain_idx = GAIN_OF_1;
+  static volatile float Vin_min = 0;
+  static volatile float Vin_max = 3.300;
+  static volatile uint16_t Vref = 0;
   /* USER CODE END 1 */
   
 
@@ -125,13 +129,22 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    if (updateGain)
+    if (zoomAndEnhance)
     {
-    	SPI_msg[0] = 0x40;
-    	SPI_msg[1] = gain_idx;
-    	HAL_GPIO_WritePin(CSS_PGA_GPIO_Port, CSS_PGA_Pin, GPIO_PIN_RESET);
-    	HAL_SPI_Transmit(&hspi1, &SPI_msg[0], 2, HAL_MAX_DELAY);
-    	HAL_GPIO_WritePin(CSS_PGA_GPIO_Port, CSS_PGA_Pin, GPIO_PIN_SET);
+    	//calculate gain from Vin_max, Vin_min
+    	float gain_float = 3.3 / ( Vin_max - Vin_min );
+    	for ( gain_idx = GAIN_OF_32; gain_idx > 0; gain_idx--)
+    	{
+    		if ( gain[gain_idx] < gain_float ) break;
+    	}
+    	//update gain
+    	setGain(gain_idx);
+
+    	//calculate Vref from gain, Vin_min
+    	float Vref_float = ( gain[gain_idx] * Vin_min ) / ( gain[gain_idx] - 1 );
+    	uint16_t Vref = round( Vref_float * 4095 / 3.3f );
+    	//update Vref
+    	setVref(Vref);    	
     }
 
     HAL_ADC_Start(&hadc1);
@@ -369,7 +382,30 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void setGain(gain_t new_gain)
+{
+	memset(&SPI_msg[0], 0, MAX_LOG_MSG_SIZE);
+	SPI_msg[0] = 0x40;
+    SPI_msg[1] = new_gain;
+    HAL_GPIO_WritePin(CSS_PGA_GPIO_Port, CSS_PGA_Pin, GPIO_PIN_RESET);
+    HAL_SPI_Transmit(&hspi1, &SPI_msg[0], 2, HAL_MAX_DELAY);
+    HAL_GPIO_WritePin(CSS_PGA_GPIO_Port, CSS_PGA_Pin, GPIO_PIN_SET);
+    memset(&SPI_msg[0], 0, MAX_LOG_MSG_SIZE);
+}
 
+void setVref(uint16_t _new_Vref)
+{
+	volatile uint16_t new_Vref = _new_Vref;
+	if ( new_Vref > 4095 ) new_Vref = 4095;
+
+	memset(&SPI_msg[0], 0, MAX_LOG_MSG_SIZE);
+	SPI_msg[0] = ( 0x70 | ( ( new_Vref >> 8 ) & 0xF ) );
+    SPI_msg[1] = ( new_Vref & 0xFF );
+    HAL_GPIO_WritePin(CSS_DAC_GPIO_Port, CSS_DAC_Pin, GPIO_PIN_RESET);
+    HAL_SPI_Transmit(&hspi1, &SPI_msg[0], 2, HAL_MAX_DELAY);
+    HAL_GPIO_WritePin(CSS_DAC_GPIO_Port, CSS_DAC_Pin, GPIO_PIN_SET);
+    memset(&SPI_msg[0], 0, MAX_LOG_MSG_SIZE);
+}
 /* USER CODE END 4 */
 
 /**

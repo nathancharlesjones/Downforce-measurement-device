@@ -37,7 +37,15 @@ extern "C" {
 
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
-
+typedef enum {  GAIN_OF_1,
+                GAIN_OF_2,
+                GAIN_OF_4,
+                GAIN_OF_5,
+                GAIN_OF_8,
+                GAIN_OF_10,
+                GAIN_OF_16,
+                GAIN_OF_32,
+                } gain_t;
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
