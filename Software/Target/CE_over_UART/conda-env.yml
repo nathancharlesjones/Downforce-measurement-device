@@ -1,0 +1,10 @@
+name: conda-env
+channels:
+  - memfault
+  - conda-forge
+  - defaults
+dependencies:
+  - make=*
+  - gcc-arm-none-eabi=*
+  - m2-base=*
+prefix: C:\Users\nathan.jones2\Miniconda3\envs\conda-env
