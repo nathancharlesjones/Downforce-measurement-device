@@ -1,4 +1,4 @@
-name: conda-env
+name: linux-test
 channels:
   - memfault
   - conda-forge
@@ -6,4 +6,5 @@ channels:
 dependencies:
   - make=4.3
   - gcc-arm-none-eabi=8.2019.q3.update
-prefix: C:\Users\nathan.jones2\Miniconda3\envs\conda-env
+  - m2-base=1.0.0
+prefix: C:\Users\nathan.jones2\Miniconda3\envs\linux-test
