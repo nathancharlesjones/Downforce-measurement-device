@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
+ARM GAS  /tmp/ccf8JOXp.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
   30:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****               (+++) Enable the NVIC SPI IRQ handle
   31:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****           (##) DMA Configuration if you need to use DMA process
   32:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****               (+++) Declare a DMA_HandleTypeDef handle structure for the transmit or receive Stream
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 2
+ARM GAS  /tmp/ccf8JOXp.s 			page 2
 
 
   33:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****               (+++) Enable the DMAx clock
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
   87:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****             (++) TxCpltCallback        : SPI Tx Completed callback
   88:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****             (++) RxCpltCallback        : SPI Rx Completed callback
   89:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****             (++) TxRxCpltCallback      : SPI TxRx Completed callback
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 3
+ARM GAS  /tmp/ccf8JOXp.s 			page 3
 
 
   90:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****             (++) TxHalfCpltCallback    : SPI Tx Half Completed callback
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  144:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****        |         |----------------|----------|----------|-----------|----------|-----------|-------
  145:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****        |    R    |     Interrupt  | Fpclk/8  | Fpclk/8  | Fpclk/64  | Fpclk/2  | Fpclk/64  | Fpclk/
  146:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****        |    X    |----------------|----------|----------|-----------|----------|-----------|-------
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 4
+ARM GAS  /tmp/ccf8JOXp.s 			page 4
 
 
  147:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****        |         |       DMA      | Fpclk/2  | Fpclk/2  | Fpclk/64  | Fpclk/2  | Fpclk/128 | Fpclk/
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  201:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** /* Includes ------------------------------------------------------------------*/
  202:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #include "stm32f1xx_hal.h"
  203:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 5
+ARM GAS  /tmp/ccf8JOXp.s 			page 5
 
 
  204:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** /** @addtogroup STM32F1xx_HAL_Driver
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  258:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** static void SPI_DMAHalfTransmitReceiveCplt(DMA_HandleTypeDef *hdma);
  259:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** static void SPI_DMAError(DMA_HandleTypeDef *hdma);
  260:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** static void SPI_DMAAbortOnError(DMA_HandleTypeDef *hdma);
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 6
+ARM GAS  /tmp/ccf8JOXp.s 			page 6
 
 
  261:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** static void SPI_DMATxAbortCallback(DMA_HandleTypeDef *hdma);
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  315:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         (++) BaudRate Prescaler
  316:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         (++) FirstBit
  317:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         (++) TIMode
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 7
+ARM GAS  /tmp/ccf8JOXp.s 			page 7
 
 
  318:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         (++) CRC Calculation
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  372:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     hspi->Lock = HAL_UNLOCKED;
  373:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  374:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #if (USE_HAL_SPI_REGISTER_CALLBACKS == 1U)
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 8
+ARM GAS  /tmp/ccf8JOXp.s 			page 8
 
 
  375:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     /* Init the SPI Callback settings */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  429:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  430:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   return HAL_OK;
  431:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 9
+ARM GAS  /tmp/ccf8JOXp.s 			page 9
 
 
  432:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  486:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   UNUSED(hspi);
  487:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  488:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   /* NOTE : This function should not be modified, when the callback is needed,
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 10
+ARM GAS  /tmp/ccf8JOXp.s 			page 10
 
 
  489:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****             the HAL_SPI_MspInit should be implemented in the user file
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  543:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         hspi->RxCpltCallback = pCallback;
  544:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         break;
  545:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 11
+ARM GAS  /tmp/ccf8JOXp.s 			page 11
 
 
  546:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       case HAL_SPI_TX_RX_COMPLETE_CB_ID :
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  600:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         /* Update the error code */
  601:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         SET_BIT(hspi->ErrorCode, HAL_SPI_ERROR_INVALID_CALLBACK);
  602:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 12
+ARM GAS  /tmp/ccf8JOXp.s 			page 12
 
 
  603:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         /* Return error status */
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  657:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       case HAL_SPI_RX_HALF_COMPLETE_CB_ID :
  658:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         hspi->RxHalfCpltCallback = HAL_SPI_RxHalfCpltCallback;     /* Legacy weak RxHalfCpltCallbac
  659:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         break;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 13
+ARM GAS  /tmp/ccf8JOXp.s 			page 13
 
 
  660:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  714:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     SET_BIT(hspi->ErrorCode, HAL_SPI_ERROR_INVALID_CALLBACK);
  715:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  716:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     /* Return error status */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 14
+ARM GAS  /tmp/ccf8JOXp.s 			page 14
 
 
  717:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     status =  HAL_ERROR;
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  771:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** HAL_StatusTypeDef HAL_SPI_Transmit(SPI_HandleTypeDef *hspi, uint8_t *pData, uint16_t Size, uint32_t
  772:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** {
  773:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   uint32_t tickstart;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 15
+ARM GAS  /tmp/ccf8JOXp.s 			page 15
 
 
  774:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   HAL_StatusTypeDef errorcode = HAL_OK;
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  828:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   if ((hspi->Instance->CR1 & SPI_CR1_SPE) != SPI_CR1_SPE)
  829:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
  830:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     /* Enable SPI peripheral */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 16
+ARM GAS  /tmp/ccf8JOXp.s 			page 16
 
 
  831:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     __HAL_SPI_ENABLE(hspi);
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  885:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         if ((((HAL_GetTick() - tickstart) >=  Timeout) && (Timeout != HAL_MAX_DELAY)) || (Timeout =
  886:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         {
  887:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****           errorcode = HAL_TIMEOUT;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 17
+ARM GAS  /tmp/ccf8JOXp.s 			page 17
 
 
  888:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****           goto error;
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  942:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     /* Call transmit-receive function to send Dummy data on Tx line and generate clock on CLK line 
  943:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     return HAL_SPI_TransmitReceive(hspi, pData, pData, Size, Timeout);
  944:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 18
+ARM GAS  /tmp/ccf8JOXp.s 			page 18
 
 
  945:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  999:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
 1000:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
 1001:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   /* Receive data in 8 Bit mode */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 19
+ARM GAS  /tmp/ccf8JOXp.s 			page 19
 
 
 1002:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   if (hspi->Init.DataSize == SPI_DATASIZE_8BIT)
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1056:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
 1057:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     /* Check if CRCNEXT is well reseted by hardware */
 1058:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     if (READ_BIT(hspi->Instance->CR1, SPI_CR1_CRCNEXT))
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 20
+ARM GAS  /tmp/ccf8JOXp.s 			page 20
 
 
 1059:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     {
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1113:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     else
 1114:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     {
 1115:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       __HAL_SPI_CLEAR_CRCERRFLAG(hspi);
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 21
+ARM GAS  /tmp/ccf8JOXp.s 			page 21
 
 
 1116:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     }
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1170:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     errorcode = HAL_BUSY;
 1171:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     goto error;
 1172:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 22
+ARM GAS  /tmp/ccf8JOXp.s 			page 22
 
 
 1173:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1227:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       {
 1228:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         hspi->Instance->DR = *((uint16_t *)hspi->pTxBuffPtr);
 1229:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         hspi->pTxBuffPtr += sizeof(uint16_t);
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 23
+ARM GAS  /tmp/ccf8JOXp.s 			page 23
 
 
 1230:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         hspi->TxXferCount--;
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1284:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         }
 1285:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #endif /* USE_SPI_CRC */
 1286:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 24
+ARM GAS  /tmp/ccf8JOXp.s 			page 24
 
 
 1287:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1341:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   /* Check the end of the transaction */
 1342:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   if (SPI_EndRxTxTransaction(hspi, Timeout, tickstart) != HAL_OK)
 1343:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 25
+ARM GAS  /tmp/ccf8JOXp.s 			page 25
 
 
 1344:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     errorcode = HAL_ERROR;
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1398:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   /* Init field not used in handle to zero */
 1399:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->pRxBuffPtr  = (uint8_t *)NULL;
 1400:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->RxXferSize  = 0U;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 26
+ARM GAS  /tmp/ccf8JOXp.s 			page 26
 
 
 1401:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->RxXferCount = 0U;
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1455:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
 1456:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   if ((hspi->Init.Direction == SPI_DIRECTION_2LINES) && (hspi->Init.Mode == SPI_MODE_MASTER))
 1457:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 27
+ARM GAS  /tmp/ccf8JOXp.s 			page 27
 
 
 1458:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     hspi->State = HAL_SPI_STATE_BUSY_RX;
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1512:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
 1513:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #endif /* USE_SPI_CRC */
 1514:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 28
+ARM GAS  /tmp/ccf8JOXp.s 			page 28
 
 
 1515:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   /* Enable TXE and ERR interrupt */
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1569:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     errorcode = HAL_ERROR;
 1570:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     goto error;
 1571:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 29
+ARM GAS  /tmp/ccf8JOXp.s 			page 29
 
 
 1572:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1626:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   * @param  hspi pointer to a SPI_HandleTypeDef structure that contains
 1627:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   *               the configuration information for SPI module.
 1628:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   * @param  pData pointer to data buffer
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 30
+ARM GAS  /tmp/ccf8JOXp.s 			page 30
 
 
 1629:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   * @param  Size amount of data to be sent
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1683:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #endif /* USE_SPI_CRC */
 1684:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
 1685:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   /* Set the SPI TxDMA Half transfer complete callback */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 31
+ARM GAS  /tmp/ccf8JOXp.s 			page 31
 
 
 1686:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->hdmatx->XferHalfCpltCallback = SPI_DMAHalfTransmitCplt;
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1740:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   HAL_StatusTypeDef errorcode = HAL_OK;
 1741:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
 1742:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   /* Check rx dma handle */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 32
+ARM GAS  /tmp/ccf8JOXp.s 			page 32
 
 
 1743:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   assert_param(IS_SPI_DMA_HANDLE(hspi->hdmarx));
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1797:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
 1798:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   /* Set the SPI RxDMA Half transfer complete callback */
 1799:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->hdmarx->XferHalfCpltCallback = SPI_DMAHalfReceiveCplt;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 33
+ARM GAS  /tmp/ccf8JOXp.s 			page 33
 
 
 1800:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1854:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   uint32_t             tmp_mode;
 1855:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   HAL_SPI_StateTypeDef tmp_state;
 1856:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   HAL_StatusTypeDef errorcode = HAL_OK;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 34
+ARM GAS  /tmp/ccf8JOXp.s 			page 34
 
 
 1857:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1911:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
 1912:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   /* Check if we are in Rx only or in Rx/Tx Mode and configure the DMA transfer complete callback *
 1913:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   if (hspi->State == HAL_SPI_STATE_BUSY_RX)
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 35
+ARM GAS  /tmp/ccf8JOXp.s 			page 35
 
 
 1914:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1968:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
 1969:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     /* Enable SPI peripheral */
 1970:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     __HAL_SPI_ENABLE(hspi);
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 36
+ARM GAS  /tmp/ccf8JOXp.s 			page 36
 
 
 1971:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2025:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     /* Reset Timeout Counter */
 2026:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     count = resetcount;
 2027:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 37
+ARM GAS  /tmp/ccf8JOXp.s 			page 37
 
 
 2028:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2082:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     if (hspi->hdmarx != NULL)
 2083:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     {
 2084:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       /* Set the SPI DMA Abort callback :
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 38
+ARM GAS  /tmp/ccf8JOXp.s 			page 38
 
 
 2085:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       will lead to call HAL_SPI_AbortCpltCallback() at end of DMA abort procedure */
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2139:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   * @retval HAL status
 2140:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   */
 2141:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** HAL_StatusTypeDef HAL_SPI_Abort_IT(SPI_HandleTypeDef *hspi)
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 39
+ARM GAS  /tmp/ccf8JOXp.s 			page 39
 
 
 2142:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** {
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2196:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
 2197:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     /* Set DMA Abort Complete callback if UART DMA Tx request if enabled.
 2198:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****        Otherwise, set it to NULL */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 40
+ARM GAS  /tmp/ccf8JOXp.s 			page 40
 
 
 2199:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     if (HAL_IS_BIT_SET(hspi->Instance->CR2, SPI_CR2_TXDMAEN))
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2253:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       else
 2254:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       {
 2255:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         abortcplt = 0U;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 41
+ARM GAS  /tmp/ccf8JOXp.s 			page 41
 
 
 2256:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       }
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2310:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   __HAL_UNLOCK(hspi);
 2311:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
 2312:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   return HAL_OK;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 42
+ARM GAS  /tmp/ccf8JOXp.s 			page 42
 
 
 2313:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** }
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2367:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
 2368:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
 2369:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   /* Disable the SPI DMA Tx & Rx requests */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 43
+ARM GAS  /tmp/ccf8JOXp.s 			page 43
 
 
 2370:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   CLEAR_BIT(hspi->Instance->CR2, SPI_CR2_TXDMAEN | SPI_CR2_RXDMAEN);
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2424:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       __HAL_SPI_CLEAR_MODFFLAG(hspi);
 2425:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     }
 2426:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 44
+ARM GAS  /tmp/ccf8JOXp.s 			page 44
 
 
 2427:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     /* SPI Frame error interrupt occurred ------------------------------------*/
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2481:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   * @retval None
 2482:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   */
 2483:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** __weak void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi)
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 45
+ARM GAS  /tmp/ccf8JOXp.s 			page 45
 
 
 2484:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** {
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2538:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****    */
 2539:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** }
 2540:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 46
+ARM GAS  /tmp/ccf8JOXp.s 			page 46
 
 
 2541:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** /**
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2595:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   * @retval None
 2596:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   */
 2597:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** __weak void HAL_SPI_AbortCpltCallback(SPI_HandleTypeDef *hspi)
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 47
+ARM GAS  /tmp/ccf8JOXp.s 			page 47
 
 
 2598:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** {
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2652:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   */
 2653:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
 2654:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** /**
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 48
+ARM GAS  /tmp/ccf8JOXp.s 			page 48
 
 
 2655:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   * @}
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2709:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       return;
 2710:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     }
 2711:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 49
+ARM GAS  /tmp/ccf8JOXp.s 			page 49
 
 
 2712:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   /* Call user Tx complete callback */
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2766:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
 2767:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
 2768:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     /* Check if CRC error occurred */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 50
+ARM GAS  /tmp/ccf8JOXp.s 			page 50
 
 
 2769:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     if (__HAL_SPI_GET_FLAG(hspi, SPI_FLAG_CRCERR) != RESET)
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2823:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     __HAL_SPI_DISABLE_IT(hspi, SPI_IT_ERR);
 2824:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
 2825:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 51
+ARM GAS  /tmp/ccf8JOXp.s 			page 51
 
 
 2826:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     /* CRC handling */
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2880:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     }
 2881:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
 2882:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   /* Call user TxRx complete callback */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 52
+ARM GAS  /tmp/ccf8JOXp.s 			page 52
 
 
 2883:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #if (USE_HAL_SPI_REGISTER_CALLBACKS == 1U)
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2937:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #if (USE_HAL_SPI_REGISTER_CALLBACKS == 1U)
 2938:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->TxRxHalfCpltCallback(hspi);
 2939:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #else
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 53
+ARM GAS  /tmp/ccf8JOXp.s 			page 53
 
 
 2940:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   HAL_SPI_TxRxHalfCpltCallback(hspi);
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2994:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   */
 2995:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** static void SPI_DMATxAbortCallback(DMA_HandleTypeDef *hdma)
 2996:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** {
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 54
+ARM GAS  /tmp/ccf8JOXp.s 			page 54
 
 
 2997:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   SPI_HandleTypeDef *hspi = (SPI_HandleTypeDef *)(((DMA_HandleTypeDef *)hdma)->Parent); /* Derogati
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3051:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** /**
 3052:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   * @brief  DMA SPI Rx communication abort callback, when initiated by user
 3053:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   *         (To be called at end of DMA Rx Abort procedure following user abort request).
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 55
+ARM GAS  /tmp/ccf8JOXp.s 			page 55
 
 
 3054:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   * @note   When this callback is executed, User Abort complete call back is called only if no
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3108:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #endif /* USE_HAL_SPI_REGISTER_CALLBACKS */
 3109:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** }
 3110:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 56
+ARM GAS  /tmp/ccf8JOXp.s 			page 56
 
 
 3111:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** /**
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3165:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #endif /* USE_SPI_CRC */
 3166:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
 3167:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** /**
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 57
+ARM GAS  /tmp/ccf8JOXp.s 			page 57
 
 
 3168:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   * @brief  Tx 8-bit handler for Transmit and Receive in Interrupt mode.
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3222:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       return;
 3223:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     }
 3224:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #endif /* USE_SPI_CRC */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 58
+ARM GAS  /tmp/ccf8JOXp.s 			page 58
 
 
 3225:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3279:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     }
 3280:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #endif /* USE_SPI_CRC */
 3281:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 59
+ARM GAS  /tmp/ccf8JOXp.s 			page 59
 
 
 3282:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     /* Disable TXE interrupt */
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3336:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
 3337:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
 3338:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     if (hspi->Init.CRCCalculation == SPI_CRCCALCULATION_ENABLE)
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 60
+ARM GAS  /tmp/ccf8JOXp.s 			page 60
 
 
 3339:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     {
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3393:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
 3394:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   if (hspi->RxXferCount == 0U)
 3395:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 61
+ARM GAS  /tmp/ccf8JOXp.s 			page 61
 
 
 3396:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #if (USE_SPI_CRC != 0U)
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3450:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       /* Enable CRC Transmission */
 3451:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       SET_BIT(hspi->Instance->CR1, SPI_CR1_CRCNEXT);
 3452:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 62
+ARM GAS  /tmp/ccf8JOXp.s 			page 62
 
 
 3453:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #endif /* USE_SPI_CRC */
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3507:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   return HAL_OK;
 3508:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** }
 3509:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 63
+ARM GAS  /tmp/ccf8JOXp.s 			page 63
 
 
 3510:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** /**
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3564:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** }
 3565:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
 3566:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** /**
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 64
+ARM GAS  /tmp/ccf8JOXp.s 			page 64
 
 
 3567:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   * @brief  Handle the end of the RXTX transaction.
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3621:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       hspi->ErrorCallback(hspi);
 3622:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #else
 3623:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       HAL_SPI_ErrorCallback(hspi);
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 65
+ARM GAS  /tmp/ccf8JOXp.s 			page 65
 
 
 3624:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #endif /* USE_HAL_SPI_REGISTER_CALLBACKS */
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3678:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** static void SPI_CloseRx_ISR(SPI_HandleTypeDef *hspi)
 3679:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** {
 3680:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   /* Disable RXNE and ERR interrupt */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 66
+ARM GAS  /tmp/ccf8JOXp.s 			page 66
 
 
 3681:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   __HAL_SPI_DISABLE_IT(hspi, (SPI_IT_RXNE | SPI_IT_ERR));
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3735:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #if (USE_HAL_SPI_REGISTER_CALLBACKS == 1U)
 3736:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       hspi->ErrorCallback(hspi);
 3737:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #else
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 67
+ARM GAS  /tmp/ccf8JOXp.s 			page 67
 
 
 3738:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       HAL_SPI_ErrorCallback(hspi);
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3792:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #else
 3793:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     HAL_SPI_ErrorCallback(hspi);
 3794:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #endif /* USE_HAL_SPI_REGISTER_CALLBACKS */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 68
+ARM GAS  /tmp/ccf8JOXp.s 			page 68
 
 
 3795:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3821:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     {
 3822:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       SET_BIT(hspi->ErrorCode, HAL_SPI_ERROR_ABORT);
 3823:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       break;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 69
+ARM GAS  /tmp/ccf8JOXp.s 			page 69
 
 
 3824:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     }
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
   92              		.loc 1 3838 1 view .LVU22
   93 0052 02B0     		add	sp, sp, #8
   94              	.LCFI1:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 70
+ARM GAS  /tmp/ccf8JOXp.s 			page 70
 
 
   95              		.cfi_def_cfa_offset 0
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3855:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** }
  135              		.loc 1 3855 1 view .LVU28
  136 001a 7047     		bx	lr
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 71
+ARM GAS  /tmp/ccf8JOXp.s 			page 71
 
 
  137              		.cfi_endproc
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  185 0020 F3D0     		beq	.L12
 3475:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       {
  186              		.loc 1 3475 7 is_stmt 1 view .LVU37
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 72
+ARM GAS  /tmp/ccf8JOXp.s 			page 72
 
 
 3475:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       {
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  226 0054 85F85030 		strb	r3, [r5, #80]
 3502:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       }
  227              		.loc 1 3502 9 view .LVU53
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 73
+ARM GAS  /tmp/ccf8JOXp.s 			page 73
 
 
 3502:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       }
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  272              		.syntax unified
  273              		.thumb
  274              		.thumb_func
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 74
+ARM GAS  /tmp/ccf8JOXp.s 			page 74
 
 
  275              		.fpu softvfp
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3560:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     return HAL_TIMEOUT;
  322              		.loc 1 3560 5 is_stmt 1 view .LVU73
  323 001c 636D     		ldr	r3, [r4, #84]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 75
+ARM GAS  /tmp/ccf8JOXp.s 			page 75
 
 
  324 001e 43F02003 		orr	r3, r3, #32
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  370 0014 03D1     		bne	.L30
 3527:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
  371              		.loc 1 3527 58 discriminator 1 view .LVU84
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 76
+ARM GAS  /tmp/ccf8JOXp.s 			page 76
 
 
  372 0016 A368     		ldr	r3, [r4, #8]
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  415              		.loc 1 3524 5 is_stmt 1 view .LVU95
  416 0044 2068     		ldr	r0, [r4]
  417 0046 0368     		ldr	r3, [r0]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 77
+ARM GAS  /tmp/ccf8JOXp.s 			page 77
 
 
  418 0048 23F04003 		bic	r3, r3, #64
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  462              		.syntax unified
  463              		.thumb
  464              		.thumb_func
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 78
+ARM GAS  /tmp/ccf8JOXp.s 			page 78
 
 
  465              		.fpu softvfp
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  348:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   assert_param(IS_SPI_BAUDRATE_PRESCALER(hspi->Init.BaudRatePrescaler));
  511              		.loc 1 348 3 view .LVU118
  349:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   assert_param(IS_SPI_FIRST_BIT(hspi->Init.FirstBit));
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 79
+ARM GAS  /tmp/ccf8JOXp.s 			page 79
 
 
  512              		.loc 1 349 3 view .LVU119
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  552 003e E269     		ldr	r2, [r4, #28]
  553 0040 1343     		orrs	r3, r3, r2
  554 0042 226A     		ldr	r2, [r4, #32]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 80
+ARM GAS  /tmp/ccf8JOXp.s 			page 80
 
 
  555 0044 1343     		orrs	r3, r3, r2
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  340:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
  597              		.loc 1 340 12 view .LVU146
  598 0078 0120     		movs	r0, #1
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 81
+ARM GAS  /tmp/ccf8JOXp.s 			page 81
 
 
  599              	.LVL25:
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  649              		.cfi_offset 4, -8
  650              		.cfi_offset 14, -4
  651 0004 0446     		mov	r4, r0
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 82
+ARM GAS  /tmp/ccf8JOXp.s 			page 82
 
 
  448:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  692              		.section	.text.HAL_SPI_Transmit,"ax",%progbits
  693              		.align	1
  694              		.global	HAL_SPI_Transmit
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 83
+ARM GAS  /tmp/ccf8JOXp.s 			page 83
 
 
  695              		.syntax unified
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  784:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   initial_TxXferCount = Size;
  740              		.loc 1 784 3 is_stmt 1 discriminator 2 view .LVU180
  784:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   initial_TxXferCount = Size;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 84
+ARM GAS  /tmp/ccf8JOXp.s 			page 84
 
 
  741              		.loc 1 784 15 is_stmt 0 discriminator 2 view .LVU181
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  777              		.loc 1 804 21 is_stmt 0 view .LVU199
  778 0052 A4F83690 		strh	r9, [r4, #54]	@ movhi
  807:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->RxXferSize  = 0U;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 85
+ARM GAS  /tmp/ccf8JOXp.s 			page 85
 
 
  779              		.loc 1 807 3 is_stmt 1 view .LVU200
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  835:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
  815              		.loc 1 835 17 is_stmt 0 view .LVU219
  816 007a E368     		ldr	r3, [r4, #12]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 86
+ARM GAS  /tmp/ccf8JOXp.s 			page 86
 
 
  835:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  855 00a8 43F48043 		orr	r3, r3, #16384
  856 00ac 1360     		str	r3, [r2]
  857 00ae DBE7     		b	.L57
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 87
+ARM GAS  /tmp/ccf8JOXp.s 			page 87
 
 
  858              	.L85:
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  856:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         {
  896              		.loc 1 856 30 view .LVU252
  897 00d6 C01B     		subs	r0, r0, r7
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 88
+ARM GAS  /tmp/ccf8JOXp.s 			page 88
 
 
  856:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         {
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  936 0104 E38E     		ldrh	r3, [r4, #54]
  851:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       }
  937              		.loc 1 851 26 view .LVU269
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 89
+ARM GAS  /tmp/ccf8JOXp.s 			page 89
 
 
  938 0106 013B     		subs	r3, r3, #1
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  977              		.loc 1 878 48 view .LVU284
  978 0136 1A73     		strb	r2, [r3, #12]
  879:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         hspi->TxXferCount--;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 90
+ARM GAS  /tmp/ccf8JOXp.s 			page 90
 
 
  979              		.loc 1 879 9 is_stmt 1 view .LVU285
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1018 0160 DA68     		ldr	r2, [r3, #12]
  1019 0162 0192     		str	r2, [sp, #4]
  910:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 91
+ARM GAS  /tmp/ccf8JOXp.s 			page 91
 
 
  1020              		.loc 1 910 5 view .LVU301
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1062              	.LCFI18:
  1063              		.cfi_restore_state
  858:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****           goto error;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 92
+ARM GAS  /tmp/ccf8JOXp.s 			page 92
 
 
  1064              		.loc 1 858 21 view .LVU314
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1115              		.loc 1 1144 3 is_stmt 1 view .LVU319
 1145:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   HAL_SPI_StateTypeDef tmp_state;
  1116              		.loc 1 1145 3 view .LVU320
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 93
+ARM GAS  /tmp/ccf8JOXp.s 			page 93
 
 
 1146:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   uint32_t             tickstart;
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1154              	.LVL52:
 1165:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  1155              		.loc 1 1165 3 is_stmt 1 discriminator 2 view .LVU338
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 94
+ARM GAS  /tmp/ccf8JOXp.s 			page 94
 
 
 1167:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         ((tmp_mode == SPI_MODE_MASTER) && (hspi->Init.Direction == SPI_DIRECTION_2LINES) && (tmp_st
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1187:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->pRxBuffPtr  = (uint8_t *)pRxData;
  1195              		.loc 1 1187 3 is_stmt 1 view .LVU354
 1187:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->pRxBuffPtr  = (uint8_t *)pRxData;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 95
+ARM GAS  /tmp/ccf8JOXp.s 			page 95
 
 
  1196              		.loc 1 1187 21 is_stmt 0 view .LVU355
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1230 008e 03D1     		bne	.L91
 1211:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
  1231              		.loc 1 1211 5 is_stmt 1 view .LVU376
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 96
+ARM GAS  /tmp/ccf8JOXp.s 			page 96
 
 
  1232 0090 1A68     		ldr	r2, [r3]
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1269              		.loc 1 1266 24 view .LVU393
  1270 00b8 013B     		subs	r3, r3, #1
  1271 00ba 9BB2     		uxth	r3, r3
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 97
+ARM GAS  /tmp/ccf8JOXp.s 			page 97
 
 
  1272 00bc E386     		strh	r3, [r4, #54]	@ movhi
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1310 00de E386     		strh	r3, [r4, #54]	@ movhi
  1311              	.L94:
 1250:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 98
+ARM GAS  /tmp/ccf8JOXp.s 			page 98
 
 
  1312              		.loc 1 1250 19 view .LVU410
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1350              		.loc 1 1250 9 is_stmt 1 view .LVU426
  1351              	.LVL59:
 1250:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 99
+ARM GAS  /tmp/ccf8JOXp.s 			page 99
 
 
  1352              		.loc 1 1250 19 is_stmt 0 view .LVU427
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1392              		.loc 1 1226 52 discriminator 1 view .LVU441
  1393 0138 002A     		cmp	r2, #0
  1394 013a D3D0     		beq	.L96
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 100
+ARM GAS  /tmp/ccf8JOXp.s 			page 100
 
 
 1226:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       {
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1433 0164 89B2     		uxth	r1, r1
 1289:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       {
  1434              		.loc 1 1289 53 discriminator 1 view .LVU458
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 101
+ARM GAS  /tmp/ccf8JOXp.s 			page 101
 
 
  1435 0166 51B1     		cbz	r1, .L103
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1472 0188 B5F1FF3F 		cmp	r5, #-1
  1473 018c 4AD1     		bne	.L116
  1474              	.L104:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 102
+ARM GAS  /tmp/ccf8JOXp.s 			page 102
 
 
 1297:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       {
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1274:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         hspi->TxXferCount--;
  1514              		.loc 1 1274 9 is_stmt 1 view .LVU491
 1274:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         hspi->TxXferCount--;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 103
+ARM GAS  /tmp/ccf8JOXp.s 			page 103
 
 
  1515              		.loc 1 1274 13 is_stmt 0 view .LVU492
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1554 01e0 2268     		ldr	r2, [r4]
  1555 01e2 D168     		ldr	r1, [r2, #12]
  1556 01e4 0191     		str	r1, [sp, #4]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 104
+ARM GAS  /tmp/ccf8JOXp.s 			page 104
 
 
 1352:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1596              	.LCFI21:
  1597              		.cfi_remember_state
  1598              		.cfi_def_cfa_offset 28
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 105
+ARM GAS  /tmp/ccf8JOXp.s 			page 105
 
 
  1599              		@ sp needed
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1648              		.thumb_func
  1649              		.fpu softvfp
  1651              	HAL_SPI_Receive:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 106
+ARM GAS  /tmp/ccf8JOXp.s 			page 106
 
 
  1652              	.LVL80:
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1695              		.loc 1 950 3 discriminator 2 view .LVU539
  950:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  1696              		.loc 1 950 15 is_stmt 0 discriminator 2 view .LVU540
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 107
+ARM GAS  /tmp/ccf8JOXp.s 			page 107
 
 
  1697 0026 FFF7FEFF 		bl	HAL_GetTick
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1733              		.loc 1 972 3 is_stmt 1 view .LVU558
  972:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->TxXferSize  = 0U;
  1734              		.loc 1 972 21 is_stmt 0 view .LVU559
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 108
+ARM GAS  /tmp/ccf8JOXp.s 			page 108
 
 
  1735 0058 2363     		str	r3, [r4, #48]
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1002:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
  1771              		.loc 1 1002 6 view .LVU578
  1772 007e EBB1     		cbz	r3, .L128
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 109
+ARM GAS  /tmp/ccf8JOXp.s 			page 109
 
 
  1773 0080 39E0     		b	.L129
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1814 00ae B042     		cmp	r0, r6
  1815 00b0 02D3     		bcc	.L132
 1018:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         {
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 110
+ARM GAS  /tmp/ccf8JOXp.s 			page 110
 
 
  1816              		.loc 1 1018 56 discriminator 1 view .LVU592
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1855 00e0 E387     		strh	r3, [r4, #62]	@ movhi
  1856 00e2 EBE7     		b	.L128
  1857              	.L135:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 111
+ARM GAS  /tmp/ccf8JOXp.s 			page 111
 
 
 1041:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         {
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1895 010c A36B     		ldr	r3, [r4, #56]
  1896 010e 0233     		adds	r3, r3, #2
  1897 0110 A363     		str	r3, [r4, #56]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 112
+ARM GAS  /tmp/ccf8JOXp.s 			page 112
 
 
 1036:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       }
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1937 0136 0123     		movs	r3, #1
  1938 0138 84F85130 		strb	r3, [r4, #81]
 1127:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   return errorcode;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 113
+ARM GAS  /tmp/ccf8JOXp.s 			page 113
 
 
  1939              		.loc 1 1127 3 is_stmt 1 view .LVU640
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  1989              	.LFB72:
 1370:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   HAL_StatusTypeDef errorcode = HAL_OK;
  1990              		.loc 1 1370 1 is_stmt 1 view -0
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 114
+ARM GAS  /tmp/ccf8JOXp.s 			page 114
 
 
  1991              		.cfi_startproc
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1393:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->pTxBuffPtr  = (uint8_t *)pData;
  2029              		.loc 1 1393 21 is_stmt 0 view .LVU664
  2030 0028 0020     		movs	r0, #0
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 115
+ARM GAS  /tmp/ccf8JOXp.s 			page 115
 
 
  2031 002a 5865     		str	r0, [r3, #84]
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1415:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
  2065              		.loc 1 1415 17 is_stmt 0 view .LVU685
  2066 0042 9A68     		ldr	r2, [r3, #8]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 116
+ARM GAS  /tmp/ccf8JOXp.s 			page 116
 
 
 1415:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2108              		.loc 1 1417 5 view .LVU698
  2109 007a E6E7     		b	.L154
  2110              	.LVL106:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 117
+ARM GAS  /tmp/ccf8JOXp.s 			page 117
 
 
  2111              	.L156:
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2158              	HAL_SPI_TransmitReceive_IT:
  2159              	.LVL111:
  2160              	.LFB74:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 118
+ARM GAS  /tmp/ccf8JOXp.s 			page 118
 
 
 1545:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   uint32_t             tmp_mode;
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2199 001c B5F5827F 		cmp	r5, #260
  2200 0020 35D1     		bne	.L171
 1561:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 119
+ARM GAS  /tmp/ccf8JOXp.s 			page 119
 
 
  2201              		.loc 1 1561 54 view .LVU724
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1581:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->TxXferSize  = Size;
  2240              		.loc 1 1581 21 is_stmt 0 view .LVU740
  2241 004c 0163     		str	r1, [r0, #48]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 120
+ARM GAS  /tmp/ccf8JOXp.s 			page 120
 
 
 1582:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->TxXferCount = Size;
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2277 0068 43F0E003 		orr	r3, r3, #224
  2278 006c 5360     		str	r3, [r2, #4]
  2279              	.LVL119:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 121
+ARM GAS  /tmp/ccf8JOXp.s 			page 121
 
 
 1612:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2319              		.loc 1 1622 1 is_stmt 0 view .LVU774
  2320 0096 1846     		mov	r0, r3
  2321              	.LVL124:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 122
+ARM GAS  /tmp/ccf8JOXp.s 			page 122
 
 
 1622:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2365              		.loc 1 1569 15 view .LVU785
  2366 00ae EFE7     		b	.L166
  2367              	.LVL135:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 123
+ARM GAS  /tmp/ccf8JOXp.s 			page 123
 
 
  2368              	.L177:
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2416              		.loc 1 1456 18 is_stmt 0 view .LVU793
  2417 0004 8568     		ldr	r5, [r0, #8]
 1456:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 124
+ARM GAS  /tmp/ccf8JOXp.s 			page 124
 
 
  2418              		.loc 1 1456 6 view .LVU794
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2456 0036 0023     		movs	r3, #0
  2457 0038 6365     		str	r3, [r4, #84]
 1481:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->RxXferSize  = Size;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 125
+ARM GAS  /tmp/ccf8JOXp.s 			page 125
 
 
  2458              		.loc 1 1481 3 is_stmt 1 view .LVU811
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2492 0054 1AD0     		beq	.L193
  2493              	.LVL141:
  2494              	.L187:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 126
+ARM GAS  /tmp/ccf8JOXp.s 			page 126
 
 
 1516:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2534              		.loc 1 1498 5 is_stmt 1 view .LVU846
 1498:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
  2535              		.loc 1 1498 17 is_stmt 0 view .LVU847
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 127
+ARM GAS  /tmp/ccf8JOXp.s 			page 127
 
 
  2536 0086 0A4B     		ldr	r3, .L194+4
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2579              	.L194:
  2580 00ac 00000000 		.word	SPI_RxISR_16BIT
  2581 00b0 00000000 		.word	SPI_RxISR_8BIT
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 128
+ARM GAS  /tmp/ccf8JOXp.s 			page 128
 
 
  2582              		.cfi_endproc
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2627 001a 4CD1     		bne	.L203
 1651:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
  2628              		.loc 1 1651 3 is_stmt 1 view .LVU870
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 129
+ARM GAS  /tmp/ccf8JOXp.s 			page 129
 
 
 1651:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2663 003a 8387     		strh	r3, [r0, #60]	@ movhi
 1669:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  2664              		.loc 1 1669 3 is_stmt 1 view .LVU891
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 130
+ARM GAS  /tmp/ccf8JOXp.s 			page 130
 
 
 1669:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2701 005e 2268     		ldr	r2, [r4]
 1699:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
  2702              		.loc 1 1699 38 view .LVU910
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 131
+ARM GAS  /tmp/ccf8JOXp.s 			page 131
 
 
  2703 0060 E38E     		ldrh	r3, [r4, #54]
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1674:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
  2745              		.loc 1 1674 5 is_stmt 1 view .LVU923
  2746 009a 0268     		ldr	r2, [r0]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 132
+ARM GAS  /tmp/ccf8JOXp.s 			page 132
 
 
  2747              	.LVL161:
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2788 00c2 0225     		movs	r5, #2
  2789 00c4 FBE7     		b	.L197
  2790              	.L208:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 133
+ARM GAS  /tmp/ccf8JOXp.s 			page 133
 
 
  2791 00c6 00BF     		.align	2
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2836 000e 0120     		movs	r0, #1
  2837              	.LVL171:
 1866:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 134
+ARM GAS  /tmp/ccf8JOXp.s 			page 134
 
 
  2838              		.loc 1 1866 3 is_stmt 0 discriminator 2 view .LVU948
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1886:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
  2877              		.loc 1 1886 11 is_stmt 0 view .LVU964
  2878 003c 94F85100 		ldrb	r0, [r4, #81]	@ zero_extendqisi2
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 135
+ARM GAS  /tmp/ccf8JOXp.s 			page 135
 
 
  2879              	.LVL175:
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  2913              		.loc 1 1901 21 is_stmt 0 view .LVU984
  2914 005c 2064     		str	r0, [r4, #64]
 1902:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 136
+ARM GAS  /tmp/ccf8JOXp.s 			page 136
 
 
  2915              		.loc 1 1902 3 is_stmt 1 view .LVU985
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1930:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  2952              		.loc 1 1930 35 view .LVU1003
  2953 007e 0022     		movs	r2, #0
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 137
+ARM GAS  /tmp/ccf8JOXp.s 			page 137
 
 
  2954 0080 5A63     		str	r2, [r3, #52]
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1917:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
  2993              		.loc 1 1917 9 is_stmt 0 view .LVU1019
  2994 00a8 E36C     		ldr	r3, [r4, #76]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 138
+ARM GAS  /tmp/ccf8JOXp.s 			page 138
 
 
 1917:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1955:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****                                  hspi->TxXferCount))
  3032              		.loc 1 1955 17 view .LVU1037
  3033 00d0 0C32     		adds	r2, r2, #12
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 139
+ARM GAS  /tmp/ccf8JOXp.s 			page 139
 
 
  3034 00d2 216B     		ldr	r1, [r4, #48]
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1963:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
  3076              		.loc 1 1963 5 is_stmt 1 view .LVU1050
  3077 0114 00E0     		b	.L212
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 140
+ARM GAS  /tmp/ccf8JOXp.s 			page 140
 
 
  3078              	.LVL188:
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1881:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     goto error;
  3120              		.loc 1 1881 15 view .LVU1063
  3121 0130 F2E7     		b	.L212
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 141
+ARM GAS  /tmp/ccf8JOXp.s 			page 141
 
 
  3122              	.LVL199:
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3171              		.loc 1 1740 3 is_stmt 1 view .LVU1070
  3172              	.LVL204:
 1743:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 142
+ARM GAS  /tmp/ccf8JOXp.s 			page 142
 
 
  3173              		.loc 1 1743 3 view .LVU1071
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3211 0032 84F85130 		strb	r3, [r4, #81]
 1773:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->pRxBuffPtr  = (uint8_t *)pData;
  3212              		.loc 1 1773 3 is_stmt 1 view .LVU1088
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 143
+ARM GAS  /tmp/ccf8JOXp.s 			page 143
 
 
 1773:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->pRxBuffPtr  = (uint8_t *)pData;
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3247 0050 244A     		ldr	r2, .L244
  3248 0052 DA62     		str	r2, [r3, #44]
 1802:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 144
+ARM GAS  /tmp/ccf8JOXp.s 			page 144
 
 
  3249              		.loc 1 1802 3 is_stmt 1 view .LVU1109
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 1823:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
  3287              		.loc 1 1823 6 view .LVU1126
  3288 007c 12F0400F 		tst	r2, #64
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 145
+ARM GAS  /tmp/ccf8JOXp.s 			page 145
 
 
  3289 0080 03D1     		bne	.L237
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3331              	.LVL213:
 1787:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
  3332              		.loc 1 1787 5 is_stmt 0 view .LVU1139
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 146
+ARM GAS  /tmp/ccf8JOXp.s 			page 146
 
 
  3333 00b8 1368     		ldr	r3, [r2]
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3375 00e2 00BF     		.align	2
  3376              	.L244:
  3377 00e4 00000000 		.word	SPI_DMAHalfReceiveCplt
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 147
+ARM GAS  /tmp/ccf8JOXp.s 			page 147
 
 
  3378 00e8 00000000 		.word	SPI_DMAReceiveCplt
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3424 0018 0293     		str	r3, [sp, #8]
 2006:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  3425              		.loc 1 2006 3 is_stmt 1 view .LVU1162
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 148
+ARM GAS  /tmp/ccf8JOXp.s 			page 148
 
 
 2006:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2020:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         break;
  3465              		.loc 1 2020 9 is_stmt 1 view .LVU1178
  3466 004c 636D     		ldr	r3, [r4, #84]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 149
+ARM GAS  /tmp/ccf8JOXp.s 			page 149
 
 
  3467 004e 43F04003 		orr	r3, r3, #64
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3505 007a 03E0     		b	.L253
  3506              	.L265:
 2037:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         break;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 150
+ARM GAS  /tmp/ccf8JOXp.s 			page 150
 
 
  3507              		.loc 1 2037 9 is_stmt 1 view .LVU1195
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3544              		.loc 1 2059 25 is_stmt 0 view .LVU1212
  3545 00a2 4023     		movs	r3, #64
  3546 00a4 6365     		str	r3, [r4, #84]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 151
+ARM GAS  /tmp/ccf8JOXp.s 			page 151
 
 
  3547              	.L256:
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3586 00d6 13D0     		beq	.L259
 2082:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     {
  3587              		.loc 1 2082 5 is_stmt 1 view .LVU1228
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 152
+ARM GAS  /tmp/ccf8JOXp.s 			page 152
 
 
 2082:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     {
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3626              		.loc 1 2106 3 is_stmt 1 view .LVU1244
 2106:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
  3627              		.loc 1 2106 11 is_stmt 0 view .LVU1245
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 153
+ARM GAS  /tmp/ccf8JOXp.s 			page 153
 
 
  3628 0106 636D     		ldr	r3, [r4, #84]
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3669              		.loc 1 2109 15 view .LVU1258
  3670 012a 0120     		movs	r0, #1
  3671 012c F0E7     		b	.L261
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 154
+ARM GAS  /tmp/ccf8JOXp.s 			page 154
 
 
  3672              	.L268:
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2312:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** }
  3719              		.loc 1 2312 10 discriminator 2 view .LVU1268
  3720 0020 7047     		bx	lr
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 155
+ARM GAS  /tmp/ccf8JOXp.s 			page 155
 
 
  3721              	.LVL230:
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3766 001e 1846     		mov	r0, r3
  3767              	.LVL233:
 2332:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 156
+ARM GAS  /tmp/ccf8JOXp.s 			page 156
 
 
  3768              		.loc 1 2332 10 discriminator 2 view .LVU1280
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3814 0008 FFF7FEFF 		bl	HAL_DMA_Abort
  3815              	.LVL239:
 2353:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     {
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 157
+ARM GAS  /tmp/ccf8JOXp.s 			page 157
 
 
  3816              		.loc 1 2353 8 view .LVU1291
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3856 0032 2268     		ldr	r2, [r4]
  3857 0034 5368     		ldr	r3, [r2, #4]
  3858 0036 23F00303 		bic	r3, r3, #3
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 158
+ARM GAS  /tmp/ccf8JOXp.s 			page 158
 
 
  3859 003a 5360     		str	r3, [r2, #4]
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3908              		@ frame_needed = 0, uses_anonymous_args = 0
  3909              		@ link register save eliminated.
 2502:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 159
+ARM GAS  /tmp/ccf8JOXp.s 			page 159
 
 
  3910              		.loc 1 2502 3 view .LVU1315
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  3962              		.syntax unified
  3963              		.thumb
  3964              		.thumb_func
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 160
+ARM GAS  /tmp/ccf8JOXp.s 			page 160
 
 
  3965              		.fpu softvfp
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4013              	.LFE88:
  4015              		.section	.text.SPI_DMAHalfReceiveCplt,"ax",%progbits
  4016              		.align	1
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 161
+ARM GAS  /tmp/ccf8JOXp.s 			page 161
 
 
  4017              		.syntax unified
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4065              		.loc 1 2571 1 is_stmt 0 view .LVU1340
  4066 0000 7047     		bx	lr
  4067              		.cfi_endproc
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 162
+ARM GAS  /tmp/ccf8JOXp.s 			page 162
 
 
  4068              	.LFE89:
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2582:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  4119              		.loc 1 2582 3 view .LVU1348
 2590:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 163
+ARM GAS  /tmp/ccf8JOXp.s 			page 163
 
 
  4120              		.loc 1 2590 1 is_stmt 0 view .LVU1349
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4166              		.loc 1 3758 15 view .LVU1359
  4167 001e 0246     		mov	r2, r0
  4168              	.LVL267:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 164
+ARM GAS  /tmp/ccf8JOXp.s 			page 164
 
 
  4169              	.L296:
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4208              	.LVL269:
 3775:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
  4209              		.loc 1 3775 6 view .LVU1375
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 165
+ARM GAS  /tmp/ccf8JOXp.s 			page 165
 
 
  4210 0050 18B1     		cbz	r0, .L297
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4249              	.L293:
 3805:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  4250              		.loc 1 3805 1 is_stmt 0 view .LVU1391
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 166
+ARM GAS  /tmp/ccf8JOXp.s 			page 166
 
 
  4251 007c 02B0     		add	sp, sp, #8
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3415:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->pTxBuffPtr++;
  4300              		.loc 1 3415 43 view .LVU1399
  4301 0006 1278     		ldrb	r2, [r2]	@ zero_extendqisi2
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 167
+ARM GAS  /tmp/ccf8JOXp.s 			page 167
 
 
 3415:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->pTxBuffPtr++;
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4345              	.LVL277:
  4346              	.LFB111:
 3439:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   /* Transmit data in 16 Bit mode */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 168
+ARM GAS  /tmp/ccf8JOXp.s 			page 168
 
 
  4347              		.loc 1 3439 1 is_stmt 1 view -0
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4386              		.loc 1 3456 1 view .LVU1428
  4387 001e 08BD     		pop	{r3, pc}
  4388              	.LVL279:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 169
+ARM GAS  /tmp/ccf8JOXp.s 			page 169
 
 
  4389              	.L312:
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3684:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
  4437              		.loc 1 3684 6 view .LVU1437
  4438 001e 18B1     		cbz	r0, .L314
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 170
+ARM GAS  /tmp/ccf8JOXp.s 			page 170
 
 
 3686:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   }
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3744:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  4478              		.loc 1 3744 1 is_stmt 0 view .LVU1453
  4479 004a 02B0     		add	sp, sp, #8
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 171
+ARM GAS  /tmp/ccf8JOXp.s 			page 171
 
 
  4480              	.LCFI50:
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3317:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->RxXferCount--;
  4527              		.loc 1 3317 3 is_stmt 1 view .LVU1463
 3317:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->RxXferCount--;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 172
+ARM GAS  /tmp/ccf8JOXp.s 			page 172
 
 
  4528              		.loc 1 3317 7 is_stmt 0 view .LVU1464
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4573              		@ frame_needed = 0, uses_anonymous_args = 0
 3374:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   *((uint16_t *)hspi->pRxBuffPtr) = (uint16_t)(hspi->Instance->DR);
  4574              		.loc 1 3374 1 is_stmt 0 view .LVU1476
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 173
+ARM GAS  /tmp/ccf8JOXp.s 			page 173
 
 
  4575 0000 08B5     		push	{r3, lr}
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4614 0020 FFF7FEFF 		bl	SPI_CloseRx_ISR
  4615              	.LVL294:
 3405:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 174
+ARM GAS  /tmp/ccf8JOXp.s 			page 174
 
 
  4616              		.loc 1 3405 1 is_stmt 0 view .LVU1492
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4662              		.loc 1 3578 15 view .LVU1502
  4663 001e 0246     		mov	r2, r0
  4664              	.LVL297:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 175
+ARM GAS  /tmp/ccf8JOXp.s 			page 175
 
 
 3581:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4704              	.LVL299:
 3595:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
  4705              		.loc 1 3595 6 view .LVU1518
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 176
+ARM GAS  /tmp/ccf8JOXp.s 			page 176
 
 
  4706 0050 18B1     		cbz	r0, .L331
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4744              		.loc 1 3648 9 is_stmt 1 view .LVU1534
 3648:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         /* Call user TxRx complete callback */
  4745              		.loc 1 3648 21 is_stmt 0 view .LVU1535
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 177
+ARM GAS  /tmp/ccf8JOXp.s 			page 177
 
 
  4746 007a 0123     		movs	r3, #1
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4792              		.section	.text.SPI_2linesTxISR_8BIT,"ax",%progbits
  4793              		.align	1
  4794              		.syntax unified
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 178
+ARM GAS  /tmp/ccf8JOXp.s 			page 178
 
 
  4795              		.thumb
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4835              		.loc 1 3180 11 is_stmt 0 view .LVU1559
  4836 0018 C38E     		ldrh	r3, [r0, #54]
  4837 001a 9BB2     		uxth	r3, r3
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 179
+ARM GAS  /tmp/ccf8JOXp.s 			page 179
 
 
 3180:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4884              		.cfi_offset 14, -4
 3120:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->pRxBuffPtr++;
  4885              		.loc 1 3120 3 is_stmt 1 view .LVU1570
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 180
+ARM GAS  /tmp/ccf8JOXp.s 			page 180
 
 
 3120:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   hspi->pRxBuffPtr++;
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4923 002c 03B1     		cbz	r3, .L348
  4924              	.LVL309:
  4925              	.L345:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 181
+ARM GAS  /tmp/ccf8JOXp.s 			page 181
 
 
 3143:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  4970 000c 0233     		adds	r3, r3, #2
  4971 000e 0363     		str	r3, [r0, #48]
 3266:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 182
+ARM GAS  /tmp/ccf8JOXp.s 			page 182
 
 
  4972              		.loc 1 3266 3 is_stmt 1 view .LVU1600
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  5015              		.fpu softvfp
  5017              	SPI_2linesRxISR_16BIT:
  5018              	.LVL316:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 183
+ARM GAS  /tmp/ccf8JOXp.s 			page 183
 
 
  5019              	.LFB106:
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  5057              		.loc 1 3227 5 is_stmt 1 view .LVU1628
  5058 001e 0268     		ldr	r2, [r0]
  5059 0020 5368     		ldr	r3, [r2, #4]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 184
+ARM GAS  /tmp/ccf8JOXp.s 			page 184
 
 
  5060 0022 23F04003 		bic	r3, r3, #64
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2955:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  5106              		.loc 1 2955 3 is_stmt 1 view .LVU1639
  5107 0004 0268     		ldr	r2, [r0]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 185
+ARM GAS  /tmp/ccf8JOXp.s 			page 185
 
 
  5108 0006 5368     		ldr	r3, [r2, #4]
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  5155              	.LVL324:
 2672:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  5156              		.loc 1 2672 3 is_stmt 1 view .LVU1649
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 186
+ARM GAS  /tmp/ccf8JOXp.s 			page 186
 
 
 2675:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  5196              		.loc 1 2693 19 is_stmt 0 view .LVU1664
  5197 003e A368     		ldr	r3, [r4, #8]
 2693:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     {
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 187
+ARM GAS  /tmp/ccf8JOXp.s 			page 187
 
 
  5198              		.loc 1 2693 8 view .LVU1665
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  5238              		.cfi_def_cfa_offset 12
  5239              		@ sp needed
  5240 0066 30BD     		pop	{r4, r5, pc}
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 188
+ARM GAS  /tmp/ccf8JOXp.s 			page 188
 
 
  5241              	.LVL329:
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2735:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
  5287              		.loc 1 2735 12 is_stmt 0 view .LVU1690
  5288 000a 2B68     		ldr	r3, [r5]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 189
+ARM GAS  /tmp/ccf8JOXp.s 			page 189
 
 
 2735:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  5328              		.loc 1 2786 5 is_stmt 1 view .LVU1705
 2786:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     {
  5329              		.loc 1 2786 13 is_stmt 0 view .LVU1706
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 190
+ARM GAS  /tmp/ccf8JOXp.s 			page 190
 
 
  5330 0042 636D     		ldr	r3, [r4, #84]
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  5377 0004 446A     		ldr	r4, [r0, #36]
  5378              	.LVL340:
 2814:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 191
+ARM GAS  /tmp/ccf8JOXp.s 			page 191
 
 
  5379              		.loc 1 2814 3 is_stmt 1 view .LVU1716
@@ -11458,7 +11458,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2848:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     hspi->RxXferCount = 0U;
  5419              		.loc 1 2848 23 is_stmt 0 view .LVU1731
  5420 003c 0023     		movs	r3, #0
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 192
+ARM GAS  /tmp/ccf8JOXp.s 			page 192
 
 
  5421 003e E386     		strh	r3, [r4, #54]	@ movhi
@@ -11518,7 +11518,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  5465              		.cfi_startproc
  5466              		@ args = 0, pretend = 0, frame = 16
  5467              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 193
+ARM GAS  /tmp/ccf8JOXp.s 			page 193
 
 
 2382:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   uint32_t itsource = hspi->Instance->CR2;
@@ -11578,7 +11578,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2402:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****        && (SPI_CHECK_IT_SOURCE(itsource, SPI_IT_ERR) != RESET))
  5508              		.loc 1 2402 3 is_stmt 1 view .LVU1758
 2402:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****        && (SPI_CHECK_IT_SOURCE(itsource, SPI_IT_ERR) != RESET))
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 194
+ARM GAS  /tmp/ccf8JOXp.s 			page 194
 
 
  5509              		.loc 1 2402 9 is_stmt 0 view .LVU1759
@@ -11638,7 +11638,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2411:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       }
  5549              		.loc 1 2411 9 is_stmt 0 view .LVU1774
  5550              	.LBE9:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 195
+ARM GAS  /tmp/ccf8JOXp.s 			page 195
 
 
 2421:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     {
@@ -11698,7 +11698,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2436:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       {
  5590              		.loc 1 2436 7 is_stmt 1 view .LVU1790
 2436:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****       {
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 196
+ARM GAS  /tmp/ccf8JOXp.s 			page 196
 
 
  5591              		.loc 1 2436 10 is_stmt 0 view .LVU1791
@@ -11758,7 +11758,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  5629 00ba 104A     		ldr	r2, .L392
  5630 00bc 5A63     		str	r2, [r3, #52]
 2457:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****           {
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 197
+ARM GAS  /tmp/ccf8JOXp.s 			page 197
 
 
  5631              		.loc 1 2457 11 is_stmt 1 view .LVU1808
@@ -11818,7 +11818,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  5671              		.loc 1 2475 1 is_stmt 0 view .LVU1822
  5672 00de 04B0     		add	sp, sp, #16
  5673              	.LCFI71:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 198
+ARM GAS  /tmp/ccf8JOXp.s 			page 198
 
 
  5674              		.cfi_remember_state
@@ -11878,7 +11878,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  5721              	SPI_DMAAbortOnError:
  5722              	.LVL365:
  5723              	.LFB101:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 199
+ARM GAS  /tmp/ccf8JOXp.s 			page 199
 
 
 2974:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   SPI_HandleTypeDef *hspi = (SPI_HandleTypeDef *)(((DMA_HandleTypeDef *)hdma)->Parent); /* Derogati
@@ -11938,7 +11938,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2600:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  5769              		.loc 1 2600 3 view .LVU1843
 2605:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 200
+ARM GAS  /tmp/ccf8JOXp.s 			page 200
 
 
  5770              		.loc 1 2605 1 is_stmt 0 view .LVU1844
@@ -11998,7 +11998,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2151:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   count = resetcount;
  5816              		.loc 1 2151 36 view .LVU1855
  5817 0012 6422     		movs	r2, #100
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 201
+ARM GAS  /tmp/ccf8JOXp.s 			page 201
 
 
  5818 0014 02FB03F3 		mul	r3, r2, r3
@@ -12058,7 +12058,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2170:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     /* Reset Timeout Counter */
  5856              		.loc 1 2170 5 view .LVU1872
  5857 0046 072B     		cmp	r3, #7
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 202
+ARM GAS  /tmp/ccf8JOXp.s 			page 202
 
 
  5858 0048 F5D1     		bne	.L401
@@ -12118,7 +12118,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  5896 0070 94F85130 		ldrb	r3, [r4, #81]	@ zero_extendqisi2
  5897 0074 DBB2     		uxtb	r3, r3
 2187:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     /* Reset Timeout Counter */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 203
+ARM GAS  /tmp/ccf8JOXp.s 			page 203
 
 
  5898              		.loc 1 2187 5 view .LVU1889
@@ -12178,7 +12178,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  5936              		.loc 1 2213 5 is_stmt 1 view .LVU1905
 2213:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     {
  5937              		.loc 1 2213 9 is_stmt 0 view .LVU1906
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 204
+ARM GAS  /tmp/ccf8JOXp.s 			page 204
 
 
  5938 009e 2268     		ldr	r2, [r4]
@@ -12238,7 +12238,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  5975 00c6 4023     		movs	r3, #64
  5976 00c8 6365     		str	r3, [r4, #84]
 2150:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   resetcount = SPI_DEFAULT_TIMEOUT * (SystemCoreClock / 24U / 1000U);
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 205
+ARM GAS  /tmp/ccf8JOXp.s 			page 205
 
 
  5977              		.loc 1 2150 13 view .LVU1924
@@ -12298,7 +12298,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2250:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         hspi->ErrorCode = HAL_SPI_ERROR_ABORT;
  6017              		.loc 1 2250 9 is_stmt 1 view .LVU1939
 2250:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****         hspi->ErrorCode = HAL_SPI_ERROR_ABORT;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 206
+ARM GAS  /tmp/ccf8JOXp.s 			page 206
 
 
  6018              		.loc 1 2250 13 is_stmt 0 view .LVU1940
@@ -12358,7 +12358,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  6060 0110 E387     		strh	r3, [r4, #62]	@ movhi
 2264:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  6061              		.loc 1 2264 5 is_stmt 1 view .LVU1953
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 207
+ARM GAS  /tmp/ccf8JOXp.s 			page 207
 
 
 2264:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -12418,7 +12418,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 2270:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     }
  6102              		.loc 1 2270 17 is_stmt 0 view .LVU1968
  6103 013c 0125     		movs	r5, #1
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 208
+ARM GAS  /tmp/ccf8JOXp.s 			page 208
 
 
  6104 013e EEE7     		b	.L413
@@ -12478,7 +12478,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  6152              		.loc 1 3066 35 view .LVU1976
  6153 0012 0022     		movs	r2, #0
  6154 0014 5A63     		str	r2, [r3, #52]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 209
+ARM GAS  /tmp/ccf8JOXp.s 			page 209
 
 
 3069:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -12538,7 +12538,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  6193              		.loc 1 3088 21 is_stmt 0 view .LVU1992
  6194 0044 E386     		strh	r3, [r4, #54]	@ movhi
 3091:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   {
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 210
+ARM GAS  /tmp/ccf8JOXp.s 			page 210
 
 
  6195              		.loc 1 3091 3 is_stmt 1 view .LVU1993
@@ -12598,7 +12598,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3109:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  6236              		.loc 1 3109 1 view .LVU2007
  6237              		.cfi_endproc
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 211
+ARM GAS  /tmp/ccf8JOXp.s 			page 211
 
 
  6238              	.LFE103:
@@ -12658,7 +12658,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3001:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
  6283              		.loc 1 3001 9 view .LVU2019
  6284 001e 0193     		str	r3, [sp, #4]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 212
+ARM GAS  /tmp/ccf8JOXp.s 			page 212
 
 
 3004:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** 
@@ -12718,7 +12718,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
 3020:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     {
  6323              		.loc 1 3020 21 is_stmt 0 view .LVU2036
  6324 004c 5B6B     		ldr	r3, [r3, #52]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 213
+ARM GAS  /tmp/ccf8JOXp.s 			page 213
 
 
 3020:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****     {
@@ -12778,7 +12778,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  6362              		.loc 1 3041 16 is_stmt 0 view .LVU2053
  6363 0070 0123     		movs	r3, #1
  6364 0072 80F85130 		strb	r3, [r0, #81]
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 214
+ARM GAS  /tmp/ccf8JOXp.s 			page 214
 
 
 3047:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c **** #endif /* USE_HAL_SPI_REGISTER_CALLBACKS */
@@ -12838,7 +12838,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  6417              	.LVL392:
  6418              	.LFB93:
 2645:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c ****   /* Return SPI ErrorCode */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 215
+ARM GAS  /tmp/ccf8JOXp.s 			page 215
 
 
  6419              		.loc 1 2645 1 is_stmt 1 view -0
@@ -12859,8 +12859,8 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  6431              	.LFE93:
  6433              		.text
  6434              	.Letext0:
- 6435              		.file 2 "c:\\users\\nathan.jones2\\miniconda3\\envs\\conda-env\\library\\arm-none-eabi\\include\\m
- 6436              		.file 3 "c:\\users\\nathan.jones2\\miniconda3\\envs\\conda-env\\library\\arm-none-eabi\\include\\s
+ 6435              		.file 2 "/home/nathancharlesjones/miniconda3/envs/conda-env/arm-none-eabi/include/machine/_default
+ 6436              		.file 3 "/home/nathancharlesjones/miniconda3/envs/conda-env/arm-none-eabi/include/sys/_stdint.h"
  6437              		.file 4 "Drivers/CMSIS/Include/core_cm3.h"
  6438              		.file 5 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
  6439              		.file 6 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
@@ -12869,140 +12869,140 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 1
  6442              		.file 9 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h"
  6443              		.file 10 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h"
  6444              		.file 11 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 216
+ARM GAS  /tmp/ccf8JOXp.s 			page 216
 
 
 DEFINED SYMBOLS
-                            *ABS*:00000000 stm32f1xx_hal_spi.c
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:16     .text.SPI_AbortRx_ISR:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:23     .text.SPI_AbortRx_ISR:00000000 SPI_AbortRx_ISR
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:101    .text.SPI_AbortRx_ISR:00000058 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:107    .text.SPI_AbortTx_ISR:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:113    .text.SPI_AbortTx_ISR:00000000 SPI_AbortTx_ISR
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:141    .text.SPI_WaitFlagStateUntilTimeout:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:147    .text.SPI_WaitFlagStateUntilTimeout:00000000 SPI_WaitFlagStateUntilTimeout
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:271    .text.SPI_EndRxTxTransaction:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:277    .text.SPI_EndRxTxTransaction:00000000 SPI_EndRxTxTransaction
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:334    .text.SPI_EndRxTransaction:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:340    .text.SPI_EndRxTransaction:00000000 SPI_EndRxTransaction
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:460    .text.HAL_SPI_MspInit:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:467    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:482    .text.HAL_SPI_Init:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:489    .text.HAL_SPI_Init:00000000 HAL_SPI_Init
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:606    .text.HAL_SPI_MspDeInit:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:613    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:628    .text.HAL_SPI_DeInit:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:635    .text.HAL_SPI_DeInit:00000000 HAL_SPI_DeInit
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:693    .text.HAL_SPI_Transmit:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:700    .text.HAL_SPI_Transmit:00000000 HAL_SPI_Transmit
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:1086   .text.HAL_SPI_TransmitReceive:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:1093   .text.HAL_SPI_TransmitReceive:00000000 HAL_SPI_TransmitReceive
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:1644   .text.HAL_SPI_Receive:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:1651   .text.HAL_SPI_Receive:00000000 HAL_SPI_Receive
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:1980   .text.HAL_SPI_Transmit_IT:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:1987   .text.HAL_SPI_Transmit_IT:00000000 HAL_SPI_Transmit_IT
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:2145   .text.HAL_SPI_Transmit_IT:00000098 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4344   .text.SPI_TxISR_16BIT:00000000 SPI_TxISR_16BIT
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4282   .text.SPI_TxISR_8BIT:00000000 SPI_TxISR_8BIT
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:2151   .text.HAL_SPI_TransmitReceive_IT:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:2158   .text.HAL_SPI_TransmitReceive_IT:00000000 HAL_SPI_TransmitReceive_IT
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:2382   .text.HAL_SPI_TransmitReceive_IT:000000b8 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5017   .text.SPI_2linesRxISR_16BIT:00000000 SPI_2linesRxISR_16BIT
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4945   .text.SPI_2linesTxISR_16BIT:00000000 SPI_2linesTxISR_16BIT
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4872   .text.SPI_2linesRxISR_8BIT:00000000 SPI_2linesRxISR_8BIT
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4799   .text.SPI_2linesTxISR_8BIT:00000000 SPI_2linesTxISR_8BIT
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:2390   .text.HAL_SPI_Receive_IT:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:2397   .text.HAL_SPI_Receive_IT:00000000 HAL_SPI_Receive_IT
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:2580   .text.HAL_SPI_Receive_IT:000000ac $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4567   .text.SPI_RxISR_16BIT:00000000 SPI_RxISR_16BIT
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4505   .text.SPI_RxISR_8BIT:00000000 SPI_RxISR_8BIT
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:2586   .text.HAL_SPI_Transmit_DMA:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:2593   .text.HAL_SPI_Transmit_DMA:00000000 HAL_SPI_Transmit_DMA
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:2793   .text.HAL_SPI_Transmit_DMA:000000c8 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3967   .text.SPI_DMAHalfTransmitCplt:00000000 SPI_DMAHalfTransmitCplt
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5134   .text.SPI_DMATransmitCplt:00000000 SPI_DMATransmitCplt
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5089   .text.SPI_DMAError:00000000 SPI_DMAError
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:2800   .text.HAL_SPI_TransmitReceive_DMA:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:2807   .text.HAL_SPI_TransmitReceive_DMA:00000000 HAL_SPI_TransmitReceive_DMA
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3139   .text.HAL_SPI_TransmitReceive_DMA:0000013c $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4077   .text.SPI_DMAHalfTransmitReceiveCplt:00000000 SPI_DMAHalfTransmitReceiveCplt
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5359   .text.SPI_DMATransmitReceiveCplt:00000000 SPI_DMATransmitReceiveCplt
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4022   .text.SPI_DMAHalfReceiveCplt:00000000 SPI_DMAHalfReceiveCplt
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5261   .text.SPI_DMAReceiveCplt:00000000 SPI_DMAReceiveCplt
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 217
+                            *ABS*:0000000000000000 stm32f1xx_hal_spi.c
+     /tmp/ccf8JOXp.s:16     .text.SPI_AbortRx_ISR:0000000000000000 $t
+     /tmp/ccf8JOXp.s:23     .text.SPI_AbortRx_ISR:0000000000000000 SPI_AbortRx_ISR
+     /tmp/ccf8JOXp.s:101    .text.SPI_AbortRx_ISR:0000000000000058 $d
+     /tmp/ccf8JOXp.s:107    .text.SPI_AbortTx_ISR:0000000000000000 $t
+     /tmp/ccf8JOXp.s:113    .text.SPI_AbortTx_ISR:0000000000000000 SPI_AbortTx_ISR
+     /tmp/ccf8JOXp.s:141    .text.SPI_WaitFlagStateUntilTimeout:0000000000000000 $t
+     /tmp/ccf8JOXp.s:147    .text.SPI_WaitFlagStateUntilTimeout:0000000000000000 SPI_WaitFlagStateUntilTimeout
+     /tmp/ccf8JOXp.s:271    .text.SPI_EndRxTxTransaction:0000000000000000 $t
+     /tmp/ccf8JOXp.s:277    .text.SPI_EndRxTxTransaction:0000000000000000 SPI_EndRxTxTransaction
+     /tmp/ccf8JOXp.s:334    .text.SPI_EndRxTransaction:0000000000000000 $t
+     /tmp/ccf8JOXp.s:340    .text.SPI_EndRxTransaction:0000000000000000 SPI_EndRxTransaction
+     /tmp/ccf8JOXp.s:460    .text.HAL_SPI_MspInit:0000000000000000 $t
+     /tmp/ccf8JOXp.s:467    .text.HAL_SPI_MspInit:0000000000000000 HAL_SPI_MspInit
+     /tmp/ccf8JOXp.s:482    .text.HAL_SPI_Init:0000000000000000 $t
+     /tmp/ccf8JOXp.s:489    .text.HAL_SPI_Init:0000000000000000 HAL_SPI_Init
+     /tmp/ccf8JOXp.s:606    .text.HAL_SPI_MspDeInit:0000000000000000 $t
+     /tmp/ccf8JOXp.s:613    .text.HAL_SPI_MspDeInit:0000000000000000 HAL_SPI_MspDeInit
+     /tmp/ccf8JOXp.s:628    .text.HAL_SPI_DeInit:0000000000000000 $t
+     /tmp/ccf8JOXp.s:635    .text.HAL_SPI_DeInit:0000000000000000 HAL_SPI_DeInit
+     /tmp/ccf8JOXp.s:693    .text.HAL_SPI_Transmit:0000000000000000 $t
+     /tmp/ccf8JOXp.s:700    .text.HAL_SPI_Transmit:0000000000000000 HAL_SPI_Transmit
+     /tmp/ccf8JOXp.s:1086   .text.HAL_SPI_TransmitReceive:0000000000000000 $t
+     /tmp/ccf8JOXp.s:1093   .text.HAL_SPI_TransmitReceive:0000000000000000 HAL_SPI_TransmitReceive
+     /tmp/ccf8JOXp.s:1644   .text.HAL_SPI_Receive:0000000000000000 $t
+     /tmp/ccf8JOXp.s:1651   .text.HAL_SPI_Receive:0000000000000000 HAL_SPI_Receive
+     /tmp/ccf8JOXp.s:1980   .text.HAL_SPI_Transmit_IT:0000000000000000 $t
+     /tmp/ccf8JOXp.s:1987   .text.HAL_SPI_Transmit_IT:0000000000000000 HAL_SPI_Transmit_IT
+     /tmp/ccf8JOXp.s:2145   .text.HAL_SPI_Transmit_IT:0000000000000098 $d
+     /tmp/ccf8JOXp.s:4344   .text.SPI_TxISR_16BIT:0000000000000000 SPI_TxISR_16BIT
+     /tmp/ccf8JOXp.s:4282   .text.SPI_TxISR_8BIT:0000000000000000 SPI_TxISR_8BIT
+     /tmp/ccf8JOXp.s:2151   .text.HAL_SPI_TransmitReceive_IT:0000000000000000 $t
+     /tmp/ccf8JOXp.s:2158   .text.HAL_SPI_TransmitReceive_IT:0000000000000000 HAL_SPI_TransmitReceive_IT
+     /tmp/ccf8JOXp.s:2382   .text.HAL_SPI_TransmitReceive_IT:00000000000000b8 $d
+     /tmp/ccf8JOXp.s:5017   .text.SPI_2linesRxISR_16BIT:0000000000000000 SPI_2linesRxISR_16BIT
+     /tmp/ccf8JOXp.s:4945   .text.SPI_2linesTxISR_16BIT:0000000000000000 SPI_2linesTxISR_16BIT
+     /tmp/ccf8JOXp.s:4872   .text.SPI_2linesRxISR_8BIT:0000000000000000 SPI_2linesRxISR_8BIT
+     /tmp/ccf8JOXp.s:4799   .text.SPI_2linesTxISR_8BIT:0000000000000000 SPI_2linesTxISR_8BIT
+     /tmp/ccf8JOXp.s:2390   .text.HAL_SPI_Receive_IT:0000000000000000 $t
+     /tmp/ccf8JOXp.s:2397   .text.HAL_SPI_Receive_IT:0000000000000000 HAL_SPI_Receive_IT
+     /tmp/ccf8JOXp.s:2580   .text.HAL_SPI_Receive_IT:00000000000000ac $d
+     /tmp/ccf8JOXp.s:4567   .text.SPI_RxISR_16BIT:0000000000000000 SPI_RxISR_16BIT
+     /tmp/ccf8JOXp.s:4505   .text.SPI_RxISR_8BIT:0000000000000000 SPI_RxISR_8BIT
+     /tmp/ccf8JOXp.s:2586   .text.HAL_SPI_Transmit_DMA:0000000000000000 $t
+     /tmp/ccf8JOXp.s:2593   .text.HAL_SPI_Transmit_DMA:0000000000000000 HAL_SPI_Transmit_DMA
+     /tmp/ccf8JOXp.s:2793   .text.HAL_SPI_Transmit_DMA:00000000000000c8 $d
+     /tmp/ccf8JOXp.s:3967   .text.SPI_DMAHalfTransmitCplt:0000000000000000 SPI_DMAHalfTransmitCplt
+     /tmp/ccf8JOXp.s:5134   .text.SPI_DMATransmitCplt:0000000000000000 SPI_DMATransmitCplt
+     /tmp/ccf8JOXp.s:5089   .text.SPI_DMAError:0000000000000000 SPI_DMAError
+     /tmp/ccf8JOXp.s:2800   .text.HAL_SPI_TransmitReceive_DMA:0000000000000000 $t
+     /tmp/ccf8JOXp.s:2807   .text.HAL_SPI_TransmitReceive_DMA:0000000000000000 HAL_SPI_TransmitReceive_DMA
+     /tmp/ccf8JOXp.s:3139   .text.HAL_SPI_TransmitReceive_DMA:000000000000013c $d
+     /tmp/ccf8JOXp.s:4077   .text.SPI_DMAHalfTransmitReceiveCplt:0000000000000000 SPI_DMAHalfTransmitReceiveCplt
+     /tmp/ccf8JOXp.s:5359   .text.SPI_DMATransmitReceiveCplt:0000000000000000 SPI_DMATransmitReceiveCplt
+     /tmp/ccf8JOXp.s:4022   .text.SPI_DMAHalfReceiveCplt:0000000000000000 SPI_DMAHalfReceiveCplt
+     /tmp/ccf8JOXp.s:5261   .text.SPI_DMAReceiveCplt:0000000000000000 SPI_DMAReceiveCplt
+ARM GAS  /tmp/ccf8JOXp.s 			page 217
 
 
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3148   .text.HAL_SPI_Receive_DMA:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3155   .text.HAL_SPI_Receive_DMA:00000000 HAL_SPI_Receive_DMA
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3377   .text.HAL_SPI_Receive_DMA:000000e4 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3384   .text.HAL_SPI_Abort:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3391   .text.HAL_SPI_Abort:00000000 HAL_SPI_Abort
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3675   .text.HAL_SPI_Abort:00000130 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3683   .text.HAL_SPI_DMAPause:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3690   .text.HAL_SPI_DMAPause:00000000 HAL_SPI_DMAPause
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3732   .text.HAL_SPI_DMAResume:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3739   .text.HAL_SPI_DMAResume:00000000 HAL_SPI_DMAResume
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3781   .text.HAL_SPI_DMAStop:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3788   .text.HAL_SPI_DMAStop:00000000 HAL_SPI_DMAStop
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3873   .text.HAL_SPI_TxCpltCallback:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3880   .text.HAL_SPI_TxCpltCallback:00000000 HAL_SPI_TxCpltCallback
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3895   .text.HAL_SPI_RxCpltCallback:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3902   .text.HAL_SPI_RxCpltCallback:00000000 HAL_SPI_RxCpltCallback
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3917   .text.HAL_SPI_TxRxCpltCallback:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3924   .text.HAL_SPI_TxRxCpltCallback:00000000 HAL_SPI_TxRxCpltCallback
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3939   .text.HAL_SPI_TxHalfCpltCallback:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3946   .text.HAL_SPI_TxHalfCpltCallback:00000000 HAL_SPI_TxHalfCpltCallback
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3961   .text.SPI_DMAHalfTransmitCplt:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:3994   .text.HAL_SPI_RxHalfCpltCallback:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4001   .text.HAL_SPI_RxHalfCpltCallback:00000000 HAL_SPI_RxHalfCpltCallback
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4016   .text.SPI_DMAHalfReceiveCplt:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4049   .text.HAL_SPI_TxRxHalfCpltCallback:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4056   .text.HAL_SPI_TxRxHalfCpltCallback:00000000 HAL_SPI_TxRxHalfCpltCallback
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4071   .text.SPI_DMAHalfTransmitReceiveCplt:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4104   .text.HAL_SPI_ErrorCallback:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4111   .text.HAL_SPI_ErrorCallback:00000000 HAL_SPI_ErrorCallback
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4126   .text.SPI_CloseTx_ISR:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4132   .text.SPI_CloseTx_ISR:00000000 SPI_CloseTx_ISR
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4270   .text.SPI_CloseTx_ISR:00000088 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4276   .text.SPI_TxISR_8BIT:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4338   .text.SPI_TxISR_16BIT:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4399   .text.SPI_CloseRx_ISR:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4405   .text.SPI_CloseRx_ISR:00000000 SPI_CloseRx_ISR
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4499   .text.SPI_RxISR_8BIT:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4561   .text.SPI_RxISR_16BIT:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4622   .text.SPI_CloseRxTx_ISR:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4628   .text.SPI_CloseRxTx_ISR:00000000 SPI_CloseRxTx_ISR
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4787   .text.SPI_CloseRxTx_ISR:000000a8 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4793   .text.SPI_2linesTxISR_8BIT:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4866   .text.SPI_2linesRxISR_8BIT:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:4939   .text.SPI_2linesTxISR_16BIT:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5011   .text.SPI_2linesRxISR_16BIT:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5083   .text.SPI_DMAError:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5128   .text.SPI_DMATransmitCplt:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5255   .text.SPI_DMAReceiveCplt:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5353   .text.SPI_DMATransmitReceiveCplt:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5454   .text.HAL_SPI_IRQHandler:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5461   .text.HAL_SPI_IRQHandler:00000000 HAL_SPI_IRQHandler
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5710   .text.HAL_SPI_IRQHandler:000000fc $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5721   .text.SPI_DMAAbortOnError:00000000 SPI_DMAAbortOnError
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5715   .text.SPI_DMAAbortOnError:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5754   .text.HAL_SPI_AbortCpltCallback:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5761   .text.HAL_SPI_AbortCpltCallback:00000000 HAL_SPI_AbortCpltCallback
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5776   .text.HAL_SPI_Abort_IT:00000000 $t
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s 			page 218
+     /tmp/ccf8JOXp.s:3148   .text.HAL_SPI_Receive_DMA:0000000000000000 $t
+     /tmp/ccf8JOXp.s:3155   .text.HAL_SPI_Receive_DMA:0000000000000000 HAL_SPI_Receive_DMA
+     /tmp/ccf8JOXp.s:3377   .text.HAL_SPI_Receive_DMA:00000000000000e4 $d
+     /tmp/ccf8JOXp.s:3384   .text.HAL_SPI_Abort:0000000000000000 $t
+     /tmp/ccf8JOXp.s:3391   .text.HAL_SPI_Abort:0000000000000000 HAL_SPI_Abort
+     /tmp/ccf8JOXp.s:3675   .text.HAL_SPI_Abort:0000000000000130 $d
+     /tmp/ccf8JOXp.s:3683   .text.HAL_SPI_DMAPause:0000000000000000 $t
+     /tmp/ccf8JOXp.s:3690   .text.HAL_SPI_DMAPause:0000000000000000 HAL_SPI_DMAPause
+     /tmp/ccf8JOXp.s:3732   .text.HAL_SPI_DMAResume:0000000000000000 $t
+     /tmp/ccf8JOXp.s:3739   .text.HAL_SPI_DMAResume:0000000000000000 HAL_SPI_DMAResume
+     /tmp/ccf8JOXp.s:3781   .text.HAL_SPI_DMAStop:0000000000000000 $t
+     /tmp/ccf8JOXp.s:3788   .text.HAL_SPI_DMAStop:0000000000000000 HAL_SPI_DMAStop
+     /tmp/ccf8JOXp.s:3873   .text.HAL_SPI_TxCpltCallback:0000000000000000 $t
+     /tmp/ccf8JOXp.s:3880   .text.HAL_SPI_TxCpltCallback:0000000000000000 HAL_SPI_TxCpltCallback
+     /tmp/ccf8JOXp.s:3895   .text.HAL_SPI_RxCpltCallback:0000000000000000 $t
+     /tmp/ccf8JOXp.s:3902   .text.HAL_SPI_RxCpltCallback:0000000000000000 HAL_SPI_RxCpltCallback
+     /tmp/ccf8JOXp.s:3917   .text.HAL_SPI_TxRxCpltCallback:0000000000000000 $t
+     /tmp/ccf8JOXp.s:3924   .text.HAL_SPI_TxRxCpltCallback:0000000000000000 HAL_SPI_TxRxCpltCallback
+     /tmp/ccf8JOXp.s:3939   .text.HAL_SPI_TxHalfCpltCallback:0000000000000000 $t
+     /tmp/ccf8JOXp.s:3946   .text.HAL_SPI_TxHalfCpltCallback:0000000000000000 HAL_SPI_TxHalfCpltCallback
+     /tmp/ccf8JOXp.s:3961   .text.SPI_DMAHalfTransmitCplt:0000000000000000 $t
+     /tmp/ccf8JOXp.s:3994   .text.HAL_SPI_RxHalfCpltCallback:0000000000000000 $t
+     /tmp/ccf8JOXp.s:4001   .text.HAL_SPI_RxHalfCpltCallback:0000000000000000 HAL_SPI_RxHalfCpltCallback
+     /tmp/ccf8JOXp.s:4016   .text.SPI_DMAHalfReceiveCplt:0000000000000000 $t
+     /tmp/ccf8JOXp.s:4049   .text.HAL_SPI_TxRxHalfCpltCallback:0000000000000000 $t
+     /tmp/ccf8JOXp.s:4056   .text.HAL_SPI_TxRxHalfCpltCallback:0000000000000000 HAL_SPI_TxRxHalfCpltCallback
+     /tmp/ccf8JOXp.s:4071   .text.SPI_DMAHalfTransmitReceiveCplt:0000000000000000 $t
+     /tmp/ccf8JOXp.s:4104   .text.HAL_SPI_ErrorCallback:0000000000000000 $t
+     /tmp/ccf8JOXp.s:4111   .text.HAL_SPI_ErrorCallback:0000000000000000 HAL_SPI_ErrorCallback
+     /tmp/ccf8JOXp.s:4126   .text.SPI_CloseTx_ISR:0000000000000000 $t
+     /tmp/ccf8JOXp.s:4132   .text.SPI_CloseTx_ISR:0000000000000000 SPI_CloseTx_ISR
+     /tmp/ccf8JOXp.s:4270   .text.SPI_CloseTx_ISR:0000000000000088 $d
+     /tmp/ccf8JOXp.s:4276   .text.SPI_TxISR_8BIT:0000000000000000 $t
+     /tmp/ccf8JOXp.s:4338   .text.SPI_TxISR_16BIT:0000000000000000 $t
+     /tmp/ccf8JOXp.s:4399   .text.SPI_CloseRx_ISR:0000000000000000 $t
+     /tmp/ccf8JOXp.s:4405   .text.SPI_CloseRx_ISR:0000000000000000 SPI_CloseRx_ISR
+     /tmp/ccf8JOXp.s:4499   .text.SPI_RxISR_8BIT:0000000000000000 $t
+     /tmp/ccf8JOXp.s:4561   .text.SPI_RxISR_16BIT:0000000000000000 $t
+     /tmp/ccf8JOXp.s:4622   .text.SPI_CloseRxTx_ISR:0000000000000000 $t
+     /tmp/ccf8JOXp.s:4628   .text.SPI_CloseRxTx_ISR:0000000000000000 SPI_CloseRxTx_ISR
+     /tmp/ccf8JOXp.s:4787   .text.SPI_CloseRxTx_ISR:00000000000000a8 $d
+     /tmp/ccf8JOXp.s:4793   .text.SPI_2linesTxISR_8BIT:0000000000000000 $t
+     /tmp/ccf8JOXp.s:4866   .text.SPI_2linesRxISR_8BIT:0000000000000000 $t
+     /tmp/ccf8JOXp.s:4939   .text.SPI_2linesTxISR_16BIT:0000000000000000 $t
+     /tmp/ccf8JOXp.s:5011   .text.SPI_2linesRxISR_16BIT:0000000000000000 $t
+     /tmp/ccf8JOXp.s:5083   .text.SPI_DMAError:0000000000000000 $t
+     /tmp/ccf8JOXp.s:5128   .text.SPI_DMATransmitCplt:0000000000000000 $t
+     /tmp/ccf8JOXp.s:5255   .text.SPI_DMAReceiveCplt:0000000000000000 $t
+     /tmp/ccf8JOXp.s:5353   .text.SPI_DMATransmitReceiveCplt:0000000000000000 $t
+     /tmp/ccf8JOXp.s:5454   .text.HAL_SPI_IRQHandler:0000000000000000 $t
+     /tmp/ccf8JOXp.s:5461   .text.HAL_SPI_IRQHandler:0000000000000000 HAL_SPI_IRQHandler
+     /tmp/ccf8JOXp.s:5710   .text.HAL_SPI_IRQHandler:00000000000000fc $d
+     /tmp/ccf8JOXp.s:5721   .text.SPI_DMAAbortOnError:0000000000000000 SPI_DMAAbortOnError
+     /tmp/ccf8JOXp.s:5715   .text.SPI_DMAAbortOnError:0000000000000000 $t
+     /tmp/ccf8JOXp.s:5754   .text.HAL_SPI_AbortCpltCallback:0000000000000000 $t
+     /tmp/ccf8JOXp.s:5761   .text.HAL_SPI_AbortCpltCallback:0000000000000000 HAL_SPI_AbortCpltCallback
+     /tmp/ccf8JOXp.s:5776   .text.HAL_SPI_Abort_IT:0000000000000000 $t
+ARM GAS  /tmp/ccf8JOXp.s 			page 218
 
 
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:5783   .text.HAL_SPI_Abort_IT:00000000 HAL_SPI_Abort_IT
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:6108   .text.HAL_SPI_Abort_IT:00000140 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:6247   .text.SPI_DMATxAbortCallback:00000000 SPI_DMATxAbortCallback
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:6124   .text.SPI_DMARxAbortCallback:00000000 SPI_DMARxAbortCallback
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:6118   .text.SPI_DMARxAbortCallback:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:6241   .text.SPI_DMATxAbortCallback:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:6378   .text.SPI_DMATxAbortCallback:00000080 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:6384   .text.HAL_SPI_GetState:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:6391   .text.HAL_SPI_GetState:00000000 HAL_SPI_GetState
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:6409   .text.HAL_SPI_GetError:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\ccY2b3m0.s:6416   .text.HAL_SPI_GetError:00000000 HAL_SPI_GetError
+     /tmp/ccf8JOXp.s:5783   .text.HAL_SPI_Abort_IT:0000000000000000 HAL_SPI_Abort_IT
+     /tmp/ccf8JOXp.s:6108   .text.HAL_SPI_Abort_IT:0000000000000140 $d
+     /tmp/ccf8JOXp.s:6247   .text.SPI_DMATxAbortCallback:0000000000000000 SPI_DMATxAbortCallback
+     /tmp/ccf8JOXp.s:6124   .text.SPI_DMARxAbortCallback:0000000000000000 SPI_DMARxAbortCallback
+     /tmp/ccf8JOXp.s:6118   .text.SPI_DMARxAbortCallback:0000000000000000 $t
+     /tmp/ccf8JOXp.s:6241   .text.SPI_DMATxAbortCallback:0000000000000000 $t
+     /tmp/ccf8JOXp.s:6378   .text.SPI_DMATxAbortCallback:0000000000000080 $d
+     /tmp/ccf8JOXp.s:6384   .text.HAL_SPI_GetState:0000000000000000 $t
+     /tmp/ccf8JOXp.s:6391   .text.HAL_SPI_GetState:0000000000000000 HAL_SPI_GetState
+     /tmp/ccf8JOXp.s:6409   .text.HAL_SPI_GetError:0000000000000000 $t
+     /tmp/ccf8JOXp.s:6416   .text.HAL_SPI_GetError:0000000000000000 HAL_SPI_GetError
 
 UNDEFINED SYMBOLS
 SystemCoreClock

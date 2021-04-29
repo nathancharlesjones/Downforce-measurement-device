@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
+ARM GAS  /tmp/cc5FGJEU.s 			page 1
 
 
    1              		.cpu cortex-m3
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
   29:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****      -@- When the NVIC_PRIORITYGROUP_0 is selected, IRQ preemption is no more possible. 
   30:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****          The pending IRQ priority will be managed only by the sub priority.
   31:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****    
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 2
+ARM GAS  /tmp/cc5FGJEU.s 			page 2
 
 
   32:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****      -@- IRQ priority order (sorted by highest to lowest priority):
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
   86:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   * @{
   87:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   */
   88:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 3
+ARM GAS  /tmp/cc5FGJEU.s 			page 3
 
 
   89:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c **** /** @defgroup CORTEX CORTEX
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  143:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c **** void HAL_NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
  144:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c **** {
   28              		.loc 1 144 1 view -0
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 4
+ARM GAS  /tmp/cc5FGJEU.s 			page 4
 
 
   29              		.cfi_startproc
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
   41:Drivers/CMSIS/Include/core_cm3.h ****   \page CMSIS_MISRA_Exceptions  MISRA-C:2004 Compliance Exceptions
   42:Drivers/CMSIS/Include/core_cm3.h ****   CMSIS violates the following MISRA-C:2004 rules:
   43:Drivers/CMSIS/Include/core_cm3.h **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 5
+ARM GAS  /tmp/cc5FGJEU.s 			page 5
 
 
   44:Drivers/CMSIS/Include/core_cm3.h ****    \li Required Rule 8.5, object/function definition in header file.<br>
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
   98:Drivers/CMSIS/Include/core_cm3.h **** #elif defined ( __TI_ARM__ )
   99:Drivers/CMSIS/Include/core_cm3.h ****   #if defined __TI_VFP_SUPPORT__
  100:Drivers/CMSIS/Include/core_cm3.h ****     #error "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 6
+ARM GAS  /tmp/cc5FGJEU.s 			page 6
 
 
  101:Drivers/CMSIS/Include/core_cm3.h ****   #endif
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  155:Drivers/CMSIS/Include/core_cm3.h **** 
  156:Drivers/CMSIS/Include/core_cm3.h **** /* IO definitions (access restrictions to peripheral registers) */
  157:Drivers/CMSIS/Include/core_cm3.h **** /**
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 7
+ARM GAS  /tmp/cc5FGJEU.s 			page 7
 
 
  158:Drivers/CMSIS/Include/core_cm3.h ****     \defgroup CMSIS_glob_defs CMSIS Global Defines
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  212:Drivers/CMSIS/Include/core_cm3.h ****     uint32_t V:1;                        /*!< bit:     28  Overflow condition code flag */
  213:Drivers/CMSIS/Include/core_cm3.h ****     uint32_t C:1;                        /*!< bit:     29  Carry condition code flag */
  214:Drivers/CMSIS/Include/core_cm3.h ****     uint32_t Z:1;                        /*!< bit:     30  Zero condition code flag */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 8
+ARM GAS  /tmp/cc5FGJEU.s 			page 8
 
 
  215:Drivers/CMSIS/Include/core_cm3.h ****     uint32_t N:1;                        /*!< bit:     31  Negative condition code flag */
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  269:Drivers/CMSIS/Include/core_cm3.h ****     uint32_t V:1;                        /*!< bit:     28  Overflow condition code flag */
  270:Drivers/CMSIS/Include/core_cm3.h ****     uint32_t C:1;                        /*!< bit:     29  Carry condition code flag */
  271:Drivers/CMSIS/Include/core_cm3.h ****     uint32_t Z:1;                        /*!< bit:     30  Zero condition code flag */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 9
+ARM GAS  /tmp/cc5FGJEU.s 			page 9
 
 
  272:Drivers/CMSIS/Include/core_cm3.h ****     uint32_t N:1;                        /*!< bit:     31  Negative condition code flag */
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  326:Drivers/CMSIS/Include/core_cm3.h **** 
  327:Drivers/CMSIS/Include/core_cm3.h **** /*@} end of group CMSIS_CORE */
  328:Drivers/CMSIS/Include/core_cm3.h **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 10
+ARM GAS  /tmp/cc5FGJEU.s 			page 10
 
 
  329:Drivers/CMSIS/Include/core_cm3.h **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  383:Drivers/CMSIS/Include/core_cm3.h ****   __IOM uint32_t SHCSR;                  /*!< Offset: 0x024 (R/W)  System Handler Control and State
  384:Drivers/CMSIS/Include/core_cm3.h ****   __IOM uint32_t CFSR;                   /*!< Offset: 0x028 (R/W)  Configurable Fault Status Regist
  385:Drivers/CMSIS/Include/core_cm3.h ****   __IOM uint32_t HFSR;                   /*!< Offset: 0x02C (R/W)  HardFault Status Register */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 11
+ARM GAS  /tmp/cc5FGJEU.s 			page 11
 
 
  386:Drivers/CMSIS/Include/core_cm3.h ****   __IOM uint32_t DFSR;                   /*!< Offset: 0x030 (R/W)  Debug Fault Status Register */
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  440:Drivers/CMSIS/Include/core_cm3.h **** #define SCB_ICSR_RETTOBASE_Pos             11U                                            /*!< SCB 
  441:Drivers/CMSIS/Include/core_cm3.h **** #define SCB_ICSR_RETTOBASE_Msk             (1UL << SCB_ICSR_RETTOBASE_Pos)                /*!< SCB 
  442:Drivers/CMSIS/Include/core_cm3.h **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 12
+ARM GAS  /tmp/cc5FGJEU.s 			page 12
 
 
  443:Drivers/CMSIS/Include/core_cm3.h **** #define SCB_ICSR_VECTACTIVE_Pos             0U                                            /*!< SCB 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  497:Drivers/CMSIS/Include/core_cm3.h **** #define SCB_CCR_DIV_0_TRP_Pos               4U                                            /*!< SCB 
  498:Drivers/CMSIS/Include/core_cm3.h **** #define SCB_CCR_DIV_0_TRP_Msk              (1UL << SCB_CCR_DIV_0_TRP_Pos)                 /*!< SCB 
  499:Drivers/CMSIS/Include/core_cm3.h **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 13
+ARM GAS  /tmp/cc5FGJEU.s 			page 13
 
 
  500:Drivers/CMSIS/Include/core_cm3.h **** #define SCB_CCR_UNALIGN_TRP_Pos             3U                                            /*!< SCB 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  554:Drivers/CMSIS/Include/core_cm3.h **** #define SCB_CFSR_USGFAULTSR_Msk            (0xFFFFUL << SCB_CFSR_USGFAULTSR_Pos)          /*!< SCB 
  555:Drivers/CMSIS/Include/core_cm3.h **** 
  556:Drivers/CMSIS/Include/core_cm3.h **** #define SCB_CFSR_BUSFAULTSR_Pos             8U                                            /*!< SCB 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 14
+ARM GAS  /tmp/cc5FGJEU.s 			page 14
 
 
  557:Drivers/CMSIS/Include/core_cm3.h **** #define SCB_CFSR_BUSFAULTSR_Msk            (0xFFUL << SCB_CFSR_BUSFAULTSR_Pos)            /*!< SCB 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  611:Drivers/CMSIS/Include/core_cm3.h **** #define SCB_CFSR_INVSTATE_Msk             (1UL << SCB_CFSR_INVSTATE_Pos)                  /*!< SCB 
  612:Drivers/CMSIS/Include/core_cm3.h **** 
  613:Drivers/CMSIS/Include/core_cm3.h **** #define SCB_CFSR_UNDEFINSTR_Pos           (SCB_CFSR_USGFAULTSR_Pos + 0U)                  /*!< SCB 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 15
+ARM GAS  /tmp/cc5FGJEU.s 			page 15
 
 
  614:Drivers/CMSIS/Include/core_cm3.h **** #define SCB_CFSR_UNDEFINSTR_Msk           (1UL << SCB_CFSR_UNDEFINSTR_Pos)                /*!< SCB 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  668:Drivers/CMSIS/Include/core_cm3.h **** #define SCnSCB_ICTR_INTLINESNUM_Msk        (0xFUL /*<< SCnSCB_ICTR_INTLINESNUM_Pos*/)  /*!< ICTR: I
  669:Drivers/CMSIS/Include/core_cm3.h **** 
  670:Drivers/CMSIS/Include/core_cm3.h **** /* Auxiliary Control Register Definitions */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 16
+ARM GAS  /tmp/cc5FGJEU.s 			page 16
 
 
  671:Drivers/CMSIS/Include/core_cm3.h **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  725:Drivers/CMSIS/Include/core_cm3.h **** #define SysTick_CALIB_NOREF_Msk            (1UL << SysTick_CALIB_NOREF_Pos)               /*!< SysT
  726:Drivers/CMSIS/Include/core_cm3.h **** 
  727:Drivers/CMSIS/Include/core_cm3.h **** #define SysTick_CALIB_SKEW_Pos             30U                                            /*!< SysT
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 17
+ARM GAS  /tmp/cc5FGJEU.s 			page 17
 
 
  728:Drivers/CMSIS/Include/core_cm3.h **** #define SysTick_CALIB_SKEW_Msk             (1UL << SysTick_CALIB_SKEW_Pos)                /*!< SysT
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  782:Drivers/CMSIS/Include/core_cm3.h **** /* ITM Trace Privilege Register Definitions */
  783:Drivers/CMSIS/Include/core_cm3.h **** #define ITM_TPR_PRIVMASK_Pos                0U                                            /*!< ITM 
  784:Drivers/CMSIS/Include/core_cm3.h **** #define ITM_TPR_PRIVMASK_Msk               (0xFFFFFFFFUL /*<< ITM_TPR_PRIVMASK_Pos*/)     /*!< ITM 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 18
+ARM GAS  /tmp/cc5FGJEU.s 			page 18
 
 
  785:Drivers/CMSIS/Include/core_cm3.h **** 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  839:Drivers/CMSIS/Include/core_cm3.h **** /**
  840:Drivers/CMSIS/Include/core_cm3.h ****   \ingroup  CMSIS_core_register
  841:Drivers/CMSIS/Include/core_cm3.h ****   \defgroup CMSIS_DWT     Data Watchpoint and Trace (DWT)
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 19
+ARM GAS  /tmp/cc5FGJEU.s 			page 19
 
 
  842:Drivers/CMSIS/Include/core_cm3.h ****   \brief    Type definitions for the Data Watchpoint and Trace (DWT)
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  896:Drivers/CMSIS/Include/core_cm3.h **** #define DWT_CTRL_FOLDEVTENA_Msk            (0x1UL << DWT_CTRL_FOLDEVTENA_Pos)          /*!< DWT CTR
  897:Drivers/CMSIS/Include/core_cm3.h **** 
  898:Drivers/CMSIS/Include/core_cm3.h **** #define DWT_CTRL_LSUEVTENA_Pos             20U                                         /*!< DWT CTR
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 20
+ARM GAS  /tmp/cc5FGJEU.s 			page 20
 
 
  899:Drivers/CMSIS/Include/core_cm3.h **** #define DWT_CTRL_LSUEVTENA_Msk             (0x1UL << DWT_CTRL_LSUEVTENA_Pos)           /*!< DWT CTR
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  953:Drivers/CMSIS/Include/core_cm3.h **** #define DWT_MASK_MASK_Msk                  (0x1FUL /*<< DWT_MASK_MASK_Pos*/)           /*!< DWT MAS
  954:Drivers/CMSIS/Include/core_cm3.h **** 
  955:Drivers/CMSIS/Include/core_cm3.h **** /* DWT Comparator Function Register Definitions */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 21
+ARM GAS  /tmp/cc5FGJEU.s 			page 21
 
 
  956:Drivers/CMSIS/Include/core_cm3.h **** #define DWT_FUNCTION_MATCHED_Pos           24U                                         /*!< DWT FUN
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
 1010:Drivers/CMSIS/Include/core_cm3.h ****   __IM  uint32_t FIFO0;                  /*!< Offset: 0xEEC (R/ )  Integration ETM Data */
 1011:Drivers/CMSIS/Include/core_cm3.h ****   __IM  uint32_t ITATBCTR2;              /*!< Offset: 0xEF0 (R/ )  ITATBCTR2 */
 1012:Drivers/CMSIS/Include/core_cm3.h ****         uint32_t RESERVED4[1U];
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 22
+ARM GAS  /tmp/cc5FGJEU.s 			page 22
 
 
 1013:Drivers/CMSIS/Include/core_cm3.h ****   __IM  uint32_t ITATBCTR0;              /*!< Offset: 0xEF8 (R/ )  ITATBCTR0 */
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
 1067:Drivers/CMSIS/Include/core_cm3.h **** #define TPI_FIFO0_ETM_bytecount_Msk        (0x3UL << TPI_FIFO0_ETM_bytecount_Pos)      /*!< TPI FIF
 1068:Drivers/CMSIS/Include/core_cm3.h **** 
 1069:Drivers/CMSIS/Include/core_cm3.h **** #define TPI_FIFO0_ETM2_Pos                 16U                                         /*!< TPI FIF
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 23
+ARM GAS  /tmp/cc5FGJEU.s 			page 23
 
 
 1070:Drivers/CMSIS/Include/core_cm3.h **** #define TPI_FIFO0_ETM2_Msk                 (0xFFUL << TPI_FIFO0_ETM2_Pos)              /*!< TPI FIF
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
 1124:Drivers/CMSIS/Include/core_cm3.h **** 
 1125:Drivers/CMSIS/Include/core_cm3.h **** #define TPI_DEVID_PTINVALID_Pos             9U                                         /*!< TPI DEV
 1126:Drivers/CMSIS/Include/core_cm3.h **** #define TPI_DEVID_PTINVALID_Msk            (0x1UL << TPI_DEVID_PTINVALID_Pos)          /*!< TPI DEV
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 24
+ARM GAS  /tmp/cc5FGJEU.s 			page 24
 
 
 1127:Drivers/CMSIS/Include/core_cm3.h **** 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
 1181:Drivers/CMSIS/Include/core_cm3.h **** 
 1182:Drivers/CMSIS/Include/core_cm3.h **** #define MPU_TYPE_SEPARATE_Pos               0U                                            /*!< MPU 
 1183:Drivers/CMSIS/Include/core_cm3.h **** #define MPU_TYPE_SEPARATE_Msk              (1UL /*<< MPU_TYPE_SEPARATE_Pos*/)             /*!< MPU 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 25
+ARM GAS  /tmp/cc5FGJEU.s 			page 25
 
 
 1184:Drivers/CMSIS/Include/core_cm3.h **** 
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
 1238:Drivers/CMSIS/Include/core_cm3.h **** #define MPU_RASR_ENABLE_Msk                (1UL /*<< MPU_RASR_ENABLE_Pos*/)               /*!< MPU 
 1239:Drivers/CMSIS/Include/core_cm3.h **** 
 1240:Drivers/CMSIS/Include/core_cm3.h **** /*@} end of group CMSIS_MPU */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 26
+ARM GAS  /tmp/cc5FGJEU.s 			page 26
 
 
 1241:Drivers/CMSIS/Include/core_cm3.h **** #endif
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
 1295:Drivers/CMSIS/Include/core_cm3.h **** 
 1296:Drivers/CMSIS/Include/core_cm3.h **** #define CoreDebug_DHCSR_C_DEBUGEN_Pos       0U                                            /*!< Core
 1297:Drivers/CMSIS/Include/core_cm3.h **** #define CoreDebug_DHCSR_C_DEBUGEN_Msk      (1UL /*<< CoreDebug_DHCSR_C_DEBUGEN_Pos*/)     /*!< Core
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 27
+ARM GAS  /tmp/cc5FGJEU.s 			page 27
 
 
 1298:Drivers/CMSIS/Include/core_cm3.h **** 
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
 1352:Drivers/CMSIS/Include/core_cm3.h ****   \brief      Macros for use with bit field definitions (xxx_Pos, xxx_Msk).
 1353:Drivers/CMSIS/Include/core_cm3.h ****   @{
 1354:Drivers/CMSIS/Include/core_cm3.h ****  */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 28
+ARM GAS  /tmp/cc5FGJEU.s 			page 28
 
 
 1355:Drivers/CMSIS/Include/core_cm3.h **** 
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
 1409:Drivers/CMSIS/Include/core_cm3.h **** 
 1410:Drivers/CMSIS/Include/core_cm3.h **** /*******************************************************************************
 1411:Drivers/CMSIS/Include/core_cm3.h ****  *                Hardware Abstraction Layer
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 29
+ARM GAS  /tmp/cc5FGJEU.s 			page 29
 
 
 1412:Drivers/CMSIS/Include/core_cm3.h ****   Core Function Interface contains:
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
 1466:Drivers/CMSIS/Include/core_cm3.h **** #define EXC_RETURN_HANDLER         (0xFFFFFFF1UL)     /* return to Handler mode, uses MSP after ret
 1467:Drivers/CMSIS/Include/core_cm3.h **** #define EXC_RETURN_THREAD_MSP      (0xFFFFFFF9UL)     /* return to Thread mode, uses MSP after retu
 1468:Drivers/CMSIS/Include/core_cm3.h **** #define EXC_RETURN_THREAD_PSP      (0xFFFFFFFDUL)     /* return to Thread mode, uses PSP after retu
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 30
+ARM GAS  /tmp/cc5FGJEU.s 			page 30
 
 
 1469:Drivers/CMSIS/Include/core_cm3.h **** 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
   68              		.loc 2 1490 14 is_stmt 0 view .LVU17
   69 001c D060     		str	r0, [r2, #12]
   70              	.LVL6:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 31
+ARM GAS  /tmp/cc5FGJEU.s 			page 31
 
 
   71              		.loc 2 1490 14 view .LVU18
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  170:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   assert_param(IS_NVIC_SUB_PRIORITY(SubPriority));
  107              		.loc 1 170 3 view .LVU23
  171:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   assert_param(IS_NVIC_PREEMPTION_PRIORITY(PreemptPriority));
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 32
+ARM GAS  /tmp/cc5FGJEU.s 			page 32
 
 
  108              		.loc 1 171 3 view .LVU24
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
 1522:Drivers/CMSIS/Include/core_cm3.h ****   \details Returns a device specific interrupt enable status from the NVIC interrupt controller.
 1523:Drivers/CMSIS/Include/core_cm3.h ****   \param [in]      IRQn  Device specific interrupt number.
 1524:Drivers/CMSIS/Include/core_cm3.h ****   \return             0  Interrupt is not enabled.
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 33
+ARM GAS  /tmp/cc5FGJEU.s 			page 33
 
 
 1525:Drivers/CMSIS/Include/core_cm3.h ****   \return             1  Interrupt is enabled.
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
 1579:Drivers/CMSIS/Include/core_cm3.h **** /**
 1580:Drivers/CMSIS/Include/core_cm3.h ****   \brief   Set Pending Interrupt
 1581:Drivers/CMSIS/Include/core_cm3.h ****   \details Sets the pending bit of a device specific interrupt in the NVIC pending register.
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 34
+ARM GAS  /tmp/cc5FGJEU.s 			page 34
 
 
 1582:Drivers/CMSIS/Include/core_cm3.h ****   \param [in]      IRQn  Device specific interrupt number.
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
 1636:Drivers/CMSIS/Include/core_cm3.h ****   \param [in]  priority  Priority to set.
 1637:Drivers/CMSIS/Include/core_cm3.h ****   \note    The priority cannot be set for every processor exception.
 1638:Drivers/CMSIS/Include/core_cm3.h ****  */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 35
+ARM GAS  /tmp/cc5FGJEU.s 			page 35
 
 
 1639:Drivers/CMSIS/Include/core_cm3.h **** __STATIC_INLINE void __NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  130              		.loc 2 1689 3 view .LVU34
 1690:Drivers/CMSIS/Include/core_cm3.h ****   uint32_t SubPriorityBits;
  131              		.loc 2 1690 3 view .LVU35
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 36
+ARM GAS  /tmp/cc5FGJEU.s 			page 36
 
 
 1691:Drivers/CMSIS/Include/core_cm3.h **** 
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  177              	.LBE51:
  178              	.LBE50:
  179              	.LBB52:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 37
+ARM GAS  /tmp/cc5FGJEU.s 			page 37
 
 
  180              	.LBI52:
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
 1647:Drivers/CMSIS/Include/core_cm3.h ****   }
  222              		.loc 2 1647 48 view .LVU65
  223 0054 0901     		lsls	r1, r1, #4
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 38
+ARM GAS  /tmp/cc5FGJEU.s 			page 38
 
 
  224              	.LVL24:
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  193:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   NVIC_EnableIRQ(IRQn);
  261              		.loc 1 193 3 view .LVU72
  262              	.LBB56:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 39
+ARM GAS  /tmp/cc5FGJEU.s 			page 39
 
 
  263              	.LBI56:
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  195:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c **** 
  196:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c **** /**
  197:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   * @brief  Disables a device specific interrupt in the NVIC interrupt controller.
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 40
+ARM GAS  /tmp/cc5FGJEU.s 			page 40
 
 
  198:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   * @param  IRQn External interrupt number.
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  340              		.file 3 "Drivers/CMSIS/Include/cmsis_gcc.h"
    1:Drivers/CMSIS/Include/cmsis_gcc.h **** /**************************************************************************//**
    2:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @file     cmsis_gcc.h
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 41
+ARM GAS  /tmp/cc5FGJEU.s 			page 41
 
 
    3:Drivers/CMSIS/Include/cmsis_gcc.h ****  * @brief    CMSIS compiler GCC header file
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
   57:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
   58:Drivers/CMSIS/Include/cmsis_gcc.h **** #ifndef   __WEAK
   59:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __WEAK                                 __attribute__((weak))
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 42
+ARM GAS  /tmp/cc5FGJEU.s 			page 42
 
 
   60:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  114:Drivers/CMSIS/Include/cmsis_gcc.h ****   #define __RESTRICT                             __restrict
  115:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
  116:Drivers/CMSIS/Include/cmsis_gcc.h **** 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 43
+ARM GAS  /tmp/cc5FGJEU.s 			page 43
 
 
  117:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  171:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
  172:Drivers/CMSIS/Include/cmsis_gcc.h **** }
  173:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 44
+ARM GAS  /tmp/cc5FGJEU.s 			page 44
 
 
  174:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  228:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  229:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get xPSR Register
  230:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the content of the xPSR Register.
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 45
+ARM GAS  /tmp/cc5FGJEU.s 			page 45
 
 
  231:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               xPSR Register value
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  285:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer (non-secure)
  286:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Process Stack Pointer (PSP) when in secure sta
  287:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    topOfProcStack  Process Stack Pointer value to set
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 46
+ARM GAS  /tmp/cc5FGJEU.s 			page 46
 
 
  288:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  342:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  343:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __TZ_set_MSP_NS(uint32_t topOfMainStack)
  344:Drivers/CMSIS/Include/cmsis_gcc.h **** {
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 47
+ARM GAS  /tmp/cc5FGJEU.s 			page 47
 
 
  345:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR msp_ns, %0" : : "r" (topOfMainStack) : );
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  399:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
  400:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  401:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, primask_ns" : "=r" (result) :: "memory");
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 48
+ARM GAS  /tmp/cc5FGJEU.s 			page 48
 
 
  402:Drivers/CMSIS/Include/cmsis_gcc.h ****   return(result);
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  456:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  457:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Get Base Priority
  458:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Returns the current value of the Base Priority register.
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 49
+ARM GAS  /tmp/cc5FGJEU.s 			page 49
 
 
  459:Drivers/CMSIS/Include/cmsis_gcc.h ****   \return               Base Priority register value
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  513:Drivers/CMSIS/Include/cmsis_gcc.h ****            or the new value increases the BASEPRI priority level.
  514:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    basePri  Base Priority value to set
  515:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 50
+ARM GAS  /tmp/cc5FGJEU.s 			page 50
 
 
  516:Drivers/CMSIS/Include/cmsis_gcc.h **** __STATIC_FORCEINLINE void __set_BASEPRI_MAX(uint32_t basePri)
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  570:Drivers/CMSIS/Include/cmsis_gcc.h **** {
  571:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MSR faultmask_ns, %0" : : "r" (faultMask) : "memory");
  572:Drivers/CMSIS/Include/cmsis_gcc.h **** }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 51
+ARM GAS  /tmp/cc5FGJEU.s 			page 51
 
 
  573:Drivers/CMSIS/Include/cmsis_gcc.h **** #endif
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  627:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  628:Drivers/CMSIS/Include/cmsis_gcc.h **** /**
  629:Drivers/CMSIS/Include/cmsis_gcc.h ****   \brief   Set Process Stack Pointer Limit
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 52
+ARM GAS  /tmp/cc5FGJEU.s 			page 52
 
 
  630:Drivers/CMSIS/Include/cmsis_gcc.h ****   Devices without ARMv8-M Main Extensions (i.e. Cortex-M23) lack the non-secure
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  684:Drivers/CMSIS/Include/cmsis_gcc.h ****   return 0U;
  685:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
  686:Drivers/CMSIS/Include/cmsis_gcc.h ****   uint32_t result;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 53
+ARM GAS  /tmp/cc5FGJEU.s 			page 53
 
 
  687:Drivers/CMSIS/Include/cmsis_gcc.h ****   __ASM volatile ("MRS %0, msplim" : "=r" (result) );
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  741:Drivers/CMSIS/Include/cmsis_gcc.h ****   Stack Pointer Limit register hence the write is silently ignored.
  742:Drivers/CMSIS/Include/cmsis_gcc.h **** 
  743:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Assigns the given value to the non-secure Main Stack Pointer Limit (MSPLIM) when in secu
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 54
+ARM GAS  /tmp/cc5FGJEU.s 			page 54
 
 
  744:Drivers/CMSIS/Include/cmsis_gcc.h ****   \param [in]    MainStackPtrLimit  Main Stack Pointer value to set
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  798:Drivers/CMSIS/Include/cmsis_gcc.h **** // || (__GNUC__ > 7) || (__GNUC__ == 7 && __GNUC_MINOR__ >= 2)
  799:Drivers/CMSIS/Include/cmsis_gcc.h ****   /* see https://gcc.gnu.org/ml/gcc-patches/2017-04/msg00443.html */
  800:Drivers/CMSIS/Include/cmsis_gcc.h ****   __builtin_arm_set_fpscr(fpscr);
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 55
+ARM GAS  /tmp/cc5FGJEU.s 			page 55
 
 
  801:Drivers/CMSIS/Include/cmsis_gcc.h **** #else
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  855:Drivers/CMSIS/Include/cmsis_gcc.h ****   \details Send Event is a hint instruction. It causes an event to be signaled to the CPU.
  856:Drivers/CMSIS/Include/cmsis_gcc.h ****  */
  857:Drivers/CMSIS/Include/cmsis_gcc.h **** #define __SEV()                             __ASM volatile ("sev")
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 56
+ARM GAS  /tmp/cc5FGJEU.s 			page 56
 
 
  858:Drivers/CMSIS/Include/cmsis_gcc.h **** 
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  369              	.LBE59:
  370              	.LBE58:
  210:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c **** }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 57
+ARM GAS  /tmp/cc5FGJEU.s 			page 57
 
 
  371              		.loc 1 210 1 view .LVU103
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
 1717:Drivers/CMSIS/Include/core_cm3.h ****   uint32_t SubPriorityBits;
 1718:Drivers/CMSIS/Include/core_cm3.h **** 
 1719:Drivers/CMSIS/Include/core_cm3.h ****   PreemptPriorityBits = ((7UL - PriorityGroupTmp) > (uint32_t)(__NVIC_PRIO_BITS)) ? (uint32_t)(__NV
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 58
+ARM GAS  /tmp/cc5FGJEU.s 			page 58
 
 
 1720:Drivers/CMSIS/Include/core_cm3.h ****   SubPriorityBits     = ((PriorityGroupTmp + (uint32_t)(__NVIC_PRIO_BITS)) < (uint32_t)7UL) ? (uint
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  407              		.syntax unified
  408              	@ 879 "Drivers/CMSIS/Include/cmsis_gcc.h" 1
  409 0000 BFF34F8F 		dsb 0xF
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 59
+ARM GAS  /tmp/cc5FGJEU.s 			page 59
 
 
  410              	@ 0 "" 2
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  452              	.L22:
  453 001c 00ED00E0 		.word	-536810240
  454 0020 0400FA05 		.word	100270084
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 60
+ARM GAS  /tmp/cc5FGJEU.s 			page 60
 
 
  455              	.LBE71:
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
 1794:Drivers/CMSIS/Include/core_cm3.h **** 
 1795:Drivers/CMSIS/Include/core_cm3.h **** /**
 1796:Drivers/CMSIS/Include/core_cm3.h ****   \brief   get FPU type
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 61
+ARM GAS  /tmp/cc5FGJEU.s 			page 61
 
 
 1797:Drivers/CMSIS/Include/core_cm3.h ****   \details returns the FPU type
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  488              		.loc 2 1841 3 is_stmt 1 view .LVU126
  489              		.loc 2 1841 18 is_stmt 0 view .LVU127
  490 0008 064B     		ldr	r3, .L27
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 62
+ARM GAS  /tmp/cc5FGJEU.s 			page 62
 
 
  491 000a 5860     		str	r0, [r3, #4]
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  531              	.L27:
  532 0024 10E000E0 		.word	-536813552
  533 0028 00ED00E0 		.word	-536810240
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 63
+ARM GAS  /tmp/cc5FGJEU.s 			page 63
 
 
  534              		.cfi_endproc
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  276:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   *            @arg MPU_HARDFAULT_NMI
  277:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   *            @arg MPU_PRIVILEGED_DEFAULT
  278:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   *            @arg MPU_HFNMI_PRIVDEF
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 64
+ARM GAS  /tmp/cc5FGJEU.s 			page 64
 
 
  279:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   * @retval None
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  333:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   {
  334:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****     MPU->RBAR = 0x00U;
  335:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****     MPU->RASR = 0x00U;
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 65
+ARM GAS  /tmp/cc5FGJEU.s 			page 65
 
 
  336:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   }
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  352:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   * @param  IRQn: External interrupt number.
  353:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   *         This parameter can be an enumerator of IRQn_Type enumeration
  354:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   *         (For the complete STM32 Devices IRQ Channels list, please refer to the appropriate CMSI
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 66
+ARM GAS  /tmp/cc5FGJEU.s 			page 66
 
 
  355:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   * @param   PriorityGroup: the priority grouping bits length.
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  610              		.loc 2 1666 31 is_stmt 0 view .LVU158
  611 0006 00F16040 		add	r0, r0, #-536870912
  612 000a 00F56140 		add	r0, r0, #57600
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 67
+ARM GAS  /tmp/cc5FGJEU.s 			page 67
 
 
  613 000e 90F80003 		ldrb	r0, [r0, #768]	@ zero_extendqisi2
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  651              		.loc 2 1722 53 view .LVU174
  652 002e 4FF0FF35 		mov	r5, #-1
  653              	.LVL45:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 68
+ARM GAS  /tmp/cc5FGJEU.s 			page 68
 
 
 1722:Drivers/CMSIS/Include/core_cm3.h ****   *pSubPriority     = (Priority                   ) & (uint32_t)((1UL << (SubPriorityBits    )) - 1
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  695              		.loc 2 1670 64 view .LVU187
  696 0052 0009     		lsrs	r0, r0, #4
  697 0054 DEE7     		b	.L34
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 69
+ARM GAS  /tmp/cc5FGJEU.s 			page 69
 
 
  698              	.LVL51:
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  736              		.loc 1 392 3 view .LVU193
  737              	.LBB90:
  738              	.LBI90:
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 70
+ARM GAS  /tmp/cc5FGJEU.s 			page 70
 
 
 1585:Drivers/CMSIS/Include/core_cm3.h **** {
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  394:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c **** 
  395:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c **** /**
  396:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   * @brief  Gets Pending Interrupt (reads the pending register in the NVIC 
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 71
+ARM GAS  /tmp/cc5FGJEU.s 			page 71
 
 
  397:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   *         and returns the pending bit for the specified interrupt).
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  814 001a 7047     		bx	lr
  815              	.L46:
 1574:Drivers/CMSIS/Include/core_cm3.h ****   }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 72
+ARM GAS  /tmp/cc5FGJEU.s 			page 72
 
 
  816              		.loc 2 1574 11 view .LVU218
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  853              		.loc 2 1602 3 view .LVU225
 1602:Drivers/CMSIS/Include/core_cm3.h ****   {
  854              		.loc 2 1602 6 is_stmt 0 view .LVU226
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 73
+ARM GAS  /tmp/cc5FGJEU.s 			page 73
 
 
  855 0000 0028     		cmp	r0, #0
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  435:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   *                 - 1  Interrupt status is pending.
  436:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   */
  437:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c **** uint32_t HAL_NVIC_GetActive(IRQn_Type IRQn)
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 74
+ARM GAS  /tmp/cc5FGJEU.s 			page 74
 
 
  438:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c **** {
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  932              	.LBE97:
  933              	.LBE96:
  444:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c **** }
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 75
+ARM GAS  /tmp/cc5FGJEU.s 			page 75
 
 
  934              		.loc 1 444 1 view .LVU250
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  465:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c ****   }
  466:Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c **** }
  970              		.loc 1 466 1 view .LVU257
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 76
+ARM GAS  /tmp/cc5FGJEU.s 			page 76
 
 
  971 000e 7047     		bx	lr
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  1005              	.LFE79:
  1007              		.section	.text.HAL_SYSTICK_IRQHandler,"ax",%progbits
  1008              		.align	1
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 77
+ARM GAS  /tmp/cc5FGJEU.s 			page 77
 
 
  1009              		.global	HAL_SYSTICK_IRQHandler
@@ -4590,57 +4590,57 @@ ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 1
  1034              		.text
  1035              	.Letext0:
  1036              		.file 4 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h"
- 1037              		.file 5 "c:\\users\\nathan.jones2\\miniconda3\\envs\\conda-env\\library\\arm-none-eabi\\include\\m
- 1038              		.file 6 "c:\\users\\nathan.jones2\\miniconda3\\envs\\conda-env\\library\\arm-none-eabi\\include\\s
+ 1037              		.file 5 "/home/nathancharlesjones/miniconda3/envs/conda-env/arm-none-eabi/include/machine/_default
+ 1038              		.file 6 "/home/nathancharlesjones/miniconda3/envs/conda-env/arm-none-eabi/include/sys/_stdint.h"
  1039              		.file 7 "Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h"
  1040              		.file 8 "Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h"
-ARM GAS  C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s 			page 78
+ARM GAS  /tmp/cc5FGJEU.s 			page 78
 
 
 DEFINED SYMBOLS
-                            *ABS*:00000000 stm32f1xx_hal_cortex.c
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:16     .text.HAL_NVIC_SetPriorityGrouping:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:24     .text.HAL_NVIC_SetPriorityGrouping:00000000 HAL_NVIC_SetPriorityGrouping
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:79     .text.HAL_NVIC_SetPriorityGrouping:00000020 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:84     .text.HAL_NVIC_SetPriority:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:91     .text.HAL_NVIC_SetPriority:00000000 HAL_NVIC_SetPriority
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:239    .text.HAL_NVIC_SetPriority:00000060 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:245    .text.HAL_NVIC_EnableIRQ:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:252    .text.HAL_NVIC_EnableIRQ:00000000 HAL_NVIC_EnableIRQ
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:293    .text.HAL_NVIC_EnableIRQ:00000018 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:298    .text.HAL_NVIC_DisableIRQ:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:305    .text.HAL_NVIC_DisableIRQ:00000000 HAL_NVIC_DisableIRQ
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:376    .text.HAL_NVIC_DisableIRQ:00000020 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:381    .text.HAL_NVIC_SystemReset:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:388    .text.HAL_NVIC_SystemReset:00000000 HAL_NVIC_SystemReset
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:453    .text.HAL_NVIC_SystemReset:0000001c $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:461    .text.HAL_SYSTICK_Config:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:468    .text.HAL_SYSTICK_Config:00000000 HAL_SYSTICK_Config
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:532    .text.HAL_SYSTICK_Config:00000024 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:538    .text.HAL_NVIC_GetPriorityGrouping:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:545    .text.HAL_NVIC_GetPriorityGrouping:00000000 HAL_NVIC_GetPriorityGrouping
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:569    .text.HAL_NVIC_GetPriorityGrouping:0000000c $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:574    .text.HAL_NVIC_GetPriority:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:581    .text.HAL_NVIC_GetPriority:00000000 HAL_NVIC_GetPriority
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:713    .text.HAL_NVIC_GetPriority:0000005c $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:720    .text.HAL_NVIC_SetPendingIRQ:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:727    .text.HAL_NVIC_SetPendingIRQ:00000000 HAL_NVIC_SetPendingIRQ
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:769    .text.HAL_NVIC_SetPendingIRQ:00000018 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:774    .text.HAL_NVIC_GetPendingIRQ:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:781    .text.HAL_NVIC_GetPendingIRQ:00000000 HAL_NVIC_GetPendingIRQ
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:827    .text.HAL_NVIC_GetPendingIRQ:00000020 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:832    .text.HAL_NVIC_ClearPendingIRQ:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:839    .text.HAL_NVIC_ClearPendingIRQ:00000000 HAL_NVIC_ClearPendingIRQ
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:881    .text.HAL_NVIC_ClearPendingIRQ:00000018 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:886    .text.HAL_NVIC_GetActive:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:893    .text.HAL_NVIC_GetActive:00000000 HAL_NVIC_GetActive
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:939    .text.HAL_NVIC_GetActive:00000020 $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:944    .text.HAL_SYSTICK_CLKSourceConfig:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:951    .text.HAL_SYSTICK_CLKSourceConfig:00000000 HAL_SYSTICK_CLKSourceConfig
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:983    .text.HAL_SYSTICK_CLKSourceConfig:0000001c $d
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:988    .text.HAL_SYSTICK_Callback:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:995    .text.HAL_SYSTICK_Callback:00000000 HAL_SYSTICK_Callback
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:1008   .text.HAL_SYSTICK_IRQHandler:00000000 $t
-C:\Users\NATHAN~1.JON\AppData\Local\Temp\cczqhG3F.s:1015   .text.HAL_SYSTICK_IRQHandler:00000000 HAL_SYSTICK_IRQHandler
+                            *ABS*:0000000000000000 stm32f1xx_hal_cortex.c
+     /tmp/cc5FGJEU.s:16     .text.HAL_NVIC_SetPriorityGrouping:0000000000000000 $t
+     /tmp/cc5FGJEU.s:24     .text.HAL_NVIC_SetPriorityGrouping:0000000000000000 HAL_NVIC_SetPriorityGrouping
+     /tmp/cc5FGJEU.s:79     .text.HAL_NVIC_SetPriorityGrouping:0000000000000020 $d
+     /tmp/cc5FGJEU.s:84     .text.HAL_NVIC_SetPriority:0000000000000000 $t
+     /tmp/cc5FGJEU.s:91     .text.HAL_NVIC_SetPriority:0000000000000000 HAL_NVIC_SetPriority
+     /tmp/cc5FGJEU.s:239    .text.HAL_NVIC_SetPriority:0000000000000060 $d
+     /tmp/cc5FGJEU.s:245    .text.HAL_NVIC_EnableIRQ:0000000000000000 $t
+     /tmp/cc5FGJEU.s:252    .text.HAL_NVIC_EnableIRQ:0000000000000000 HAL_NVIC_EnableIRQ
+     /tmp/cc5FGJEU.s:293    .text.HAL_NVIC_EnableIRQ:0000000000000018 $d
+     /tmp/cc5FGJEU.s:298    .text.HAL_NVIC_DisableIRQ:0000000000000000 $t
+     /tmp/cc5FGJEU.s:305    .text.HAL_NVIC_DisableIRQ:0000000000000000 HAL_NVIC_DisableIRQ
+     /tmp/cc5FGJEU.s:376    .text.HAL_NVIC_DisableIRQ:0000000000000020 $d
+     /tmp/cc5FGJEU.s:381    .text.HAL_NVIC_SystemReset:0000000000000000 $t
+     /tmp/cc5FGJEU.s:388    .text.HAL_NVIC_SystemReset:0000000000000000 HAL_NVIC_SystemReset
+     /tmp/cc5FGJEU.s:453    .text.HAL_NVIC_SystemReset:000000000000001c $d
+     /tmp/cc5FGJEU.s:461    .text.HAL_SYSTICK_Config:0000000000000000 $t
+     /tmp/cc5FGJEU.s:468    .text.HAL_SYSTICK_Config:0000000000000000 HAL_SYSTICK_Config
+     /tmp/cc5FGJEU.s:532    .text.HAL_SYSTICK_Config:0000000000000024 $d
+     /tmp/cc5FGJEU.s:538    .text.HAL_NVIC_GetPriorityGrouping:0000000000000000 $t
+     /tmp/cc5FGJEU.s:545    .text.HAL_NVIC_GetPriorityGrouping:0000000000000000 HAL_NVIC_GetPriorityGrouping
+     /tmp/cc5FGJEU.s:569    .text.HAL_NVIC_GetPriorityGrouping:000000000000000c $d
+     /tmp/cc5FGJEU.s:574    .text.HAL_NVIC_GetPriority:0000000000000000 $t
+     /tmp/cc5FGJEU.s:581    .text.HAL_NVIC_GetPriority:0000000000000000 HAL_NVIC_GetPriority
+     /tmp/cc5FGJEU.s:713    .text.HAL_NVIC_GetPriority:000000000000005c $d
+     /tmp/cc5FGJEU.s:720    .text.HAL_NVIC_SetPendingIRQ:0000000000000000 $t
+     /tmp/cc5FGJEU.s:727    .text.HAL_NVIC_SetPendingIRQ:0000000000000000 HAL_NVIC_SetPendingIRQ
+     /tmp/cc5FGJEU.s:769    .text.HAL_NVIC_SetPendingIRQ:0000000000000018 $d
+     /tmp/cc5FGJEU.s:774    .text.HAL_NVIC_GetPendingIRQ:0000000000000000 $t
+     /tmp/cc5FGJEU.s:781    .text.HAL_NVIC_GetPendingIRQ:0000000000000000 HAL_NVIC_GetPendingIRQ
+     /tmp/cc5FGJEU.s:827    .text.HAL_NVIC_GetPendingIRQ:0000000000000020 $d
+     /tmp/cc5FGJEU.s:832    .text.HAL_NVIC_ClearPendingIRQ:0000000000000000 $t
+     /tmp/cc5FGJEU.s:839    .text.HAL_NVIC_ClearPendingIRQ:0000000000000000 HAL_NVIC_ClearPendingIRQ
+     /tmp/cc5FGJEU.s:881    .text.HAL_NVIC_ClearPendingIRQ:0000000000000018 $d
+     /tmp/cc5FGJEU.s:886    .text.HAL_NVIC_GetActive:0000000000000000 $t
+     /tmp/cc5FGJEU.s:893    .text.HAL_NVIC_GetActive:0000000000000000 HAL_NVIC_GetActive
+     /tmp/cc5FGJEU.s:939    .text.HAL_NVIC_GetActive:0000000000000020 $d
+     /tmp/cc5FGJEU.s:944    .text.HAL_SYSTICK_CLKSourceConfig:0000000000000000 $t
+     /tmp/cc5FGJEU.s:951    .text.HAL_SYSTICK_CLKSourceConfig:0000000000000000 HAL_SYSTICK_CLKSourceConfig
+     /tmp/cc5FGJEU.s:983    .text.HAL_SYSTICK_CLKSourceConfig:000000000000001c $d
+     /tmp/cc5FGJEU.s:988    .text.HAL_SYSTICK_Callback:0000000000000000 $t
+     /tmp/cc5FGJEU.s:995    .text.HAL_SYSTICK_Callback:0000000000000000 HAL_SYSTICK_Callback
+     /tmp/cc5FGJEU.s:1008   .text.HAL_SYSTICK_IRQHandler:0000000000000000 $t
+     /tmp/cc5FGJEU.s:1015   .text.HAL_SYSTICK_IRQHandler:0000000000000000 HAL_SYSTICK_IRQHandler
 
 NO UNDEFINED SYMBOLS
