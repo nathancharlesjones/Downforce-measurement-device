@@ -8,8 +8,10 @@
     - Okay, so the problem clearly seems to be how long it takes to make an ADC measurement
 - So I'll need to use the STM32 as my base (which I was expecting anyways, since the MCP2221 doesn't have SPI or CAN)
 - Possible alternatives:
-    - STM32 <--> SPI (API: "readADC", "setFreq", etc) <--> RPi / matplotlib / PyQT / tkinter
-    - STM32 <--> SPI (API: "setReg" and "readReg") <--> RPi / matplotlib / PyQT / tkinter
+    - STM32 <--> SPI/I2C (API: "readADC", "setFreq", etc) <--> RPi / matplotlib / PyQT / tkinter
+    - STM32 <--> SPI/I2C (API: "setReg" and "readReg") <--> RPi / matplotlib / PyQT / tkinter
+    - STM32 <--> I2C (API: "readADC", "setFreq", etc) <--> MCP2221 <--> matplotlib / PyQT / tkinter
+    - STM32 <--> I2C (API: "setReg" and "readReg") <--> MCP2221 <--> matplotlib / PyQT / tkinter
     - STM32 <--> USB serial (JSON or other serialization scheme; API: "readADC", "setFreq", etc) <--> matplotlib / PyQT / tkinter
     - STM32 <--> USB serial (JSON or other serialization scheme; API: "setReg" and "readReg") <--> matplotlib / PyQT / tkinter
     - STM32 <--> UART (JSON or other serialization scheme; API: "readADC", "setFreq", etc) <--> matplotlib / PyQT / tkinter
@@ -31,6 +33,7 @@
         - Somehow overload/intercept the register reads/writes to use pyGDB/DebugMon/MRI/CLI?
         - Would need to compile HAL for x86 (not sure if _that's_ possible) into a static library. Then I could call it from either a C/C++ or Python program on the host computer.
         - Possible to load desired functions onto STM32 with an empty while(1) loop and then call the functions from pyGDB?
+    - Semihosting?? RTT??
 - Do I need real-time graphing anyways? I kind of just need a measure of liveliness, so a digital readout might also work.
 - Faster Python
     - [PyPy](https://www.pypy.org/)
