@@ -33,13 +33,23 @@
         - Somehow overload/intercept the register reads/writes to use pyGDB/DebugMon/MRI/CLI?
         - Would need to compile HAL for x86 (not sure if _that's_ possible) into a static library. Then I could call it from either a C/C++ or Python program on the host computer.
         - Possible to load desired functions onto STM32 with an empty while(1) loop and then call the functions from pyGDB?
-    - Semihosting?? RTT??
+    - Semihosting: Probably not useful. This just redirects printf/scanf to a debugging session.
+    - J-Scope: Output only, but seems useful. Could use this + RTT for input, possibly. Would require J-Link.
 - Do I need real-time graphing anyways? I kind of just need a measure of liveliness, so a digital readout might also work.
 - Faster Python
     - [PyPy](https://www.pypy.org/)
     - [Auto PY to EXE](https://dev.to/eshleron/how-to-convert-py-to-exe-step-by-step-guide-3cfi)
-    - [Nutika](https://github.com/Nuitka/Nuitka)
+    - [Nuitka](https://github.com/Nuitka/Nuitka)
         - Possible to use this to compile for Arm??
 - [Possible faster real-time plot with matplotlib](https://gist.github.com/Uberi/283a13b8a71a46fb4dc8)
 - [Tkinter tutorial](https://pythonprogramming.net/plotting-live-bitcoin-price-data-tkinter-matplotlib/)
 - [Live update graphs with PyQT](https://www.mfitzp.com/tutorials/plotting-pyqtgraph/)
+
+# Saturday, 01 May 2021
+- Auto PY to EXE is SUPER easy to use. Didn't seem to speed up the code at all, though. Maybe it's just translating the interpreter literally? (Related thought: Perhaps the PyPy JIT interpreter is faster than normal Python because once it reads and evaluates a line of code, it compiles it and saves it for later. LOCs that are repeated (i.e. loops and functions) get faster since they've already been compiled, whereas for the normal Python interpreter it reads each line every time as if it were new. No idea if that's right, though.)
+    - Don't see an option to cross-compile, so I'd probably need to make sure I was on the same machine as Adam would be using (hopefully a Windows?) when I created it.
+- Another hit to speed when I add logging to a file. Logging seems to take ~5 ms on my machine.
+- How fast do I need to sample? Twice the highest frequency of interest, minimum. Ten times gives a better result, though. How quickly might the downforce change? It's based on airflow, which should mostly be a result of vehicle speed (at least on a calm wind day). On a perfectly straight track with no wind and no change to vehicle speed, the downforce should be constant, I think. That's basically a wind tunnel. There might be slight fluctuations from small gusts of wind or slight variations in pedal position, possibly on the order of 0.1-0.5 Hz. But I don't have a great way of tracking those, anyway. So maybe my highest signal of interest is really just 1 Hz. So 10 Hz for sampling purposes, or ~40 Hz (assuming I'm trying to plot sensor from 4 sensors).
+- Realtime plot is meh. Sampling rate seemed to top out around 40-50 Hz and interacting with the program wasn't clean (program starts with a warning about a closed window and requires the user to close an empty window before continuing; also program doesn't necessarily end when the window is closed and requires Ctrl+C in terminal). I do like, though, that the y-axis are auto-scaled.
+- PyQT pretty easy to set up. Appearance is very similar to matplotlib. Speed seemed about on par, also. Refresh rate was ~130 or 140 Hz at nominal window size, ~60 Hz when full screen. Y-axis was auto-scaled.
+- My guess is that PyQT is better set up for the simple GUI that I want (I'm assuming there are ways to respond to button presses and handling other periodic tasks that doesn't involve co-opting the "update_plot" callback as my while(1) loop), so I think I'll pursue this one further (using Auto PY to EXE for final packaging). I'll save (1) compiling with Nuitka or (2) rewriting in C using tkinter for later, only if I need faster update rates.
