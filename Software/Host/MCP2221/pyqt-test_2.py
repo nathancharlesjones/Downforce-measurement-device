@@ -9,6 +9,8 @@ import math
 import json
 import numpy as np
 
+# TODO: Add acquisition of GPS data and speed logging
+
 class MainWindow(QtWidgets.QMainWindow):
 
     def __init__(self, *args, **kwargs):
@@ -24,6 +26,7 @@ class MainWindow(QtWidgets.QMainWindow):
         try:
             calibration_values = open('calibration_values.json','r')
         except IOError:
+            # TODO: Change this to create a zero-initialized file
             err_msg = QtGui.QMessageBox()
             err_msg.setIcon(QtGui.QMessageBox.Critical)
             err_msg.setWindowTitle("Program Error")
@@ -132,6 +135,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def calibrate(self):
         print("Calibrating")    
+        # TODO: Add this screen
 
     def newWindowWidth(self):
         self.window_width_s = int(self.window_width_s_field.text())
@@ -163,6 +167,7 @@ class MainWindow(QtWidgets.QMainWindow):
         if self.log_start_stop_button.isChecked():
             self.logging = True
             self.filename = os.path.join(self.dirname, "{}.csv".format(dt.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")))
+            # TODO: Check if file already exists. If not, initialize with headers.
             self.log_start_stop_button.setText("Stop logging")
         else:
             self.logging = False
@@ -186,6 +191,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         if self.logging:
             with open(r"{}".format(self.filename), "a") as file:
+                # TODO: Add all three values
                 file.write("{},{:1.3f}\n".format(dt.datetime.now().strftime('%H:%M:%S.%f'),newVal1))
 
         #self.counter += 1
