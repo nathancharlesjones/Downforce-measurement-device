@@ -147,28 +147,21 @@ class MainWindow(QtWidgets.QMainWindow):
         self.updateBuffers()
 
     def updateBuffers(self):
-        # TODO: ERROR: Updated lines don't match time axes sometimes when updated
-        self.timer.stop()
-        old_buffer_size = self.buffer_size
+        old_time_vals = self.time_vals
         self.buffer_size = int(self.window_width_s*self.sampling_freq_Hz)
-        if self.buffer_size >= old_buffer_size:
-            buffer_size_diff = self.buffer_size-len(self.time_vals)
-            self.time_vals = list(np.linspace(-self.window_width_s,0,self.buffer_size))
-            self.light_sensor = [0]*(buffer_size_diff) + self.light_sensor
-            self.load_scale = [0]*(buffer_size_diff) + self.load_scale
-            self.Izze_strain_gauge_amplifier = [0]*(buffer_size_diff) + self.Izze_strain_gauge_amplifier
-        else:
-            self.time_vals = list(np.linspace(-self.window_width_s,0,self.buffer_size))
-            self.light_sensor = self.light_sensor[-self.buffer_size:]
-            self.load_scale = self.load_scale[-self.buffer_size:]
-            self.Izze_strain_gauge_amplifier = self.Izze_strain_gauge_amplifier[-self.buffer_size:]
-        self.timer.start()
+        self.time_vals = list(np.linspace(-self.window_width_s,0,self.buffer_size))
+        self.light_sensor = list(np.interp(self.time_vals,old_time_vals,self.light_sensor))
+        self.load_scale = list(np.interp(self.time_vals,old_time_vals,self.load_scale))
+        self.Izze_strain_gauge_amplifier = list(np.interp(self.time_vals,old_time_vals,self.Izze_strain_gauge_amplifier))
 
     def startStopLogging(self):
         if self.log_start_stop_button.isChecked():
             self.logging = True
             self.filename = os.path.join(self.dirname, "{}.csv".format(dt.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")))
-            # TODO: Check if file already exists. If not, initialize with headers.
+            # If the file doesn't exist, open it and write the headers
+            if not os.path.exists(self.filename):
+                with open(r"{}".format(self.filename), "w") as file:
+                    file.write("{},{}\n".format("Time","Light sensor values"))
             self.log_start_stop_button.setText("Stop logging")
         else:
             self.logging = False
