@@ -49,63 +49,84 @@ class MainWindow(QtWidgets.QMainWindow):
             retval = err_msg.exec_()
             sys.exit()
 
+        # Create main graph
         self.graphWidget = pg.PlotWidget()
         self.graphWidget.setLabel('left', 'Downforce (ft-lb)')
         self.graphWidget.setLabel('bottom', 'Time (relative sec)')
         self.graphWidget.setBackground('w')
 
+        # Create calibrate button; first item on bottom toolbar
         self.calibrate_button = QtWidgets.QPushButton("Calibrate", self)
         self.calibrate_button.clicked.connect(self.calibrate)
 
+        # Create window width numeric entry; second item on bottom toolbar
         self.window_width_s = 3
         self.window_width_s_field = QtGui.QLineEdit(str(self.window_width_s))
         self.window_width_s_field.setValidator(QtGui.QIntValidator(1,20))
         self.window_width_s_field.editingFinished.connect(self.newWindowWidth)
+        self.window_width_s_field_label = QtGui.QLabel("Window width (sec; Min: 1, Max: 20)")
+        self.window_width_s_field_layout = QtWidgets.QVBoxLayout()
+        self.window_width_s_field_layout.addWidget(self.window_width_s_field_label)
+        self.window_width_s_field_layout.addWidget(self.window_width_s_field)
+        self.window_width_s_field_widget = QtWidgets.QWidget()
+        self.window_width_s_field_widget.setLayout(self.window_width_s_field_layout)
 
-        self.sampling_period_ms = 50
-        self.sampling_period_ms_field = QtGui.QLineEdit(str(self.sampling_period_ms))
-        self.sampling_period_ms_field.setValidator(QtGui.QIntValidator(20,1000))
-        self.sampling_period_ms_field.editingFinished.connect(self.newSamplingPeriod)
+        # Create sampling frequency numeric entry; third item on bottom toolbar
+        self.sampling_freq_Hz = 20
+        self.sampling_freq_Hz_field = QtGui.QLineEdit(str(self.sampling_freq_Hz))
+        self.sampling_freq_Hz_field.setValidator(QtGui.QIntValidator(1,20))
+        self.sampling_freq_Hz_field.editingFinished.connect(self.newSamplingFreq)
+        self.sampling_freq_Hz_field_label = QtGui.QLabel("Sampling frequency (Hz; Min: 1, Max: 20)")
+        self.sampling_freq_Hz_field_layout = QtWidgets.QVBoxLayout()
+        self.sampling_freq_Hz_field_layout.addWidget(self.sampling_freq_Hz_field_label)
+        self.sampling_freq_Hz_field_layout.addWidget(self.sampling_freq_Hz_field)
+        self.sampling_freq_Hz_field_widget = QtWidgets.QWidget()
+        self.sampling_freq_Hz_field_widget.setLayout(self.sampling_freq_Hz_field_layout)
 
-        self.buffer_size = int(1000*self.window_width_s/self.sampling_period_ms)
+        self.buffer_size = int(self.window_width_s*self.sampling_freq_Hz)
         
+        # Create start/stop logging button; fourth item on bottom toolbar
         self.log_start_stop_button = QtWidgets.QPushButton("Start logging", self)
         self.log_start_stop_button.setCheckable(True)
         self.log_start_stop_button.clicked.connect(self.startStopLogging)
 
-        self.setWindowTitle("Downforce Measurement Device, Carter's Customs, LLC")
+        # Create toolbar with horizontal layout
+        # | Calibrate button | Window width numeric entry | Sampling freq numeric entry | Start/stop logging button | 
         self.toolbar_layout = QtWidgets.QHBoxLayout()
         self.toolbar_layout.addWidget(self.calibrate_button)
-        self.toolbar_layout.addWidget(self.window_width_s_field)
-        self.toolbar_layout.addWidget(self.sampling_period_ms_field)
+        self.toolbar_layout.addWidget(self.window_width_s_field_widget)
+        self.toolbar_layout.addWidget(self.sampling_freq_Hz_field_widget)
         self.toolbar_layout.addWidget(self.log_start_stop_button)
         self.toolbar_widget = QtWidgets.QWidget()
         self.toolbar_widget.setLayout(self.toolbar_layout)
 
+        # Combine graph and toolbar into a single widget
         self.graph_and_toolbar_layout = QtWidgets.QVBoxLayout()
         self.graph_and_toolbar_layout.addWidget(self.graphWidget)
         self.graph_and_toolbar_layout.addWidget(self.toolbar_widget)
         
+        # Set up the main window
+        self.setWindowTitle("Downforce Measurement Device, Carter's Customs, LLC")
         self.main_widget = QtWidgets.QWidget()
         self.main_widget.setLayout(self.graph_and_toolbar_layout)
         self.setCentralWidget(self.main_widget)
 
-        self.time_vals = np.linspace(-self.window_width_s,0,self.buffer_size)
+        self.time_vals = list(np.linspace(-self.window_width_s,0,self.buffer_size))
         self.light_sensor = [0] * self.buffer_size
         self.load_scale = [0] * self.buffer_size
         self.Izze_strain_gauge_amplifier = [0] * self.buffer_size
 
-        red_pen = pg.mkPen(color=(255, 0, 0))
-        self.light_sensor_line =  self.graphWidget.plot(self.time_vals, self.light_sensor, pen=red_pen)
+        self.red_pen = pg.mkPen(color=(255, 0, 0))
+        self.light_sensor_line =  self.graphWidget.plot(self.time_vals, self.light_sensor, pen=self.red_pen)
+        
+        self.green_pen = pg.mkPen(color=(0, 255, 0))
+        self.load_scale_line =  self.graphWidget.plot(self.time_vals, self.load_scale, pen=self.green_pen)
 
-        green_pen = pg.mkPen(color=(0, 255, 0))
-        self.load_scale_line =  self.graphWidget.plot(self.time_vals, self.load_scale, pen=green_pen)
-
-        blue_pen = pg.mkPen(color=(0, 0, 255))
-        self.Izze_strain_gauge_amplifier_line =  self.graphWidget.plot(self.time_vals, self.Izze_strain_gauge_amplifier, pen=blue_pen)
+        self.blue_pen = pg.mkPen(color=(0, 0, 255))
+        self.Izze_strain_gauge_amplifier_line =  self.graphWidget.plot(self.time_vals, self.Izze_strain_gauge_amplifier, pen=self.blue_pen)
 
         self.timer = QtCore.QTimer()
-        self.timer.setInterval(self.sampling_period_ms)
+        self.timer.setInterval(int(1000/self.sampling_freq_Hz))
         self.timer.timeout.connect(self.update_plot_data)
         self.timer.start()
 
@@ -113,10 +134,30 @@ class MainWindow(QtWidgets.QMainWindow):
         print("Calibrating")    
 
     def newWindowWidth(self):
-        print("New window width",self.window_width_s_field.text())
+        self.window_width_s = int(self.window_width_s_field.text())
+        self.updateBuffers()            
 
-    def newSamplingPeriod(self):
-        print("New sampling period",self.sampling_period_ms_field.text())
+    def newSamplingFreq(self):
+        self.sampling_freq_Hz = int(self.sampling_freq_Hz_field.text())
+        self.timer.setInterval(int(1000/self.sampling_freq_Hz))
+        self.updateBuffers()
+
+    def updateBuffers(self):
+        self.timer.stop()
+        old_buffer_size = self.buffer_size
+        self.buffer_size = int(self.window_width_s*self.sampling_freq_Hz)
+        if self.buffer_size >= old_buffer_size:
+            buffer_size_diff = self.buffer_size-len(self.time_vals)
+            self.time_vals = list(np.linspace(-self.window_width_s,0,self.buffer_size))
+            self.light_sensor = [0]*(buffer_size_diff) + self.light_sensor
+            self.load_scale = [0]*(buffer_size_diff) + self.load_scale
+            self.Izze_strain_gauge_amplifier = [0]*(buffer_size_diff) + self.Izze_strain_gauge_amplifier
+        else:
+            self.time_vals = list(np.linspace(-self.window_width_s,0,self.buffer_size))
+            self.light_sensor = self.light_sensor[-self.buffer_size:]
+            self.load_scale = self.load_scale[-self.buffer_size:]
+            self.Izze_strain_gauge_amplifier = self.Izze_strain_gauge_amplifier[-self.buffer_size:]
+        self.timer.start()
 
     def startStopLogging(self):
         if self.log_start_stop_button.isChecked():
@@ -128,10 +169,6 @@ class MainWindow(QtWidgets.QMainWindow):
             self.log_start_stop_button.setText("Start logging")
 
     def update_plot_data(self):
-
-        #self.time_vals = self.time_vals[1:]  # Remove the first y element.
-        #self.time_vals.append(self.time_vals[-1]+1)  # Add a new value 1 higher than the last.
-
         self.light_sensor = self.light_sensor[1:]  # Remove the first
         newVal1 = math.sin(time.time()*self.light_sensor_omega + self.light_sensor_offset)
         self.light_sensor.append(newVal1)  # Add a new random value.
