@@ -147,6 +147,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.updateBuffers()
 
     def updateBuffers(self):
+        # TODO: ERROR: Updated lines don't match time axes sometimes when updated
         self.timer.stop()
         old_buffer_size = self.buffer_size
         self.buffer_size = int(self.window_width_s*self.sampling_freq_Hz)
