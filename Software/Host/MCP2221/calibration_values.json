@@ -1,0 +1,8 @@
+{
+    "light_sensor_omega":2,
+    "light_sensor_offset":0,
+    "load_scale_omega":3,
+    "load_scale_offset":10,
+    "Izze_strain_gauge_amplifier_omega":4,
+    "Izze_strain_gauge_amplifier_offset":20
+}
