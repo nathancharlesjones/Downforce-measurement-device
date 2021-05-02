@@ -26,14 +26,25 @@ class MainWindow(QtWidgets.QMainWindow):
         try:
             calibration_values = open('calibration_values.json','r')
         except IOError:
-            # TODO: Change this to create a zero-initialized file
             err_msg = QtGui.QMessageBox()
-            err_msg.setIcon(QtGui.QMessageBox.Critical)
-            err_msg.setWindowTitle("Program Error")
-            err_msg.setText("Error opening the file 'calibration_values.json'.")
-            err_msg.setStandardButtons(QtGui.QMessageBox.Ok)
+            err_msg.setIcon(QtGui.QMessageBox.Information)
+            err_msg.setWindowTitle("Unable to open file: calibration_values.json")
+            err_msg.setText("The file 'calibration_values.json' is either missing or corrupted.\n\nThis is normal behavior if the system has never been calibrated.\n\nPress 'Ok' to create a JSON file with default calibration values.\n\nPress 'Cancel' to exit the program without creating a new JSON file.")
+            err_msg.setStandardButtons(QtGui.QMessageBox.Ok | QtGui.QMessageBox.Cancel)
             retval = err_msg.exec_()
-            sys.exit()
+            if retval == QtGui.QMessageBox.Ok:
+                with open(r"calibration_values.json", "w") as file:
+                    file.write('''{
+                                    "light_sensor_omega":2,
+                                    "light_sensor_offset":0,
+                                    "load_scale_omega":3,
+                                    "load_scale_offset":10,
+                                    "Izze_strain_gauge_amplifier_omega":4,
+                                    "Izze_strain_gauge_amplifier_offset":20
+                                }''')
+                calibration_values = open('calibration_values.json','r')
+            else:
+                sys.exit()
 
         try:
             decoded_values = json.load(calibration_values)
@@ -161,7 +172,7 @@ class MainWindow(QtWidgets.QMainWindow):
             # If the file doesn't exist, open it and write the headers
             if not os.path.exists(self.filename):
                 with open(r"{}".format(self.filename), "w") as file:
-                    file.write("{},{}\n".format("Time","Light sensor values"))
+                    file.write("{},{},{},{}\n".format("Time","Light sensor values","Load scale values","Izze strain gauge amplifier values"))
             self.log_start_stop_button.setText("Stop logging")
         else:
             self.logging = False
@@ -185,8 +196,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         if self.logging:
             with open(r"{}".format(self.filename), "a") as file:
-                # TODO: Add all three values
-                file.write("{},{:1.3f}\n".format(dt.datetime.now().strftime('%H:%M:%S.%f'),newVal1))
+                file.write("{},{:1.3f},{:1.3f},{:1.3f}\n".format(dt.datetime.now().strftime('%H:%M:%S.%f'),newVal1,newVal2,newVal3))
 
         #self.counter += 1
         #time_diff = time.perf_counter() - self.last_time
