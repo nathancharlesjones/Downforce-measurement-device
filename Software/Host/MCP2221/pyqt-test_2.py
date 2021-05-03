@@ -19,6 +19,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.logging = False
         self.dirname = os.path.dirname(__file__)
         self.filename = ''
+        self.calibrateWindow = None
         self.counter = 0
         self.last_time = time.perf_counter()
 
@@ -68,6 +69,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.graphWidget.setLabel('left', 'Downforce (ft-lb)')
         self.graphWidget.setLabel('bottom', 'Time (relative sec)')
         self.graphWidget.setBackground('w')
+        self.graphWidget.addLegend()
 
         # Create calibrate button; first item on bottom toolbar
         self.calibrate_button = QtWidgets.QPushButton("Calibrate", self)
@@ -131,13 +133,13 @@ class MainWindow(QtWidgets.QMainWindow):
         self.Izze_strain_gauge_amplifier = [0] * self.buffer_size
 
         self.red_pen = pg.mkPen(color=(255, 0, 0))
-        self.light_sensor_line =  self.graphWidget.plot(self.time_vals, self.light_sensor, pen=self.red_pen)
+        self.light_sensor_line =  self.graphWidget.plot(self.time_vals, self.light_sensor, name="Light sensor", pen=self.red_pen)
         
         self.green_pen = pg.mkPen(color=(0, 255, 0))
-        self.load_scale_line =  self.graphWidget.plot(self.time_vals, self.load_scale, pen=self.green_pen)
+        self.load_scale_line =  self.graphWidget.plot(self.time_vals, self.load_scale, name="Load scale", pen=self.green_pen)
 
         self.blue_pen = pg.mkPen(color=(0, 0, 255))
-        self.Izze_strain_gauge_amplifier_line =  self.graphWidget.plot(self.time_vals, self.Izze_strain_gauge_amplifier, pen=self.blue_pen)
+        self.Izze_strain_gauge_amplifier_line =  self.graphWidget.plot(self.time_vals, self.Izze_strain_gauge_amplifier, name="Izze strain gauge amplifier", pen=self.blue_pen)
 
         self.timer = QtCore.QTimer()
         self.timer.setInterval(int(1000/self.sampling_freq_Hz))
@@ -145,8 +147,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.timer.start()
 
     def calibrate(self):
-        print("Calibrating")    
-        # TODO: Add this screen
+        self.calibrateWindow = CalibrateWindow()
+        self.calibrateWindow.show()
 
     def newWindowWidth(self):
         self.window_width_s = int(self.window_width_s_field.text())
@@ -181,17 +183,17 @@ class MainWindow(QtWidgets.QMainWindow):
     def update_plot_data(self):
         self.light_sensor = self.light_sensor[1:]  # Remove the first
         newVal1 = math.sin(time.time()*self.light_sensor_omega + self.light_sensor_offset)
-        self.light_sensor.append(newVal1)  # Add a new random value.
+        self.light_sensor.append(newVal1)  # Add a new value.
         self.light_sensor_line.setData(self.time_vals, self.light_sensor)  # Update the data.
 
         self.load_scale = self.load_scale[1:]  # Remove the first
         newVal2 = math.sin(time.time()*self.load_scale_omega + self.load_scale_offset)
-        self.load_scale.append(newVal2)  # Add a new random value.
+        self.load_scale.append(newVal2)  # Add a new value.
         self.load_scale_line.setData(self.time_vals, self.load_scale)  # Update the data.
 
         self.Izze_strain_gauge_amplifier = self.Izze_strain_gauge_amplifier[1:]  # Remove the first
         newVal3 = math.sin(time.time()*self.Izze_strain_gauge_amplifier_omega + self.Izze_strain_gauge_amplifier_offset)
-        self.Izze_strain_gauge_amplifier.append(newVal3)  # Add a new random value.
+        self.Izze_strain_gauge_amplifier.append(newVal3)  # Add a new value.
         self.Izze_strain_gauge_amplifier_line.setData(self.time_vals, self.Izze_strain_gauge_amplifier)  # Update the data.        
 
         if self.logging:
@@ -204,6 +206,14 @@ class MainWindow(QtWidgets.QMainWindow):
             #print("{:4d} samples processed in {:1.9f} seconds. Update frequency: {:4.1f} Hz".format(self.counter,time_diff,(self.counter/time_diff)))
             #self.last_time = time.perf_counter()
             #self.counter = 0
+
+    def getLastData(self):
+        return (self.light_sensor[-1],self.load_scale[-1],self.Izze_strain_gauge_amplifier[-1])
+
+class CalibrateWindow(QtWidgets.QMainWindow):
+
+    def __init__(self, *args, **kwargs):
+        super(CalibrateWindow, self).__init__(*args, **kwargs)
 
 app = QtWidgets.QApplication(sys.argv)
 w = MainWindow()
